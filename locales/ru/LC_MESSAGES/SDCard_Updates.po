@@ -1,0 +1,728 @@
+# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022.
+# Evgeniy Khramov <thejenjagamertjg@gmail.com>, 2022.
+# VICTOR <subfyn@gmail.com>, 2023.
+# xXx <xxx_xxx_xxxxxxxxx@mail.ru>, 2023.
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
+"PO-Revision-Date: 2023-09-30 21:41+0000\n"
+"Last-Translator: xXx <xxx_xxx_xxxxxxxxx@mail.ru>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/klipper/sdcard_updates/ru/>\n"
+"Language: ru\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.1-dev\n"
+
+msgid ""
+"Many of today's popular controller boards ship with a bootloader capable of "
+"updating firmware via SD Card. While this is convenient in many circumstances,"
+" these bootloaders typically provide no other way to update firmware. This can"
+" be a nuisance if your board is mounted in a location that is difficult to "
+"access or if you need to update firmware often. After Klipper has been "
+"initially flashed to a controller it is possible to transfer new firmware to "
+"the SD Card and initiate the flashing procedure via ssh."
+msgstr ""
+"Многие из популярных на сегодняшний день плат контроллеров поставляются с "
+"загрузчиком, способным обновлять встроенное ПО с помощью SD-карты. Хотя это "
+"удобно во многих случаях, эти загрузчики обычно не предоставляют другого "
+"способа обновления встроенного программного обеспечения. Это может быть "
+"неприятно, если ваша плата установлена в труднодоступном месте или если вам "
+"необходимо часто обновлять встроенное ПО. После первоначальной прошивки "
+"Klipper на контроллер можно перенести новую прошивку на SD-карту и "
+"инициировать процедуру прошивки через ssh."
+
+msgid "Typical Upgrade Procedure"
+msgstr "Типовая процедура обновления"
+
+msgid ""
+"The procedure for updating MCU firmware using the SD Card is similar to that "
+"of other methods. Instead of using `make flash` it is necessary to run a "
+"helper script, `flash-sdcard.sh`. Updating a BigTreeTech SKR 1.3 might look "
+"like the following:"
+msgstr ""
+"Процедура обновления микропрограммного обеспечения MCU с помощью SD-карты "
+"аналогична другим методам. Вместо использования `make flash` необходимо "
+"запустить вспомогательный скрипт, `flash-sdcard.sh `. Обновление BigTreeTech "
+"SKR 1.3 может выглядеть следующим образом:"
+
+msgid ""
+"It is up to the user to determine the device location and board name. If a "
+"user needs to flash multiple boards, `flash-sdcard.sh` (or `make flash` if "
+"appropriate) should be run for each board prior to restarting the Klipper "
+"service."
+msgstr ""
+"Пользователь сам определяет местоположение устройства и название платы. Если "
+"пользователю необходимо прошить несколько плат, `flash-sdcard.sh ` (или `make "
+"flash`, если это уместно) следует запустить для каждой платы перед "
+"перезапуском службы Klipper."
+
+msgid "Supported boards can be listed with the following command:"
+msgstr "Список поддерживаемых плат можно получить с помощью следующей команды:"
+
+msgid ""
+"If you do not see your board listed it may be necessary to add a new board "
+"definition as [described below](#board-definitions)."
+msgstr ""
+"Если вы не видите свою плату в списке, возможно, необходимо добавить новое "
+"определение платы, как [описано ниже](#board-definitions)."
+
+msgid "Advanced Usage"
+msgstr "Продвинутое использование"
+
+msgid ""
+"The above commands assume that your MCU connects at the default baud rate of "
+"250000 and the firmware is located at `~/klipper/out/klipper.bin`. The `flash-"
+"sdcard.sh` script provides options for changing these defaults. All options "
+"can be viewed by the help screen:"
+msgstr ""
+"В приведенных выше командах предполагается, что MCU подключается со скоростью "
+"250000 бод по умолчанию, а прошивка находится по адресу "
+"`~/klipper/out/klipper.bin`. Сценарий `flash-sdcard.sh` предоставляет опции "
+"для изменения этих значений по умолчанию. Все опции можно просмотреть с "
+"помощью экрана справки:"
+
+msgid ""
+"If your board is flashed with firmware that connects at a custom baud rate it "
+"is possible to upgrade by specifying the `-b` option:"
+msgstr ""
+"Если на плате прошита микропрограмма, которая подключается с пользовательской "
+"скоростью передачи данных, то ее можно обновить, указав опцию `-b`:"
+
+msgid ""
+"If you wish to flash a build of Klipper located somewhere other than the "
+"default location it can be done by specifying the `-f` option:"
+msgstr ""
+"Если вы хотите прошить сборку Klipper, расположенную не в том месте, где она "
+"находится по умолчанию, это можно сделать, указав опцию `-f`:"
+
+msgid ""
+"Note that when upgrading a MKS Robin E3 it is not necessary to manually run "
+"`update_mks_robin.py` and supply the resulting binary to `flash-sdcard.sh`. "
+"This procedure is automated during the upload process."
+msgstr ""
+"Обратите внимание, что при обновлении MKS Robin E3 нет необходимости вручную "
+"запускать файл `update_mks_robin.py` и передавать полученный двоичный файл в "
+"файл `flash-sdcard.sh`. Эта процедура автоматизирована в процессе загрузки."
+
+msgid "Caveats"
+msgstr "Оговорки"
+
+msgid ""
+"As mentioned in the introduction, this method only works for upgrading "
+"firmware. The initial flashing procedure must be done manually per the "
+"instructions that apply to your controller board."
+msgstr ""
+"Как уже говорилось во введении, этот метод применим только для обновления "
+"микропрограммного обеспечения. Процедура начальной прошивки должна выполняться"
+" вручную в соответствии с инструкциями, применимыми к плате контроллера."
+
+msgid ""
+"While it is possible to flash a build that changes the Serial Baud or "
+"connection interface (ie: from USB to UART), verification will always fail as "
+"the script will be unable to reconnect to the MCU to verify the current "
+"version."
+msgstr ""
+"Хотя можно прошить сборку, изменяющую последовательный бод или интерфейс "
+"подключения (например, с USB на UART), верификация всегда будет неудачной, "
+"поскольку скрипт не сможет повторно подключиться к MCU для проверки текущей "
+"версии."
+
+msgid "Board Definitions"
+msgstr "Определения платы"
+
+msgid ""
+"Most common boards should be available, however it is possible to add a new "
+"board definition if necessary. Board definitions are located in "
+"`~/klipper/scripts/spi_flash/board_defs.py`. The definitions are stored in "
+"dictionary, for example:"
+msgstr ""
+"Большинство распространенных плат должны быть доступны, однако при "
+"необходимости можно добавить новое определение платы. Определения плат "
+"находятся в файле `~/klipper/scripts/spi_flash/board_defs.py`. Определения "
+"хранятся в словаре, например:"
+
+msgid "The following fields may be specified:"
+msgstr "Могут быть указаны следующие поля:"
+
+msgid ""
+"`firmware_path`: The path on the SD Card where firmware should be transferred."
+" The default is `firmware.bin`."
+msgstr ""
+"`firmware_path`: Путь на SD-карте, куда должна быть перенесена прошивка. По "
+"умолчанию используется `firmware.bin`."
+
+msgid ""
+"`spi_pins`: This should be 3 comma separated pins that are connected to the SD"
+" Card in the format of `miso,mosi,sclk`."
+msgstr ""
+"`spi_pins`: Это должны быть 3 контакта, разделенные запятыми, которые "
+"подключены к SD-карте в формате `miso,mosi,sclk`."
+
+msgid ""
+"Prior to creating a new board definition one should check to see if an "
+"existing board definition meets the criteria necessary for the new board. If "
+"this is the case, a `BOARD_ALIAS` may be specified. For example, the following"
+" alias may be added to specify `my-new-board` as an alias for `generic-"
+"lpc1768`:"
+msgstr ""
+"Перед созданием нового определения платы необходимо проверить, соответствует "
+"ли существующее определение платы критериям, необходимым для новой платы. Если"
+" это так, то можно указать псевдоним `BOARD_ALIAS`. Например, чтобы указать "
+"`my-new-board` в качестве псевдонима для `generic-lpc1768`, можно добавить "
+"следующий псевдоним:"
+
+msgid ""
+"If you need a new board definition and you are uncomfortable with the "
+"procedure outlined above it is recommended that you request one in the "
+"[Klipper Community Discord](Contact.md#discord)."
+msgstr ""
+"Если вам необходимо новое определение платы и вас не устраивает описанная выше"
+" процедура, рекомендуется запросить его в [Klipper Community "
+"Discord](Contact.md#discord)."
+
+#: docs/SDCard_Updates.md:block 1 (header)
+msgid "SDCard updates"
+msgstr "Обновления SDCard"
+
+#: docs/SDCard_Updates.md:block 18 (paragraph)
+msgid ""
+"The `-c` option is used to perform a check or verify-only operation to test if"
+" the board is running the specified firmware correctly. This option is "
+"primarily intended for cases where a manual power-cycle is necessary to "
+"complete the flashing procedure, such as with bootloaders that use SDIO mode "
+"instead of SPI to access their SD Cards. (See Caveats below) But, it can also "
+"be used anytime to verify if the code flashed into the board matches the "
+"version in your build folder on any supported board."
+msgstr ""
+"Опция `-c` используется для выполнения операции проверки или только для "
+"проверки корректности работы платы с указанной микропрограммой. Эта опция "
+"предназначена, в первую очередь, для случаев, когда для завершения процедуры "
+"прошивки требуется ручное отключение питания, например, для загрузчиков, "
+"использующих для доступа к SD картам режим SDIO вместо SPI. (См. раздел "
+"\"Оговорки\" ниже), но ее также можно использовать в любое время для проверки "
+"соответствия прошитого в плату кода версии, находящейся в папке сборки, на "
+"любой поддерживаемой плате."
+
+#: docs/SDCard_Updates.md:block 20 (unordered list)
+msgid ""
+"Only boards that use SPI for SD Card communication are supported. Boards that "
+"use SDIO, such as the Flymaker Flyboard and MKS Robin Nano V1/V2, will not "
+"work in SDIO mode. However, it's usually possible to flash such boards using "
+"Software SPI mode instead. But if the board's bootloader only uses SDIO mode "
+"to access the SD Card, a power-cycle of the board and SD Card will be "
+"necessary so that the mode can switch from SPI back to SDIO to complete "
+"reflashing. Such boards should be defined with `skip_verify` enabled to skip "
+"the verify step immediately after flashing. Then after the manual power-cycle,"
+" you can rerun the exact same `./scripts/flash-sdcard.sh` command, but add the"
+" `-c` option to complete the check/verify operation. See [Flashing Boards that"
+" use SDIO](#flashing-boards-that-use-sdio) for examples."
+msgstr ""
+"Поддерживаются только платы, использующие SPI для связи с SD-картой. Платы, "
+"использующие SDIO, такие как Flymaker Flyboard и MKS Robin Nano V1/V2, не "
+"будут работать в режиме SDIO. Однако, как правило, такие платы можно прошить, "
+"используя режим Software SPI. Но если загрузчик платы использует режим SDIO "
+"только для доступа к SD-карте, то для завершения перепрошивки потребуется "
+"переключить питание платы и SD-карты, чтобы переключить режим с SPI обратно на"
+" SDIO. Такие платы должны быть определены с включенной опцией `skip_verify`, "
+"чтобы пропустить этап проверки сразу после прошивки. Затем, после ручного "
+"отключения питания, можно повторно выполнить точно такую же команду "
+"`./scripts/flash-sdcard.sh`, но добавить опцию `-c` для завершения операции "
+"проверки/верификации. Примеры смотрите в разделе [Прошивка плат, использующих "
+"SDIO](#flashing-boards-that-use-sdio)."
+
+#: docs/SDCard_Updates.md:block 25 (unordered list)
+msgid ""
+"`current_firmware_path`: The path on the SD Card where the renamed firmware "
+"file is located after a successful flash. The default is `firmware.cur`."
+msgstr ""
+"`current_firmware_path`: Путь на SD-карте, где находится переименованный файл "
+"прошивки после успешной прошивки. По умолчанию это `firmware.cur`."
+
+#: docs/SDCard_Updates.md:block 25 (unordered list)
+msgid ""
+"`skip_verify`: This defines a boolean value which tells the scripts to skip "
+"the firmware verification step during the flashing process. The default is "
+"`False`. It can be set to `True` for boards that require a manual power-cycle "
+"to complete flashing. To verify the firmware afterward, run the script again "
+"with the `-c` option to perform the verification step. [See caveats with SDIO "
+"cards](#caveats)"
+msgstr ""
+"`skip_verify`: Определяет булево значение, которое указывает скриптам на "
+"необходимость пропускать этап проверки прошивки в процессе прошивки. По "
+"умолчанию используется значение `False`. Это значение может быть установлено в"
+" `True` для плат, которым для завершения прошивки требуется ручное отключение "
+"питания. Для последующей проверки микропрограммы запустите скрипт еще раз с "
+"опцией `-c`, чтобы выполнить этап проверки. [См. рекомендации по работе с "
+"платами SDIO](#caveats)"
+
+#: docs/SDCard_Updates.md:block 26 (paragraph)
+msgid ""
+"If software SPI is required, the `spi_bus` field should be set to `swspi` and "
+"the following additional field should be specified:"
+msgstr ""
+"Если требуется программный SPI, то поле `spi_bus` должно быть установлено в "
+"значение `swspi`, а также должно быть указано следующее дополнительное поле:"
+
+#: docs/SDCard_Updates.md:block 28 (paragraph)
+msgid ""
+"It should be exceedingly rare that Software SPI is necessary, typically only "
+"boards with design errors or boards that normally only support SDIO mode for "
+"their SD Card will require it. The `btt-skr-pro` board definition provides an "
+"example of the former, and the `btt-octopus-f446-v1` board definition provides"
+" an example of the latter."
+msgstr ""
+"Необходимость в программном SPI возникает крайне редко, как правило, только в "
+"платах с ошибками проектирования или в платах, которые обычно поддерживают "
+"только режим SDIO для SD-карты. Примером первых может служить определение "
+"платы `btt-skr-pro`, а примером вторых - определение платы `btt-"
+"octopus-f446-v1`."
+
+#: docs/SDCard_Updates.md:block 32 (header)
+msgid "Flashing Boards that use SDIO"
+msgstr "Прошивка плат, использующих SDIO"
+
+#: docs/SDCard_Updates.md:block 33 (paragraph)
+msgid ""
+"[As mentioned in the Caveats](#caveats), boards whose bootloader uses SDIO "
+"mode to access their SD Card require a power-cycle of the board, and "
+"specifically the SD Card itself, in order to switch from the SPI Mode used "
+"while writing the file to the SD Card back to SDIO mode for the bootloader to "
+"flash it into the board. These board definitions will use the `skip_verify` "
+"flag, which tells the flashing tool to stop after writing the firmware to the "
+"SD Card so that the board can be manually power-cycled and the verification "
+"step deferred until that's complete."
+msgstr ""
+"[Как указано в разделе Caveats](#caveats), платы, загрузчик которых использует"
+" режим SDIO для доступа к SD-карте, требуют отключения питания платы и, в "
+"частности, самой SD-карты, для перехода из режима SPI, используемого при "
+"записи файла на SD-карту, обратно в режим SDIO, чтобы загрузчик смог прошить "
+"ее в плату. В этих определениях плат будет использоваться флаг `skip_verify`, "
+"который указывает программе прошивки остановиться после записи прошивки на SD-"
+"карту, чтобы можно было вручную перевести плату в режим питания и отложить "
+"этап проверки до его завершения."
+
+#: docs/SDCard_Updates.md:block 34 (paragraph)
+msgid ""
+"There are two scenarios -- one with the RPi Host running on a separate power "
+"supply and the other when the RPi Host is running on the same power supply as "
+"the main board being flashed. The difference is whether or not it's necessary "
+"to also shutdown the RPi and then `ssh` again after the flashing is complete "
+"in order to do the verification step, or if the verification can be done "
+"immediately. Here's examples of the two scenarios:"
+msgstr ""
+"Существует два сценария - один, когда RPi Host работает от отдельного блока "
+"питания, и другой, когда RPi Host работает от того же блока питания, что и "
+"основная плата, которую прошивают. Разница заключается в том, нужно ли после "
+"завершения прошивки выключать RPi и снова подключаться по `ssh`, чтобы "
+"выполнить этап проверки, или же проверку можно выполнить сразу. Вот примеры "
+"двух сценариев:"
+
+#: docs/SDCard_Updates.md:block 35 (header)
+msgid "SDIO Programming with RPi on Separate Power Supply"
+msgstr "Программирование SDIO с RPi на отдельном источнике питания"
+
+#: docs/SDCard_Updates.md:block 36 (paragraph)
+msgid ""
+"A typical session with the RPi on a Separate Power Supply looks like the "
+"following. You will, of course, need to use your proper device path and board "
+"name:"
+msgstr ""
+"Типичный сеанс работы с RPi на отдельном источнике питания выглядит следующим "
+"образом. Разумеется, необходимо использовать правильный путь к устройству и "
+"имя платы:"
+
+#: docs/SDCard_Updates.md:block 38 (header)
+msgid "SDIO Programming with RPi on the Same Power Supply"
+msgstr "Программирование SDIO при использовании RPi от одного источника питания"
+
+#: docs/SDCard_Updates.md:block 39 (paragraph)
+msgid ""
+"A typical session with the RPi on the Same Power Supply looks like the "
+"following. You will, of course, need to use your proper device path and board "
+"name:"
+msgstr ""
+"Типичный сеанс работы с RPi на одном и том же источнике питания выглядит "
+"следующим образом. Разумеется, необходимо использовать правильный путь к "
+"устройству и имя платы:"
+
+#: docs/SDCard_Updates.md:block 41 (paragraph)
+msgid ""
+"In this case, since the RPi Host is being restarted, which will restart the "
+"`klipper` service, it's necessary to stop `klipper` again before doing the "
+"verification step and restart it after verification is complete."
+msgstr ""
+"В данном случае, поскольку происходит перезапуск хоста RPi, что приведет к "
+"перезапуску службы `klipper`, необходимо снова остановить `klipper` перед "
+"выполнением шага проверки и перезапустить ее после завершения проверки."
+
+#: docs/SDCard_Updates.md:block 42 (header)
+msgid "SDIO to SPI Pin Mapping"
+msgstr "Сопоставление выводов SDIO и SPI"
+
+#: docs/SDCard_Updates.md:block 43 (paragraph)
+msgid ""
+"If your board's schematic uses SDIO for its SD Card, you can map the pins as "
+"described in the chart below to determine the compatible Software SPI pins to "
+"assign in the `board_defs.py` file:"
+msgstr ""
+"Если в схеме платы используется SDIO для SD карты, то для определения "
+"совместимых SPI контактов программного обеспечения, которые необходимо "
+"назначить в файле `board_defs.py`, можно сопоставить контакты, как описано на "
+"схеме ниже:"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "SD Card Pin"
+msgstr "Контакт SD-карты"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "Micro SD Card Pin"
+msgstr "Штырь для карты Micro SD"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "SDIO Pin Name"
+msgstr "Имя контакта SDIO"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "SPI Pin Name"
+msgstr "Имя вывода SPI"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "9"
+msgstr "9"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "1"
+msgstr "1"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "DATA2"
+msgstr "ДАТА2"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "None (PU)*"
+msgstr "Нет (ПУ)*"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "2"
+msgstr "2"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "CD/DATA3"
+msgstr "CD/DATA3"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "CS"
+msgstr "CS"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "3"
+msgstr "3"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "CMD"
+msgstr "CMD"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "MOSI"
+msgstr "MOSI"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "4"
+msgstr "4"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "+3.3V (VDD)"
+msgstr "+3,3 В (VDD)"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "5"
+msgstr "5"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "CLK"
+msgstr "CLK"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "SCLK"
+msgstr "SCLK"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "6"
+msgstr "6"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "GND (VSS)"
+msgstr "GND (VSS)"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "7"
+msgstr "7"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "DATA0"
+msgstr "ДАТА0"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "MISO"
+msgstr "MISO"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "8"
+msgstr "8"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "DATA1"
+msgstr "ДАТА1"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "N/A"
+msgstr "Н/Д"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "Card Detect (CD)"
+msgstr "Обнаружение карты (CD)"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "10"
+msgstr "10"
+
+#: docs/SDCard_Updates.md:block 44 (table)
+msgid "GND"
+msgstr "GND"
+
+#: docs/SDCard_Updates.md:block 45 (paragraph)
+msgid "\\* None (PU) indicates an unused pin with a pull-up resistor"
+msgstr ""
+"\\* None (PU) указывает на неиспользуемый вывод с подтягивающим резистором"
+
+#: docs/SDCard_Updates.md:block 25 (unordered list)
+msgid ""
+"`mcu`: The mcu type. This can be retrieved after configuring the build via "
+"`make menuconfig` by running `cat .config | grep CONFIG_MCU`. This field is "
+"required."
+msgstr ""
+"`mcu`: Тип mcu. Его можно получить после конфигурирования сборки с помощью "
+"`make menuconfig`, выполнив команду `cat .config | grep CONFIG_MCU`. Это поле "
+"является обязательным."
+
+#: docs/SDCard_Updates.md:block 25 (unordered list)
+msgid ""
+"`spi_bus`: The SPI bus connected to the SD Card. This should be retrieved from"
+" the board's schematic. This field is required."
+msgstr ""
+"`spi_bus`: Шина SPI, подключенная к SD-карте. Этот параметр должен быть "
+"получен из схемы платы. Это поле обязательно для заполнения."
+
+#: docs/SDCard_Updates.md:block 25 (unordered list)
+msgid ""
+"`cs_pin`: The Chip Select Pin connected to the SD Card. This should be "
+"retrieved from the board schematic. This field is required."
+msgstr ""
+"`cs_pin`: Вывод Chip Select, подключенный к SD-карте. Этот вывод должен быть "
+"получен из схемы платы. Это поле обязательно для заполнения."
+
+#~ msgid ""
+#~ "sudo service klipper stop\n"
+#~ "cd ~/klipper\n"
+#~ "git pull\n"
+#~ "make clean\n"
+#~ "make menuconfig\n"
+#~ "make\n"
+#~ "./scripts/flash-sdcard.sh /dev/ttyACM0 btt-skr-v1.3\n"
+#~ "sudo service klipper start\n"
+#~ msgstr ""
+#~ "sudo service klipper stop\n"
+#~ "cd ~/klipper\n"
+#~ "git pull\n"
+#~ "make clean\n"
+#~ "make menuconfig\n"
+#~ "make\n"
+#~ "./scripts/flash-sdcard.sh /dev/ttyACM0 btt-skr-v1.3\n"
+#~ "sudo service klipper start\n"
+
+#~ msgid "./scripts/flash-sdcard.sh -l\n"
+#~ msgstr "./scripts/flash-sdcard.sh -l\n"
+
+#~ msgid "./scripts/flash-sdcard.sh -b 115200 /dev/ttyAMA0 btt-skr-v1.3\n"
+#~ msgstr "./scripts/flash-sdcard.sh -b 115200 /dev/ttyAMA0 btt-skr-v1.3\n"
+
+#~ msgid ""
+#~ "./scripts/flash-sdcard.sh -f ~/downloads/klipper.bin /dev/ttyAMA0 btt-"
+#~ "skr-v1.3\n"
+#~ msgstr ""
+#~ "./scripts/flash-sdcard.sh -f ~/downloads/klipper.bin /dev/ttyAMA0 btt-"
+#~ "skr-v1.3\n"
+
+#~ msgid ""
+#~ "BOARD_DEFS = {\n"
+#~ "    'generic-lpc1768': {\n"
+#~ "        'mcu': \"lpc1768\",\n"
+#~ "        'spi_bus': \"ssp1\",\n"
+#~ "        \"cs_pin\": \"P0.6\"\n"
+#~ "    },\n"
+#~ "    ...<further definitions>\n"
+#~ "}\n"
+#~ msgstr ""
+#~ "BOARD_DEFS = {\n"
+#~ "    'generic-lpc1768': {\n"
+#~ "        'mcu': \"lpc1768\",\n"
+#~ "        'spi_bus': \"ssp1\",\n"
+#~ "        \"cs_pin\": \"P0.6\"\n"
+#~ "    },\n"
+#~ "    ...<дальнейшие определения>\n"
+#~ "}\n"
+
+#~ msgid ""
+#~ "BOARD_ALIASES = {\n"
+#~ "    ...<previous aliases>,\n"
+#~ "    'my-new-board': BOARD_DEFS['generic-lpc1768'],\n"
+#~ "}\n"
+#~ msgstr ""
+#~ "BOARD_ALIASES = {\n"
+#~ "    ...<предыдущие псевдонимы>,\n"
+#~ "    'my-new-board': BOARD_DEFS['generic-lpc1768'],\n"
+#~ "}\n"
+
+#~ msgid ""
+#~ "./scripts/flash-sdcard.sh -h\n"
+#~ "SD Card upload utility for Klipper\n"
+#~ "\n"
+#~ "usage: flash_sdcard.sh [-h] [-l] [-c] [-b <baud>] [-f <firmware>]\n"
+#~ "                       <device> <board>\n"
+#~ "\n"
+#~ "positional arguments:\n"
+#~ "  <device>        device serial port\n"
+#~ "  <board>         board type\n"
+#~ "\n"
+#~ "optional arguments:\n"
+#~ "  -h              show this message\n"
+#~ "  -l              list available boards\n"
+#~ "  -c              run flash check/verify only (skip upload)\n"
+#~ "  -b <baud>       serial baud rate (default is 250000)\n"
+#~ "  -f <firmware>   path to klipper.bin\n"
+#~ msgstr ""
+#~ "./scripts/flash-sdcard.sh -ч\n"
+#~ "Утилита загрузки SD-карт для Klipper\n"
+#~ "\n"
+#~ "использование: flash_sdcard.sh [-h] [-l] [-c] [-b <бод>] [-f <прошивка>]\n"
+#~ "                       <устройство> <плата>\n"
+#~ "\n"
+#~ "позиционные аргументы:\n"
+#~ "  <устройство> последовательный порт устройства\n"
+#~ "  <плата> тип платы\n"
+#~ "\n"
+#~ "необязательные аргументы:\n"
+#~ "  -h показать это сообщение\n"
+#~ "  -l список доступных плат\n"
+#~ "  -c запускать только проверку flash/верификацию (пропустить загрузку)\n"
+#~ "  -b <скорость передачи данных в бодах> последовательная скорость передачи данных в бодах (по умолчанию - 250000)\n"
+#~ "  -f <прошивка> путь к klipper.bin\n"
+
+#~ msgid ""
+#~ "sudo service klipper stop\n"
+#~ "cd ~/klipper\n"
+#~ "git pull\n"
+#~ "make clean\n"
+#~ "make menuconfig\n"
+#~ "make\n"
+#~ "./scripts/flash-sdcard.sh /dev/ttyACM0 btt-octopus-f446-v1\n"
+#~ "[[[manually power-cycle the printer board here when instructed]]]\n"
+#~ "./scripts/flash-sdcard.sh -c /dev/ttyACM0 btt-octopus-f446-v1\n"
+#~ "sudo service klipper start\n"
+#~ msgstr ""
+#~ "sudo service klipper stop\n"
+#~ "cd ~/klipper\n"
+#~ "git pull\n"
+#~ "make clean\n"
+#~ "make menuconfig\n"
+#~ "make\n"
+#~ "./scripts/flash-sdcard.sh /dev/ttyACM0 btt-octopus-f446-v1\n"
+#~ "[[[вручную выключите питание платы принтера здесь, когда это будет указано]]\n"
+#~ "./scripts/flash-sdcard.sh -c /dev/ttyACM0 btt-octopus-f446-v1\n"
+#~ "sudo service klipper start\n"
+
+#~ msgid ""
+#~ "sudo service klipper stop\n"
+#~ "cd ~/klipper\n"
+#~ "git pull\n"
+#~ "make clean\n"
+#~ "make menuconfig\n"
+#~ "make\n"
+#~ "./scripts/flash-sdcard.sh /dev/ttyACM0 btt-octopus-f446-v1\n"
+#~ "sudo shutdown -h now\n"
+#~ "[[[wait for the RPi to shutdown, then power-cycle and ssh again to the RPi when it restarts]]]\n"
+#~ "sudo service klipper stop\n"
+#~ "cd ~/klipper\n"
+#~ "./scripts/flash-sdcard.sh -c /dev/ttyACM0 btt-octopus-f446-v1\n"
+#~ "sudo service klipper start\n"
+#~ msgstr ""
+#~ "sudo service klipper stop\n"
+#~ "cd ~/klipper\n"
+#~ "git pull\n"
+#~ "make clean\n"
+#~ "make menuconfig\n"
+#~ "make\n"
+#~ "./scripts/flash-sdcard.sh /dev/ttyACM0 btt-octopus-f446-v1\n"
+#~ "sudo shutdown -h now\n"
+#~ "[[[дождитесь выключения RPi, затем выключите питание и снова зайдите в RPi по ssh, когда она перезагрузится]].\n"
+#~ "sudo service klipper stop\n"
+#~ "cd ~/klipper\n"
+#~ "./scripts/flash-sdcard.sh -c /dev/ttyACM0 btt-octopus-f446-v1\n"
+#~ "sudo service klipper start\n"
+
+#~ msgid ""
+#~ "`mcu`: The mcu type. This can be retrevied after configuring the build via "
+#~ "`make menuconfig` by running `cat .config | grep CONFIG_MCU`. This field is "
+#~ "required."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`spi_bus`: The SPI bus connected to the SD Card. This should be retreived from"
+#~ " the board's schematic. This field is required."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`cs_pin`: The Chip Select Pin connected to the SD Card. This should be "
+#~ "retreived from the board schematic. This field is required."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Only boards that use SPI for SD Card communication are supported. Boards that "
+#~ "use SDIO, such as the Flymaker Flyboard and MKS Robin Nano V1/V2, will not "
+#~ "work."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`current_firmware_path` The path on the SD Card where the renamed firmware "
+#~ "file is located after a successful flash. The default is `firmware.cur`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If software SPI is required the `spi_bus` field should be set to `swspi` and "
+#~ "the following additional field should be specified:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It should be exceedingly rare that Software SPI is necessary, typically only "
+#~ "boards with design errors will require it. The `btt-skr-pro` board definition "
+#~ "provides an example."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "./scripts/flash-sdcard.sh -h\n"
+#~ "SD Card upload utility for Klipper\n"
+#~ "\n"
+#~ "usage: flash_sdcard.sh [-h] [-l] [-b <baud>] [-f <firmware>]\n"
+#~ "                       <device> <board>\n"
+#~ "\n"
+#~ "positional arguments:\n"
+#~ "  <device>        device serial port\n"
+#~ "  <board>         board type\n"
+#~ "\n"
+#~ "optional arguments:\n"
+#~ "  -h              show this message\n"
+#~ "  -l              list available boards\n"
+#~ "  -b <baud>       serial baud rate (default is 250000)\n"
+#~ "  -f <firmware>   path to klipper.bin\n"
+#~ msgstr ""

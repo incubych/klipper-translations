@@ -1,0 +1,37 @@
+# Oriol Tous Casadesús <otousc@gmail.com>, 2023.
+# Carles Mateu <carlesm@carlesm.com>, 2024.
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
+"PO-Revision-Date: 2024-06-19 01:09+0000\n"
+"Last-Translator: Carles Mateu <carlesm@carlesm.com>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/klipper/navigation/ca/>\n"
+"Language: ca\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6-dev\n"
+
+msgid "Klipper documentation"
+msgstr "Documentació Klipper"
+
+msgid "Installation and Configuration"
+msgstr "Instal·lació i configuració"
+
+msgid "Configuration Reference"
+msgstr "Referència configuració"
+
+msgid "Bed Level"
+msgstr "Anivellament de Base"
+
+msgid "Resonance Compensation"
+msgstr "Compensació de Resonància"
+
+msgid "Command templates"
+msgstr ""
+
+msgid "Developer Documentation"
+msgstr "Documentació per a desenvolupadors"
+
+msgid "Device Specific Documents"
+msgstr "Documents específics d'un dispositiu"

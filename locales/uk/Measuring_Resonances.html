@@ -1,0 +1,2347 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>Вимірювання Резонансів - Klipper documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../_klipper3d/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-VEN1PGNQL4"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-VEN1PGNQL4",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VEN1PGNQL4"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Klipper documentation" class="md-header__button md-logo" aria-label="Klipper documentation" data-md-component="logo">
+      
+  <img src="../../img/klipper.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Klipper documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Вимірювання Резонансів
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2 0-.68.06-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.923 7.923 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8.008 8.008 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.65 15.65 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
+                    简体中文
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/zh-Hant/" hreflang="zh-Hant" class="md-select__link">
+                    繁體中文
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/hu/" hreflang="hu" class="md-select__link">
+                    Magyar
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/it/" hreflang="it" class="md-select__link">
+                    Italiano
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/fr/" hreflang="fr" class="md-select__link">
+                    Français
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Klipper3d/klipper/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Klipper3d/klipper
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Klipper documentation" class="md-nav__button md-logo" aria-label="Klipper documentation" data-md-component="logo">
+      
+  <img src="../../img/klipper.svg" alt="logo">
+
+    </a>
+    Klipper documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Klipper3d/klipper/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Klipper3d/klipper
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Overview.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Features.html" class="md-nav__link">
+        Features
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ.html" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Releases.html" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Config_Changes.html" class="md-nav__link">
+        Configuration Changes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contact.html" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Installation and Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation and Configuration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Installation and Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Installation.html" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OctoPrint.html" class="md-nav__link">
+        OctoPrint for Klipper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          Configuration Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Configuration Reference" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Config_Reference.html" class="md-nav__link">
+        Configuration reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rotation_Distance.html" class="md-nav__link">
+        Rotation distance
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Config_checks.html" class="md-nav__link">
+        Configuration checks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4" type="checkbox" id="__nav_7_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_4">
+          Bed Level
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bed Level" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_4">
+          <span class="md-nav__icon md-icon"></span>
+          Bed Level
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bed_Level.html" class="md-nav__link">
+        Bed leveling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Delta_Calibrate.html" class="md-nav__link">
+        Delta calibration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Probe_Calibrate.html" class="md-nav__link">
+        Probe calibration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLTouch.html" class="md-nav__link">
+        BL-Touch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manual_Level.html" class="md-nav__link">
+        Manual leveling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bed_Mesh.html" class="md-nav__link">
+        Bed Mesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Endstop_Phase.html" class="md-nav__link">
+        Endstop phase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Axis_Twist_Compensation.html" class="md-nav__link">
+        Axis Twist Compensation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_5" type="checkbox" id="__nav_7_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_5">
+          Resonance Compensation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resonance Compensation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          Resonance Compensation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Resonance_Compensation.html" class="md-nav__link">
+        Resonance Compensation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Measuring_Resonances.html" class="md-nav__link">
+        Measuring Resonances
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Pressure_Advance.html" class="md-nav__link">
+        Pressure advance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../G-Codes.html" class="md-nav__link">
+        G-Codes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_8" type="checkbox" id="__nav_7_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_8">
+          Command templates
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Command templates" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_8">
+          <span class="md-nav__icon md-icon"></span>
+          Command templates
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Command_Templates.html" class="md-nav__link">
+        Commands templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Status_Reference.html" class="md-nav__link">
+        Status reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TMC_Drivers.html" class="md-nav__link">
+        TMC drivers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Multi_MCU_Homing.html" class="md-nav__link">
+        Multiple Micro-controller Homing and Probing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Slicers.html" class="md-nav__link">
+        Slicers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Skew_Correction.html" class="md-nav__link">
+        Skew correction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Exclude_Object.html" class="md-nav__link">
+        Exclude Objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using_PWM_Tools.html" class="md-nav__link">
+        Using PWM tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Developer Documentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developer Documentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Code_Overview.html" class="md-nav__link">
+        Code overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Kinematics.html" class="md-nav__link">
+        Kinematics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Protocol.html" class="md-nav__link">
+        Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API_Server.html" class="md-nav__link">
+        API server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MCU_Commands.html" class="md-nav__link">
+        MCU commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CANBUS_protocol.html" class="md-nav__link">
+        CANBUS protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Debugging.html" class="md-nav__link">
+        Debugging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Benchmarks.html" class="md-nav__link">
+        Benchmarks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CONTRIBUTING.html" class="md-nav__link">
+        Contributing to Klipper
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Packaging.html" class="md-nav__link">
+        Packaging Klipper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Device Specific Documents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Device Specific Documents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Device Specific Documents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Example_Configs.html" class="md-nav__link">
+        Example configurations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SDCard_Updates.html" class="md-nav__link">
+        SDCard updates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RPi_microcontroller.html" class="md-nav__link">
+        RPi microcontroller
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Beaglebone.html" class="md-nav__link">
+        Beaglebone
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bootloaders.html" class="md-nav__link">
+        Bootloaders
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bootloader_Entry.html" class="md-nav__link">
+        Bootloader Entry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CANBUS.html" class="md-nav__link">
+        CANBUS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CANBUS_Troubleshooting.html" class="md-nav__link">
+        CANBUS Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TSL1401CL_Filament_Width_Sensor.html" class="md-nav__link">
+        TSL1401CL filament width sensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hall_Filament_Width_Sensor.html" class="md-nav__link">
+        Hall filament width sensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Eddy_Probe.html" class="md-nav__link">
+        Eddy Current Inductive probe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Load_Cell.html" class="md-nav__link">
+        Load Cells
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sponsors.html" class="md-nav__link">
+        Sponsors
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mcu-klipper-i2c-fast-mode" class="md-nav__link">
+    MCU з Klipper I2C fast-mode Підтримка
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Інструкція по монтажу
+  </a>
+  
+    <nav class="md-nav" aria-label="Інструкція по монтажу">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Прованс
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spi" class="md-nav__link">
+    SPI Акселерометри
+  </a>
+  
+    <nav class="md-nav" aria-label="SPI Акселерометри">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#345" class="md-nav__link">
+    АДСЛ345
+  </a>
+  
+    <nav class="md-nav" aria-label="АДСЛ345">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Пряма до Малина Пі
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raspberry-pico" class="md-nav__link">
+    Використання Raspberry Pico
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i2c" class="md-nav__link">
+    I2C Акселерометри
+  </a>
+  
+    <nav class="md-nav" aria-label="I2C Акселерометри">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mpu-9250mpu-9255mpu-6515mpu-6050mpu-6500icm20948" class="md-nav__link">
+    MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500/ICM20948
+  </a>
+  
+    <nav class="md-nav" aria-label="MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500/ICM20948">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i2ctwi-avr-atmega328p-nano" class="md-nav__link">
+    Рекомендована схема підключення до I2C(TWI) на AVR ATmega328P Ардуїно Nano:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Монтаж акселерометра
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    Встановлення програмного забезпечення
+  </a>
+  
+    <nav class="md-nav" aria-label="Встановлення програмного забезпечення">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adxl345-rpi" class="md-nav__link">
+    Налаштування ADXL345 з RPi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adxl345-pico" class="md-nav__link">
+    Налаштування ADXL345 з Pico
+  </a>
+  
+    <nav class="md-nav" aria-label="Налаштування ADXL345 з Pico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pico" class="md-nav__link">
+    Прошивка Pico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    Налаштування підключення
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lis2dw-spi" class="md-nav__link">
+    Налаштуйте серію LIS2DW через SPI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mpu-60009000-rpi" class="md-nav__link">
+    Налаштування серії MPU-6000/9000 з RPi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mpu-9520-pico" class="md-nav__link">
+    Налаштування MPU-9520 Сумісний з Pico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mpu-9520-avr" class="md-nav__link">
+    Налаштування MPU-9520 Сумісний з AVR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    Вимірювання резонансів
+  </a>
+  
+    <nav class="md-nav" aria-label="Вимірювання резонансів">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    Перевірка налаштування
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    Вимірювання резонансів
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    Принтери постільної білизни
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    Макс плавлення
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_accel" class="md-nav__link">
+    Вибір макс_accel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    Ненадійні вимірювання резонансних частот
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    Тестування користувальницьких осей
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    Вхідний шейпер автоматичного калібрування
+  </a>
+  
+    <nav class="md-nav" aria-label="Вхідний шейпер автоматичного калібрування">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#re-calibration" class="md-nav__link">
+    Вхідний шейпер re-calibration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    Офлайн обробки даних акселерометра
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/Klipper3d/klipper/blob/master/docs/locales/uk/Measuring_Resonances.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="_1">Вимірювання Резонансів<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>Klipper має вбудовану підтримку сумісних акселерометрів ADXL345, MPU-9250, LIS2DW і LIS3DH, які можна використовувати для вимірювання резонансних частот принтера для різних осей і автоматичного налаштування <a href="Resonance_Compensation.html">формувальників вхідних даних</a> для компенсації резонансів. Зауважте, що використання акселерометрів потребує пайки та обтиску. ADXL345 можна підключити до інтерфейсу SPI плати Raspberry Pi або MCU (він має бути достатньо швидким). Сімейство MPU можна підключити безпосередньо до інтерфейсу I2C Raspberry Pi або до інтерфейсу I2C плати MCU, яка підтримує 400 Кбіт/с <em>швидкий режим</em> у Klipper. LIS2DW і LIS3DH можна підключити до SPI або I2C з тими ж міркуваннями, що й вище.</p>
+<p>При стисканні акселерометрів слід розуміти, що існують різні зразки друкованої плати та різні клони їх. Якщо він буде підключений до принтера 5V MCU, щоб він має регулятор напруги та перемикачі рівня.</p>
+<p>Для ADXL345 переконайтеся, що плата підтримує режим SPI (невелика кількість плат, здається, жорстко налаштована для I2C шляхом підтягування SDO до GND).</p>
+<p>For MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500/ICM20948s and LIS2DW/LIS3DH there are also a variety of board designs and clones with different I2C pull-up resistors which will need supplementing.</p>
+<h2 id="mcu-klipper-i2c-fast-mode">MCU з Klipper I2C <em>fast-mode</em> Підтримка<a class="headerlink" href="#mcu-klipper-i2c-fast-mode" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">МКУ Сім'я</th>
+<th align="left">MCU(s) Тестовані</th>
+<th align="left">MCU(s) з підтримкою</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Малина Пі</td>
+<td align="left">3B+, Піко</td>
+<td align="left">3А, 3А+, 3Б, 4</td>
+</tr>
+<tr>
+<td align="center">АВР АМПА</td>
+<td align="left">A Tmega328p</td>
+<td align="left">ATmega 32u4, ATmega128, ATmega168, ATmega328, ATmega644p, ATmega1280, ATmega1284, ATmega2560</td>
+</tr>
+<tr>
+<td align="center">ВІДЕОРЕЄСТРАТОР AT90</td>
+<td align="left">-</td>
+<td align="left">AT90 usb646, AT90usb1286</td>
+</tr>
+<tr>
+<td align="center">SAMD</td>
+<td align="left">SAMC21G18</td>
+<td align="left">SAMC21G18, SAMD21G18, SAMD21E18, SAMD21J18, SAMD21E15, SAMD51G19, SAMD51J19, SAMD51N19, SAMD51P20, SAME51J19, SAME51N19, SAME54P20</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">Інструкція по монтажу<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">Прованс<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>Кабель ethernet з щитоподібними закрученими парами (кат5e або краще) рекомендується для цілісності сигналу на віддаленій відстані. Якщо ви все ще відчуваєте питання про цілісність сигналів (SPI/I2C):</p>
+<ul>
+<li>Подвійний контроль проводки з цифровим мультиметром для:<ul>
+<li>Правильні з'єднання при вимкненні (константильність)</li>
+<li>Правильна потужність і напруги</li>
+</ul>
+</li>
+<li>I2C тільки:<ul>
+<li>Перевірити стійкість SCL і SDA ліній до 3.3V в діапазоні 900 ом до 1.8K</li>
+<li>Для отримання повної технічної інформації <a href="https://www.pololu.com/file/0J435/UM10204.pdf">chapter 7 специфікації та посібник користувача UM10204</a> для <em>fast-mode</em></li>
+</ul>
+</li>
+<li>Скорочення кабелю</li>
+</ul>
+<p>Підключення електромережі тільки до плати МКУ/Пі мелені.</p>
+<p><strong><em>Подвійний контроль перед живленням, щоб запобігти знешкодженню MCU/Raspberry Pi або акселерометра.</em></strong></p>
+<h3 id="spi">SPI Акселерометри<a class="headerlink" href="#spi" title="Permanent link">&para;</a></h3>
+<p>Найяскравіший закручений парний порядок для трьох закручених пар:</p>
+<div class="highlight"><pre><span></span><code>ГНД+МІСО
+3.3В+МОСИ
+СКЛК+КС
+</code></pre></div>
+
+<p>Зверніть увагу, що на відміну від кабельного щита, GND повинен бути підключений як на кінцях.</p>
+<h4 id="345">АДСЛ345<a class="headerlink" href="#345" title="Permanent link">&para;</a></h4>
+<h5 id="_4">Пряма до Малина Пі<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<p><strong>Примітка: Багато MCUs буде працювати з ADXL345 в режимі SPI (наприклад, Pico), електропроводка і конфігурація будуть відрізнятися відповідно до вашої конкретної дошки і доступні шпильки </strong></p>
+<p>Вам потрібно підключити ADXL345 до Raspberry Pi через SPI. Зауважте, що підключення I2C, що пропонується документацією ADXL345, має занадто низький пропускний зв'язок і <strong> не працювати</strong>. Рекомендована схема підключення:</p>
+<table>
+<thead>
+<tr>
+<th align="center">ADXL345 шпилька</th>
+<th align="center">RPI шпильки</th>
+<th align="center">Назва RPi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">3V3 (або VCC)</td>
+<td align="center">01 мар</td>
+<td align="center">3.3V DC потужність</td>
+</tr>
+<tr>
+<td align="center">ГНД</td>
+<td align="center">06 мар</td>
+<td align="center">Головна</td>
+</tr>
+<tr>
+<td align="center">Р</td>
+<td align="center">24</td>
+<td align="center">GPIO08 (SPI0_CE0_N)</td>
+</tr>
+<tr>
+<td align="center">СДО</td>
+<td align="center">21 мар</td>
+<td align="center">GPIO09 (SPI0_MISO)</td>
+</tr>
+<tr>
+<td align="center">СДА</td>
+<td align="center">19 мар</td>
+<td align="center">GPIO10 (SPI0_MOSI)</td>
+</tr>
+<tr>
+<td align="center">СКЛ</td>
+<td align="center">23 мар</td>
+<td align="center">GPIO11 (SPI0_SCLK)</td>
+</tr>
+</tbody>
+</table>
+<p>Фрицтінг схем електропроводки для деяких плат ADXL345:</p>
+<p><img alt="ADXL345-Rpi" src="IMG/adxl345-fritzing.png" /></p>
+<h5 id="raspberry-pico">Використання Raspberry Pico<a class="headerlink" href="#raspberry-pico" title="Permanent link">&para;</a></h5>
+<p>Ви можете підключити ADXL345 до вашого Raspberry Pico, а потім підключити Pico до вашого Малина Пі через USB. Це дозволяє легко використовувати акселерометр на інших пристроях Klipper, оскільки ви можете підключити через USB замість GPIO. Піко не має багатої потужності обробки, тому переконайтеся, що це тільки працює акселерометр і не виконує ніяких інших обов'язків.</p>
+<p>Для того, щоб уникнути пошкодження RPi переконайтеся, що підключення ADXL345 до 3.3V тільки. В залежності від макета дошки може бути присутнім перехідник рівня, що робить 5V небезпечним для вашого RPi.</p>
+<table>
+<thead>
+<tr>
+<th align="center">ADXL345 шпилька</th>
+<th align="center">Піко шпильки</th>
+<th align="center">Назва поштового штифта Pico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">3V3 (або VCC)</td>
+<td align="center">36</td>
+<td align="center">3.3V DC потужність</td>
+</tr>
+<tr>
+<td align="center">ГНД</td>
+<td align="center">38 хв</td>
+<td align="center">Головна</td>
+</tr>
+<tr>
+<td align="center">Р</td>
+<td align="center">2</td>
+<td align="center">GP1 (SPI 0_CSn)</td>
+</tr>
+<tr>
+<td align="center">СДО</td>
+<td align="center">1</td>
+<td align="center">GP0 (SPI0_RX)</td>
+</tr>
+<tr>
+<td align="center">СДА</td>
+<td align="center">5</td>
+<td align="center">GP3 (SPI0_TX)</td>
+</tr>
+<tr>
+<td align="center">СКЛ</td>
+<td align="center">4</td>
+<td align="center">GP2 (SPI0_SCK)</td>
+</tr>
+</tbody>
+</table>
+<p>Схема підключення для деяких плат ADXL345:</p>
+<p><img alt="ADXL345-Pico" src="img/adxl 345-pico.png" /></p>
+<h3 id="i2c">I2C Акселерометри<a class="headerlink" href="#i2c" title="Permanent link">&para;</a></h3>
+<p>Найяскравіший закручений парний порядок для трьох пар (попередньо):</p>
+<div class="highlight"><pre><span></span><code>3.3В+ГНК
+СДА+GND
+СКЛ+GND
+</code></pre></div>
+
+<p>або для двох пар:</p>
+<div class="highlight"><pre><span></span><code>3.3В+СД
+ГНД+СКЛ
+</code></pre></div>
+
+<p>Зауважте, що на відміну від кабельного щита, будь-які GND(s) повинні бути підключені до обох кінців.</p>
+<h4 id="mpu-9250mpu-9255mpu-6515mpu-6050mpu-6500icm20948">MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500/ICM20948<a class="headerlink" href="#mpu-9250mpu-9255mpu-6515mpu-6050mpu-6500icm20948" title="Permanent link">&para;</a></h4>
+<p>Ці акселерометри були протестовані для роботи над I2C на RPi, RP2040 (Pico) та AVR на 400kbit/s (<em>fast mode</em>). Деякі модулі акселерометра МПУ включають витяги, але деякі занадто великі на 10K і повинні бути змінені або доповнені меншими паралельними резисторами.</p>
+<p>Рекомендована схема підключення I2C на Малина Пі:</p>
+<table>
+<thead>
+<tr>
+<th align="center">МПУ-9250 шпилька</th>
+<th align="center">RPI шпильки</th>
+<th align="center">Назва RPi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">ВКЦ</td>
+<td align="center">01 мар</td>
+<td align="center">3.3v DC потужність</td>
+</tr>
+<tr>
+<td align="center">ГНД</td>
+<td align="center">09 мар</td>
+<td align="center">Головна</td>
+</tr>
+<tr>
+<td align="center">СДА</td>
+<td align="center">03 мар</td>
+<td align="center">GPIO02 (SDA1)</td>
+</tr>
+<tr>
+<td align="center">СКЛ</td>
+<td align="center">05 мар</td>
+<td align="center">GPIO03 (SCL1)</td>
+</tr>
+</tbody>
+</table>
+<p>RPi має buit-in 1.8K тяги на обох SCL і SDA.</p>
+<p><img alt="MPU-9250 підключений до Pi" src="img/mpu9250-PI-fritzing.png" /></p>
+<p>Рекомендована схема підключення до I2C (i2c0a) на RP2040:</p>
+<table>
+<thead>
+<tr>
+<th align="center">МПУ-9250 шпилька</th>
+<th align="center">RP2040 шпилька</th>
+<th align="center">RP2040 Назва штифта</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">ВКЦ</td>
+<td align="center">36</td>
+<td align="center">3в3</td>
+</tr>
+<tr>
+<td align="center">ГНД</td>
+<td align="center">38 хв</td>
+<td align="center">Головна</td>
+</tr>
+<tr>
+<td align="center">СДА</td>
+<td align="center">01 мар</td>
+<td align="center">GP0 (I2C0 SDA)</td>
+</tr>
+<tr>
+<td align="center">СКЛ</td>
+<td align="center">02 мар</td>
+<td align="center">GP1 (I2C0 SCL)</td>
+</tr>
+</tbody>
+</table>
+<p>Піко не включає в себе будь-які вбудовані резистори I2C.</p>
+<p><img alt="MPU-9250 підключений до Pico" src="img/mpu9250-PICO-fritzing.png" /></p>
+<h5 id="i2ctwi-avr-atmega328p-nano">Рекомендована схема підключення до I2C(TWI) на AVR ATmega328P Ардуїно Nano:<a class="headerlink" href="#i2ctwi-avr-atmega328p-nano" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th align="center">МПУ-9250 шпилька</th>
+<th align="center">Atmega328P TQFP32 шпилька</th>
+<th align="center">Атмега328П контактна назва</th>
+<th align="center">Arduino Нано шпилька</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">ВКЦ</td>
+<td align="center">39 хв</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">ГНД</td>
+<td align="center">38 хв</td>
+<td align="center">Головна</td>
+<td align="center">ГНД</td>
+</tr>
+<tr>
+<td align="center">СДА</td>
+<td align="center">27</td>
+<td align="center">СДА</td>
+<td align="center">A4</td>
+</tr>
+<tr>
+<td align="center">СКЛ</td>
+<td align="center">28</td>
+<td align="center">СКЛ</td>
+<td align="center">A5</td>
+</tr>
+</tbody>
+</table>
+<p>Arduino Nano не включає в себе будь-які вбудовані резистори витяжки, ані 3.3V силовий штифт.</p>
+<h3 id="_5">Монтаж акселерометра<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>Акселерометр повинен бути прикріплений до панелі інструментів. Для оформлення правильної кріплень, яка підходить для власних принтерів 3D. Краще вирівняти осі акселерометра з осями принтера (але якщо він робить його більш зручним, токси можуть бути опуклими - тобто не потрібно вирівняти вісь X з X і так далі - це повинно бути відмінно навіть якщо вісь акселерометра X осі принтера і т.д.).</p>
+<p>Приклад монтажу ADXL345 на SmartEffector:</p>
+<p><img alt="ADXL345 на SmartEffector" src="img/adxl345-mount.jpg" /></p>
+<p>Зауважте, що на станковому стропальному принтері необхідно розробити 2 кріплення: одне для інструментальної головки та інше для станини, а також виконати вимірювання двічі. Додаткову інформацію див. у відповідному <a href="#bed-slinger-printers">розділі</a>.</p>
+<p><strong>Вміст:</strong> переконайтеся, що акселерометр і будь-які гвинти, які тримати його в місці, не доторкнутися до будь-яких металевих деталей принтера. В основному, кріплення повинні бути розроблені таким чином, щоб забезпечити електричну ізоляцію акселерометра з коробки принтера. Включаючи для того, щоб створити заземну петлю в системі, яка може пошкодити електроніку.</p>
+<h3 id="_6">Встановлення програмного забезпечення<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>Зверніть увагу, що резонансні вимірювання та автоматичне калібрування формувача вимагають додаткових залежностей програмного забезпечення, не встановлених за замовчуванням. Спочатку запустіть на Raspberry Pi наступні команди:</p>
+<div class="highlight"><pre><span></span><code>sudo apt оновлення
+sudo apt встановити python3-numpy python3-matplotlib libatlas-base-dev libopenblas-dev
+</code></pre></div>
+
+<p>Далі, щоб встановити NumPy в середовищі Klipper, запустити команду:</p>
+<div class="highlight"><pre><span></span><code>~/klippy-env/bin/pip install -v &quot;numpy&lt;1.26&quot;
+</code></pre></div>
+
+<p>Зауважте, що, залежно від продуктивності ЦП, це може зайняти <em>багато</em> часу, до 10-20 хвилин. Запасіться терпінням і дочекайтеся завершення установки. У деяких випадках, якщо на платі занадто мало оперативної пам’яті, інсталяція може завершитися помилкою, і вам потрібно буде ввімкнути обмін. Також зверніть увагу на примусову версію, оскільки нові версії NumPY мають вимоги, які можуть не виконуватись у деяких середовищах klipper python.</p>
+<p>Після встановлення переконайтеся, що команда не відображає помилки:</p>
+<div class="highlight"><pre><span></span><code>~/klippy-env/bin/python -c &#39;import numpy;&#39;
+</code></pre></div>
+
+<p>Правильний вихід має бути просто новим рядком.</p>
+<h4 id="adxl345-rpi">Налаштування ADXL345 з RPi<a class="headerlink" href="#adxl345-rpi" title="Permanent link">&para;</a></h4>
+<p>По-перше, перевірте та дотримуйтесь інструкцій в <a href="RPi_microcontroller.html">RPi Microcontroller документ</a> для налаштування "linux mcu" на Raspberry Pi. Це налаштує другий екземпляр кліппера, який працює на Пі.</p>
+<p>Переконайтеся, що драйвер Linux SPI працює <code>sudo raspi-config</code> і дозволяє SPI під меню «Інфракційні параметри».</p>
+<p>Додати наступний до файлу принтера.cfg:</p>
+<div class="highlight"><pre><span></span><code>[mcu rpi]
+/tmp/klipper_host_mcu
+
+[adxl345]
+JavaScript licenses API Веб-сайт Go1.13.8
+
+[resonance_tester]
+accel_chip: adxl345
+Теги:
+100, 100, 20 # приклад
+</code></pre></div>
+
+<p>Повідомляємо про початок з 1 точки зору, в середині принту, трохи вище.</p>
+<h4 id="adxl345-pico">Налаштування ADXL345 з Pico<a class="headerlink" href="#adxl345-pico" title="Permanent link">&para;</a></h4>
+<h5 id="pico">Прошивка Pico<a class="headerlink" href="#pico" title="Permanent link">&para;</a></h5>
+<p>На Raspberry Pi, компіляція прошивки для Pico.</p>
+<div class="highlight"><pre><span></span><code>cd ~ / клиппер
+чистий
+налаштування меню
+</code></pre></div>
+
+<p><img alt="Pico менюconfig" src="img/klipper_pico_menuconfig.png" /></p>
+<p>Тепер, утримуючи <code>BOOTSEL</code> кнопка на Піко, підключіть Піко до Малини Пі через USB. Прошивка і прошивка.</p>
+<div class="highlight"><pre><span></span><code>зробити флеш FLASH_DEVICE=перший
+</code></pre></div>
+
+<p>Якщо ви не змогли, ви сказали, що <code>FLASH_DEVICE</code> для використання. У цьому прикладі, що <code>змія флеш FLASH_DEVICE=2e8a:0003</code>. <img alt="Визначення флеш-пристрою" src="img/flash_rp2040_FLASH_DEVICE.png" /></p>
+<h5 id="_7">Налаштування підключення<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h5>
+<p>Піко тепер перезавантажить нову прошивку і повинен показати як серійний пристрій. Знайдіть послідовний пристрій піко з <code>ls /dev/serial/by-id/*</code>. Тепер можна додати файл <code>adxl.cfg</code> з наступними налаштуваннями:</p>
+<div class="highlight"><pre><span></span><code>[mcu adxl]
+Нема Змініть &lt;mySerial&gt;, щоб дізнатися вище. Наприклад,
+# usb-Klipper_rp2040_E661640843545B2E-if00
+/dev/serial/by-id/usb-Klipper_rp2040_&lt;mySerial&gt;
+
+[adxl345]
+cs_pin: adxl:gpio1
+spi_bus: spi0a
+JavaScript licenses API Веб-сайт Go1.13.8
+
+[resonance_tester]
+accel_chip: adxl345
+Теги:
+# Десь трохи вище середини вашого принту ліжко
+147,154, 20
+
+[вихід_pin power_mode] # Підвищення стабільності потужності
+шпилька: adxl:gpio23
+</code></pre></div>
+
+<p>Якщо налаштування конфігурації ADXL345 в окремому файлі, як показано вище, ви також хочете змінити файл <code>printer.cfg</code>, щоб включити цей:</p>
+<div class="highlight"><pre><span></span><code>[включає adxl.cfg] # Comment this out, коли ви відключите акселерометр
+</code></pre></div>
+
+<p>Рештарт Кліппер через команду <code>RESTART</code>.</p>
+<h4 id="lis2dw-spi">Налаштуйте серію LIS2DW через SPI<a class="headerlink" href="#lis2dw-spi" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>[mcu lis]
+Нема Змініть &lt;mySerial&gt;, щоб дізнатися вище. Наприклад,
+# usb-Klipper_rp2040_E661640843545B2E-if00
+/dev/serial/by-id/usb-Klipper_rp2040_&lt;mySerial&gt;
+
+[lis2dw]
+cs_pin: lis:gpio1
+spi_bus: spi0a
+JavaScript licenses API Веб-сайт Go1.13.8
+
+[resonance_tester]
+accel_chip: lis2dw
+Теги:
+# Десь трохи вище середини вашого принту ліжко
+147,154, 20
+</code></pre></div>
+
+<h4 id="mpu-60009000-rpi">Налаштування серії MPU-6000/9000 з RPi<a class="headerlink" href="#mpu-60009000-rpi" title="Permanent link">&para;</a></h4>
+<p>Переконайтеся, що драйвер Linux I2C ввімкнено, а курс baud встановлюється до 400000 (див. <a href="RPi_microcontroller.html#optional-enabling-i2c">Включення I2C</a> для більш детальної інформації). Потім додайте наступний до принтера.cfg:</p>
+<div class="highlight"><pre><span></span><code>[mcu rpi]
+/tmp/klipper_host_mcu
+
+[mpu9250]
+i2c_mcu: свінгери
+i2c_bus: i2c.1
+
+[resonance_tester]
+accel_chip: mpu9250
+теги:
+100, 100, 20 # приклад
+</code></pre></div>
+
+<p>If you are using the ICM20948, replace instances of "mpu9250" with "icm20948".</p>
+<h4 id="mpu-9520-pico">Налаштування MPU-9520 Сумісний з Pico<a class="headerlink" href="#mpu-9520-pico" title="Permanent link">&para;</a></h4>
+<p>Pico I2C встановлюється до 400000 за замовчуванням. Просто додайте наступний до принтера.cfg:</p>
+<div class="highlight"><pre><span></span><code>[mcu pico]
+послідовність: /dev/serial/by-id/&lt;your Серійний ID Pico&gt;
+
+[mpu9250]
+i2c_mcu: pico
+i2c_bus: i2c0a
+
+[resonance_tester]
+accel_chip: mpu9250
+Теги:
+100, 100, 20 # приклад
+
+[static_digital_вихід pico_3V3pwm] # Підвищення стабільності потужності
+шпильки: pico:gpio23
+</code></pre></div>
+
+<p>If you are using the ICM20948, replace instances of "mpu9250" with "icm20948".</p>
+<h4 id="mpu-9520-avr">Налаштування MPU-9520 Сумісний з AVR<a class="headerlink" href="#mpu-9520-avr" title="Permanent link">&para;</a></h4>
+<p>AVR I2C буде встановлена до 400000 по параметру mpu9250. Просто додайте наступний до принтера.cfg:</p>
+<div class="highlight"><pre><span></span><code>[mcu нано]
+послідовність: /dev/serial/by-id/&lt;your нано послідовний ідентифікатор&gt;
+
+[mpu9250]
+i2c_mcu: нано
+
+[resonance_tester]
+accel_chip: mpu9250
+Теги:
+100, 100, 20 # приклад
+</code></pre></div>
+
+<p>If you are using the ICM20948, replace instances of "mpu9250" with "icm20948".</p>
+<p>Рештарт Кліппер через команду <code>RESTART</code>.</p>
+<h2 id="_8">Вимірювання резонансів<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="_9">Перевірка налаштування<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>Тепер можна перевірити підключення.</p>
+<ul>
+<li>Для «не постільних речей» (наприклад, один акселерометр), в Octoprint, введіть <code>ACCELEROMETER_QUERY</code></li>
+<li>Для "дягачів" (наприклад, більше одного акселерометра), введіть <code>ACCELEROMETER_QUERY CHIP=&lt;chip&gt;</code>, де <code>&lt;chip&gt;</code> є ім'ям чіпа, як-вхідний, наприклад, <code>CHIP=bed</code> (див.: <a href="#bed-slinger-printers">bed-slinger</a> для всіх встановлених акселерометрових чіпів.</li>
+</ul>
+<p>Ви повинні бачити поточні вимірювання від акселерометра, включаючи прискорення вільного падіння, наприклад.</p>
+<div class="highlight"><pre><span></span><code>Рев: // ADxl345 значення (x, y, z): 470.719200, 941.438400, 9728.196800
+</code></pre></div>
+
+<p>Якщо ви отримуєте помилку, як <code>Invalid adxl345 id (got xx vs e5)</code>, де <code>xx</code> є інший ID, негайно спробуйте знову. Питання ініціалізації SPI. Якщо ви все ще отримуєте помилку, це індексує проблему з'єднання з ADXL345 або датчиком несправності. Подвійне зчепити потужність, електропроводка (тобто вона відповідає схемі, не зламаний дріт або пухкий і т.д.), і якість пайки.</p>
+<p><strong>Якщо ви використовуєте сумісний акселерометр MPU-9250 і він показує як `mpu-unknown```, скористайтеся обережністю! Вони, ймовірно, відремонтовані чіпси! </strong></p>
+<p>Далі намагатися бігти <code>MEASURE_AXES_NOISE</code> в Октопринті, ви повинні отримати деякі базові номери для шуму акселерометра на осі (зварити десь в діапазоні ~1-100). Занадто високий шум осі (наприклад, 1000 і більше) можна індексувати проблеми датчика, проблеми зі своєю потужністю, або занадто незбалансовані вентилятори на 3D принтері.</p>
+<h3 id="_10">Вимірювання резонансів<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>Тепер ви можете запустити деякі реальні тести. Запустіть команду:</p>
+<div class="highlight"><pre><span></span><code>TEST_RESONANCES AXIS=X
+</code></pre></div>
+
+<p>Зверніть увагу, що він створить вібрації на осі X. Він також буде відключити формулювання введення, якщо він був включений раніше, оскільки він не є дійсним для запуску резонансного тестування з ввімкненою формою введення.</p>
+<p><strong>Пригода!</strong> Обов'язково дотримуватися принтера вперше, щоб переконатися, що коливання не стали занадто жорстокими (<code>M112</code> команди можна використовувати для видалення тесту в разі надзвичайної ситуації, сподіваємось, що це не прийде до цього. Якщо вібрація є занадто сильною, ви можете намагатися вказати нижче значення за замовчуванням для параметра <code>accel_per_hz</code> у розділі <code>[resonance_tester]</code>, наприклад.</p>
+<div class="highlight"><pre><span></span><code>[resonance_tester]
+ accel_chip: adxl345
+ accel_per_hz: 50 # за замовчуванням 75
+ точки_зонду: ...
+</code></pre></div>
+
+<p>Якщо він працює для осі X, запустіть для осі Y:</p>
+<div class="highlight"><pre><span></span><code>TEST_RESONANCES AXIS=Y
+</code></pre></div>
+
+<p>Це генерує файли 2 CSV (<code>/tmp/resonances_x_*.csv</code> та <code>/tmp/resonances_y_*.csv</code>). Ці файли можна обробити за допомогою стаціонарного сценарію на Raspberry Pi. Цей скрипт призначений для запуску з одним файлом CSV для кожної осі вимірюється, хоча він може використовуватися з декількома файлами CSV, якщо ви хочете в середньому результати. Результати дослідження можуть бути корисними, наприклад, якщо резонансні тести були зроблені на декількох тестових точках. Видалення додаткових файлів CSV, якщо ви не бажаєте в середньому їх.</p>
+<div class="highlight"><pre><span></span><code>~/klipper/scripts/calibrate_shaper.py /tmp/resonances_x_*.csv -o /tmp/shaper_calibrate_x.png
+ ~/klipper/scripts/calibrate_shaper.py /tmp/resonances_y_*.csv -o /tmp/shaper_calibrate_y.png
+</code></pre></div>
+
+<p>Цей скрипт буде генерувати діаграми <code>/tmp/shaper_calibrate_x.png</code> і <code>/tmp/shaper_calibrate_y.png</code> з частотними відгуками. Ви також отримаєте запропоновані частоти для кожного ідентифікатора вводу, а також які вводні форми рекомендується для налаштування. Наприклад:</p>
+<p><img alt="Резонанси" src="img/calibrate-y.png" /></p>
+<div class="highlight"><pre><span></span><code>В&#39;язана формар &#39;zv&#39; частота = 34.4 Hz (vibrations = 4.0%, розгладжування ~= 0.132)
+Щоб уникнути занадто багато розгладжування з &#39;zv&#39;, запропонував макс_accel &lt;= 4500 мм/сек^2
+В&#39;язана формар &#39;mzv&#39; частота = 34.6 Hz (vibrations = 0.0%, розгладжування ~= 0.170)
+Щоб уникнути занадто багато плавлення з &#39;mzv&#39;, запропонував макс_accel &lt;= 3500 мм/сек^2
+В&#39;язана формар &#39;е&#39; частота = 41.4 Hz (vibrations = 0.0%, розгладжування ~= 0.188)
+Щоб уникнути занадто багато розгладжування з &#39;ei&#39;, запропонував макс_accel &lt;= 3200 мм/сек^2
+В&#39;язана формар &#39;2hump_ei&#39; частота = 51.8 Hz (vibrations = 0.0%, розгладжування ~= 0.201)
+Щоб уникнути занадто багато розгладжування з &#39;2hump_ei&#39;, запропонував макс_accel &lt;= 3000 мм/сек^2
+В&#39;язана формар &#39;3hump_ei&#39; частота = 61.8 Hz (vibrations = 0.0%, розгладжування ~= 0.215)
+Щоб уникнути занадто багато розгладжування з &#39;3hump_ei&#39;, запропонував макс_accel &lt;= 2800 мм/сек^2
+Рекомендований форматор - mzv @ 34.6 ХХз
+</code></pre></div>
+
+<p>У розділі <code>printer.cfg</code>, наприклад:</p>
+<div class="highlight"><pre><span></span><code>[input_shaper]
+JavaScript licenses API Веб-сайт Go1.13.8
+JavaScript licenses API Веб-сайт Go1.13.8
+JavaScript licenses API Веб-сайт Go1.13.8
+JavaScript licenses API Веб-сайт Go1.13.8
+
+[принтер]
+max_accel: 3000 # не повинен перевищувати оцінений макс_accel для X і Y осі
+</code></pre></div>
+
+<p>або ви можете вибрати іншу конфігурацію самостійно на основі створених графіків: піків в потужності спектральної щільності на діаграмах відповідають резонансним частотам принтера.</p>
+<p>Зауважте, що альтернативно ви можете запустити вводну формувальну автоматичну калібрацію з Klipper <a href="#input-shaper-auto-calibration">прямо</a>, яка може бути зручною, наприклад, для вхідної форми <a href="#input-shaper-re-calibration">re-calibration</a>.</p>
+<h3 id="_11">Принтери постільної білизни<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>Якщо ваш принтер являє собою плащовий принтер, потрібно буде змінити місце розташування акселерометра між вимірюваннями для X і Y осі: вимірювати резонанси осі X з акселерометром, прикріпленим до панелі інструментів і резонансами осі Y - до ліжка (звичайне налаштування постільної білизни).</p>
+<p>Тим не менш, ви також можете підключити два акселерометри одночасно, хоча ADXL345 повинні бути підключені до різних дощок (програш, до плати RPi і принтера MCU), або до двох різних фізичних інтерфейсів SPI на одній дошці (тільки доступні). Далі вони можуть бути налаштовані таким чином:</p>
+<div class="highlight"><pre><span></span><code>[adxl345 hotend]
+ # Припустимо, що мікросхему `hotend` підключено до RPi
+ cs_pin: rpi: немає
+
+ [adxl345 ліжко]
+ # Припустимо, що мікросхему `bed` підключено до плати MCU принтера
+ cs_pin: ... # Вибір мікросхеми SPI плати принтера (CS).
+
+ [resonance_tester]
+ # Припустимо типове налаштування принтера bed sling
+ accel_chip_x: adxl345 hotend
+ accel_chip_y: ліжко adxl345
+ точки_зонду: ...
+</code></pre></div>
+
+<p>Два MPU можуть поділитися одним автобусом I2C, але вони <strong>cannot</strong> вимірювати одночасно як 400kbit/s I2C автобус не дуже швидко. Потрібно мати шпильку AD0 до 0V (адреса 104) і інші її шпильки AD0 до 3.3V (адреса 105):</p>
+<div class="highlight"><pre><span></span><code>[mpu9250 hotend]
+ i2c_mcu: rpi
+ i2c_bus: i2c.1
+ i2c_address: 104 # Цей MPU має низький рівень контакту AD0
+
+ [ліжко mpu9250]
+ i2c_mcu: rpi
+ i2c_bus: i2c.1
+ i2c_address: 105 # Цей MPU має високий висновок AD0
+
+ [resonance_tester]
+ # Припустимо типове налаштування принтера bed sling
+ accel_chip_x: mpu9250 hotend
+ accel_chip_y: ліжко mpu9250
+ точки_зонду: ...
+</code></pre></div>
+
+<p>[Тест з кожним МПУ в індивідуальному порядку перед підключенням до автобуса для легкого знеболювання.]</p>
+<p>Потім команди <code>TEST_RESONANCES AXIS=X</code> і <code>TEST_RESONANCES AXIS=Y</code> використовувати правильний акселерометр для кожної осі.</p>
+<h3 id="_12">Макс плавлення<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>Враховуйте, що вводний формувач може створити деякий розгладжування деталей. Автоматичне тюнінг вхідної форми, що виконується <code>calibrate_shaper.py</code> скрипт або <code>SHAPER_CALIBRATE</code> команда намагається не згасити плавлення, але в той же час вони намагаються мінімізувати отримані вібрації. Іноді вони можуть зробити субоптимальний вибір частоти фігури, або, можливо, ви просто віддаєте перевагу менше розгладжування деталей за рахунок більшої решти коливань. У цих випадках ви можете запитувати, щоб обмежити максимальне згладжування від вхідної форми.</p>
+<p>Давайте розглянемо наступні результати з автоматичного тюнінгу:</p>
+<p><img alt="Резонанси" src="img/calibrate-x.png" /></p>
+<div class="highlight"><pre><span></span><code>В&#39;язана формар &#39;zv&#39; частота = 57.8 Hz (vibrations = 20.3%, розгладжування ~= 0.053)
+Щоб уникнути занадто багато розгладжування з &#39;zv&#39;, запропонував макс_accel &lt;= 13000 мм/сек^2
+В&#39;язана формар &#39;mzv&#39; частота = 34.8 Hz (vibrations = 3.6%, розгладжування ~= 0.168)
+Щоб уникнути занадто багато плавлення з &#39;mzv&#39;, запропонував макс_accel &lt;= 3600 мм/сек^2
+В&#39;язана формар &#39;е&#39; частота = 48.8 Hz (vibrations = 4.9%, розгладжування ~= 0.135)
+Щоб уникнути занадто багато розгладжування з &#39;ei&#39;, запропонував макс_accel &lt;= 4400 мм/сек^2
+В&#39;язана формар &#39;2hump_ei&#39; частота = 45.2 Hz (vibrations = 0.1%, розгладжування ~= 0.264)
+Щоб уникнути занадто багато розгладжування з &#39;2hump_ei&#39;, запропонував макс_accel &lt;= 2200 мм/sec^2
+В&#39;язана формар &#39;3hump_ei&#39; частота = 48.0 Hz (vibrations = 0.0%, розгладжування ~= 0.356)
+Щоб уникнути занадто багато плавлення з &#39;3hump_ei&#39;, запропонував макс_accel &lt;= 1500 мм/сек^2
+Рекомендований форматор 2hump_ei @ 45.2 ХХз
+</code></pre></div>
+
+<p>Зверніть увагу, що повідомлені значення «згладжування» є деякими абстрактними прогнозованими значеннями. Ці значення можна використовувати для порівняння різних конфігурацій: чим вище значення, тим більше згладжування створить шейпер. Однак ці показники згладжування не представляють реальної міри згладжування, оскільки фактичне згладжування залежить від параметрів <a href="#selecting-max-accel"><code>max_accel</code></a> і <code>square_corner_velocity</code>. Тому вам слід надрукувати кілька пробних відбитків, щоб побачити, наскільки згладжування створює саме вибрана конфігурація.</p>
+<p>На прикладі вище запропоновані параметри формера не погані, але що якщо ви хочете отримати менше розгладжування на осі X? Ви можете намагатися обмежити максимальне вирівнювання фігури за допомогою наступної команди:</p>
+<div class="highlight"><pre><span></span><code>~/klipper/scripts/calibrate_shaper.py /tmp/resonances_x_*.csv -o /tmp/shaper_calibrate_x.png --max_smoothing=0,2
+</code></pre></div>
+
+<p>яка обмежує розгладжування до 0,2 балу. Тепер ви можете отримати наступний результат:</p>
+<p><img alt="Резонанси" src="img/calibrate-x-max-smoothing.png" /></p>
+<div class="highlight"><pre><span></span><code>В&#39;язана формар &#39;zv&#39; частота = 55.4 Hz (vibrations = 19.7%, розгладжування ~= 0.057)
+Щоб уникнути занадто багато розгладжування з &#39;zv&#39;, запропонував макс_accel &lt;= 12000 мм/сек^2
+В&#39;язана формар &#39;mzv&#39; частота = 34.6 Hz (vibrations = 3.6%, розгладжування ~= 0.170)
+Щоб уникнути занадто багато плавлення з &#39;mzv&#39;, запропонував макс_accel &lt;= 3500 мм/сек^2
+В&#39;язана формар &#39;е&#39; частота = 48.2 Hz (vibrations = 4.8%, розгладжування ~= 0.139)
+Щоб уникнути занадто багато розгладжування з &#39;ei&#39;, запропонував макс_accel &lt;= 4300 мм/сек^2
+В&#39;язана формар &#39;2hump_ei&#39; частота = 52.0 Hz (vibrations = 2.7%, розгладжування ~= 0.200)
+Щоб уникнути занадто багато розгладжування з &#39;2hump_ei&#39;, запропонував макс_accel &lt;= 3000 мм/сек^2
+В&#39;язана формар &#39;3hump_ei&#39; частота = 72.6 Hz (vibrations = 1,4%, розгладжування ~= 0.155)
+Щоб уникнути занадто багато розгладжування з &#39;3hump_ei&#39;, запропонував макс_accel &lt;= 3900 мм/сек^2
+Рекомендований формар 3hump_ei @ 72.6 ХХз
+</code></pre></div>
+
+<p>Якщо порівняти раніше запропоновані параметри, коли коливання трохи більше, але плавлення значно менше, ніж раніше, що дозволяє збільшити максимальне прискорення.</p>
+<p>При вирішенні, які <code>max_smoothing</code> параметр вибрати, ви можете використовувати пробний і-error підхід. Спробуйте кілька різних значень, які ви отримуєте. Зверніть увагу, що фактичне згладжування, вироблене за допомогою вхідного формера залежить, в першу чергу, на найнижчій частоті резонансу принтера: чим вище частота найнижчого резонансу - тим менша плавка. Таким чином, якщо ви запитуєте сценарій, щоб знайти конфігурацію вхідної форми з нереально малим розгладжуванням, це буде за рахунок збільшення кільця за найнижчими частотами резонансу (які, як правило, також більш помітні в друку). Таким чином, завжди подвійна точка проекту, що залишилися коливання, які повідомляються скриптом і переконайтеся, що вони не занадто високі.</p>
+<p>Зверніть увагу, що якщо ви вибрали добре <code>max_smoothing</code> значення для обох ваших осей, ви можете зберігати його в <code>printer.cfg</code> як</p>
+<div class="highlight"><pre><span></span><code>[resonance_tester]
+accel_chip: ...
+теги: ...
+max_smoothing: 0.25 # приклад
+</code></pre></div>
+
+<p>Потім, якщо ви <a href="#input-shaper-re-calibration">rerun</a> за допомогою вхідної форми за допомогою <code>SHAPER_CALIBRATE</code> Команда Klipper в майбутньому, вона буде використовувати збережені <code>max_smoothing</code> значення як посилання.</p>
+<h3 id="_accel">Вибір макс_accel<a class="headerlink" href="#_accel" title="Permanent link">&para;</a></h3>
+<p>Оскільки вводний форматор може створити деяке розгладжування деталей, особливо при високих прискореннях, вам все ще потрібно вибрати <code>max_accel</code> значення, яке не створює занадто багато розгладжування в друкованих частинах. Скрипт калібрування забезпечує оцінку параметра <code>max_accel</code>, який не повинен створювати занадто багато згладжування. Зауважте, що <code>max_accel</code>, як показано сценарій калібрування, є лише теоретичним, максимальним, при якому відповідний формар все ще здатний працювати без отримання занадто багато згладжування. Не можна рекомендувати для встановлення цього прискорення для друку. Максимальне прискорення вашого принтера дозволяє залишатися в залежності від механічних властивостей і максимального крутного моменту використовуваних крокових двигунів. Отже, пропонується встановити <code>max_accel</code> в розділі <code>[printer]</code>, яка не перевищує оцінені значення для X і Y осі, ймовірно, з деякими консервативними запасами безпеки.</p>
+<p>Крім того, слідувати <a href="Resonance_Compensation.html#selecting-max_accel">this</a> частини інструкції з налаштування вводу та друку тестової моделі для вибору <code>max_accel</code> експериментально.</p>
+<p>Те ж повідомлення відноситься до вхідного формера <a href="#input-shaper-auto-calibration">auto-calibration</a> з <code>SHAPER_CALIBRATE</code> команда: вона все ще потрібно вибрати правильний <code>max_accel</code> значення після автоматичного калібрування, і запропоновані обмеження прискорення не будуть застосовуватися автоматично.</p>
+<p>Враховуйте, що максимальне прискорення без зайвих зусиль залежить від <code>square_corner_velocity</code>. Загальні рекомендації не можна змінити його з його значення за замовчуванням 5.0, і це значення, яке використовується за замовчуванням <code>calibrate_shaper.py</code> скрипт. Якщо ви змінили його, ви повинні повідомити скрипт про це, пройшовши <code>-square_corner_velocity=...</code> параметр, наприклад.</p>
+<div class="highlight"><pre><span></span><code>~/klipper/scripts/calibrate_shaper.py /tmp/resonances_x_*.csv -o /tmp/shaper_calib rate_x.png --square_corner_velocity=10.0
+</code></pre></div>
+
+<p>таким чином, можна правильно розрахувати максимальні рекомендації прискорення. Зауважте, що <code>SHAPER_CALIBRATE</code> команда вже приймає налаштовувані <code>square_corner_velocity</code> параметр враховується, і немає необхідності уточнювати його явно.</p>
+<p>Якщо ви виконуєте рекалібрацію формувача і повідомляється розгладжування за запропонованою конфігурацією формера практично таким же, що ви отримали під час попереднього калібрування, цей крок можна пропустити.</p>
+<h3 id="_13">Ненадійні вимірювання резонансних частот<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>Іноді резонансні вимірювання можуть давати фальшиві результати, що призводить до неправильних пропозицій для формувачів вхідних даних. Це може бути викликано різними причинами, зокрема роботою вентиляторів на інструментальній головці, неправильним положенням або нежорстким кріпленням акселерометра або механічними проблемами, як-от ослаблені ремені або закручування чи нерівність осі. Майте на увазі, що всі вентилятори мають бути відключені для перевірки резонансу, особливо галасливі, і що акселерометр має бути жорстко встановлений на відповідній рухомій частині (наприклад, на самій платформі для стропальника ліжка або на самому екструдері принтера, а не на каретці; деякі люди отримують кращі результати, встановлюючи акселерометр на самому соплі). Що стосується механічних проблем, користувач повинен перевірити, чи є якась несправність, яку можна усунути за допомогою рухомої осі (наприклад, лінійні напрямні рейки очищені та змащені, а натяг коліс із V-подібним пазом відрегульовано правильно). Якщо нічого з цього не допомагає, користувач може спробувати інші формувачі зі створеного списку, окрім рекомендованого за замовчуванням.</p>
+<h3 id="_14">Тестування користувальницьких осей<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p><code>TEST_RESONANCES</code> команда підтримує користувацькі осі. В той час як це не дуже корисно для калібрування вводу, його можна використовувати для вивчення резонансів принтера глибоко і для перевірки, наприклад, натяг стрічки.</p>
+<p>Для перевірки натягу стрічки на принтерах CoreXY, виконання</p>
+<div class="highlight"><pre><span></span><code>TEST_RESONANCES AXIS=1,1 OUTPUT=raw_data
+TEST_RESONANCES AXIS=1,-1 OUT PUT=raw_data
+</code></pre></div>
+
+<p><code>graph_accelerometer.py</code> для обробки створених файлів, наприклад.</p>
+<div class="highlight"><pre><span></span><code>~/klipper/scripts/graph_accelero meter.py -c /tmp/raw_data_axis*.csv -o /tmp/resonances.png
+</code></pre></div>
+
+<p><code>/tmp/resonances.png</code> порівняння резонансів.</p>
+<p>Для принтерів Delta з розміщенням за замовчуванням (підтримка A ~= 210 градусів, B ~=330 градусів, а C ~= 90 градусів), виконання</p>
+<div class="highlight"><pre><span></span><code>TEST_RESONANCES AXIS=0,1 OUTPUT=raw_data
+TEST_RESONANCES AXIS=-0.866025404,-0.5 OUTPUT=raw_data
+TEST_RESONANCES AXIS=0.866025404,-0.5 OUTPUT=raw_data
+</code></pre></div>
+
+<p>а потім використовувати однакову команду</p>
+<div class="highlight"><pre><span></span><code>~/klipper/scripts/graph_accelero meter.py -c /tmp/raw_data_axis*.csv -o /tmp/resonances.png
+</code></pre></div>
+
+<p>щоб створити <code>/tmp/resonances.png</code> для порівняння резонансів.</p>
+<h2 id="_15">Вхідний шейпер автоматичного калібрування<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<p>Крім ручного вибору відповідних параметрів для функції вводу, можна також запустити автовизначення для вхідної форми безпосередньо від Klipper. Запустіть команду за допомогою терміналу Octoprint:</p>
+<div class="highlight"><pre><span></span><code>SHAPER_CALIBRATE
+</code></pre></div>
+
+<p>Це буде запустити повну тест для обох осей і генерувати вихід csv (<code>/tmp/calibration_data_*.csv</code> за замовчуванням) для відповіді частоти і запропонованих форм введення. Ви також отримаєте запропоновані частоти для кожного ідентифікатора вводу, а також який вводний формувач рекомендується для налаштування, на Octoprint консолі. Наприклад:</p>
+<div class="highlight"><pre><span></span><code>Розрахунок кращих параметрів вводу для осі я
+В&#39;язана формар &#39;zv&#39; частота = 39.0 Hz (vibrations = 13.2%, розгладжування ~= 0.105)
+Щоб уникнути занадто багато розгладжування з &#39;zv&#39;, запропонував макс_accel &lt;= 5900 мм/сек^2
+В&#39;язана формар &#39;mzv&#39; частота = 36.8 Hz (vibrations = 1.7%, розгладжування ~= 0.150)
+Щоб уникнути занадто багато розгладжування з &#39;mzv&#39;, запропонував макс_accel &lt;= 4000 мм/сек^2
+В&#39;язана формар &#39;я&#39; частота = 36.6 Hz (vibrations = 2.2%, розгладжування ~= 0.240)
+Щоб уникнути занадто багато розгладжування з &#39;ei&#39;, запропонував макс_accel &lt;= 2500 мм/сек^2
+В&#39;язана формар &#39;2hump_ei&#39; частота = 48.0 Hz (vibrations = 0.0%, розгладжування ~= 0.234)
+Щоб уникнути занадто багато розгладжування з &#39;2hump_ei&#39;, запропонував макс_accel &lt;= 2500 мм/сек^2
+В&#39;язана формар &#39;3hump_ei&#39; частота = 59.0 Hz (vibrations = 0.0%, розгладжування ~= 0.235)
+Щоб уникнути занадто багато розгладжування з &#39;3hump_ei&#39;, запропонував макс_accel &lt;= 2500 мм/сек^2
+Рекомендований форматор_type_y = mzv, формаr_freq_y = 36.8 ХХз
+</code></pre></div>
+
+<p>Якщо ви погоджуєтесь з запропонованими параметрами, ви можете виконувати <code>SAVE_CONFIG</code>, щоб зберегти їх і перезапустити Klipper. Зверніть увагу, що це не буде оновлено <code>max_accel</code> значення в розділі <code>[printer]</code>. Ви повинні оновити її вручну за розглядами в розділі <a href="#selecting-max_accel">Виберіть максимальну кількість_accel</a>.</p>
+<p>Якщо ваш принтер являє собою плащовий принтер, ви можете вказати яку віссю для тестування, так що ви можете змінити точку кріплення акселерометра між тестами (за замовчуванням тест виконується як для обох осей):</p>
+<div class="highlight"><pre><span></span><code>SHAPER_CALIBRATE AXIS=Y
+</code></pre></div>
+
+<p>Ви можете виконувати <code>SAVE_CONFIG</code> двічі - після калібрування кожної осі.</p>
+<p>Тим не менш, якщо ви підключені два акселерометри одночасно, ви просто запустіть <code>SHAPER_CALIBRATE</code>, не вказавши вісь, щоб калібрувати вводну форму для обох осі в одному ходу.</p>
+<h3 id="re-calibration">Вхідний шейпер re-calibration<a class="headerlink" href="#re-calibration" title="Permanent link">&para;</a></h3>
+<p><code>SHAPER_CALIBRATE</code> команда також може використовуватися для повторного калібрування вхідного форматора в майбутньому, особливо якщо деякі зміни принтера, які можуть вплинути на його кінематику. Один може або перебіг повного калібрування за допомогою <code>SHAPER_CALIBRATE</code>, або обмежити автоматичне калібрування на одну вісь, подаючи <code>AXIS=</code> параметр, як і</p>
+<div class="highlight"><pre><span></span><code>SHAPER_CALIBRATE AXIS=X
+</code></pre></div>
+
+<p><strong>Налаштування!</strong> Не доцільно запустити автоматичну калібрацію фігурки дуже часто (наприклад, перед кожним друком або кожним днем). Для визначення резонансних частот автокальібрація створює інтенсивні коливання на кожному з осей. Зазвичай принтери 3D не призначені для витримки тривалого впливу коливань біля резонансних частот. Дозування може збільшити знос компонентів принтера і зменшити термін служби. Також є підвищений ризик виникнення певних частин, що незламні або стають пухкими. Завжди перевірте, що всі частини принтера (в тому числі тих, які можуть зазвичай не переходити) надійно зафіксовані в місці після кожного автовиїзду.</p>
+<p>Крім того, через деякий шум при вимірюванні, можливо, що результати тюнінга будуть трохи відрізнятися від одного калібрування за один до одного. Тим не менш, не очікується, що шум впливає на якість друку занадто багато. Тим не менш, він ще радий подвійним вирізом запропонованих параметрів і друкувати деякі тестові відбитки, перш ніж використовувати їх, щоб підтвердити, що вони добре.</p>
+<h2 id="_16">Офлайн обробки даних акселерометра<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<p>Генерувати дані акселерометра і обробляти її автономно (наприклад, на хост-машину), наприклад, для пошуку резонансів. Для того, щоб зробити це, запустіть наступні команди через термінал Octoprint:</p>
+<div class="highlight"><pre><span></span><code>СЕТ_INPUT_SHAPER SHAPER_FREQ_X=0 SHAPER_FREQ_Y=0
+TEST_RESONANCES AXIS=X OUTPUT=raw_data
+</code></pre></div>
+
+<p>ігнорування будь-яких помилок <code>SET_INPUT_SHAPER</code> команди. Для <code>TEST_RESONANCES</code> команда, вкажіть бажану вісь тесту. Сирі дані будуть записані в каталог <code>/tmp</code> на RPi.</p>
+<p>Сирі дані також можуть бути отримані за допомогою запуску команди <code>ACCELEROMETER_MEASURE</code> команди двічі під час нормальної активності принтера - спочатку почати вимірювання, а потім зупинити їх і написати вихідний файл. <a href="G-Codes.html#adxl345">G-Codes</a> Детальніше.</p>
+<p><code>scripts/graph_accelerometer.py</code> і <code>scripts/calibrate_shaper.py</code>. Обидва вони приймають один або кілька сирих CSV файлів, як вхід в залежності від режиму. Граф_accelerometer.py скрипт підтримує кілька режимів роботи:</p>
+<ul>
+<li>побудова необроблених даних акселерометра (використовуйте параметр <code>-r</code>), підтримується лише 1 вхід;</li>
+<li>позначення періодичної реакції (не обов’язкові параметри), якщо вказані кілька вводів, комп’ютерна реакція середньої частоти;</li>
+<li>порівняння частотної реакції між декількома входами (користування <code>-c</code> параметра); можна додатково вказати, яку осі акселерометра, щоб розглянути через <code>-a x</code>, <code>-a y</code> або <code>-a z</code> (якщо не вказано, сума вібрацій для всіх осей використовується);</li>
+<li>розділяє спектрограму (використання <code>-s</code> параметра), підтримується тільки 1 вхід; можна додатково вказати, яку осі акселерометра, щоб розглянути за допомогою <code>-a x</code>, <code>-a y</code> або <code>-a z</code> (якщо не вказано, сума вібрацій для всіх осей використовується).</li>
+</ul>
+<p>Зауважте, що граф_accelerometer.py скрипт підтримує лише сиру_data*.csv файли і не резонанси*. JavaScript licenses API Веб-сайт Go1.13.8.</p>
+<p>Наприклад,</p>
+<div class="highlight"><pre><span></span><code>javascript licenses api веб-сайт go1.13.8 javascript licenses api веб-сайт go1.13.8
+</code></pre></div>
+
+<p>розділить порівняння кількох <code>/tmp/raw_data_x_*.csv</code> файлів для осі Z до <code>/tmp/resonances_x.png</code> файл.</p>
+<p>Скрипт формаr_calibrate.py приймає 1 або кілька вводів і може запустити автоматичне налаштування вхідної форми і запропонувати кращі параметри, які добре працюють для всіх наданих вводів. Друковано запропоновані параметри до консолі, а також може додатково генерувати діаграму, якщо параметр <code>-o вихід.png</code> надається, або файл CSV, якщо <code>-c вихід.csv</code>.</p>
+<p>Надання декількох входів до форматора_calibrate.py скрипт може бути корисний, якщо запустити деякі розширені настройки вхідної форми, наприклад:</p>
+<ul>
+<li>Запуск <code>TEST_RESONANCES AXIS=X OUTPUT=raw_data</code> (і <code>Y</code>) для одноосьового вісь двічі на прибиральному принтері з акселерометром, прикріпленим до інструментального керівника першого разу, а акселерометр прикріплюється до ліжка другий раз для виявлення осей крос-резонансів і спроб скасування їх вводними форматорами.</li>
+<li><code>TEST_ RESONANCES AXIS=Y OUTPUT=raw_data</code> двічі на вкладній шляпці зі скляним ліжком та магнітними поверхнями (який легше) знайти параметри вводу, які добре працюють для будь-якої конфігурації поверхні друку.</li>
+<li>Поєднання резонансних даних з декількох тестових точок.</li>
+<li>Комбінація резонансних даних з осі 2 (наприклад, на постільному принтері для налаштовування вводу X-і осі X-резонансних резонансів для скасування вібрацій <em>bed</em> у випадку, якщо насадка 'catches' друку при переході в осі X).</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>

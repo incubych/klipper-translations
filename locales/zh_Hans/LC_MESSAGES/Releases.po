@@ -1,0 +1,784 @@
+# Lantern Master <1013653797@qq.com>, 2021.
+# Arda <pengfei.fu@gmail.com>, 2022.
+# Yifei Ding <dingyifeiair@gmail.com>, 2022.
+# 猫尾草 <aike1997sims2@gmail.com>, 2023.
+# "Neko.vecter" <Vecterfang@icloud.com>, 2023.
+# Hosted Weblate <mfvotmjhcj@iubridge.com>, 2024.
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
+"PO-Revision-Date: 2024-02-23 22:02+0000\n"
+"Last-Translator: Hosted Weblate <mfvotmjhcj@iubridge.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/klipper/releases/zh_Hans/>\n"
+"Language: zh_Hans\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.5-dev\n"
+
+msgid ""
+"History of Klipper releases. Please see [installation](Installation.md) for "
+"information on installing Klipper."
+msgstr "Klipper版本发布。如何安装Klipper ，请查看[installation](Installation.md)。"
+
+msgid "Klipper 0.9.0"
+msgstr "Klipper 0.9.0"
+
+msgid "Available on 20201020. Major changes in this release:"
+msgstr "发布于2020年10月20日，此版本更新内容:"
+
+msgid ""
+"Support for \"Input Shaping\" - a mechanism to counteract printer resonance. "
+"It can reduce or eliminate \"ringing\" in prints."
+msgstr "支持使用“输入整形”功能 - 此功能主要作用是抵消打印机共振。它可以减少甚至消除打印中产生的“ringing”振纹。"
+
+msgid ""
+"New \"Smooth Pressure Advance\" system. This implements \"Pressure Advance\" "
+"without introducing instantaneous velocity changes. It is also now possible to"
+" tune pressure advance using a \"Tuning Tower\" method."
+msgstr ""
+"“Smooth Pressure Advance”全新的挤出算法机制。这实现了“Pressure "
+"Advance”(打印挤出）同时不会引起挤出速度瞬间的改变，相反会变得更加平滑。现在也可以使用“Tuning Tower”方法来调整“Pressure "
+"Advance”(打印挤出）。"
+
+msgid ""
+"New \"webhooks\" API server. This provides a programmable JSON interface to "
+"Klipper."
+msgstr "“webhooks”全新的API 服务器。 这次 Klipper 添加了可编程的 JSON 接口。"
+
+msgid ""
+"The LCD display and menu are now configurable using the Jinja2 template "
+"language."
+msgstr "现在可以使用 Jinja2 模板语言配置 LCD 显示和菜单。"
+
+msgid ""
+"The TMC2208 stepper motor drivers can now be used in \"standalone\" mode with "
+"Klipper."
+msgstr "现在TMC2208 步进电机驱动器可以在 Klipper系统中 使用“standalone”模式。"
+
+msgid "Improved BL-Touch v3 support."
+msgstr "支持并优化使用BL-Touch v3 。"
+
+msgid ""
+"Improved USB identification. Klipper now has its own USB identification code "
+"and micro-controllers can now report their unique serial numbers during USB "
+"identification."
+msgstr "改进了USB识别。Klipper现在有自己的USB识别代码，微控制器现在可以在USB识别期间报告其唯一的序列号。"
+
+msgid "New kinematic support for \"Rotary Delta\" and \"CoreXZ\" printers."
+msgstr "对 \"Rotary Delta \"和 \"CoreXZ \"打印机的新运动学支持。"
+
+msgid ""
+"Micro-controller improvements: support for stm32f070, support for stm32f207, "
+"support for GPIO pins on \"Linux MCU\", stm32 \"HID bootloader\" support, "
+"Chitu bootloader support, MKS Robin bootloader support."
+msgstr ""
+"微控制器的改进：支持stm32f070，支持stm32f207，支持 \"Linux MCU \"的GPIO引脚，支持stm32 "
+"\"HID启动引导程序\"，支持Chitu启动引导程序，支持MKS Robin启动引导程序。"
+
+msgid "Improved handling of Python \"garbage collection\" events."
+msgstr "改进了对Python \"垃圾收集 \"事件的处理。"
+
+msgid ""
+"Many additional modules added: adc_scaled, adxl345, bme280, display_status, "
+"extruder_stepper, fan_generic, hall_filament_width_sensor, htu21d, "
+"homing_heaters, input_shaper, lm75, print_stats, resonance_tester, "
+"shaper_calibrate, query_adc, graph_accelerometer, graph_extruder, "
+"graph_motion, graph_shaper, graph_temp_sensor, whconsole"
+msgstr ""
+"增加了许多额外的模块：adc_scaled, adxl345, bme280, display_status, extruder_stepper, "
+"fan_generic, hall_filament_width_sensor, htu21d, homing_heaters, input_shaper,"
+" lm75, print_stats, resonance_tester, shaper_calibrate, query_adc, "
+"graph_accelerometer, graph_extruder, graph_motion, graph_shaper, "
+"graph_temp_sensor, whconsole"
+
+msgid "Several bug fixes and code cleanups."
+msgstr "几个错误的修复和代码的清理。"
+
+msgid "Klipper 0.9.1"
+msgstr "Klipper 0.9.1"
+
+msgid "Available on 20201028. Release containing only bug fixes."
+msgstr "在20201028发布。只包含错误修复。"
+
+msgid "Klipper 0.8.0"
+msgstr "Klipper 0.8.0"
+
+msgid "Available on 20191021. Major changes in this release:"
+msgstr "在20191021年发布。此版本的主要变化："
+
+msgid ""
+"New G-Code command template support. G-Code in the config file is now "
+"evaluated with the Jinja2 template language."
+msgstr "新的G-Code命令模板支持。配置文件中的G-Code现在可以用Jinja2模板语言进行编写。"
+
+msgid "Improvements to Trinamic stepper drivers:"
+msgstr "对Trinamic步进驱动器的改进："
+
+msgid "New support for TMC2209 and TMC5160 drivers."
+msgstr "新增对TMC2209和TMC5160驱动器的支持。"
+
+msgid "Improved DUMP_TMC, SET_TMC_CURRENT, and INIT_TMC G-Code commands."
+msgstr "改进了 DUMP_TMC、SET_TMC_CURRENT 和 INIT_TMC G-Code 命令。"
+
+msgid "Improved support for TMC UART handling with an analog mux."
+msgstr "通过模拟一个多路复用器改进了对 TMC UART 处理的支持。"
+
+msgid "Improved homing, probing, and bed leveling support:"
+msgstr "改进了对归位、探测和床位平整的支持："
+
+msgid ""
+"New manual_probe, bed_screws, screws_tilt_adjust, skew_correction, safe_z_home"
+" modules added."
+msgstr ""
+"新增 manual_probe, bed_screws, screws_tilt_adjust, skew_correction, safe_z_home "
+"模块。"
+
+msgid "Enhanced multi-sample probing with median, average, and retry logic."
+msgstr "通过使用中位数、平均值和重试逻辑改进了多样本探测。"
+
+msgid ""
+"Improved documentation for BL-Touch, probe calibration, endstop calibration, "
+"delta calibration, sensorless homing, and endstop phase calibration."
+msgstr "改进了 BL-Touch、探针校准、限位校准、三角洲校准、无传感器归位和限位相位校准的文档。"
+
+msgid "Improved homing support on a large Z axis."
+msgstr "改进了长 Z 轴上的归位支持。"
+
+msgid "Many Klipper micro-controller improvements:"
+msgstr "许多 Klipper 微控制器改进："
+
+msgid "Klipper ported to: SAM3X8C, SAM4S8C, SAMD51, STM32F042, STM32F4"
+msgstr "Klipper 被移植到：sam3x8c、sam4s8c、samd51、stm32f042和stm32f4"
+
+msgid "New USB CDC driver implementations on SAM3X, SAM4, STM32F4."
+msgstr "SAM3X、SAM4、STM32F4 上现在的使用了一个人新的 USB CDC 驱动程序实现。"
+
+msgid "Enhanced support for flashing Klipper over USB."
+msgstr "改进了对通过 USB 刷写 Klipper 的支持。"
+
+msgid "Software SPI support."
+msgstr "支持软件 SPI。"
+
+msgid "Greatly improved temperature filtering on the LPC176x."
+msgstr "大大改善了 LPC176x 的温度滤波。"
+
+msgid "Early output pin settings can be configured in the micro-controller."
+msgstr "可以在微控制器中配置初始引脚输出。"
+
+msgid "New website with the Klipper documentation: http://klipper3d.org/"
+msgstr "Klipper 文档的新网站：http://klipper3d.org/"
+
+msgid "Klipper now has a logo."
+msgstr "Klipper 现在有了一个标志。"
+
+msgid "Experimental support for polar and \"cable winch\" kinematics."
+msgstr "对polar和\"cable winch\"运动学的实验性支持。"
+
+msgid "The config file can now include other config files."
+msgstr "配置文件现在可以包括其他配置文件。"
+
+msgid ""
+"Many additional modules added: board_pins, controller_fan, delayed_gcode, "
+"dotstar, filament_switch_sensor, firmware_retraction, gcode_arcs, "
+"gcode_button, heater_generic, manual_stepper, mcp4018, mcp4728, neopixel, "
+"pause_resume, respond, temperature_sensor tsl1401cl_filament_width_sensor, "
+"tuning_tower"
+msgstr ""
+"添加了许多新的模块：board_pins，controller_fan，delayed_gcode，dotstar，filament_switch_sensor，firmware_retraction，gcode_arcs，gcode_button，heater_generic，manual_stepper，mcp4018，mcp4728，neopixel，pause_resume，响应，temperature_sensor"
+" tsl1401cl_filament_width_sensor，tuning_tower"
+
+msgid ""
+"Many additional commands added: RESTORE_GCODE_STATE, SAVE_GCODE_STATE, "
+"SET_GCODE_VARIABLE, SET_HEATER_TEMPERATURE, SET_IDLE_TIMEOUT, "
+"SET_TEMPERATURE_FAN_TARGET"
+msgstr ""
+"增加了许多命令：RESTORE_GCODE_STATE、SAVE_GCODE_STATE、SET_GCODE_VARIABLE、SET_HEATER_TEMPERATURE、SET_IDLE_TIMEOUT"
+" SET_TEMPERATURE_FAN_TARGET"
+
+msgid "Klipper 0.7.0"
+msgstr "Klipper 0.7.0"
+
+msgid "Available on 20181220. Major changes in this release:"
+msgstr "发布于2018年12月20日，此版本更新内容:"
+
+msgid "Klipper now supports \"mesh\" bed leveling"
+msgstr "Klipper 现在支持“网状”打印床调平"
+
+msgid ""
+"New support for \"enhanced\" delta calibration (calibrates print x/y "
+"dimensions on delta printers)"
+msgstr "新增对“增强”三角洲校准的支持（校准三角洲打印机上的打印 x/y 尺寸）"
+
+msgid ""
+"Support for run-time configuration of Trinamic stepper motor drivers (tmc2130,"
+" tmc2208, tmc2660)"
+msgstr "支持运行时配置 Trinamic 步进电机驱动（tmc2130, tmc2208, tmc2660）"
+
+msgid ""
+"Improved temperature sensor support: MAX6675, MAX31855, MAX31856, MAX31865, "
+"custom thermistors, common pt100 style sensors"
+msgstr "改进的温度传感器支持：MAX6675、MAX31855、MAX31856、MAX31865、定制热敏电阻、common pt100类传感器"
+
+msgid ""
+"Several new modules: temperature_fan, sx1509, force_move, mcp4451, z_tilt, "
+"quad_gantry_level, endstop_phase, bltouch"
+msgstr ""
+"几个新模块：temperature_fan, sx1509, force_move, mcp4451, z_tilt, quad_gantry_level,"
+" endstop_phase, bltouch"
+
+msgid ""
+"Several new commands added: SAVE_CONFIG, SET_PRESSURE_ADVANCE, "
+"SET_GCODE_OFFSET, SET_VELOCITY_LIMIT, STEPPER_BUZZ, TURN_OFF_HEATERS, M204, "
+"custom g-code macros"
+msgstr ""
+"添加了几个新命令：SAVE_CONFIG、SET_PRESSURE_ADVANCE、SET_GCODE_OFFSET、SET_VELOCITY_LIMIT、STEPPER_BUZZ、TURN_OFF_HEATERS、M204、自定义G代码宏"
+
+msgid "Expanded LCD display support:"
+msgstr "扩展 LCD 显示支持："
+
+msgid "Support for run-time menus"
+msgstr "支持实时菜单"
+
+msgid "New display icons"
+msgstr "新的显示屏图标"
+
+msgid "Support for \"uc1701\" and \"ssd1306\" displays"
+msgstr "对“uc1701”和“ssd1306”显示器的支持"
+
+msgid "Additional micro-controller support:"
+msgstr "支持更多的微控制器："
+
+msgid ""
+"Klipper ported to: LPC176x (Smoothieboards), SAM4E8E (Duet2), SAMD21 (Arduino "
+"Zero), STM32F103 (\"Blue pill\" devices), atmega32u4"
+msgstr ""
+"Klipper被移植到：LPC176x (Smoothieboards), SAM4E8E (Duet2), SAMD21 (Arduino Zero), "
+"STM32F103 (\"Blue pill\" devices), atmega32u4"
+
+msgid ""
+"New Generic USB CDC driver implemented on AVR, LPC176x, SAMD21, and STM32F103"
+msgstr "在AVR、LPC176x、SAMD21和STM32F103上实现了新的通用USB CDC驱动程序"
+
+msgid "Performance improvements on ARM processors"
+msgstr "改善了在ARM处理器上运行时的性能"
+
+msgid "The kinematics code was rewritten to use an \"iterative solver\""
+msgstr "运动学代码被重写为使用\"迭代求解器\""
+
+msgid "New automatic test cases for the Klipper host software"
+msgstr "适用于 Klipper 主机软件的新自动测试用例"
+
+msgid "Many new example config files for common off-the-shelf printers"
+msgstr "为常见的商品打印机提供了许多新的配置文件范例"
+
+msgid ""
+"Documentation updates for bootloaders, benchmarking, micro-controller porting,"
+" config checks, pin mapping, slicer settings, packaging, and more"
+msgstr "更新了引导加载程序、基准测试、微控制器移植、配置检查、引脚映射、切片设置、打包等的文档"
+
+msgid "Several bug fixes and code cleanups"
+msgstr "修复了几个错误并整理了代码"
+
+msgid "Klipper 0.6.0"
+msgstr "Klipper 0.6.0"
+
+msgid "Available on 20180331. Major changes in this release:"
+msgstr "发布于2018年3月31日。此版本的重要变化："
+
+msgid "Enhanced heater and thermistor hardware failure checks"
+msgstr "改进了加热器和热敏电阻硬件故障检查"
+
+msgid "Support for Z probes"
+msgstr "支持 Z 探针"
+
+msgid ""
+"Initial support for automatic parameter calibration on deltas (via a new "
+"delta_calibrate command)"
+msgstr "初步支持对三角洲的自动参数校准（通过一个新的delta_calibrate命令）"
+
+msgid ""
+"Initial support for bed tilt compensation (via bed_tilt_calibrate command)"
+msgstr "最初支持打印床倾斜补偿（通过bed_tilt_calibrate命令）"
+
+msgid "Initial support for \"safe homing\" and homing overrides"
+msgstr "初步支持 \"安全归位 \"和归位重写"
+
+msgid ""
+"Initial support for displaying status on RepRapDiscount style 2004 and 12864 "
+"displays"
+msgstr "初步支持在RepRapDiscount 样式的2004和12864屏幕上显示状态（STATUS）"
+
+msgid "New multi-extruder improvements:"
+msgstr "全新多挤出机改进："
+
+msgid "Support for shared heaters"
+msgstr "支持共享加热头（二合一或者多合一模式）"
+
+msgid "Initial support for dual carriages"
+msgstr "对于双步进模式的初步支持"
+
+msgid "Support for configuring multiple steppers per axis (eg, dual Z)"
+msgstr "支持为每个轴配置多个步进电机（例如：双Z）"
+
+msgid ""
+"Support for custom digital and pwm output pins (with a new SET_PIN command)"
+msgstr "支持自定义数字和PWM输出引脚（使用新的 SET_PIN 命令）"
+
+msgid ""
+"Initial support for a \"virtual sdcard\" that allows printing directly from "
+"Klipper (helps on machines too slow to run OctoPrint well)"
+msgstr "初步支持Klipper从“虚拟SDCard”直接开始打印（有助于在由于机器速度太慢而无法运行OctoPrint的情况）"
+
+msgid "Support for setting different arm lengths on each tower of a delta"
+msgstr "支持在三角洲机型上每个柱上设置不同的打印臂长度"
+
+msgid ""
+"Support for G-Code M220/M221 commands (speed factor override / extrude factor "
+"override)"
+msgstr "支持 G-Code M220/M221 指令（运行速度系数/运行挤出系数）"
+
+msgid "Several documentation updates:"
+msgstr "几个文档更新："
+
+msgid "New multiple MCU config example"
+msgstr "新增多微控制器配置示例"
+
+msgid "New bltouch sensor config example"
+msgstr "新增bltouch传感器配置示例"
+
+msgid "New FAQ, config check, and G-Code documents"
+msgstr "新的常见问题，配置检查和G-Code文档"
+
+msgid "Initial support for continuous integration testing on all github commits"
+msgstr "初步支持所有github提交的持续集成测试"
+
+msgid "Klipper 0.5.0"
+msgstr "Klipper 0.5.0"
+
+msgid "Available on 20171025. Major changes in this release:"
+msgstr "发布于2017年10月25日。此版本的主要更新："
+
+msgid "Support for printers with multiple extruders."
+msgstr "支持拥有多个挤出机的打印机。"
+
+msgid ""
+"Initial support for running on the Beaglebone PRU. Initial support for the "
+"Replicape board."
+msgstr "初步支持在Beaglebone 可编程实时单元上运行。初步支持其复制板。"
+
+msgid ""
+"Initial support for running the micro-controller code in a real-time Linux "
+"process."
+msgstr "初步支持在实时Linux进程中运行微控制器代码。"
+
+msgid ""
+"Support for multiple micro-controllers. (For example, one could control an "
+"extruder with one micro-controller and the rest of the printer with another.) "
+"Software clock synchronization is implemented to coordinate actions between "
+"micro-controllers."
+msgstr "支持多个微控制器。（例如，可以在一个微控制器控制挤出机，而用另外一个微控制器控制打印机的其他部分）实现软件时钟同步用来协调微控制器之间的动作。"
+
+msgid ""
+"Stepper performance improvements (20Mhz AVRs up to 189K steps per second)."
+msgstr "步进器性能提升（20Mhz AVR单片机可提升至每秒189千步）。"
+
+msgid ""
+"Support for controlling servos and support for defining nozzle cooling fans."
+msgstr "支持控制舵机，支持自定义喷嘴冷却风扇。"
+
+msgid "Klipper 0.4.0"
+msgstr "Klipper 0.4.0"
+
+msgid "Available on 20170503. Major changes in this release:"
+msgstr "发布于2017年5月3日。此版本主要更新："
+
+msgid ""
+"Improved installation on Raspberry Pi machines. Most of the install is now "
+"scripted."
+msgstr "改进树莓派机器上的安装。现在大部分安装都是脚本化方式执行。"
+
+msgid "Support for corexy kinematics"
+msgstr "支持CoreXY运动学机型"
+
+msgid ""
+"Documentation updates: New Kinematics document, new Pressure Advance tuning "
+"guide, new example config files, and more"
+msgstr "文档更新：全新运动学文档，全新压力提前调整指南，全新示例配置文件等"
+
+msgid ""
+"Stepper performance improvements (20Mhz AVRs over 175K steps per second, "
+"Arduino Due over 460K)"
+msgstr "步进器性能改进（20Mhz的AVR单片机每秒超过175千步，Arduino Due超过460千步）"
+
+msgid ""
+"Support for automatic micro-controller resets. Support for resets via toggling"
+" USB power on Raspberry Pi."
+msgstr "支持自动微控制器复位。支持在树莓派上切换USB电源进行重置。"
+
+msgid ""
+"The pressure advance algorithm now works with look-ahead to reduce pressure "
+"changes during cornering."
+msgstr "压力提前算法现在与前瞻（look-ahead）算法一起使用，以减少转弯过程中的压力变化。"
+
+msgid "Support for limiting the top speed of short zigzag moves"
+msgstr "支持限制短之字形移动的最高速度"
+
+msgid "Support for AD595 sensors"
+msgstr "支持了AD595 传感器"
+
+msgid "Klipper 0.3.0"
+msgstr "Klipper 0.3.0"
+
+msgid "Available on 20161223. Major changes in this release:"
+msgstr "发布于2016年12月23日。此版本的主要更新："
+
+msgid "Improved documentation"
+msgstr "改进文档"
+
+msgid "Support for robots with delta kinematics"
+msgstr "支持delta运动学的机器"
+
+msgid "Support for Arduino Due micro-controller (ARM cortex-M3)"
+msgstr "添加了Arduino Due MCU (ARM cortex-M3)的支持"
+
+msgid "Support for USB based AVR micro-controllers"
+msgstr "添加了对USB based 的AVR MCU 支持"
+
+msgid "Support for \"pressure advance\" algorithm - it reduces ooze during prints."
+msgstr "添加了对\"pressure advance\"算法的支持 - 以减少打印过程中的溢出。"
+
+msgid ""
+"New \"stepper phased based endstop\" feature - enables higher precision on "
+"endstop homing."
+msgstr "添加了\"stepper phased based endstop\"特性 - 以获得更高的限位精度。"
+
+msgid "Support for \"extended g-code\" commands such as \"help\", \"restart\", and \"status\"."
+msgstr "添加了对\"extended g-code\"的支持，例如\"help\" \"restart\"和 \"status\"。"
+
+msgid ""
+"Support for reloading the Klipper config and restarting the host software by "
+"issuing a \"restart\" command from the terminal."
+msgstr "支持重新加载 Klipper 配置，并通过终端发出 \"restart\"命令重启主机软件。"
+
+msgid ""
+"Stepper performance improvements (20Mhz AVRs up to 158K steps per second)."
+msgstr "步进电机性能提升（20Mhz AVRs 可以到达158K steps 每秒）。"
+
+msgid ""
+"Improved error reporting. Most errors now shown via the terminal along with "
+"help on how to resolve."
+msgstr "改善了报错。绝大多数错误会在终端中显示并且有解决方法。"
+
+msgid "Klipper 0.2.0"
+msgstr "Klipper 0.2.0"
+
+msgid ""
+"Initial release of Klipper. Available on 20160525. Major features available in"
+" the initial release include:"
+msgstr "Klipper的最初版本。发布于2016年5月25日。初始版本中提供的主要功能包括："
+
+msgid ""
+"Basic support for cartesian printers (steppers, extruder, heated bed, cooling "
+"fan)."
+msgstr "对于笛卡尔打印机（步进电机、挤出机、热床、冷却风扇）的初步支持。"
+
+msgid ""
+"Support for common g-code commands. Support for interfacing with OctoPrint."
+msgstr "支持常见的G-Code命令。支持OctoPrint的接口。"
+
+msgid "Acceleration and lookahead handling"
+msgstr "加速和前瞻处理"
+
+msgid "Support for AVR micro-controllers via standard serial ports"
+msgstr "通过标准串行接口支持AVR微控制器"
+
+#: docs/Releases.md:block 1 (header)
+msgid "Releases"
+msgstr "发行说明"
+
+#: docs/Releases.md:block 3 (header)
+msgid "Klipper 0.10.0"
+msgstr "Klipper 0.10.0"
+
+#: docs/Releases.md:block 4 (paragraph)
+msgid "Available on 20210929. Major changes in this release:"
+msgstr "发布于2021年9月29日。此版本主要更新："
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"Support for \"Multi-MCU Homing\". It is now possible for a stepper motor and "
+"its endstop to be wired to separate micro-controllers. This simplifies wiring "
+"of Z probes on \"toolhead boards\"."
+msgstr "支持“多微控制器归位”。现在可以将步进电机和限位连接到单独的微控制器上。此举简化了“工具板”上的Z探头的接线。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"Klipper now has a [Community Discord Server](https://discord.klipper3d.org) "
+"and a [Community Discourse Server](https://community.klipper3d.org)."
+msgstr ""
+"klipper 现在有[社区Discord "
+"服务器](https://discord.klipper3d.org)和[社区论坛](https://community.klipper3d.org)."
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"The [Klipper website](https://www.klipper3d.org) now uses the \"mkdocs\" "
+"infrastructure. There is also a [Klipper "
+"Translations](https://github.com/Klipper3d/klipper-translations) project."
+msgstr ""
+"[Klipper官网](https://www.klipper3d.org)现在使用“mkdocs”基础架构。还有一个[翻译Klipper](https://github.com/Klipper3d/klipper-"
+"translations)项目。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid "Automated support for flashing firmware via sdcard on many boards."
+msgstr "在许多开发板上通过sdcard自动更新固件。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid "New kinematic support for \"Hybrid CoreXY\" and \"Hybrid CoreXZ\" printers."
+msgstr "添加了新的运动学\"Hybrid CoreXY\"和\"Hybrid CoreXZ\"的打印机支持。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"Klipper now uses `rotation_distance` to configure stepper motor travel "
+"distances."
+msgstr "Klipper 现在使用`rotation_distance`来配置步进电机的行程距离。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"The main Klipper host code can now directly communicate with micro-controllers"
+" using CAN bus."
+msgstr "Klipper上位机现在可以使用CAN总线与微控制器进行通信。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"New \"motion analysis\" system. Klipper's internal motion updates and sensor "
+"results can be tracked and logged for analysis."
+msgstr "新的“运动分析”系统。可以追踪和记录Klipper内部的运动更新和传感器结果以供分析。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"Trinamic stepper motor drivers are now continuously monitored for error "
+"conditions."
+msgstr "Trinamic步进电机驱动现在可以连续监控错误情况。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid "Support for the rp2040 micro-controller (Raspberry Pi Pico boards)."
+msgstr "添加了对RP2040 MCU的支持（Raspberry Pi Pico）。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid "The \"make menuconfig\" system now utilizes kconfiglib."
+msgstr "\"make menuconfig\"系统现在使用 kconfiglib。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"Many additional modules added: ds18b20, duplicate_pin_override, "
+"filament_motion_sensor, palette2, motion_report, pca9533, pulse_counter, "
+"save_variables, sdcard_loop, temperature_host, temperature_mcu"
+msgstr ""
+"添加了许多附加模块：ds18b20, duplicate_pin_override, filament_motion_sensor, palette2, "
+"motion_report, pca9533, pulse_counter, save_variables, sdcard_loop, "
+"temperature_host, temperature_mcu"
+
+#: docs/Releases.md:block 3 (header)
+msgid "Klipper 0.11.0"
+msgstr "Klipper 0.11.0"
+
+#: docs/Releases.md:block 4 (paragraph)
+msgid "Available on 20221128. Major changes in this release:"
+msgstr "发布于2022年11月28日。此版本的主要更新："
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid "Trinamic stepper motor driver \"step on both edges\" optimization."
+msgstr "优化了Trinamic驱动的 \"step on both edges\"功能。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"Support for Python3. The Klipper host code will run with either Python2 or "
+"Python3."
+msgstr "添加对Python3的支持。现在Klipper Host 的代码可以运行在Python2 或 Python3中。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"Enhanced CAN bus support. Support for CAN bus on rp2040, stm32g0, stm32h7, "
+"same51, and same54 chips. Support for \"USB to CAN bus bridge\" mode."
+msgstr ""
+"改进了CAN Bus 支持。在rp2040 stm32g0 stm32h7 same51 以及 same54 芯片上支持了CAN Bus。并支持了\"USB"
+" to CAN bus bridge\" 模式。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid "Support for CanBoot bootloader."
+msgstr "添加了对CanBoot bootloader的支持。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid "Support for mpu9250 and mpu6050 accelerometers."
+msgstr "添加了对mpu9250以及mpu6050 加速度计的支持。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"Improved error handling for max31856, max31855, max31865, and max6675 "
+"temperature sensors."
+msgstr "改进了对温度传感器max31856 max31855 max31865 max6675的错误处理。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"It is now possible to configure LEDs to update during long running G-Code "
+"commands using LED \"template\" support."
+msgstr "现在可以使用LED“模板”支持将LED配置为在长时间运行G-Code命令期间更新。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"Several micro-controller improvements. New support for stm32h743, stm32h750, "
+"stm32l412, stm32g0b1, same70, same51, and same54 chips. Support for i2c reads "
+"on atsamd and stm32f0. Hardware pwm support on stm32. Linux mcu signal based "
+"event dispatch. New rp2040 support for \"make flash\", i2c, and rp2040-e5 USB "
+"errata."
+msgstr ""
+"多项微控制器改进。 新增对 stm32h743 stm32h750 stm32l412 stm32g0b1 same70 same51 same54 "
+"芯片的支持。在 atsamd 和 stm32f0 上支持 i2c 读取。在 stm32 上支持硬件 pwm。基于 Linux mcu 信号的事件分派。 新的"
+" rp2040 支持 \"make flash\" i2c 以及 rp2040-e5 USB 勘误。"
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"New modules added: angle, dac084S085, exclude_object, led, mpu9250, pca9632, "
+"smart_effector, z_thermal_adjust. New deltesian kinematics added. New dump_mcu"
+" tool added."
+msgstr ""
+"新增模块：ANGLE、DAC084S085、EXCLUDE_OBJECT、LED、mpu9250、pca9632、SMART_EFECTOR、Z_HEARTER_ADJUST。添加了新的Deltesian运动学。添加了新的Dump_MCU工具。"
+
+#: docs/Releases.md:block 3 (header)
+msgid "Klipper 0.13.0"
+msgstr ""
+
+#: docs/Releases.md:block 4 (paragraph)
+msgid "Available on 20250411. Major changes in this release:"
+msgstr ""
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid "New \"sweeping vibrations\" resonance testing mechanism for input shaper."
+msgstr ""
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid "Fans and GPIO pins can now be assigned a formula (via Jinja2 \"templates\")."
+msgstr ""
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"The bed_mesh code now supports \"adaptive bed mesh\". The area probed can be "
+"adjusted for the size of the print."
+msgstr ""
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"A new `minimum_cruise_ratio` kinematic parameter has been added (it replaces "
+"the previous `max_accel_to_decel` parameter)."
+msgstr ""
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid "Several new sensors added:"
+msgstr ""
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"Support for ldc1612 \"eddy\" current sensors. This includes probing support, "
+"fast \"scan\" probing, and temperature calibration."
+msgstr ""
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"New support for \"load cell\" measurements. Support for connecting these load "
+"cells to hx71x and ads1220 ADC sensors."
+msgstr ""
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"Support for BMP180, BMP388, and SHT3x temperature sensors. Support for "
+"measuring temperature with ADS1x1x ADC chips."
+msgstr ""
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid "New lis3dh and icm20948 accelerometer support."
+msgstr ""
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid "Support for mt6816 and mt6826s \"hall angle\" sensors."
+msgstr ""
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid "New micro-controller improvements:"
+msgstr ""
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid "New support for rp2350 micro-controllers."
+msgstr ""
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid "Existing rp2040 chips now run at 200MHz (up from 125Mhz)."
+msgstr ""
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"The micro-controller code can now define many more commands (up to 16384 from "
+"128)."
+msgstr ""
+
+#: docs/Releases.md:block 5 (unordered list)
+msgid ""
+"Other modules added: aip31068_spi, canbus_stats, error_mcu, "
+"garbage_collection, pwm_cycle_time, pwm_tool, garbage_collection."
+msgstr ""
+
+#: docs/Releases.md:block 6 (header)
+msgid "Klipper 0.12.0"
+msgstr ""
+
+#: docs/Releases.md:block 7 (paragraph)
+msgid "Available on 20231110. Major changes in this release:"
+msgstr ""
+
+#: docs/Releases.md:block 8 (unordered list)
+msgid "Support for COPY and MIRROR modes on IDEX printers."
+msgstr ""
+
+#: docs/Releases.md:block 8 (unordered list)
+msgid "Several micro-controller improvements:"
+msgstr ""
+
+#: docs/Releases.md:block 8 (unordered list)
+msgid "Support for new ar100 and hc32f460 architectures."
+msgstr ""
+
+#: docs/Releases.md:block 8 (unordered list)
+msgid ""
+"Support for stm32f7, stm32g0b0, stm32g07x, stm32g4, stm32h723, n32g45x, "
+"samc21, and samd21j18 chip variants."
+msgstr ""
+
+#: docs/Releases.md:block 8 (unordered list)
+msgid "Improved DFU and Katapult reboot handling."
+msgstr ""
+
+#: docs/Releases.md:block 8 (unordered list)
+msgid "Improved performance on USB to CANbus bridge mode."
+msgstr ""
+
+#: docs/Releases.md:block 8 (unordered list)
+msgid "Improved performance on \"linux mcu\"."
+msgstr ""
+
+#: docs/Releases.md:block 8 (unordered list)
+msgid "New support for software based i2c."
+msgstr ""
+
+#: docs/Releases.md:block 8 (unordered list)
+msgid ""
+"New hardware support for tmc2240 stepper motor drivers, lis2dw12 "
+"accelerometers, and aht10 temperature sensors."
+msgstr ""
+
+#: docs/Releases.md:block 8 (unordered list)
+msgid "New axis_twist_compensation and temperature_combined modules added."
+msgstr ""
+
+#: docs/Releases.md:block 8 (unordered list)
+msgid "New support for gcode arcs in XY, XZ, and YZ planes."
+msgstr ""

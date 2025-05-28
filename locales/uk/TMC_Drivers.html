@@ -1,0 +1,1820 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>Драйвери TMC - Klipper documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../_klipper3d/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-VEN1PGNQL4"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-VEN1PGNQL4",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VEN1PGNQL4"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tmc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Klipper documentation" class="md-header__button md-logo" aria-label="Klipper documentation" data-md-component="logo">
+      
+  <img src="../../img/klipper.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Klipper documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Драйвери TMC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2 0-.68.06-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.923 7.923 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8.008 8.008 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.65 15.65 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
+                    简体中文
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/zh-Hant/" hreflang="zh-Hant" class="md-select__link">
+                    繁體中文
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/hu/" hreflang="hu" class="md-select__link">
+                    Magyar
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/it/" hreflang="it" class="md-select__link">
+                    Italiano
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/fr/" hreflang="fr" class="md-select__link">
+                    Français
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Klipper3d/klipper/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Klipper3d/klipper
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Klipper documentation" class="md-nav__button md-logo" aria-label="Klipper documentation" data-md-component="logo">
+      
+  <img src="../../img/klipper.svg" alt="logo">
+
+    </a>
+    Klipper documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Klipper3d/klipper/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Klipper3d/klipper
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Overview.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Features.html" class="md-nav__link">
+        Features
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ.html" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Releases.html" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Config_Changes.html" class="md-nav__link">
+        Configuration Changes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contact.html" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Installation and Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation and Configuration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Installation and Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Installation.html" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OctoPrint.html" class="md-nav__link">
+        OctoPrint for Klipper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          Configuration Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Configuration Reference" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Config_Reference.html" class="md-nav__link">
+        Configuration reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rotation_Distance.html" class="md-nav__link">
+        Rotation distance
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Config_checks.html" class="md-nav__link">
+        Configuration checks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4" type="checkbox" id="__nav_7_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_4">
+          Bed Level
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bed Level" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_4">
+          <span class="md-nav__icon md-icon"></span>
+          Bed Level
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bed_Level.html" class="md-nav__link">
+        Bed leveling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Delta_Calibrate.html" class="md-nav__link">
+        Delta calibration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Probe_Calibrate.html" class="md-nav__link">
+        Probe calibration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLTouch.html" class="md-nav__link">
+        BL-Touch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manual_Level.html" class="md-nav__link">
+        Manual leveling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bed_Mesh.html" class="md-nav__link">
+        Bed Mesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Endstop_Phase.html" class="md-nav__link">
+        Endstop phase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Axis_Twist_Compensation.html" class="md-nav__link">
+        Axis Twist Compensation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_5" type="checkbox" id="__nav_7_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_5">
+          Resonance Compensation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resonance Compensation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          Resonance Compensation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Resonance_Compensation.html" class="md-nav__link">
+        Resonance Compensation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Measuring_Resonances.html" class="md-nav__link">
+        Measuring Resonances
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Pressure_Advance.html" class="md-nav__link">
+        Pressure advance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../G-Codes.html" class="md-nav__link">
+        G-Codes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_8" type="checkbox" id="__nav_7_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_8">
+          Command templates
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Command templates" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_8">
+          <span class="md-nav__icon md-icon"></span>
+          Command templates
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Command_Templates.html" class="md-nav__link">
+        Commands templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Status_Reference.html" class="md-nav__link">
+        Status reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TMC_Drivers.html" class="md-nav__link">
+        TMC drivers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Multi_MCU_Homing.html" class="md-nav__link">
+        Multiple Micro-controller Homing and Probing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Slicers.html" class="md-nav__link">
+        Slicers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Skew_Correction.html" class="md-nav__link">
+        Skew correction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Exclude_Object.html" class="md-nav__link">
+        Exclude Objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using_PWM_Tools.html" class="md-nav__link">
+        Using PWM tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Developer Documentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developer Documentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Code_Overview.html" class="md-nav__link">
+        Code overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Kinematics.html" class="md-nav__link">
+        Kinematics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Protocol.html" class="md-nav__link">
+        Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API_Server.html" class="md-nav__link">
+        API server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MCU_Commands.html" class="md-nav__link">
+        MCU commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CANBUS_protocol.html" class="md-nav__link">
+        CANBUS protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Debugging.html" class="md-nav__link">
+        Debugging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Benchmarks.html" class="md-nav__link">
+        Benchmarks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CONTRIBUTING.html" class="md-nav__link">
+        Contributing to Klipper
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Packaging.html" class="md-nav__link">
+        Packaging Klipper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Device Specific Documents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Device Specific Documents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Device Specific Documents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Example_Configs.html" class="md-nav__link">
+        Example configurations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SDCard_Updates.html" class="md-nav__link">
+        SDCard updates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RPi_microcontroller.html" class="md-nav__link">
+        RPi microcontroller
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Beaglebone.html" class="md-nav__link">
+        Beaglebone
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bootloaders.html" class="md-nav__link">
+        Bootloaders
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bootloader_Entry.html" class="md-nav__link">
+        Bootloader Entry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CANBUS.html" class="md-nav__link">
+        CANBUS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CANBUS_Troubleshooting.html" class="md-nav__link">
+        CANBUS Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TSL1401CL_Filament_Width_Sensor.html" class="md-nav__link">
+        TSL1401CL filament width sensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hall_Filament_Width_Sensor.html" class="md-nav__link">
+        Hall filament width sensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Eddy_Probe.html" class="md-nav__link">
+        Eddy Current Inductive probe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Load_Cell.html" class="md-nav__link">
+        Load Cells
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sponsors.html" class="md-nav__link">
+        Sponsors
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Тюнінговий струм двигуна
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_" class="md-nav__link">
+    Не вказуйте про утримання_поточної
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spreadcycle-stealthchop-mode" class="md-nav__link">
+    Налаштування "spreadCycle" проти "stealthChop" Mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tmc_1" class="md-nav__link">
+    Налаштування інтерполяції TMC вводить невелике відхилення позиції
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Сенсорний блиск
+  </a>
+  
+    <nav class="md-nav" aria-label="Сенсорний блиск">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Лімітації
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Вимоги
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Тюнінг
+  </a>
+  
+    <nav class="md-nav" aria-label="Тюнінг">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    Виберіть швидкість лосини
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cfg" class="md-nav__link">
+    Налаштування принтера.cfg для безсенсорного гоління
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    Знайдіть найвищу чутливість, яка успішно будинки
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    Знайти найменшу чутливість, які будинки з одним дотиком
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cfg_1" class="md-nav__link">
+    Оновлення принтера.cfg з значенням чутливості
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    Використання Macros при голодуванні
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corexy" class="md-nav__link">
+    Поради щодо безсенсорного гоління на CoreXY
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    Налаштування драйвера та діагностики
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_xxx" class="md-nav__link">
+    Налаштування параметрів драйвера_XXX
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    Загальні питання
+  </a>
+  
+    <nav class="md-nav" aria-label="Загальні питання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chop" class="md-nav__link">
+    Чи можу я використовувати прихованийChop режим на екструдера з передовим тиском?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmc-uart-stepper_x-ifcnt" class="md-nav__link">
+    Я тримую "Не вдалося прочитати tmc uart 'stepper_x' реєстрація IFCNT" помилки?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmc-spi-stepper_x" class="md-nav__link">
+    Я тримую "Неможливо писати tmc spi 'stepper_x' реєстрація ..." помилки?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmc_2" class="md-nav__link">
+    Чому я отримав "TMC повідомлення про помилку: ..." помилка?
+  </a>
+  
+    <nav class="md-nav" aria-label="Чому я отримав "TMC повідомлення про помилку: ..." помилка?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ot1overtemperror" class="md-nav__link">
+    ... ot=1(OvertempError!)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmc-shorttognd-shorttosupply" class="md-nav__link">
+    TMC повідомляє про помилку: ... ShortToGND АБО ShortToSupply
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmc-reset1reset-cs_actual0reset-se0reset" class="md-nav__link">
+    TMC повідомляє про помилку: ... reset=1(Reset) АБО CS_ACTUAL=0(Reset?) АБО SE=0(Reset?)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmc-uv_cp1" class="md-nav__link">
+    TMC повідомляє про помилку: ... uv_cp=1(Знижена напруга!)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cyclecoolstepetc" class="md-nav__link">
+    Як я налаштовую поширенняCycle/coolStep/etc. режим на драйверах?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/Klipper3d/klipper/blob/master/docs/locales/uk/TMC_Drivers.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="tmc">Драйвери TMC<a class="headerlink" href="#tmc" title="Permanent link">&para;</a></h1>
+<p>Цей документ надає інформацію про використання драйверів двигуна Trinamic stepper у режимі SPI / UART на Klipper.</p>
+<p>Кліппер також може використовувати Тринамічні драйвери в режимі "standalone". Однак, коли драйвери знаходяться в цьому режимі, не потрібно спеціальної конфігурації Klipper і розширені функції Klipper обговорюються в цьому документі.</p>
+<p>Додатково до цього документа обов'язково перегляньте посилання на налаштування драйвера <a href="Config_Reference.html#tmc-stepper-driver-configuration">TMC</a>.</p>
+<h2 id="_1">Тюнінговий струм двигуна<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Більший струм водія збільшує точність позицій і крутний момент. Тим не менш, чим вище струм також підвищує тепло, що виробляється кроковим двигуном і кроковим двигуном. Якщо водій крокової двигуна занадто спекотний він буде відключити себе і Klipper повідомить про помилку. Якщо кроковий двигун занадто гаряча, він втрачає крутний момент і точність позицій. (Якщо вона дуже гаряча, вона також може розтопити пластикові деталі, прикріплені до неї або біля неї.)</p>
+<p>В якості загального наконечника, віддайте перевагу більш високі значення струму до тих пір, поки кроковий двигун не отримує занадто спекотний і кроковий драйвер не повідомляє попередження або помилки. В цілому, для крокової мотора відчуває себе теплим, але це не повинно стати настільки гарячим, що це болісно доторкнеться.</p>
+<h2 id="_">Не вказуйте про утримання_поточної<a class="headerlink" href="#_" title="Permanent link">&para;</a></h2>
+<p>Якщо один налаштовує <code>hold_current</code>, то драйвер TMC може зменшити струм на кроковий двигун, коли він виявляє, що степпер не рухається. Однак, змінний струм двигуна може сам ввести рух двигуна. Це може виникати через "детентні сили" в рамках крокової мотори (постійний магніт в роторі тягнеться до залізних зубів в статорі) або через зовнішні сили на вісь-перевезення.</p>
+<p>Більшість крокових моторів не отримають суттєву користь для зменшення струму при нормальних друкух, оскільки деякі рухи друку залишать кроковий двигун свічки досить довго, щоб активувати функцію <code>hold_current</code>. І, навряд чи, що потрібно ввести тонкі артефакти друку на кілька перегонів друку, які залишають крокової свічки досить довго.</p>
+<p>Якщо один хоче зменшити струм до моторів під час початку друку, то розглянути емітацію <a href="G-Codes.html#set_tmc_current">SET_TMC_CURRENT</a> команди в <a href="Slicers.html#klipper-gcode_macro">START_PRINT макро</a> для регулювання струму до і після нормального переміщення друку.</p>
+<p>Деякі принтери з виділеними Двигуни Z, які свічуються при нормальному перетворенні друку (не ліжко_меш, немає ліжко_тил, немає Z skew_correction, немає "масового режиму" принтів і т.д.) може знайти, що двигуни Z працюють охолоджувача з <code>hold_current</code>. При реалізації цього потім обов'язково враховуйте цей тип некомандованого руху осі Z під час вирівнювання місця, пров'язування ліжка, калібрування зонда та аналогічного. <code>driver_TPOWERDOWN</code> і <code>driver_IHOLDDELAY</code> також слід калібрувати відповідно. <code>hold_current</code>.</p>
+<h2 id="spreadcycle-stealthchop-mode">Налаштування "spreadCycle" проти "stealthChop" Mode<a class="headerlink" href="#spreadcycle-stealthchop-mode" title="Permanent link">&para;</a></h2>
+<p>За замовчуванням Klipper розміщує драйвери TMC в режимі "spreadCycle". Якщо драйвер підтримує "stealthChop", то він може бути включений, додаючи <code>stealthchop_threshold: 999999999</code> до розділу налаштування TMC.</p>
+<p>В цілому поширення Режим циклів забезпечує більший крутний момент і більша точність позицій, ніж стелтКхоп режим. Тим не менш, режим крадіжкиЧоп може значно знизити шум на деяких принтерах.</p>
+<p>Випробування режимів порівняння показали підвищений "положений лаг" близько 75% повного кроку при постійному русі швидкості при використанні крадіжки Режим хопа (наприклад, на принтері з 40mm обертання_distance і 200 кроків_per_rotation, відхилення позицій постійного руху швидкості збільшено ~0.150mm). Тим не менш, це "деле в отриманні запитуваного положення" може не проявлятися як суттєвий дефект друку і може віддати перевагу тихій поведінці крадіжкиChop-моделі.</p>
+<p>Рекомендовано завжди використовувати режим "спредКікле" (за умови <code>stealthchop_threshold</code>) або завжди використовувати режим "stealthChop" (встановивши <code>stealthchop_threshold</code> до 999999). На жаль, драйвери часто виробляють погані і переконливі результати, якщо зміни режиму, коли двигун знаходиться на неоднорідній швидкості.</p>
+<p>Note that the <code>stealthchop_threshold</code> config option does not impact sensorless homing as Klipper automatically switches the TMC driver to an appropriate mode during sensorless homing operations.</p>
+<h2 id="tmc_1">Налаштування інтерполяції TMC вводить невелике відхилення позиції<a class="headerlink" href="#tmc_1" title="Permanent link">&para;</a></h2>
+<p>Драйвер TMC <code>інтерпольат</code> може зменшити шум принтера за вартістю введення невеликої системної похибки. Цей системний результат похибки про похибки водія у виконанні "кроків", які відправляє її. Під час постійної швидкості рухи, це результат затримки в позиційній похибці майже половини налаштованого мікрокрокрокропу (точніше, похибка - половина мікрокроступної дистанції мінус 512-го поверху). Наприклад, на віссю з поворотом 40mm, 200 кроків_per_rotation, і 16 мікрокроступів, системна похибка, введена при постійному русі швидкості ~0.006mm.</p>
+<p>Для найкращої точності позицій слід розглянути за допомогою поширення Режим циклу та відключення інтерполяції (set <code>interpolate: False</code> в налаштуваннях драйвера TMC). При налаштуванні цього шляху можна збільшити мікрокроп <code></code> для зменшення шуму під час руху крокової атаки. Як правило, мікрокроступна установка <code>64</code> або <code>128</code> буде мати схожий шум, як інтерполяція, і зробити так без введення системної похибки.</p>
+<p>При використанні стелс Хоп-режим, після чого послідовна неточність від інтерполяції невелика порівняно з позиційною неточністю, введеною з режиму крадіжкиЧоп. Таким чином, перевтілення інтерполяції не вважається корисною, коли в прихованому режимі, і можна залишити інтерполяції в його стандартному стані.</p>
+<h2 id="_2">Сенсорний блиск<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Безсенсорне замішування дозволяє в домашніх умовах вісь без необхідності фізичного вимикача. Замість, перевезення на віссю переноситься в механічний ліміт, що робить кроковий двигун пропускає кроки. Драйвер кроковий відзначає втрачені кроки і вказує на це для контролінгу MCU (Klipper) шляхом засвоєння шпильки. Ця інформація може бути використана Klipper як кінцева зупинка для осі.</p>
+<p>Цей посібник охоплює налаштування безсенсорного гоління для принтера X. Тим не менш, він працює однаково з усіма іншими осями (що вимагають закінчення зупинки). Ви повинні налаштовувати і налаштовувати його на одну вісь одночасно.</p>
+<h3 id="_3">Лімітації<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>Обов'язково, що Ваші механічні компоненти здатні обробити навантаження вагонки, що припливають в ліміт осі багаторазово. Тим не менш, це може створити багато сил. Пришийте вісь Z, змащуючи насадку на поверхню друку, може бути непогана ідея. Для кращих результатів перевірте, що вісь-перевезення зробить контакт фірми з обмеженням осі.</p>
+<p>Крім того, для принтера не буде достатньо точного. В той час як хмінг X і Y осі на картонній машині може добре працювати, хмінг осі Z, як правило, не точніше і може призвести до невідповідної висоти першого шару. Захоплення дельта принтера не бажано через відсутність точності.</p>
+<p>Далі, стиглий виявлення крокового драйвера залежить від механічного навантаження на двигун, струм двигуна і температури двигуна (резистентність вологи).</p>
+<p>Відстеження безшумних голів найкраще працює на швидкості середнього двигуна. Для дуже повільних швидкостей (без 10 RPM) двигун не генерує значну задню EMF і TMC не може надійно виявити моторні стилі. далі, при дуже високих швидкостях, спина EMF мотора підійде напругу живлення мотора, тому TMC не може виявити столи. Повідомляємо, що в описі вашого конкретного TMCs ви можете переглянути опис. Ви також можете дізнатися більше про обмеження цього налаштування.</p>
+<h3 id="_4">Вимоги<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>Кілька передумов необхідно використовувати безсенсорне гоління:</p>
+<ol>
+<li>СталГуард здатний драйвера стартера TMC (tmc2130, tmc2209, tmc2660 або tmc5160).</li>
+<li>SPI / інтерфейс UART драйвера ТМC проводилася до мікроконтролера (режим витримки не працює).</li>
+<li>Привідний "DIAG" або "SG_TST" штифт драйвера TMC підключений до мікроконтролера.</li>
+<li>Заходи в документі <a href="Config_checks.html">config checks</a> повинні працювати, щоб підтвердити крокові двигуни налаштовані і працюють належним чином.</li>
+</ol>
+<h3 id="_5">Тюнінг<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>Процедура описана тут має шість основних кроків:</p>
+<ol>
+<li>Виберіть швидкість стрибка.</li>
+<li>Налаштуйте файл <code>printer.cfg</code>, щоб увімкнути сенсорне панування.</li>
+<li>Знайдіть налаштування стійкого захисту з найвищою чутливістю, яка успішно домовласників.</li>
+<li>Знайдіть налаштування траалгарду з найнижчою чутливістю, яка вдало домовласників з одним дотиком.</li>
+<li>Оновлення <code>printer.cfg</code> з бажаним налаштуванням траалгарду.</li>
+<li>Створення або оновлення <code>printer.cfg</code> макроси до дому послідовно.</li>
+</ol>
+<h4 id="_6">Виберіть швидкість лосини<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>Швидкість панування є важливим вибором при виконанні безсенсорного гоління. Бажано використовувати повільну швидкість хмелю, щоб перевезення не вичерпувала зайву силу на каркасі при виготовленні контакту з закінченням рейки. Тим не менш, драйвери TMC не можуть надійно виявити високий рівень при дуже повільній швидкості.</p>
+<p>Хороша початкова точка для швидкості замішування є для крокової двигуна, щоб зробити повне обертання кожні два секунди. Для багатьох осей це буде <code>rotation_distance</code> розділений на два. Наприклад:</p>
+<div class="highlight"><pre><span></span><code>[stepper_x]
+обертання_distance: 40
+код товару: 20
+...
+</code></pre></div>
+
+<h4 id="cfg">Налаштування принтера.cfg для безсенсорного гоління<a class="headerlink" href="#cfg" title="Permanent link">&para;</a></h4>
+<p><code>homing_retract_dist</code> налаштування повинна бути встановлена до нуля в <code>stepper_x</code> розділ налаштування для відключення другого підйому. Друга спроба хмінгу не додасть значення при використанні безсенсорного хмінгу, це не буде надійно працювати, і він буде плутати процес налаштування.</p>
+<p>Переконайтеся, що параметр <code>hold_current</code> не вказано в розділі драйвера TMC config. (Якщо утримувати_поточний встановлюється після того, як з'явиться контакт, рух припиняється, поки перевезення натискається на кінець рейки, а зменшення струму в той час як в такому положенні може викликати перевезення, щоб пересуватися - це призводить до низької продуктивності і буде протистояти процесу тюнінгу.)</p>
+<p>Необхідно налаштовувати безсенсорні замшеві шпильки і налаштовувати початкові налаштування "стандарт". Прикладна конфігурація Tmc2209 для осі X може виглядати:</p>
+<div class="highlight"><pre><span></span><code>[tmc2209 stepper_x]
+diag_pin: ^PA1 # Комплект до MCU, підключений до штифта TMC DIAG
+Драйвери SGTHRS: 255 # 255 є найбільш чутливою вартістю, 0 найменш чутлива
+...
+
+[stepper_x]
+JavaScript licenses API Веб-сайт Go1.13.8
+код товару: 0
+...
+</code></pre></div>
+
+<p>Приклад tmc2130 або tmc5160 config може виглядати як:</p>
+<div class="highlight"><pre><span></span><code>[tmc2130 stepper_x]
+diag1_pin: ^!PA1 # Pin підключений до штифта TMC DIAG1 (або використовувати діаг0_pin / DIAG0 шпилька)
+драйвер_SGT: -64 # -64 є найбільш чутливим значенням, 63 є найменш чутливим
+...
+
+[stepper_x]
+JavaScript licenses API Веб-сайт Go1.13.8
+код товару: 0
+...
+</code></pre></div>
+
+<p>Приклад tmc2660 config може виглядати як:</p>
+<div class="highlight"><pre><span></span><code>[tmc2660 stepper_x]
+драйвер_SGT: -64 # -64 є найбільш чутливим значенням, 63 є найменш чутливим
+...
+
+[stepper_x]
+endstop_pin: ^PA1 # Pin підключений до TMC SG_TST шпильки
+код товару: 0
+...
+</code></pre></div>
+
+<p>Приклади вище тільки показують параметри, специфічні для безсенсорного гоління. Дивитися посилання <a href="Config_Reference.html#tmc-stepper-driver-configuration">config</a> для всіх доступних варіантів.</p>
+<h4 id="_7">Знайдіть найвищу чутливість, яка успішно будинки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>Помістити вагонку біля центру рейки. Використовуйте команду SET_TMC_FIELD, щоб встановити найвищу чутливість. Для tmc2209:</p>
+<div class="highlight"><pre><span></span><code>СЕТ_TMC_FIELD СТЕППЕР=Степпер_x ФАЙЛД=СГТРС ВАЛУ=255
+</code></pre></div>
+
+<p>Для tmc2130, tmc5160 і tmc2660:</p>
+<div class="highlight"><pre><span></span><code>СЕТ_TMC_FIELD СТЕППЕР=Степпер_x ФАЙЛД=СТ ВАЛЭ=-64
+</code></pre></div>
+
+<p>Потім випишіть команду <code>G28 X0</code> і перевірте віссю не рухається на всіх або швидко зупиняється переміщення. Якщо вісь не зупиняється, то виписайте <code>M112</code>, щоб захопити принтер - щось не вірно з діаг / сg_tst шпилькою або конфігурацією, і її необхідно виправити до продовження.</p>
+<p>Далі, безперервно зменшуючи чутливість параметра <code>VALUE</code> і запустити <code>SET_TMC_FIELD</code> <code>G28 X0</code> команди знову знайдуть найвищу чутливість, яка призводить до перевезення, успішно перемістивши весь шлях до кінця і жовчі. (Для драйверів tmc2209 це буде знешкоджено SGTHRS, для інших водіїв він буде збільшуватися sgt.) Обов'язково запустіть кожну спробу з перевезенням поруч з центром рейки (у разі необхідності <code>M84</code>, а потім вручну перемістіть перевезення до центру). Необхідно знайти найбільшу чутливість, що домівки надійно (постановки з вищим результатом чутливості в малому або без руху). Зверніть увагу, що знайшли значення <em>maximum_sensitivity</em>. (Якщо мінімальна можлива чутливість (SGTHRS=0 або sgt=63) отримується без будь-якого руху перевезення, то щось не правильне з діаг/сg_tst шпилькою або конфігурацією, і вона повинна бути виправлена до продовження.)</p>
+<p>При пошуку максимальної_чутливості, це може бути зручно стрибати на різні налаштування VALUE (наприклад, для виявлення параметра VALUE). Якщо це зробити, то приготувавши, щоб випустити <code>M112</code>, щоб захопити принтер, так як установка з дуже низькою чутливістю може викликати вісь для багаторазового "чубчик" в кінці рейки.</p>
+<p>Обов'язково почекайте пару секунд між кожною спробою. Після того, як драйвер TMC виявляє високий рівень, він може зайняти трохи часу для того, щоб очистити його внутрішній показник і бути здатний виявляти інший високий рівень.</p>
+<p>Під час цих тестів, якщо команда <code>G28 X0</code> не пересуває весь шлях до обмеження осі, то будьте обережні з видачею будь-яких регулярних команд руху (наприклад, <code>G1</code>). Кліппер не має правильного розуміння положення про перевезення та команди руху може викликати небажані та переконливі результати.</p>
+<h4 id="_8">Знайти найменшу чутливість, які будинки з одним дотиком<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>Коли захоплення з знайденим <em>maximum_sensitivity</em> значення, вісь повинна переходити до кінця рейки і зупинитися з "сингом дотиком" - тобто не повинно бути "затискання" або "чуття" звуку. (Якщо є чубчик або натискання звуку в максимальній_чутливості, то хмінг_швидкість може бути занадто низьким, струм водія може бути занадто низьким, або безсенсорне хміння може бути недобрим вибором для осі.)</p>
+<p>Наступний крок полягає в тому, щоб знову безперервно перемістити перевезення в позицію недалеко від центру рейки, зменшити чутливість і запустити <code>SET_TMC_FIELD</code> <code>G28 X0</code> команди - ціль тепер знайти найнижчу чутливість, яка все ще призводить до перевезення, вдало занурення з "синглінним дотиком". Що це, це не "чубчик" або "клацання" при контакті з закінченням рейки. Зверніть увагу, що знайшли значення <em>minimum_sensitivity</em>.</p>
+<h4 id="cfg_1">Оновлення принтера.cfg з значенням чутливості<a class="headerlink" href="#cfg_1" title="Permanent link">&para;</a></h4>
+<p><em>maximum_sensitivity</em> і <em>minimum_sensitivity</em>, використовуйте калькулятор для отримання рекомендувати чутливість як <em>minimum_sensitivity + (maximum_sensitivity - мінімум_sensitivity)/3</em>. Рекомендована чутливість повинна бути в діапазоні між мінімальним і максимальним, але трохи ближче до мінімуму. Закруглити кінцеве значення до найближчого цілого значення.</p>
+<p>Для tmc2209 встановити це в конфігурації, як <code>driver_SGTHRS</code>, для інших драйверів TMC встановити це в конфігурації, як <code>driver_SGT</code>.</p>
+<p>Якщо діапазон між <em>maximum_sensitivity</em> і <em>minimum_sensitivity</em> є невеликим (наприклад, менше 5), то це може призвести до нестабільного панування. Швидша швидкість замші може збільшити діапазон і зробити операцію більш стабільною.</p>
+<p>Зверніть увагу, що якщо будь-яка зміна виконана на струм драйвера, швидкість замішування або нездатна зміна проводиться до обладнання принтера, то буде потрібно знову запустити процес налаштування.</p>
+<h4 id="macros">Використання Macros при голодуванні<a class="headerlink" href="#macros" title="Permanent link">&para;</a></h4>
+<p>Після безшумного гоління завершується перевалка буде натискати на кінець рейки, а кроковий крок закріпить сили на каркасі до того, як перевезення переміщається. Це гарна ідея для створення макросу до будинку осі і відразу ж перемістити перевезення з кінця рейки.</p>
+<p>Це хороша ідея для макросу, щоб пауза принаймні 2 секунди до початку безсенсорного гоління (або іншим чином, не існує руху на степпері протягом 2 секунд). Без затримки можна за внутрішнім стиглим прапором, щоб все-таки було встановлено з попереднього ходу.</p>
+<p>Також можна скористатися тим, що макроси встановлюють струм драйвера перед замішуванням і встановлюють новий струм після переїзду.</p>
+<p>Наприклад, макро може виглядати щось схоже:</p>
+<div class="highlight"><pre><span></span><code>[gcode_macro SENSORLESS_HOME_X]
+гкод:
+{% встановити HOME_CUR = 0.700 %}
+{% встановити драйвер_config = принтер.configfile.settings[&#39;tmc2209 stepper_x&#39;] %}
+{% встановити RUN_CUR = драйвер_config.run_current %}
+# Встановити струм для безсенсорного гоління
+SET_TMC_CURRENT STEPPER=Степпер_x КУРЕНТ={HOME_CUR}
+#Застосувати, щоб забезпечити водій стиглий прапор ясно
+Г4 П2000
+# Головна
+Г28 Х0
+#Перемістити
+Г90
+Г1 Х5 Ф1200
+# Встановити струм під час друку
+SET_TMC_CURRENT STEPPER=Степпер_x КУРЕНТ={RUN_CUR}
+</code></pre></div>
+
+<p>Отриманий макрос можна назвати з розділу <a href="Config_Reference.html#homing_override">homing_override config</a> або з <a href="Slicers.html#klipper-gcode_macro">START_PRINT макро</a>.</p>
+<p>Зверніть увагу, що якщо змінено струм водія, то процес налаштування повинен знову працювати.</p>
+<h3 id="corexy">Поради щодо безсенсорного гоління на CoreXY<a class="headerlink" href="#corexy" title="Permanent link">&para;</a></h3>
+<p>Можливе використання безсенсорних штрихів на X і Y-колесках принтера CoreXY. Klipper використовує <code>[stepper_x]</code> stepper для виявлення стол, коли захоплення X-транспорту і використовує <code>[stepper_y]</code> stepper для виявлення стол, коли панування Y-транспорту.</p>
+<p>Використовуйте посібник, описаний вище, щоб знайти відповідну "високу чутливість" для кожного перевезення, але врахувати такі обмеження:</p>
+<ol>
+<li>При використанні безсенсорного гоління на CoreXY, переконайтеся, що немає <code>hold_current</code> налаштовано для будь-якого кроку.</li>
+<li>В той час як тюнінг, переконайтеся, що обидві вагони X і Y знаходяться недалеко від центру своїх рейок до кожної домашньої спроби.</li>
+<li>Після того, як тюнінг завершений, коли панування як X, так і Y використовуйте макроси, щоб забезпечити, що одна вісь спочатку додається, потім перемістіть, що перевозиться від обмеження осі, пауза не менше 2 секунд, а потім починайте гоління іншого перевезення. Відіймається від осі уникає захоплення однієї осі, а інший притискається до обмеження осі (що може скребити стійке виявлення). Пауза необхідна для того, щоб забезпечити дорожний прапор водія був очищений до того, як знову захопити.</li>
+</ol>
+<p>Наприклад, CoreXY кодування макро може виглядати:</p>
+<div class="highlight"><pre><span></span><code>[gcode_macro HOME]
+гкод:
+Г90
+# Головна З
+Г28 З0
+Г1 З10 Ф1200
+# Головна Y
+Г28 Y0
+G1 Y5 F1200
+# Головна X
+Г4 П2000
+Г28 Х0
+Г1 Х5 Ф1200
+</code></pre></div>
+
+<h2 id="_9">Налаштування драйвера та діагностики<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>`<a href="G-Codes.html#dump_tmc">DUMP_TMC команди</a> є корисним інструментом при налаштуванні та діагностуванні драйверів. Повідомляти всі поля, налаштовані Klipper, а також всі поля, які можуть бути перевірені з водія.</p>
+<p>Всі зазначені поля визначені в таблиці даних Trinamic для кожного водія. Ці таблиці можна знайти на сайті <a href="https://www.trinamic.com/">Тринадимий сайт</a>. Ознайомтеся з та ознайомтеся з табличкою даних для водія, щоб інтерпретувати результати DUMP_TMC.</p>
+<h2 id="_xxx">Налаштування параметрів драйвера_XXX<a class="headerlink" href="#_xxx" title="Permanent link">&para;</a></h2>
+<p>Klipper підтримує налаштування багатьох драйверів низького рівня за допомогою параметра <code>driver_XXX</code>. <a href="Config_Reference.html#tmc-stepper-driver-configuration">Налаштування драйвера TMC</a> має повний перелік полів, доступних для кожного типу драйвера.</p>
+<p>Крім того, майже всі поля можуть бути змінені в режимі run-time за допомогою команди <a href="G-Codes.html#set_tmc_field">SET_TMC_FIELD</a>.</p>
+<p>Кожна з цих полів визначається в таблиці даних Trinamic для кожного водія. Ці таблиці можна знайти на сайті <a href="https://www.trinamic.com/">Тринадимий сайт</a>.</p>
+<p>Зауважте, що Тринамічні описи іноді використовують формулювання, яке може заплутати налаштування високого рівня (наприклад, "гістерез енд") з низькою вартістю поля (наприклад, "HEND"). У Klipper <code>driver_XXX</code> і SET_TMC_FIELD завжди встановлюють значення поля низького рівня, яке фактично написано водієм. Так, наприклад, якщо Тринамічний опис таблиці стверджує, що значення 3 має бути написано на поле HEND, щоб отримати "гістерезний кінець" 0, потім встановити <code>driver_HEND=3</code> для отримання високої ціни 0.</p>
+<h2 id="_10">Загальні питання<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h3 id="chop">Чи можу я використовувати прихованийChop режим на екструдера з передовим тиском?<a class="headerlink" href="#chop" title="Permanent link">&para;</a></h3>
+<p>Багато людей успішно використовують режим «stealthChop» з передовим тиском Klipper. Klipper впроваджує <a href="кінематика.md#pressure-advance">попереднє оновлення тиску</a>, що не вводить будь-які миттєві зміни швидкості.</p>
+<p>Однак режим «stealthChop» може виготовити нижню моторну крутку та/або виготовити більш високу моторну спеку. Не може бути достатній режим для вашого конкретного принтера.</p>
+<h3 id="tmc-uart-stepper_x-ifcnt">Я тримую "Не вдалося прочитати tmc uart 'stepper_x' реєстрація IFCNT" помилки?<a class="headerlink" href="#tmc-uart-stepper_x-ifcnt" title="Permanent link">&para;</a></h3>
+<p>Це відбувається, коли Klipper не може спілкуватися з драйвером tmc2208 або tmc2209.</p>
+<p>Переконайтеся, що моторна потужність ввімкнена, як кроковий двигун водій, як правило, потребує моторної потужності, перш ніж вона може спілкуватися з мікроконтролером.</p>
+<p>Якщо ця помилка виникає після того, як миготливий ковпачок вперше, то драйвер може попередньо запрограмований в штаті, який не сумісний з Klipper. Щоб скидати стан, видаліть всю потужність з принтера протягом декількох секунд (фізично не розгорніть як USB, так і заглушки живлення).</p>
+<p>В іншому випадку, ця помилка, як правило, є результатом неправильного UART шприцом або неправильною конфігурацією клиппера UART настройок.</p>
+<h3 id="tmc-spi-stepper_x">Я тримую "Неможливо писати tmc spi 'stepper_x' реєстрація ..." помилки?<a class="headerlink" href="#tmc-spi-stepper_x" title="Permanent link">&para;</a></h3>
+<p>Це відбувається, коли Klipper не може спілкуватися з драйвером tmc2130 або tmc5160.</p>
+<p>Переконайтеся, що моторна потужність ввімкнена, як кроковий двигун водій, як правило, потребує моторної потужності, перш ніж вона може спілкуватися з мікроконтролером.</p>
+<p>В іншому випадку, ця помилка, як правило, є результатом неправильної передачі SPI, неправильної конфігурації Klipper параметрів SPI або неповної конфігурації пристроїв на автобусі SPI.</p>
+<p>Зверніть увагу, що якщо водій знаходиться на спільному автобусі SPI з декількома пристроями, то обов'язково в повній мірі налаштовувати кожен пристрій на цьому спільному автобусі SPI в Klipper. Якщо пристрій на спільному автобусі SPI не налаштовується, то він може некоректно реагувати на команди, які не призначені для нього і псувати зв'язок до призначеного пристрою. Якщо є пристрій на спільному автобусі SPI, який не може бути налаштований в Klipper, то скористайтеся <a href="Config_Reference.html#static_digital_вихід">static_digital_вихідна конфігурація розділу</a> для встановлення CS шпильки невикористаного пристрою високої (так що він не намагатиметься використовувати SPI автобус). Дошка схема часто є корисною для пошуку, які пристрої знаходяться на автобусі SPI і їх пов'язані шпильки.</p>
+<h3 id="tmc_2">Чому я отримав "TMC повідомлення про помилку: ..." помилка?<a class="headerlink" href="#tmc_2" title="Permanent link">&para;</a></h3>
+<p>Цей тип помилки показує, що драйвер TMC виявив проблему і відключив себе. Таким чином, водій припинив позицію та ігнорував командування руху. Якщо Klipper виявляє, що активний водій відключився самостійно, він перетворить принтер в стан «пошуку».</p>
+<p>Також можливо, що <strong>TMC звітує про помилку</strong> виникає через помилки SPI, які запобігають зв'язкам з водієм (на tmc2130, tmc5160 або tmc2660). Якщо це відбувається, це загальний для вказаного стану драйвера, щоб показати <code>0000000000000000</code> або <code>ffffffffffffffffffffffffff</code> - наприклад: <code>TMC Повідомлення: DRV_STATUS: ffffffffff ...</code> OR <code>TMC повідомлення про помилку: READRSP@RDSEL2: 00000000 ...</code>. Таку несправність може бути пов’язано з проблемою електропроводки SPI або може бути пов’язано з самовідновленням або збою драйвера TMC.</p>
+<p>Деякі загальні помилки і поради щодо діагностики їх:</p>
+<h4 id="ot1overtemperror"><code>... ot=1(OvertempError!)</code><a class="headerlink" href="#ot1overtemperror" title="Permanent link">&para;</a></h4>
+<p>Це говорить про те, що водій відключився, тому що він став занадто гарячим. Типові рішення є зменшення струменя крокового двигуна, збільшення охолодження на кроковий двигун водія, а/або збільшення охолодження на кроковий двигун.</p>
+<h4 id="tmc-shorttognd-shorttosupply">TMC повідомляє про помилку: <code>... ShortToGND</code> АБО <code>ShortToSupply</code><a class="headerlink" href="#tmc-shorttognd-shorttosupply" title="Permanent link">&para;</a></h4>
+<p>Це говорить про те, що водій відключився себе, тому що він виявлений дуже високий струм проходження через драйвер. Це може вказати пухкий або скорочений дріт на кроковий двигун або всередині самого крокової двигуна.</p>
+<p>Ця помилка також може виникнути при використанні крадіжки Шоп-режим і драйвер TMC точно не здатний прогнозувати механічне навантаження двигуна. (Якщо водій робить поганий прогноз, то він може надсилати занадто багато струму через двигун і запускати його самостійно за рахунок виявлення.) Щоб перевірити це, відключити крадіжкуChop режим і перевірити, якщо помилки продовжують виникати.</p>
+<h4 id="tmc-reset1reset-cs_actual0reset-se0reset">TMC повідомляє про помилку: <code>... reset=1(Reset)</code> АБО <code>CS_ACTUAL=0(Reset?)</code> АБО <code>SE=0(Reset?)</code><a class="headerlink" href="#tmc-reset1reset-cs_actual0reset-se0reset" title="Permanent link">&para;</a></h4>
+<p>Це вказує на те, що водій скинути себе середнім друком. Це може бути пов'язано з питаннями напруги або проводки.</p>
+<h4 id="tmc-uv_cp1">TMC повідомляє про помилку: <code>... uv_cp=1(Знижена напруга!)</code><a class="headerlink" href="#tmc-uv_cp1" title="Permanent link">&para;</a></h4>
+<p>Це свідчить про те, що водій виявив низьковольтний захід і відключив себе. Це може бути пов'язано з питаннями електропроводки або електропостачання.</p>
+<h3 id="cyclecoolstepetc">Як я налаштовую поширенняCycle/coolStep/etc. режим на драйверах?<a class="headerlink" href="#cyclecoolstepetc" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.trinamic.com/">Trinamic веб-сайт</a> має керівництва щодо налаштування драйверів. Ці керівництва часто технічні, низький рівень, і може знадобитися спеціалізоване обладнання. Незалежно від того, що вони є найкращим джерелом інформації.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>

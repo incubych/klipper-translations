@@ -1,0 +1,2036 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>Мапа поверхні - Klipper documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../_klipper3d/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-VEN1PGNQL4"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-VEN1PGNQL4",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VEN1PGNQL4"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Klipper documentation" class="md-header__button md-logo" aria-label="Klipper documentation" data-md-component="logo">
+      
+  <img src="../../img/klipper.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Klipper documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Мапа поверхні
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2 0-.68.06-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.923 7.923 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8.008 8.008 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.65 15.65 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
+                    简体中文
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/zh-Hant/" hreflang="zh-Hant" class="md-select__link">
+                    繁體中文
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/hu/" hreflang="hu" class="md-select__link">
+                    Magyar
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/it/" hreflang="it" class="md-select__link">
+                    Italiano
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/fr/" hreflang="fr" class="md-select__link">
+                    Français
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Klipper3d/klipper/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Klipper3d/klipper
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Klipper documentation" class="md-nav__button md-logo" aria-label="Klipper documentation" data-md-component="logo">
+      
+  <img src="../../img/klipper.svg" alt="logo">
+
+    </a>
+    Klipper documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Klipper3d/klipper/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Klipper3d/klipper
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Overview.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Features.html" class="md-nav__link">
+        Features
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ.html" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Releases.html" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Config_Changes.html" class="md-nav__link">
+        Configuration Changes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contact.html" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Installation and Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation and Configuration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Installation and Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Installation.html" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OctoPrint.html" class="md-nav__link">
+        OctoPrint for Klipper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          Configuration Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Configuration Reference" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Config_Reference.html" class="md-nav__link">
+        Configuration reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rotation_Distance.html" class="md-nav__link">
+        Rotation distance
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Config_checks.html" class="md-nav__link">
+        Configuration checks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4" type="checkbox" id="__nav_7_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_4">
+          Bed Level
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bed Level" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_4">
+          <span class="md-nav__icon md-icon"></span>
+          Bed Level
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bed_Level.html" class="md-nav__link">
+        Bed leveling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Delta_Calibrate.html" class="md-nav__link">
+        Delta calibration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Probe_Calibrate.html" class="md-nav__link">
+        Probe calibration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLTouch.html" class="md-nav__link">
+        BL-Touch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manual_Level.html" class="md-nav__link">
+        Manual leveling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bed_Mesh.html" class="md-nav__link">
+        Bed Mesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Endstop_Phase.html" class="md-nav__link">
+        Endstop phase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Axis_Twist_Compensation.html" class="md-nav__link">
+        Axis Twist Compensation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_5" type="checkbox" id="__nav_7_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_5">
+          Resonance Compensation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resonance Compensation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          Resonance Compensation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Resonance_Compensation.html" class="md-nav__link">
+        Resonance Compensation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Measuring_Resonances.html" class="md-nav__link">
+        Measuring Resonances
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Pressure_Advance.html" class="md-nav__link">
+        Pressure advance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../G-Codes.html" class="md-nav__link">
+        G-Codes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_8" type="checkbox" id="__nav_7_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_8">
+          Command templates
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Command templates" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_8">
+          <span class="md-nav__icon md-icon"></span>
+          Command templates
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Command_Templates.html" class="md-nav__link">
+        Commands templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Status_Reference.html" class="md-nav__link">
+        Status reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TMC_Drivers.html" class="md-nav__link">
+        TMC drivers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Multi_MCU_Homing.html" class="md-nav__link">
+        Multiple Micro-controller Homing and Probing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Slicers.html" class="md-nav__link">
+        Slicers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Skew_Correction.html" class="md-nav__link">
+        Skew correction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Exclude_Object.html" class="md-nav__link">
+        Exclude Objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using_PWM_Tools.html" class="md-nav__link">
+        Using PWM tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Developer Documentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developer Documentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Code_Overview.html" class="md-nav__link">
+        Code overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Kinematics.html" class="md-nav__link">
+        Kinematics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Protocol.html" class="md-nav__link">
+        Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API_Server.html" class="md-nav__link">
+        API server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MCU_Commands.html" class="md-nav__link">
+        MCU commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CANBUS_protocol.html" class="md-nav__link">
+        CANBUS protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Debugging.html" class="md-nav__link">
+        Debugging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Benchmarks.html" class="md-nav__link">
+        Benchmarks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CONTRIBUTING.html" class="md-nav__link">
+        Contributing to Klipper
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Packaging.html" class="md-nav__link">
+        Packaging Klipper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Device Specific Documents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Device Specific Documents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Device Specific Documents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Example_Configs.html" class="md-nav__link">
+        Example configurations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SDCard_Updates.html" class="md-nav__link">
+        SDCard updates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RPi_microcontroller.html" class="md-nav__link">
+        RPi microcontroller
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Beaglebone.html" class="md-nav__link">
+        Beaglebone
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bootloaders.html" class="md-nav__link">
+        Bootloaders
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bootloader_Entry.html" class="md-nav__link">
+        Bootloader Entry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CANBUS.html" class="md-nav__link">
+        CANBUS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CANBUS_Troubleshooting.html" class="md-nav__link">
+        CANBUS Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TSL1401CL_Filament_Width_Sensor.html" class="md-nav__link">
+        TSL1401CL filament width sensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hall_Filament_Width_Sensor.html" class="md-nav__link">
+        Hall filament width sensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Eddy_Probe.html" class="md-nav__link">
+        Eddy Current Inductive probe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Load_Cell.html" class="md-nav__link">
+        Load Cells
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sponsors.html" class="md-nav__link">
+        Sponsors
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Базова конфігурація
+  </a>
+  
+    <nav class="md-nav" aria-label="Базова конфігурація">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Прямокутні ліжка
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Круглі ліжка
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Розширена конфігурація
+  </a>
+  
+    <nav class="md-nav" aria-label="Розширена конфігурація">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    Інтерполяція сітки
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    Перемістити розділення
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fade" class="md-nav__link">
+    Сітка Fade
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    Налаштування нульової позиції відліку
+  </a>
+  
+    <nav class="md-nav" aria-label="Налаштування нульової позиції відліку">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relative_reference_index" class="md-nav__link">
+    Застарілий relative_reference_index
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    Несправні регіони
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    Адаптивні сітки
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    Сканування поверхні
+  </a>
+  
+    <nav class="md-nav" aria-label="Сканування поверхні">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    Висота сканування
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    Швидке (безперервне) сканування
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#g-" class="md-nav__link">
+    G-коди сітки для ліжка
+  </a>
+  
+    <nav class="md-nav" aria-label="G-коди сітки для ліжка">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    Калібрування
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    Профілі
+  </a>
+  
+    <nav class="md-nav" aria-label="Профілі">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    Завантаження профілю за замовчуванням
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    Вихід
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    Очистити стан сітки
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xy" class="md-nav__link">
+    Застосувати зміщення X/Y
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-bed-mesh-webhooks" class="md-nav__link">
+    API Bed Mesh Webhooks
+  </a>
+  
+    <nav class="md-nav" aria-label="API Bed Mesh Webhooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    Дамп даних сітки
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    Візуалізація та аналіз
+  </a>
+  
+    <nav class="md-nav" aria-label="Візуалізація та аналіз">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    Передумови
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesh" class="md-nav__link">
+    Побудова даних Mesh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    Аналіз сітки ліжка
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    Збережіть дані сітки у файл
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/Klipper3d/klipper/blob/master/docs/locales/uk/Bed_Mesh.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="_1">Мапа поверхні<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>Модуль Bed Mesh можна використовувати для компенсації нерівностей поверхні ліжка для досягнення кращого першого шару по всьому ліжку. Слід зазначити, що програмна корекція не дасть ідеальних результатів, вона може лише наблизити форму ліжка. Bed Mesh також не може компенсувати механічні та електричні проблеми. Якщо вісь перекошена або датчик неточний, модуль bed_mesh не отримає точні результати процесу вимірювання.</p>
+<p>Перед калібруванням сітки вам потрібно буде переконатися, що Z-зсув вашого зонда відкалібровано. Якщо використовується кінцевий упор для наведення по осі Z, його також потрібно буде відкалібрувати. Для отримання додаткової інформації див. <a href="Probe_Calibrate.html">Probe Calibrate</a> і Z_ENDSTOP_CALIBRATE у <a href="Manual_Level.html">Manual Level</a>.</p>
+<h2 id="_2">Базова конфігурація<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">Прямокутні ліжка<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>У цьому прикладі передбачається, що принтер має прямокутну платформу розміром 250 мм x 220 мм і датчик зі зміщенням по осі Х 24 мм і зміщенням по осі 5 мм.</p>
+<div class="highlight"><pre><span></span><code>[bed_mesh]
+ швидкість: 120
+ horizontal_move_z: 5
+ mesh_min: 35, 6
+ mesh_max: 240, 198
+ probe_count: 5, 3
+</code></pre></div>
+
+<ul>
+<li><code>швидкість: 120</code> <em>Значення за замовчуванням: 50</em> Швидкість, з якою інструмент рухається між точками.</li>
+<li><code>horizontal_move_z: 5</code> <em>Значення за замовчуванням: 5</em> Координата Z, до якої зонд піднімається перед подорожжю між точками.</li>
+<li><code>mesh_min: 35, 6</code> <em>Обов’язковий</em> Перша досліджена координата, найближча до початку координат. Ця координата відноситься до місця розташування зонда.</li>
+<li><code>mesh_max: 240, 198</code> <em>Обов’язковий</em> Найдальша від початку координат досліджувати координата. Це не обов’язково остання досліджувана точка, оскільки процес зондування відбувається зигзагоподібно. Як і у випадку з <code>mesh_min</code>, ця координата є відносною розташування зонда.</li>
+<li><code>probe_count: 5, 3</code> <em>Значення за замовчуванням: 3, 3</em> Кількість точок для перевірки на кожній осі, указана як цілі числа X, Y. У цьому прикладі 5 точок буде досліджено вздовж осі X і 3 точки вздовж осі Y, тобто 15 точок. Зверніть увагу: якщо вам потрібна квадратна сітка, наприклад 3x3, це можна вказати як єдине ціле число, яке використовується для обох осей, тобто <code>probe_count: 3</code>. Зауважте, що сітка вимагає мінімум probe_count 3 уздовж кожної осі.</li>
+</ul>
+<p>На ілюстрації нижче показано, як параметри <code>mesh_min</code>, <code>mesh_max</code> і <code>probe_count</code> використовуються для створення точок зондування. Стрілки вказують напрямок процедури зондування, починаючи з <code>mesh_min</code>. Для довідки, коли зонд знаходиться на <code>mesh_min</code>, сопло буде на (11, 1), а коли зонд на <code>mesh_max</code>, сопло буде на (206, 193).</p>
+<p><img alt="bed mesh_rect_basic" src="img/bedmesh_rect_basic.svg" /></p>
+<h3 id="_4">Круглі ліжка<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>У цьому прикладі передбачається, що принтер оснащений круглою станиною радіусом 100 мм. Ми використовуватимемо ті самі зміщення зонда, що й у прямокутному прикладі, 24 мм на X і 5 мм на Y.</p>
+<div class="highlight"><pre><span></span><code>[bed_mesh]
+ швидкість: 120
+ horizontal_move_z: 5
+ mesh_radius: 75
+ mesh_origin: 0, 0
+ round_probe_count: 5
+</code></pre></div>
+
+<ul>
+<li><code>mesh_radius: 75</code> <em>Обов’язковий</em> Радіус досліджуваної сітки в мм відносно <code>mesh_origin</code>. Зауважте, що зміщення зонда обмежують розмір радіуса сітки. У цьому прикладі радіус, більший за 76, перемістить інструмент за межі діапазону принтера.</li>
+<li><code>mesh_origin: 0, 0</code> <em>Значення за замовчуванням: 0, 0</em> Центральна точка сітки. Ця координата відноситься до місця розташування зонда. Хоча за замовчуванням встановлено значення 0, 0, може бути корисно налаштувати вихідну точку, щоб досліджувати більшу частину дна. Дивіться ілюстрацію нижче.</li>
+<li><code>round_probe_count: 5</code> <em>Значення за замовчуванням: 5</em> Це ціле число, яке визначає максимальну кількість досліджуваних точок уздовж осей X і Y. Під «максимумом» ми маємо на увазі кількість точок, досліджених вздовж початку сітки. Це значення має бути непарним числом, оскільки необхідно, щоб центр сітки був досліджений.</li>
+</ul>
+<p>На малюнку нижче показано, як генеруються досліджувані точки. Як бачите, встановлення <code>mesh_origin</code> на (-10, 0) дозволяє нам вказати більший радіус сітки 85.</p>
+<p><img alt="bed mesh_round_basic" src="img/bedmesh_round_basic.svg" /></p>
+<h2 id="_5">Розширена конфігурація<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>Нижче детально описано більш розширені параметри конфігурації. Кожен приклад базується на базовій прямокутній конфігурації ліжка, показаній вище. Кожна з розширених опцій однаково застосовується до круглих ліжок.</p>
+<h3 id="_6">Інтерполяція сітки<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>У той час як можна відібрати зразки досліджуваної матриці безпосередньо за допомогою простої білінійної інтерполяції для визначення Z-значень між досліджуваними точками, часто корисно інтерполювати додаткові точки за допомогою більш просунутих алгоритмів інтерполяції для збільшення щільності сітки. Ці алгоритми додають сітці кривизну, намагаючись імітувати властивості матеріалу ліжка. Для цього Bed Mesh пропонує інтерполяцію Лагранжа та бікубічну інтерполяцію.</p>
+<div class="highlight"><pre><span></span><code>[bed_mesh]
+ швидкість: 120
+ horizontal_move_z: 5
+ mesh_min: 35, 6
+ mesh_max: 240, 198
+ probe_count: 5, 3
+ mesh_pps: 2, 3
+ алгоритм: бікубічний
+ бікубічний_натяг: 0,2
+</code></pre></div>
+
+<ul>
+<li><code>mesh_pps: 2, 3</code> <em>Значення за замовчуванням: 2, 2</em> Параметр <code>mesh_pps</code> є скороченням для точок сітки на сегмент. Цей параметр визначає, скільки точок інтерполювати для кожного сегмента вздовж осей X і Y. Вважайте «сегмент» простором між кожною досліджуваною точкою. Як і <code>probe_count</code>, <code>mesh_pps</code> вказується як пара цілих чисел X, Y, а також може бути вказано одне ціле число, яке застосовується до обох осей. У цьому прикладі є 4 сегменти вздовж осі X і 2 сегменти вздовж осі Y. Це означає 8 інтерпольованих точок уздовж X, 6 інтерпольованих точок уздовж Y, що призводить до сітки 13x8. Зауважте, що якщо mesh_pps встановлено на 0, то інтерполяція сітки вимкнена, а досліджувана матриця буде взята безпосередньо.</li>
+<li><code>algorithm: lagrange</code> <em>Значення за замовчуванням: lagrange</em> Алгоритм, який використовується для інтерполяції сітки. Може бути «лагранжа» або «бікубічного». Інтерполяція Лагранжа обмежена 6 досліджуваними точками, оскільки коливання мають тенденцію відбуватися з більшою кількістю зразків. Бікубічна інтерполяція потребує мінімум 4 досліджуваних точок уздовж кожної осі, якщо вказано менше 4 точок, то вибірка Лагранжа виконується примусово. Якщо <code>mesh_pps</code> має значення 0, це значення ігнорується, оскільки інтерполяція сітки не виконується.</li>
+<li><code>bicubic_tension: 0,2</code> <em>Значення за замовчуванням: 0,2</em> Якщо для параметра <code>algorithm</code> встановлено значення bicubic, можна вказати значення натягу. Чим вище натяг, тим більший нахил інтерполюється. Будьте обережні, регулюючи це, оскільки вищі значення також створюють більше перевищення, що призведе до того, що інтерпольовані значення будуть вищими або нижчими, ніж ваші вимірювані точки.</li>
+</ul>
+<p>На ілюстрації нижче показано, як наведені вище параметри використовуються для створення інтерпольованої сітки.</p>
+<p><img alt="bed mesh_interpolated" src="img/bedmesh_interpolated.svg" /></p>
+<h3 id="_7">Перемістити розділення<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>Bed Mesh працює, перехоплюючи команди переміщення gcode та застосовуючи трансформацію до їх координати Z. Довгі рухи необхідно розділити на менші, щоб правильно відповідати формі ліжка. Параметри нижче керують поведінкою розділення.</p>
+<div class="highlight"><pre><span></span><code>[bed_mesh]
+ швидкість: 120
+ horizontal_move_z: 5
+ mesh_min: 35, 6
+ mesh_max: 240, 198
+ probe_count: 5, 3
+ move_check_distance: 5
+ split_delta_z: 0,025
+</code></pre></div>
+
+<ul>
+<li><code>move_check_distance: 5</code> <em>Значення за замовчуванням: 5</em> Мінімальна відстань для перевірки бажаної зміни Z перед виконанням поділу. У цьому прикладі алгоритм обійде переміщення довжиною понад 5 мм. Через кожні 5 мм буде відбуватися пошук Z сітки, порівнюючи його зі значенням Z попереднього ходу. Якщо дельта досягає порогового значення, встановленого <code>split_delta_z</code>, рух буде розділено, а обхід продовжиться. Цей процес повторюється до кінця ходу, де буде застосовано остаточне коригування. Ходи, менші за <code>move_check_distance</code>, мають правильне коригування Z, застосоване безпосередньо до ходу без обходу чи поділу.</li>
+<li><code>split_delta_z: .025</code> <em>Значення за замовчуванням: .025</em> Як згадувалося вище, це мінімальне відхилення, необхідне для запуску розділення ходу. У цьому прикладі будь-яке значення Z із відхиленням +/- 0,025 мм ініціює розділення.</li>
+</ul>
+<p>Зазвичай значень за замовчуванням для цих параметрів достатньо, насправді значення за замовчуванням 5 мм для <code>move_check_distance</code> може бути надмірним. Однак досвідчений користувач може захотіти поекспериментувати з цими параметрами, щоб вичавити оптимальний перший шар.</p>
+<h3 id="fade">Сітка Fade<a class="headerlink" href="#fade" title="Permanent link">&para;</a></h3>
+<p>Коли ввімкнено «згасання», коригування Z поступово припиняється на відстані, визначеній конфігурацією. Це досягається шляхом застосування невеликих коригувань висоти шару, або збільшення, або зменшення залежно від форми ліжка. Коли вицвітання завершено, регулювання Z більше не застосовується, дозволяючи верхній частині відбитка бути плоским, а не віддзеркалювати форму ложа. Вицвітання також може мати деякі небажані риси, якщо ви вицвітаєте занадто швидко, це може призвести до видимих артефактів на відбитку. Крім того, якщо ваше ліжко значно деформоване, вицвітання може зменшити або розтягнути висоту Z друку. Таким чином, зникнення вимкнено за замовчуванням.</p>
+<div class="highlight"><pre><span></span><code>[bed_mesh]
+ швидкість: 120
+ horizontal_move_z: 5
+ mesh_min: 35, 6
+ mesh_max: 240, 198
+ probe_count: 5, 3
+ fade_start: 1
+ fade_end: 10
+ fade_target: 0
+</code></pre></div>
+
+<ul>
+<li><code>fade_start: 1</code> <em>Значення за замовчуванням: 1</em> Висота Z, з якої починається поетапне припинення коригування. Рекомендується нанести кілька шарів перед початком процесу вицвітання.</li>
+<li><code>fade_end: 10</code> <em>Значення за замовчуванням: 0</em> Висота Z, на якій має завершитися згасання. Якщо це значення менше, ніж <code>fade_start</code>, тоді згасання вимкнено. Це значення можна регулювати залежно від того, наскільки викривлена поверхня для друку. Значно деформована поверхня повинна зникати на більшій відстані. Майже плоска поверхня може зменшити це значення, щоб швидше припинити роботу. 10 мм — це розумне значення для початку, якщо використовувати значення за замовчуванням 1 для <code>fade_start</code>.</li>
+<li><code>fade_target: 0</code> <em>Значення за замовчуванням: середнє значення Z сітки</em> <code>fade_target</code> можна розглядати як додаткове зміщення Z, застосоване до всього ліжка після завершення згасання. Загалом ми хотіли б, щоб це значення було 0, однак є обставини, коли воно не повинно бути. Наприклад, припустимо, що ваше початкове положення на станині є викидом, воно на 0,2 мм нижче, ніж середня досліджувана висота станини. Якщо <code>fade_target</code> дорівнює 0, зникнення зменшить відбиток у середньому на 0,2 мм по всій поверхні. Встановивши для параметра <code>fade_target</code> значення .2, ділянка фіксації розшириться на .2 мм, однак решта ліжка матиме точний розмір. Загалом доцільно залишити <code>fade_target</code> поза конфігурацією, щоб використовувати середню висоту сітки, однак може бути бажано вручну налаштувати ціль зникнення, якщо потрібно друкувати на певній частині ліжка.</li>
+</ul>
+<h3 id="_8">Налаштування нульової позиції відліку<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>Багато зондів сприйнятливі до «дрейфу», тобто до неточностей зондування, викликаних теплом або перешкодами. Це може ускладнити обчислення z-зміщення зонда, особливо при різних температурах шару. Таким чином, деякі принтери використовують кінцевий упор для наведення осі Z і зонд для калібрування сітки. У цій конфігурації можна зміщувати сітку таким чином, щоб «еталонна позиція» (X, Y) застосовувала коригування нуля. «Еталонною позицією» має бути місце на платформі, де виконується тестування паперу <a href="Manual_Level.html#calibrating-a-z-endstop">Z_ENDSTOP_CALIBRATE</a>. Модуль bed_mesh надає параметр <code>zero_reference_position</code> для визначення цієї координати:</p>
+<div class="highlight"><pre><span></span><code>[bed_mesh]
+ швидкість: 120
+ horizontal_move_z: 5
+ mesh_min: 35, 6
+ mesh_max: 240, 198
+ zero_reference_position: 125, 110
+ probe_count: 5, 3
+</code></pre></div>
+
+<ul>
+<li><code>zero_reference_position:</code> <em>Значення за замовчуванням: Немає (вимкнено)</em> <code>zero_reference_position</code> очікує, що координата (X, Y) відповідає координаті <code>еталонної позиції</code>, описаної вище. Якщо координата лежить у межах сітки, тоді сітка буде зміщена, тому опорна позиція застосовує коригування нуля. Якщо координата лежить за межами сітки, то координата буде досліджена після калібрування, а результуюче значення z використовуватиметься як зсув по z. Зауважте, що ця координата НЕ має бути в місці, зазначеному як <code>faulty_region</code>, якщо потрібен зонд.</li>
+</ul>
+<h4 id="relative_reference_index">Застарілий relative_reference_index<a class="headerlink" href="#relative_reference_index" title="Permanent link">&para;</a></h4>
+<p>Існуючі конфігурації, що використовують параметр <code>relative_reference_index</code>, необхідно оновити, щоб використовувати <code>zero_reference_position</code>. Відповідь на команду gcode <a href="#output">BED_MESH_OUTPUT PGP=1</a> включатиме координату (X, Y), пов’язану з індексом; цю позицію можна використовувати як значення для <code>zero_reference_position</code>. Результат виглядатиме приблизно так:</p>
+<div class="highlight"><pre><span></span><code>// bed_mesh: згенеровані точки
+ // Індекс | Інструмент налаштований | Зонд
+ // 0 | (1,0, 1,0) | (24,0, 6,0)
+ // 1 | (36,7, 1,0) | (59,7, 6,0)
+ // 2 | (72,3, 1,0) | (95,3, 6,0)
+ // 3 | (108,0, 1,0) | (131,0, 6,0)
+ ... (додаткові згенеровані бали)
+ // bed_mesh: relative_reference_index 24 дорівнює (131,5, 108,0)
+</code></pre></div>
+
+<p><em>Примітка. Наведені вище результати також друкуються в <code>klippy.log</code> під час ініціалізації.</em></p>
+<p>Використовуючи наведений вище приклад, ми бачимо, що <code>relative_reference_index</code> друкується разом із його координатою. Таким чином, <code>zero_reference_position</code> становить <code>131,5, 108</code>.</p>
+<h3 id="_9">Несправні регіони<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>Деякі ділянки ліжка можуть повідомляти про неточні результати під час зондування через «несправність» у певних місцях. Найкращим прикладом цього є ліжка з рядом інтегрованих магнітів, які використовуються для утримання знімних сталевих листів. Магнітне поле на цих магнітах і навколо них може призвести до спрацьовування індуктивного зонда на відстані, вищій або нижчій, ніж це було б у іншому випадку, що призведе до сітки, яка не точно представляє поверхню в цих місцях. <strong>Примітка: це не слід плутати зі зміщенням розташування датчика, яке дає неточні результати по всьому ліжку.</strong></p>
+<p>Параметри <code>faulty_region</code> можуть бути налаштовані для компенсації цього впливу. Якщо згенерована точка лежить у несправній області, сітка ліжка намагатиметься дослідити до 4 точок на межах цієї області. Ці досліджувані значення будуть усереднені та вставлені в сітку як значення Z у створеній (X, Y) координаті.</p>
+<div class="highlight"><pre><span></span><code>[bed_mesh]
+ швидкість: 120
+ horizontal_move_z: 5
+ mesh_min: 35, 6
+ mesh_max: 240, 198
+ probe_count: 5, 3
+ faulty_region_1_min: 130,0, 0,0
+ faulty_region_1_max: 145,0, 40,0
+ faulty_region_2_min: 225,0, 0,0
+ faulty_region_2_max: 250,0, 25,0
+ faulty_region_3_min: 165,0, 95,0
+ faulty_region_3_max: 205,0, 110,0
+ faulty_region_4_min: 30,0, 170,0
+ faulty_region_4_max: 45,0, 210,0
+</code></pre></div>
+
+<ul>
+<li><code>faulty_region_{1...99}_min</code> <code>faulty_region_{1..99}_max</code> <em>Значення за замовчуванням: Немає (вимкнено)</em> Несправні області визначаються подібно до самої сітки, де мінімум і максимум (X , Y) необхідно вказати координати для кожного регіону. Дефектна область може виходити за межі сітки, однак згенеровані альтернативні точки завжди будуть у межах сітки. Жодні два регіони не можуть перетинатися.</li>
+</ul>
+<p>На зображенні нижче показано, як генеруються точки заміни, коли згенерована точка лежить у дефектній області. Показані регіони збігаються з наведеними вище зразками конфігурації. Точки заміни та їх координати позначені зеленим кольором.</p>
+<p><img alt="bed mesh_interpolated" src="img/bedmesh_faulty_regions.svg" /></p>
+<h3 id="_10">Адаптивні сітки<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>Адаптивна сітка ліжка — це спосіб прискорити генерацію сітки ліжка, досліджуючи лише область ліжка, яку використовують об’єкти, що друкуються. Під час використання метод автоматично регулює параметри сітки на основі площі, зайнятої визначеними об’єктами друку.</p>
+<p>Адаптована площа сітки буде обчислена з області, визначеної межами всіх визначених об’єктів друку, щоб вона охоплювала кожен об’єкт, включаючи будь-які поля, визначені в конфігурації. Після обчислення площі кількість точок зондування буде зменшено на основі співвідношення площі сітки за замовчуванням і адаптованої площі сітки. Щоб проілюструвати це, розглянемо такий приклад:</p>
+<p>Для ліжка розміром 150 мм x 150 мм із значенням <code>mesh_min</code>, установленим на <code>25,25</code> і <code>mesh_max</code>, встановленим на <code>125,125</code>, площа сітки за замовчуванням становить квадрат 100 мм x 100 мм. Адаптована площа сітки «50,50» означає співвідношення «0,5x0,5» між адаптованою площею та площею сітки за замовчуванням.</p>
+<p>Якщо конфігурація <code>bed_mesh</code> вказала <code>probe_count</code> як <code>7x7</code>, адаптована сітка ліжка використовуватиме 4x4 точки зонда (7 * 0,5 округлено в більшу сторону).</p>
+<p><img alt="adaptive_bed mesh" src="img/adaptive_bed_mesh.svg" /></p>
+<div class="highlight"><pre><span></span><code>[bed_mesh]
+ швидкість: 120
+ horizontal_move_z: 5
+ mesh_min: 35, 6
+ mesh_max: 240, 198
+ probe_count: 5, 3
+ adaptive_margin: 5
+</code></pre></div>
+
+<ul>
+<li>
+<p><code>adaptive_margin</code> <em>Значення за замовчуванням: 0</em> Поле (у мм), яке додається навколо площі ложа, що використовується визначеними об’єктами. На діаграмі нижче показано адаптовану площу сітки ліжка з <code>adaptive_margin</code> 5 мм. Адаптована площа сітки (область зеленого кольору) обчислюється як використана площа грядки (область синього кольору) плюс визначений запас.</p>
+<p><img alt="adaptive_bedmesh_margin" src="img/adaptive_bed_mesh_margin.svg" /></p>
+</li>
+</ul>
+<p>За своєю природою адаптивні ліжкові сітки використовують об’єкти, визначені файлом Gcode, який друкується. Таким чином, очікується, що кожен файл Gcode генеруватиме сітку, яка досліджує іншу область друкарської поверхні. Тому адаптовані сітки для ліжок не можна використовувати повторно. Очікується, що нова сітка буде створена для кожного друку, якщо використовується адаптивна сітка.</p>
+<p>Важливо також враховувати, що адаптивну сітку шару найкраще використовувати на машинах, які зазвичай можуть досліджувати весь шар і досягати максимальної дисперсії, меншої або рівної 1 висоті шару. Машини з механічними проблемами, які зазвичай компенсує повна сітка, можуть мати небажані результати під час спроб друку рухатися <strong>поза</strong> зони зондування. Якщо повна сітка має дисперсію, що перевищує 1 висоту шару, слід бути обережним, використовуючи адаптивні сітки та намагаючись друкувати за межами сітчастої області.</p>
+<h2 id="_11">Сканування поверхні<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>Деякі зонди, такі як <a href="Eddy_Probe.html">Вихровий зонд</a>, здатні «сканувати» поверхню ліжка. Тобто ці зонди можуть відбирати сітку, не піднімаючи інструмент між пробами. Щоб увімкнути режим сканування, параметр зонду <code>METHOD=scan</code> або <code>METHOD=rapid_scan</code> слід передати в команду gcode <code>BED_MESH_CALIBRATE</code>.</p>
+<h3 id="_12">Висота сканування<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>Висота сканування встановлюється параметром <code>horizontal_move_z</code> в <code>[bed_mesh]</code>. Крім того, його можна надати команді gcode <code>BED_MESH_CALIBRATE</code> через параметр <code>HORIZONTAL_MOVE_Z</code>.</p>
+<p>Висота сканування має бути достатньо низькою, щоб уникнути помилок сканування. Зазвичай висота 2 мм (тобто: <code>HORIZONTAL_MOVE_Z=2</code>) має працювати добре, припускаючи, що зонд встановлено правильно.</p>
+<p>Слід зазначити, що якщо зонд знаходиться понад 4 мм над поверхнею, результати будуть недійсними. Таким чином, сканування неможливе на ліжках із сильним відхиленням поверхні або ліжках із екстремальним нахилом, який не було виправлено.</p>
+<h3 id="_13">Швидке (безперервне) сканування<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>Виконуючи <code>rapid_scan</code>, слід мати на увазі, що результати матимуть певну кількість похибок. Ця помилка має бути достатньо низькою, щоб бути корисною для великих областей друку з досить товстим шаром. Деякі зонди можуть бути більш схильними до помилок, ніж інші.</p>
+<p>Не рекомендується використовувати швидкий режим для сканування «щільної» сітки. Деякі помилки, які виникають під час швидкого сканування, можуть бути гаусовим шумом від датчика, і щільна сітка відображатиме цей шум (тобто: будуть піки та спади).</p>
+<p>Bed Mesh намагатиметься оптимізувати шлях руху, щоб забезпечити найкращий можливий результат залежно від конфігурації. Це включає уникнення дефектних областей під час збору зразків і «перевищення» сітки при зміні напрямку. Це перевищення покращує вибірку на краях сітки, однак воно вимагає, щоб сітка була налаштована таким чином, щоб інструмент міг рухатися за межі сітки.</p>
+<div class="highlight"><pre><span></span><code>[bed_mesh]
+ швидкість: 120
+ horizontal_move_z: 5
+ mesh_min: 35, 6
+ mesh_max: 240, 198
+ probe_count: 5
+ scan_overshoot: 8
+</code></pre></div>
+
+<ul>
+<li><code>scan_overshoot</code> <em>Значення за замовчуванням: 0 (вимкнено)</em> Максимальна величина ходу (у мм), доступна за межами сітки. Для прямокутних ліжок це стосується переміщення по осі X, а для круглих ліжок – по всьому радіусу. Інструмент повинен мати можливість рухатися за межами сітки на вказану величину. Це значення використовується для оптимізації шляху руху під час виконання «швидкого сканування». Мінімальне значення, яке можна вказати, дорівнює 1. За замовчуванням перевищення немає.</li>
+</ul>
+<p>Якщо перевищення сканування не налаштовано, оптимізація шляху руху не застосовуватиметься до змін напрямку.</p>
+<h2 id="g-">G-коди сітки для ліжка<a class="headerlink" href="#g-" title="Permanent link">&para;</a></h2>
+<h3 id="_14">Калібрування<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p><code>BED_MESH_CALIBRATE PROFILE=&lt;name&gt; METHOD=[посібник | автоматичний | скам | rapid_scan] \ [&lt;probe_parameter&gt;=&lt;value&gt;] [&lt;mesh_parameter&gt;=&lt;value&gt;] [ADAPTIVE=[0|1] \ [ADAPTIVE_MARGIN=&lt;value&gt;]</code> <em>Профіль за замовчуванням: за замовчуванням</em> <em>Методи за замовчуванням: автоматичний якщо виявлено зонд , інакше ручну</em>  <em>Адаптивний за замовчуванням: 0</em>  <em>Адаптивний поля за замовчуванням: 0</em></p>
+<p>Ініціює процедуру зондування для калібрування сітки ліжка.</p>
+<p>Сітка буде збережена в профілі, визначеному параметром <code>PROFILE</code>, або <code>default</code>, якщо не вказано. Параметр <code>METHOD</code> приймає одне з таких значень:</p>
+<ul>
+<li><code>METHOD=manual</code>: дозволяє ручне зондування за допомогою насадки та паперового тесту</li>
+<li><code>METHOD=automatic</code>: Автоматичне (стандартне) зондування. Це значення за умовчанням.</li>
+<li><code>METHOD=scan</code>: Вмикає сканування поверхні. Інструмент зупинятиметься над кожною позицією, щоб зібрати зразок.</li>
+<li><code>METHOD=rapid_scan</code>: вмикає безперервне сканування поверхні.</li>
+</ul>
+<p>Положення XY автоматично налаштовуються, щоб включити зміщення X і/або Y, коли вибрано метод зондування, відмінний від <code>«ручного»</code>.</p>
+<p>Можна вказати параметри сітки для зміни досліджуваної області. Доступні такі параметри:</p>
+<ul>
+<li>Грядки прямокутні (декартові):<ul>
+<li><code>MESH_MIN</code></li>
+<li><code>MESH_MAX</code></li>
+<li><code>PROBE_COUNT</code></li>
+</ul>
+</li>
+<li>Круглі грядки (дельта):<ul>
+<li><code>MESH_RADIUS</code></li>
+<li><code>MESH_ORIGIN</code></li>
+<li><code>ROUND_PROBE_COUNT</code></li>
+</ul>
+</li>
+<li>Всі ліжка:<ul>
+<li><code>MESH_PPS</code></li>
+<li><code>ALGORITHM</code></li>
+<li><code>ADAPTIVE</code></li>
+<li><code>ADAPTIVE_MARGIN</code></li>
+</ul>
+</li>
+</ul>
+<p>Перегляньте документацію щодо конфігурації вище, щоб дізнатися, як кожен параметр застосовується до сітки.</p>
+<h3 id="_15">Профілі<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p><code>BED_MESH_PROFILE SAVE=&lt;name&gt; LOAD=&lt;name&gt; REMOVE=&lt;name&gt;</code></p>
+<p>Після виконання BED_MESH_CALIBRATE можна зберегти поточний стан сітки в іменованому профілі. Це дає можливість завантажувати сітку без повторного зондування ложа. Після того як профіль було збережено за допомогою <code>BED_MESH_PROFILE SAVE=&lt;name&gt;</code>, можна виконати gcode <code>SAVE_CONFIG</code>, щоб записати профіль у printer.cfg.</p>
+<p>Профілі можна завантажити, виконавши <code>BED_MESH_PROFILE LOAD=&lt;name&gt;</code>.</p>
+<p>Слід зазначити, що кожного разу, коли відбувається BED_MESH_CALIBRATE, поточний стан автоматично зберігається в профілі <em>за замовчуванням</em>. Профіль <em>за замовчуванням</em> можна видалити таким чином:</p>
+<p><code>BED_MESH_PROFILE REMOVE=default</code></p>
+<p>Будь-який інший збережений профіль можна видалити таким же чином, замінивши <em>default</em> на названий профіль, який ви хочете видалити.</p>
+<h4 id="_16">Завантаження профілю за замовчуванням<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<p>Попередні версії <code>bed_mesh</code> завжди завантажували профіль із назвою <em>default</em> під час запуску, якщо він був присутній. Цю поведінку було видалено, щоб користувач міг визначати, коли завантажується профіль. Якщо користувач бажає завантажити профіль <code>за замовчуванням</code>, рекомендується додати <code>BED_MESH_PROFILE LOAD=default</code> або до свого макросу <code>START_PRINT</code>, або до конфігурації «Почати G-код» слайсера, залежно від того, що застосовно.</p>
+<p>Крім того, стару поведінку завантаження профілю під час запуску можна відновити за допомогою <code>[delayed_gcode]</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[delayed_gcode bed_mesh_init]</span>
+<span class="w"> </span><span class="na">початкова_тривалість</span><span class="o">:</span><span class="w"> </span><span class="s">.01</span>
+<span class="w"> </span><span class="na">gcode</span><span class="o">:</span>
+<span class="w">   </span><span class="na">BED_MESH_PROFILE LOAD</span><span class="o">=</span><span class="s">за умовчанням</span>
+</code></pre></div>
+
+<h3 id="_17">Вихід<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p><code>BED_MESH_OUTPUT PGP=[0 | 1]</code></p>
+<p>Виводить поточний стан сітки на термінал. Зверніть увагу, що виводиться сама сітка</p>
+<p>Параметр PGP є скороченням для «Друк згенерованих точок». Якщо встановлено <code>PGP=1</code>, згенеровані перевірені точки будуть виведені на термінал:</p>
+<div class="highlight"><pre><span></span><code>// bed_mesh: згенеровані точки
+ // Індекс | Інструмент налаштований | Зонд
+ // 0 | (11,0, 1,0) | (35,0, 6,0)
+ // 1 | (62,2, 1,0) | (86,2, 6,0)
+ // 2 | (113,5, 1,0) | (137,5, 6,0)
+ // 3 | (164,8, 1,0) | (188,8, 6,0)
+ // 4 | (216,0, 1,0) | (240,0, 6,0)
+ // 5 | (216,0, 97,0) | (240,0, 102,0)
+ // 6 | (164,8, 97,0) | (188,8, 102,0)
+ // 7 | (113,5, 97,0) | (137,5, 102,0)
+ // 8 | (62,2, 97,0) | (86,2, 102,0)
+ // 9 | (11,0, 97,0) | (35,0, 102,0)
+ // 10 | (11,0, 193,0) | (35,0, 198,0)
+ // 11 | (62,2, 193,0) | (86,2, 198,0)
+ // 12 | (113,5, 193,0) | (137,5, 198,0)
+ // 13 | (164,8, 193,0) | (188,8, 198,0)
+ // 14 | (216,0, 193,0) | (240,0, 198,0)
+</code></pre></div>
+
+<p>Точки «Налаштований інструмент» стосуються розташування сопла для кожної точки, а точки «Зонд» стосуються розташування зонда. Зауважте, що під час вимірювання вручну точки «Зонд» стосуватимуться розташування як інструмента, так і насадки.</p>
+<h3 id="_18">Очистити стан сітки<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p><code>BED_MESH_CLEAR</code></p>
+<p>Цей gcode можна використовувати для очищення внутрішнього стану сітки.</p>
+<h3 id="xy">Застосувати зміщення X/Y<a class="headerlink" href="#xy" title="Permanent link">&para;</a></h3>
+<p><code>BED_MESH_OFFSET [X=&lt;value&gt;] [Y=&lt;value&gt;] [ZFADE=&lt;value&gt;]</code></p>
+<p>Це корисно для принтерів із декількома незалежними екструдерами, оскільки зсув необхідний для правильного коригування Z після зміни інструменту. Зміщення слід вказати відносно первинного екструдера. Тобто, якщо вторинний екструдер встановлено праворуч від первинного екструдера, слід вказати позитивне зміщення по осі X, якщо вторинний екструдер встановлено «позаду» первинного екструдера, має бути вказано позитивне зміщення по осі Y, а позитивне зміщення по ZFADE має вказується, якщо сопло вторинного екструдера знаходиться над соплом первинного екструдера.</p>
+<p>Зауважте, що зміщення ZFADE <em>НЕ</em> безпосередньо застосовує додаткові налаштування. Він призначений для компенсації <code>зсуву gcode</code>, коли ввімкнено <a href="#mesh-fade">mesh fade</a>. Наприклад, якщо вторинний екструдер вищий за основний і потребує від’ємного зсуву gcode, тобто: <code>SET_GCODE_OFFSET Z=-.2</code>, це можна врахувати в <code>bed_mesh</code> з <code>BED_MESH_OFFSET ZFADE=.2</code>.</p>
+<h2 id="api-bed-mesh-webhooks">API Bed Mesh Webhooks<a class="headerlink" href="#api-bed-mesh-webhooks" title="Permanent link">&para;</a></h2>
+<h3 id="_19">Дамп даних сітки<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p><code>{"id": 123, "met hod": "bed_mesh/dump_mesh"}</code></p>
+<p>Дамп конфігурації та стану для поточної сітки та всіх збережених профілів.</p>
+<p>Кінцева точка <code>dump_mesh</code> приймає один необов’язковий параметр, <code>mesh_args</code>. Цей параметр має бути об’єктом, де ключі та значення є параметрами, доступними для <a href="#bed_mesh_calibrate">BED_MESH_CALIBRATE</a>. Це оновить конфігурацію сітки та точки зонду за допомогою наданих параметрів перед поверненням результату. Рекомендується опускати параметри сітки, якщо не потрібно візуалізувати точки зонда та/або траєкторію перед виконанням <code>BED_MESH_CALIBRATE</code>.</p>
+<h2 id="_20">Візуалізація та аналіз<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<p>Більшість користувачів, ймовірно, виявить, що візуалізаторів, які входять до таких програм, як Mainsail, Fluidd і Octoprint, достатньо для базового аналізу. Проте папка <code>scripts</code> Klipper містить сценарій <code>graph_mesh.py</code>, який можна використовувати для виконання додаткової візуалізації та більш детального аналізу, особливо корисного для налагодження обладнання або результатів, створених <code>bed_mesh</code>:</p>
+<div class="highlight"><pre><span></span><code>використання: графік_mesh.py [-h] {list,plot,analyze,dump} ...
+
+Graph Bed Mesh Дані
+
+позиціональні аргументи:
+{list,plot,analyze,dump}
+список доступних типів ділянок
+доля Plot вказаний тип
+аналіз Виконувати аналіз даних сітки
+Dump API відповідь на файл json
+
+варіанти:
+-h, --help показати це повідомлення про допомогу і вихід
+</code></pre></div>
+
+<h3 id="_21">Передумови<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p>Як і більшість графічних інструментів, наданих Klipper, <code>graph_mesh.py</code> вимагає залежностей <code>matplotlib</code> і <code>numpy</code> python. Крім того, для підключення до Klipper через веб-сокет Moonraker потрібна залежність <code>websockets</code> python. Хоча всі візуалізації можна виводити у файл <code>svg</code>, більшість візуалізацій, які пропонує <code>graph_mesh.py</code>, краще переглядати в режимі попереднього перегляду на настільному ПК. Наприклад, тривимірні візуалізації можна обертати та масштабувати в режимі попереднього перегляду, а візуалізації шляху можна додатково анімувати в режимі попереднього перегляду.</p>
+<h3 id="mesh">Побудова даних Mesh<a class="headerlink" href="#mesh" title="Permanent link">&para;</a></h3>
+<p>Інструмент <code>graph_mesh.py</code> може створювати кілька типів візуалізацій. Доступні типи можна показати, запустивши <code>graph_mesh.py list</code>:</p>
+<div class="highlight"><pre><span></span><code>список графімеш.py
+окуляри Plot оригінальні генеровані точки
+Шлях Плот пробе подорожі шлях
+порназоркі Plot швидкий сканування шляху
+Пробед Plot probed Z значення
+свінгери Plot сітки Z значення
+накладка Плоти поточної прокладної сітки перекриття профілю
+дельта Плоти дельти між поточною прокладкою сітки і профілю
+</code></pre></div>
+
+<p>Деякі варіанти доступні при візуалізації ділянки:</p>
+<div class="highlight"><pre><span></span><code>використання: графімеш.py plot [-h] [-a] [-s] [-p PROFILE_NAME] [-o OUTPUT] &lt;plot type&gt; &lt;input&gt;
+
+позиціональні аргументи:
+&lt;plot тип&gt; Тип даних до графіка
+&lt;input&gt; Патент/url на Klipper Socket або шлях до json файл
+
+варіанти:
+-h, --help показати це повідомлення про допомогу і вихід
+-a, --анімат Аніматові доріжки в живому попередньому перегляді
+--s, - масштаб-plot Використовуйте діапазони осі, які повідомляються Klipper, щоб масштабувати ділянку X / Y
+-р ПРОФІЛЕ_NAME, --профайл-ім&#39;я ПРОФІЛЕ_NAME
+Додаткове найменування профілю для &#39;probedz Р
+-o OUTPUT, - вихід
+Вихідний шлях файлу
+</code></pre></div>
+
+<p>Нижче опис кожного аргумента:</p>
+<ul>
+<li><code>plot type</code>: Потрібні аргументи для створення типу візуалізації. Повинен бути одним з типів <code>graph_mesh.py list</code> команди.</li>
+<li><code>вхід</code>: Необхідний аргумент позиціонування, що містить шлях або виворіт на джерело введення. Це повинно бути одне з наступних:<ul>
+<li>Шлях до Unix Domain Socket Klipper</li>
+<li>URL-адреса екземпляра Moonraker</li>
+<li>Шлях до файлу json, створеного <code>graph_mesh.py dump&lt;input&gt;</code></li>
+</ul>
+</li>
+<li><code>-a</code>: додаткова анімація для типів візуалізації <code>path</code> і <code>rapid</code>. Анімації застосовуються лише до попереднього перегляду в реальному часі.</li>
+<li><code>-s</code>: необов’язково масштабує графік, використовуючи значення <code>axis_minimum</code> і <code>axis_maximum</code>, які повідомляються об'єктом <code>toolhead</code> Klipper під час створення файлу дампа.</li>
+<li><code>-p</code>: ім'я профілю, яке можна вказати під час генерації візуалізації тривимірної сітки <code>probedz</code>. Під час генерації візуалізації <code>overlay</code> або <code>delta</code> візуалізації цей аргумент має бути надано.</li>
+<li><code>-o</code>: додатковий шлях до файлу, який вказує, що сценарій має зберегти візуалізацію в цьому місці, а не запускатися в режимі попереднього перегляду. Зображення зберігаються у форматі <code>svg</code>.</li>
+</ul>
+<p>Наприклад, щоб побудувати анімований швидкий шлях, підключившись через Unix-сокет Klipper:</p>
+<div class="highlight"><pre><span></span><code>графік graph_mesh.py - швидкий ~/printer_data/comms/klippy.sock
+</code></pre></div>
+
+<p>Або побудувати 3D візуалізацію сітки, підключившись через Moonraker:</p>
+<div class="highlight"><pre><span></span><code>graph_mesh.py побудувати мережу http://my-printer.local
+</code></pre></div>
+
+<h3 id="_22">Аналіз сітки ліжка<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<p>Інструмент <code>graph_mesh.py</code> також можна використовувати для аналізу даних, наданих <a href="#dumping-mesh-data">bed_mesh/dump_mesh</a> API:</p>
+<div class="highlight"><pre><span></span><code>аналіз graph_mesh.py
+</code></pre></div>
+
+<p>Як і у випадку з командою <code>plot</code>, <code>&lt;input&gt;</code> має бути шляхом до Unix-сокету Klipper, URL-адресою екземпляра Moonraker або шляхом до файлу json, створеного командою dump.</p>
+<p>Для початку аналіз виконає різні перевірки точок і шляхів зонда, згенерованих <code>bed_mesh</code> під час створення дампа. Це включає наступне:</p>
+<ul>
+<li>Кількість згенерованих точок зондування без додавання</li>
+<li>Кількість згенерованих точок зондування, включно з будь-якими точками, згенерованими як результат несправних областей і/або налаштованої нульової опорної позиції.</li>
+<li>Кількість пробних точок, згенерованих під час виконання швидкого сканування.</li>
+<li>Загальна кількість ходів, згенерованих для швидкого сканування.</li>
+<li>Перевірка того, що точки зондування, створені для швидкого сканування, ідентичні точкам тестування, згенерованим для стандартної процедури зондування.</li>
+<li>Перевірка "зворотного відстеження" як для стандартного шляху зонда, так і для шляху швидкого сканування. Зворотне відстеження можна визначити як переміщення до однієї позиції більше одного разу під час процедури зондування. Зворотне відстеження ніколи не повинно відбуватися під час стандартного зонду. Несправні області <em>можуть</em> призвести до зворотного відстеження під час швидкого сканування в спробі уникнути входу в несправну область під час наближення або виходу з місця зонда, однак ніколи не повинно відбуватися в іншому випадку.</li>
+</ul>
+<p>Далі буде проаналізовано кожну досліджувану сітку, наявну в дампі, починаючи з сітки, завантаженої під час дампа (якщо вона є), а потім будь-які збережені профілі. Витягуються такі дані:</p>
+<ul>
+<li>Форма сітки (мін. X, Y, макс. X, Y кількість зондів)</li>
+<li>Сітка Z діапазон, (мінімум Z, максимум Z)</li>
+<li>Середнє значення Z у сітці</li>
+<li>Стандартне відхилення значень Z у сітці</li>
+</ul>
+<p>На додаток до вищезазначеного, дельта-аналіз виконується між сітками однакової форми, повідомляючи наступне:</p>
+<ul>
+<li>Діапазон дельти між сітками (мінімум і максимум)</li>
+<li>Середня дельта</li>
+<li>Стандартне відхилення дельти</li>
+<li>Абсолютна максимальна різниця</li>
+<li>Абсолютне середнє</li>
+</ul>
+<h3 id="_23">Збережіть дані сітки у файл<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<p>Команда <code>dump</code> може бути використана для збереження відповіді у файл, який можна надати для аналізу під час усунення несправностей:</p>
+<div class="highlight"><pre><span></span><code>graph_mesh.py дамп -o
+</code></pre></div>
+
+<p><code>&lt;input&gt;</code> має бути шляхом до unix-сокету Klipper або URL-адресою екземпляра Moonraker. Параметр <code>-o</code> можна використовувати для вказівки шляху до вихідного файлу. Якщо пропущено, файл буде збережено в робочому каталозі з назвою файлу в такому форматі:</p>
+<p><code>kipper bed mesh-{year}{month}{day}{hour}{minute}{second}.json</code></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>
