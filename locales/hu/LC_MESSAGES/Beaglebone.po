@@ -1,16 +1,16 @@
 # Zs.Antal <zsikaiantal@gmail.com>, 2022.
-# "Zs.Antal" <antonio092130@icloud.com>, 2024.
+# "Zs.Antal" <antonio092130@icloud.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-09-08 09:09+0000\n"
+"PO-Revision-Date: 2025-07-22 08:34+0000\n"
 "Last-Translator: \"Zs.Antal\" <antonio092130@icloud.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/klipper/beaglebone/hu/>\n"
 "Language: hu\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: docs/Beaglebone.md:block 1 (header)
 msgid "Beaglebone"
@@ -331,16 +331,6 @@ msgstr ""
 "\"host:gpiochip1/gpio17\", de ezt kerülni kell, mert ez további terhelést "
 "jelent a fő CPU-ra, és valószínűleg nem tudja használni a léptető vezérlésére."
 
-#: docs/Beaglebone.md:block 53 (paragraph)
-msgid ""
-"Complete the installation by configuring Klipper following the instructions in"
-" the main [Installation](Installation.md#configuring-octoprint-to-use-klipper)"
-" document."
-msgstr ""
-"Fejezd be a telepítést a Klipper konfigurálásával a "
-"[Telepítés](Installation.md#configuring-octoprint-to-use-klipper) "
-"fődokumentumban található utasítások szerint."
-
 #: docs/Beaglebone.md:block 55 (paragraph)
 msgid ""
 "Unfortunately, the Beaglebone processor can sometimes struggle to run "
@@ -562,6 +552,21 @@ msgstr ""
 "esetén CAN0: BB-CAN0-00A0.dtbo CAN1: BB-CAN1-00A0.dtbo UART0: - a konzol "
 "számára UART1(RX,TX): BB-UART3-00A0.dtbo UART4(RS-485): BB-"
 "UART4-RS485-00A0.dtbo UART5(RX,TX): BB-UART5-00A0.dtbo"
+
+#: docs/Beaglebone.md:block 53 (paragraph)
+msgid ""
+"Complete the installation by configuring Klipper following the instructions in"
+" the main [Installation](Installation.md#configuring-klipper) document."
+msgstr ""
+
+#~ msgid ""
+#~ "Complete the installation by configuring Klipper following the instructions in"
+#~ " the main [Installation](Installation.md#configuring-octoprint-to-use-klipper)"
+#~ " document."
+#~ msgstr ""
+#~ "Fejezd be a telepítést a Klipper konfigurálásával a "
+#~ "[Telepítés](Installation.md#configuring-octoprint-to-use-klipper) "
+#~ "fődokumentumban található utasítások szerint."
 
 #~ msgid ""
 #~ "git clone https://github.com/foosel/OctoPrint.git\n"

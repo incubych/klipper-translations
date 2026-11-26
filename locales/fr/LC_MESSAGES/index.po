@@ -1,21 +1,23 @@
-# Nathan <bonnemainsnathan@gmail.com>, 2021.
+# Nathan <bonnemainsnathan@gmail.com>, 2021, 2025.
 # Francis Poulizac <francis@poulizac.fr>, 2023.
-# jean-luc MATTEI <jlucm@free.fr>, 2023.
+# jean-luc MATTEI <jlucm@free.fr>, 2023, 2025.
+# Sébastien Thieury <dev.sebthieu@serendip-it.fr>, 2025.
+# Posemartonis <weblate.drainage895@passmail.net>, 2026.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2023-04-26 06:51+0000\n"
-"Last-Translator: jean-luc MATTEI <jlucm@free.fr>\n"
+"PO-Revision-Date: 2026-03-07 09:10+0000\n"
+"Last-Translator: Posemartonis <weblate.drainage895@passmail.net>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/klipper/index/fr/>\n"
 "Language: fr\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #: docs/index.md:block 1 (paragraph)
 msgid "hide:"
-msgstr "hide:"
+msgstr "caché :"
 
 #: docs/index.md:block 2 (unordered list)
 msgid "toc title: Welcome"
@@ -23,29 +25,26 @@ msgstr "toc title: Bienvenue"
 
 #: docs/index.md:block 3 (paragraph)
 msgid "![](img/klipper-logo.png){ .center-image }"
-msgstr "![](img/klipper-logo.png){ .center-image }"
+msgstr "![](img/klipper-logo.png){ .centre-image }"
 
 #: docs/index.md:block 4 (paragraph)
 msgid ""
 "The Klipper firmware controls 3d-Printers. It combines the power of a general "
 "purpose computer with one or more micro-controllers. See the [features "
-"document](https://www.klipper3d.org/Features.html) for more information on why"
-" you should use the Klipper software."
+"document](Features.md) for more information on why you should use the Klipper "
+"software."
 msgstr ""
 
 #: docs/index.md:block 5 (paragraph)
-msgid ""
-"Start by [installing Klipper "
-"software](https://www.klipper3d.org/Installation.html)."
+msgid "Start by [installing Klipper software](Installation.md)."
 msgstr ""
 
 #: docs/index.md:block 6 (paragraph)
 msgid ""
-"Klipper software is Free Software. Read the "
-"[documentation](https://www.klipper3d.org/Overview.html), see the "
-"[license](COPYING), or [download](https://github.com/Klipper3d/Klipper) the "
-"software. We depend on the generous support from our "
-"[sponsors](https://www.klipper3d.org/Sponsors.html)."
+"Klipper software is Free Software. Read the [documentation](Overview.md), see "
+"the [license](../COPYING), or [download](https://github.com/Klipper3d/Klipper)"
+" the software. We depend on the generous support from our "
+"[sponsors](Sponsors.md)."
 msgstr ""
 
 #~ msgid ""

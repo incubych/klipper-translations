@@ -1,17 +1,17 @@
-# Roberto Besser <rmbesser@gmail.com>, 2021.
-# gbonaspetti <gbonaspetti@hotmail.com>, 2022.
-# Tiago Lucas Flach <tiagolucas9830@gmail.com>, 2023.
+# Roberto Besser <rmbesser@gmail.com>, 2021, 2025.
+# gbonaspetti <gbonaspetti@hotmail.com>, 2022, 2025.
+# Tiago Lucas Flach <tiagolucas9830@gmail.com>, 2023, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2023-11-30 20:05+0000\n"
-"Last-Translator: Tiago Lucas Flach <tiagolucas9830@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:23+0000\n"
+"Last-Translator: gbonaspetti <gbonaspetti@hotmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/klipper/config_checks/pt_BR/>\n"
 "Language: pt_BR\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.3-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document provides a list of steps to help confirm the pin settings in the"
@@ -295,16 +295,6 @@ msgstr ""
 "enquanto aciona manualmente o ponto final. O comando QUERY_ENDSTOPS deve "
 "reportar o fim de curso como \"TRIGGERED\"."
 
-#: docs/Config_checks.md:block 15 (paragraph)
-msgid ""
-"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
-"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
-"^PA2\"), or remove the \"!\" if there is already one present."
-msgstr ""
-"Se o fim de curso parecer invertido (relata \"aberto\" quando acionado e vice-"
-"versa), adicione um \"!\" à definição do pino (por exemplo, \"endstop_pin: "
-"^PA2\") ou remova o \"!\" se já houver um presente."
-
 #: docs/Config_checks.md:block 18 (paragraph)
 msgid ""
 "Use the STEPPER_BUZZ command to verify the connectivity of each stepper motor."
@@ -353,6 +343,22 @@ msgstr ""
 "Para calibrar a extrusora, navegue até o console de comando e execute o "
 "comando PID_CALIBRATE. Por exemplo: `PID_CALIBRATE HEATER=extrusora "
 "TARGET=170`"
+
+#: docs/Config_checks.md:block 15 (paragraph)
+msgid ""
+"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+"^!PA2\"), or remove the \"!\" if there is already one present."
+msgstr ""
+
+#~ msgid ""
+#~ "If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+#~ "versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+#~ "^PA2\"), or remove the \"!\" if there is already one present."
+#~ msgstr ""
+#~ "Se o fim de curso parecer invertido (relata \"aberto\" quando acionado e vice-"
+#~ "versa), adicione um \"!\" à definição do pino (por exemplo, \"endstop_pin: "
+#~ "^PA2\") ou remova o \"!\" se já houver um presente."
 
 #~ msgid ""
 #~ "Start by verifying that temperatures are being properly reported. Navigate to "

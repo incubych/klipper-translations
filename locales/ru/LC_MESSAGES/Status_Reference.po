@@ -1,17 +1,22 @@
-# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022.
+# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022, 2025.
 # Evgeniy Khramov <thejenjagamertjg@gmail.com>, 2022.
-# gfbdrgng <hnaofegnp@hldrive.com>, 2024.
+# gfbdrgng <hnaofegnp@hldrive.com>, 2024, 2025.
+# Evgeniy Khramov <65224669+thejenja@users.noreply.github.com>, 2025.
+# gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>, 2025.
+# Andrei Stepanov <adem@users.noreply.hosted.weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-12-31 06:00+0000\n"
-"Last-Translator: gfbdrgng <hnaofegnp@hldrive.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/klipper/status_reference/ru/>\n"
+"PO-Revision-Date: 2026-10-25 10:42+0000\n"
+"Last-Translator: Andrei Stepanov <adem@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/klipper/"
+"status_reference/ru/>\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.10-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.11.dev0\n"
 
 msgid ""
 "This document is a reference of printer status information available in "
@@ -162,7 +167,6 @@ msgstr ""
 "`rpm`: Измеренная скорость вращения вентилятора в оборотах в минуту, если у "
 "вентилятора определен контакт тахометра (tachometer_pin)."
 
-#, fuzzy
 msgid "filament_switch_sensor"
 msgstr "filament_switch_sensor"
 
@@ -183,7 +187,6 @@ msgstr ""
 "`filament_detected`: Возвращает истину, если датчик находится в состоянии "
 "срабатывания."
 
-#, fuzzy
 msgid "filament_motion_sensor"
 msgstr "filament_motion_sensor"
 
@@ -197,7 +200,6 @@ msgstr ""
 msgid "`enabled`: Returns True if the motion sensor is currently enabled."
 msgstr "`включен`: Возвращает истину, если датчик движения включен."
 
-#, fuzzy
 msgid "firmware_retraction"
 msgstr "firmware_retraction"
 
@@ -219,7 +221,6 @@ msgstr ""
 "настройки могут отличаться от настроек в файле конфигурации, если команда "
 "`SET_RETRACTION` изменит их."
 
-#, fuzzy
 msgid "gcode_macro"
 msgstr "gcode_macro"
 
@@ -237,7 +238,6 @@ msgstr ""
 "`<переменная>`: Текущее значение переменной "
 "[gcode_macro](Command_Templates.md#variables)."
 
-#, fuzzy
 msgid "gcode_move"
 msgstr "gcode_move"
 
@@ -247,38 +247,6 @@ msgid ""
 msgstr ""
 "Следующая информация доступна в объекте `gcode_move` (этот объект всегда "
 "доступен):"
-
-msgid ""
-"`gcode_position`: The current position of the toolhead relative to the current"
-" G-Code origin. That is, positions that one might directly send to a `G1` "
-"command. It is possible to access the x, y, z, and e components of this "
-"position (eg, `gcode_position.x`)."
-msgstr ""
-"`gcode_position`: Текущее положение головки инструмента относительно текущего "
-"начала G-кода. То есть, позиция, которую можно напрямую передать в команду "
-"`G1`. Можно получить доступ к компонентам x, y, z и e этой позиции (например, "
-"`gcode_position.x`)."
-
-msgid ""
-"`position`: The last commanded position of the toolhead using the coordinate "
-"system specified in the config file. It is possible to access the x, y, z, and"
-" e components of this position (eg, `position.x`)."
-msgstr ""
-"`позиция`: Последнее заданное положение головки инструмента в системе "
-"координат, указанной в файле конфигурации. Можно получить доступ к компонентам"
-" x, y, z и e этой позиции (например, `position.x`)."
-
-msgid ""
-"`homing_origin`: The origin of the gcode coordinate system (relative to the "
-"coordinate system specified in the config file) to use after a `G28` command. "
-"The `SET_GCODE_OFFSET` command can alter this position. It is possible to "
-"access the x, y, and z components of this position (eg, `homing_origin.x`)."
-msgstr ""
-"`homing_origin`: Начало системы координат gcode (относительно системы "
-"координат, указанной в файле конфигурации), которую следует использовать после"
-" команды `G28`. Команда `SET_GCODE_OFFSET` может изменить это положение. Можно"
-" получить доступ к компонентам x, y и z этой позиции (например, "
-"`homing_origin.x`)."
 
 msgid "`speed`: The last speed set in a `G1` command (in mm/s)."
 msgstr "`скорость`: Последняя скорость, установленная в команде `G1` (в мм/с)."
@@ -308,15 +276,6 @@ msgstr ""
 "`абсолютные_координаты`: Возвращает True, если в режиме абсолютных координат "
 "`G90`, или False, если в режиме относительных координат `G91`."
 
-msgid ""
-"`absolute_extrude`: This returns True if in `M82` absolute extrude mode or "
-"False if in `M83` relative mode."
-msgstr ""
-"`absolute_extrude`: Возвращает True, если используется режим абсолютного "
-"выдавливания `M82`, или False, если используется режим относительного "
-"выдавливания `M83`."
-
-#, fuzzy
 msgid "hall_filament_width_sensor"
 msgstr "hall_filament_width_sensor"
 
@@ -404,7 +363,6 @@ msgstr ""
 "`[\"extruder\", \"heater_bed\", \"heater_generic my_custom_heater\", "
 "\"temperature_sensor electronics_temp\"]`."
 
-#, fuzzy
 msgid "idle_timeout"
 msgstr "idle_timeout"
 
@@ -431,7 +389,6 @@ msgstr ""
 "`printing_time`: Количество времени (в секундах), в течение которого принтер "
 "находился в состоянии \"Печать\" (отслеживается модулем idle_timeout)."
 
-#, fuzzy
 msgid "mcu"
 msgstr "mcu"
 
@@ -469,21 +426,12 @@ msgstr ""
 "`last_stats.<statistics_name>`: Статистическая информация о подключении "
 "микроконтроллера."
 
-#, fuzzy
 msgid "output_pin"
 msgstr "output_pin"
-
-msgid ""
-"The following information is available in [output_pin "
-"some_name](Config_Reference.md#output_pin) objects:"
-msgstr ""
-"Следующая информация доступна в объектах [output_pin "
-"some_name](Config_Reference.md#output_pin):"
 
 msgid "`value`: The \"value\" of the pin, as set by a `SET_PIN` command."
 msgstr "`value`: \"Значение\" пина, заданное командой `SET_PIN`."
 
-#, fuzzy
 msgid "palette2"
 msgstr "palette2"
 
@@ -508,7 +456,6 @@ msgstr ""
 msgid "`is_splicing`: True when the Palette 2 is splicing filament."
 msgstr "`is_splicing`: Истина, если палитра 2 сращивает нити."
 
-#, fuzzy
 msgid "pause_resume"
 msgstr "pause_resume"
 
@@ -526,7 +473,6 @@ msgstr ""
 "`is_paused`: Возвращает true, если была выполнена команда PAUSE без "
 "соответствующего RESUME."
 
-#, fuzzy
 msgid "print_stats"
 msgstr "print_stats"
 
@@ -549,9 +495,8 @@ msgstr ""
 "`message`: Оценочная информация о текущем отпечатке, если активен отпечаток "
 "virtual_sdcard."
 
-#, fuzzy
 msgid "probe"
-msgstr "probe"
+msgstr "зонд"
 
 msgid ""
 "The following information is available in the "
@@ -573,17 +518,6 @@ msgstr ""
 "макросе, то из-за порядка расширения шаблона команда QUERY_PROBE должна быть "
 "запущена до макроса, содержащего эту ссылку."
 
-msgid ""
-"`last_z_result`: Returns the Z result value of the last PROBE command. Note, "
-"if this is used in a macro, due to the order of template expansion, the PROBE "
-"(or similar) command must be run prior to the macro containing this reference."
-msgstr ""
-"`last_z_result`: Возвращает значение Z-результата последней команды PROBE. "
-"Обратите внимание, если это используется в макросе, то из-за порядка "
-"расширения шаблона команда PROBE (или аналогичная) должна быть запущена до "
-"макроса, содержащего эту ссылку."
-
-#, fuzzy
 msgid "quad_gantry_level"
 msgstr "quad_gantry_level"
 
@@ -601,7 +535,6 @@ msgstr ""
 "`применено`: True, если процесс выравнивания порталов был запущен и успешно "
 "завершен."
 
-#, fuzzy
 msgid "query_endstops"
 msgstr "query_endstops"
 
@@ -641,7 +574,6 @@ msgstr ""
 "`printer[\"servo <config_name>\"].value`: Последняя настройка вывода ШИМ "
 "(значение между 0.0 и 1.0), связанного с сервоприводом."
 
-#, fuzzy
 msgid "system_stats"
 msgstr "system_stats"
 
@@ -668,7 +600,6 @@ msgstr "Следующая информация доступна в"
 msgid "`temperature`: The last read temperature from the sensor."
 msgstr "`температура`: Последнее значение температуры, считанное с датчика."
 
-#, fuzzy
 msgid "temperature_fan"
 msgstr "temperature_fan"
 
@@ -682,7 +613,6 @@ msgstr ""
 msgid "`target`: The target temperature for the fan."
 msgstr "`Цель`: Целевая температура для вентилятора."
 
-#, fuzzy
 msgid "temperature_sensor"
 msgstr "temperature_sensor"
 
@@ -712,15 +642,6 @@ msgstr ""
 "доступен):"
 
 msgid ""
-"`position`: The last commanded position of the toolhead relative to the "
-"coordinate system specified in the config file. It is possible to access the "
-"x, y, z, and e components of this position (eg, `position.x`)."
-msgstr ""
-"`позиция`: Последнее заданное положение головки инструмента относительно "
-"системы координат, указанной в файле конфигурации. Можно получить доступ к "
-"компонентам x, y, z и e этой позиции (например, `position.x`)."
-
-msgid ""
 "`extruder`: The name of the currently active extruder. For example, in a macro"
 " one could use `printer[printer.toolhead.extruder].target` to get the target "
 "temperature of the current extruder."
@@ -738,15 +659,6 @@ msgstr ""
 "\"x\", \"y\", \"z\"."
 
 msgid ""
-"`axis_minimum`, `axis_maximum`: The axis travel limits (mm) after homing. It "
-"is possible to access the x, y, z components of this limit value (eg, "
-"`axis_minimum.x`, `axis_maximum.z`)."
-msgstr ""
-"`axis_minimum`, `axis_maximum`: Предельные значения перемещения оси (мм) после"
-" наведения. Можно получить доступ к компонентам x, y, z этого предельного "
-"значения (например, `axis_minimum.x`, `axis_maximum.z`)."
-
-msgid ""
 "`stalls`: The total number of times (since the last restart) that the printer "
 "had to be paused because the toolhead moved faster than moves could be read "
 "from the G-Code input."
@@ -755,7 +667,6 @@ msgstr ""
 "принтер был приостановлен из-за того, что головка инструмента двигалась "
 "быстрее, чем можно было считать перемещения из G-кода."
 
-#, fuzzy
 msgid "virtual_sdcard"
 msgstr "virtual_sdcard"
 
@@ -804,7 +715,6 @@ msgstr ""
 "`state_message`: Человекочитаемая строка, дающая дополнительный контекст о "
 "текущем состоянии Klipper."
 
-#, fuzzy
 msgid "z_tilt"
 msgstr "z_tilt"
 
@@ -822,7 +732,6 @@ msgstr ""
 "`applied`: True, если процесс выравнивания наклона был запущен и успешно "
 "завершен."
 
-#, fuzzy
 msgid "dual_carriage"
 msgstr "dual_carriage"
 
@@ -837,7 +746,6 @@ msgid "Status reference"
 msgstr "Ссылка на статус"
 
 #: docs/Status_Reference.md:block 49 (header)
-#, fuzzy
 msgid "motion_report"
 msgstr "motion_report"
 
@@ -848,14 +756,6 @@ msgid ""
 msgstr ""
 "Следующая информация доступна в объекте `motion_report` (этот объект "
 "автоматически доступен, если определена любая секция конфигурации степпера):"
-
-#: docs/Status_Reference.md:block 51 (unordered list)
-msgid ""
-"`live_position`: The requested toolhead position interpolated to the current "
-"time."
-msgstr ""
-"`live_position`: Запрашиваемая позиция головки инструмента, интерполированная "
-"к текущему времени."
 
 #: docs/Status_Reference.md:block 51 (unordered list)
 msgid ""
@@ -943,10 +843,6 @@ msgid "`hold_current`: The currently set hold current."
 msgstr "`hold_current`: Установленный в данный момент ток удержания."
 
 #: docs/Status_Reference.md:block 36 (unordered list)
-msgid "`Diameter`: The last reading from the sensor in mm."
-msgstr "`Диаметр`: Последнее показание датчика в мм."
-
-#: docs/Status_Reference.md:block 36 (unordered list)
 msgid "`Raw`: The last raw ADC reading from the sensor."
 msgstr "`Сырой`: Последнее необработанное показание АЦП с датчика."
 
@@ -996,23 +892,6 @@ msgstr ""
 "led_name]`, `[neopixel led_name]`, `[dotstar led_name]`, `[pca9533 led_name]` "
 "и `[pca9632 led_name]`, определенного в файле printer.cfg:"
 
-#: docs/Status_Reference.md:block 51 (unordered list)
-msgid ""
-"`color_data`: A list of color lists containing the RGBW values for a led in "
-"the chain. Each value is represented as a float from 0.0 to 1.0. Each color "
-"list contains 4 items (red, green, blue, white) even if the underyling LED "
-"supports fewer color channels. For example, the blue value (3rd item in color "
-"list) of the second neopixel in a chain could be accessed at "
-"`printer[\"neopixel <config_name>\"].color_data[1][2]`."
-msgstr ""
-"`color_data`: Список списков цветов, содержащих значения RGBW для светодиода в"
-" цепочке. Каждое значение представлено в виде float от 0.0 до 1.0. Каждый "
-"список цветов содержит 4 элемента (красный, зеленый, синий, белый), даже если "
-"подстроечный светодиод поддерживает меньшее количество цветовых каналов. "
-"Например, значение синего цвета (3-й элемент в списке цветов) второго "
-"неопикселя в цепочке может быть доступно по адресу `printer[\"neopixel "
-"<config_name>\"].color_data[1][2]`."
-
 #: docs/Status_Reference.md:block 12 (unordered list)
 msgid ""
 "`save_config_pending_items`: Contains the sections and options that were "
@@ -1022,7 +901,6 @@ msgstr ""
 "будут сохранены при `SAVE_CONFIG`."
 
 #: docs/Status_Reference.md:block 19 (header)
-#, fuzzy
 msgid "exclude_object"
 msgstr "exclude_object"
 
@@ -1062,7 +940,6 @@ msgid "`current_object`: The name of the object currently being printed."
 msgstr "`current_object`: Имя объекта, который печатается в данный момент."
 
 #: docs/Status_Reference.md:block 57 (header)
-#, fuzzy
 msgid "manual_probe"
 msgstr "manual_probe"
 
@@ -1097,7 +974,6 @@ msgstr ""
 "высоту."
 
 #: docs/Status_Reference.md:block 10 (header)
-#, fuzzy
 msgid "bed_screws"
 msgstr "bed_screws"
 
@@ -1126,7 +1002,6 @@ msgid "`accepted_screws`: The number of accepted screws."
 msgstr "`accepted_screws`: Количество принимаемых винтов."
 
 #: docs/Status_Reference.md:block 27 (header)
-#, fuzzy
 msgid "extruder_stepper"
 msgstr "extruder_stepper"
 
@@ -1174,7 +1049,6 @@ msgstr ""
 "CURRENT_LAYER=<значение>`."
 
 #: docs/Status_Reference.md:block 124 (header)
-#, fuzzy
 msgid "z_thermal_adjust"
 msgstr "z_thermal_adjust"
 
@@ -1219,7 +1093,6 @@ msgstr ""
 "расчета Z `current_z_adjust` [degC]."
 
 #: docs/Status_Reference.md:block 93 (header)
-#, fuzzy
 msgid "screws_tilt_adjust"
 msgstr "screws_tilt_adjust"
 
@@ -1287,7 +1160,6 @@ msgid "`is_base`: Returns True if this is the base screw."
 msgstr "`is_base`: Возвращает True, если это базовый винт."
 
 #: docs/Status_Reference.md:block 99 (header)
-#, fuzzy
 msgid "stepper_enable"
 msgstr "stepper_enable"
 
@@ -1304,7 +1176,6 @@ msgid "`steppers[\"<stepper>\"]`: Returns True if the given stepper is enabled."
 msgstr "`steppers[\"<stepper>\"]`: Возвращает True, если указанный степпер включен."
 
 #: docs/Status_Reference.md:block 42 (header)
-#, fuzzy
 msgid "gcode_button"
 msgstr "gcode_button"
 
@@ -1380,7 +1251,6 @@ msgstr ""
 "\"ПЕРВИЧНЫЙ\", \"КОПИРОВАНИЕ\" и \"ЗЕРКАЛО\"."
 
 #: docs/Status_Reference.md:block 90 (header)
-#, fuzzy
 msgid "pwm_cycle_time"
 msgstr "pwm_cycle_time"
 
@@ -1404,27 +1274,6 @@ msgstr ""
 "файла конфигурации, если команда `SET_VELOCITY_LIMIT` (или `M204`) изменит их "
 "во время выполнения."
 
-#: docs/Status_Reference.md:block 113 (paragraph)
-#, fuzzy
-msgid ""
-"[bme280 "
-"config_section_name](Config_Reference.md#bmp280bme280bme680-temperature-"
-"sensor), [htu21d config_section_name](Config_Reference.md#htu21d-sensor), "
-"[sht3x config_section_name](Config_Reference.md#sht31-sensor), [lm75 "
-"config_section_name](Config_Reference.md#lm75-temperature-sensor), "
-"[temperature_host config_section_name](Config_Reference.md#host-temperature-"
-"sensor) and [temperature_combined "
-"config_section_name](Config_Reference.md#combined-temperature-sensor) objects:"
-msgstr ""
-"[bme280 "
-"config_section_name](Config_Reference.md#bmp280bme280bme680-temperature-"
-"sensor), [htu21d config_section_name](Config_Reference.md#htu21d-sensor), "
-"[sht3x config_section_name](Config_Reference.md#sht31-sensor), [lm75 "
-"config_section_name](Config_Reference.md#lm75-temperature-sensor), "
-"[temperature_host config_section_name](Config_Reference.md#host-temperature-"
-"sensor) and [temperature_combined "
-"config_section_name](Config_Reference.md#combined-temperature-sensor) objects:"
-
 #: docs/Status_Reference.md:block 114 (unordered list)
 msgid ""
 "`humidity`, `pressure`, `gas`: The last read values from the sensor (only on "
@@ -1438,10 +1287,11 @@ msgid ""
 "The following information is available in the "
 "[bed_screws](Config_Reference.md#bed_screws) object:"
 msgstr ""
+"Следующая информация доступна в объекте `Config_Reference.md#{bed_screws}`:"
 
 #: docs/Status_Reference.md:block 13 (header)
 msgid "canbus_stats"
-msgstr ""
+msgstr "canbus_stats"
 
 #: docs/Status_Reference.md:block 14 (paragraph)
 msgid ""
@@ -1449,24 +1299,31 @@ msgid ""
 "object (this object is automatically available if an mcu is configured to use "
 "canbus):"
 msgstr ""
+"Следующая информация доступна в объекте `canbus_stats some_mcu_name ` (этот "
+"объект автоматически доступен, если mcu настроен для использования canbus):"
 
 #: docs/Status_Reference.md:block 15 (unordered list)
 msgid ""
 "`rx_error`: The number of receive errors detected by the micro-controller "
 "canbus hardware."
 msgstr ""
+"`rx_error`: Количество ошибок, обнаруженных микроконтроллерным оборудованием."
 
 #: docs/Status_Reference.md:block 15 (unordered list)
 msgid ""
 "`tx_error`: The number of transmit errors detected by the micro-controller "
 "canbus hardware."
 msgstr ""
+"`tx_error`: Количество ошибок передачи, обнаруженных аппаратным обеспечением "
+"микроконтроллера."
 
 #: docs/Status_Reference.md:block 15 (unordered list)
 msgid ""
 "`tx_retries`: The number of transmit attempts that were retried due to bus "
 "contention or errors."
 msgstr ""
+"`tx_retries`: Количество попыток передачи, которые были повторно испытаны из-"
+"за разногласий или ошибок."
 
 #: docs/Status_Reference.md:block 15 (unordered list)
 msgid ""
@@ -1475,6 +1332,11 @@ msgid ""
 " that will no longer transmit canbus error frames, or \"off\" for a bus that "
 "will no longer transmit or receive messages)."
 msgstr ""
+"`bus_state`: Статус интерфейса (как правило, «активный» для автобуса в "
+"нормальной эксплуатации, «огненный» для автобуса с недавними ошибками, "
+"«пассивный» для автобуса, который больше не будет передавать рамы ошибок "
+"каннаба или «выключен» для автобуса, который больше не будет передавать или "
+"получать сообщения)."
 
 #: docs/Status_Reference.md:block 16 (paragraph)
 msgid ""
@@ -1482,65 +1344,594 @@ msgid ""
 "field and the rp2XXX micro-controllers always report `tx_error` as zero and "
 "`bus_state` as \"active\"."
 msgstr ""
+"Обратите внимание, что только rp2XXX микроконтроллеры сообщают ненулевую ` "
+"tx_retries` поле и rp2XXX микроконтроллеры всегда сообщают `tx_error` как ноль"
+" и `bus_state` как «активные»."
 
 #: docs/Status_Reference.md:block 57 (unordered list)
 msgid ""
 "all items from "
 "[filament_switch_sensor](Status_Reference.md#filament_switch_sensor)"
 msgstr ""
+"все элементы "
+"из[filament_switch_sensor](Status_Reference.md#filament_switch_sensor)"
 
 #: docs/Status_Reference.md:block 70 (header)
 msgid "load_cell"
-msgstr ""
+msgstr "load_cell"
 
 #: docs/Status_Reference.md:block 71 (paragraph)
 msgid "The following information is available for each `[load_cell name]`:"
-msgstr ""
-
-#: docs/Status_Reference.md:block 72 (unordered list)
-msgid "'is_calibrated': True/False is the load cell calibrated"
-msgstr ""
-
-#: docs/Status_Reference.md:block 72 (unordered list)
-msgid ""
-"'counts_per_gram': The number of raw sensor counts that equals 1 gram of force"
-msgstr ""
-
-#: docs/Status_Reference.md:block 72 (unordered list)
-msgid ""
-"'reference_tare_counts': The reference number of raw sensor counts for 0 force"
-msgstr ""
-
-#: docs/Status_Reference.md:block 72 (unordered list)
-msgid "'tare_counts': The current number of raw sensor counts for 0 force"
-msgstr ""
-
-#: docs/Status_Reference.md:block 72 (unordered list)
-msgid "'force_g': The force in grams, averaged over the last polling period."
-msgstr ""
-
-#: docs/Status_Reference.md:block 72 (unordered list)
-msgid "'min_force_g': The minimum force in grams, over the last polling period."
-msgstr ""
-
-#: docs/Status_Reference.md:block 72 (unordered list)
-msgid "'max_force_g': The maximum force in grams, over the last polling period."
-msgstr ""
+msgstr "Для каждого `[load_cell name]` доступна следующая информация:"
 
 #: docs/Status_Reference.md:block 112 (header)
 msgid "skew_correction.py"
-msgstr ""
+msgstr "skew_correction.py"
 
 #: docs/Status_Reference.md:block 113 (paragraph)
 msgid ""
 "The following information is available in the `skew_correction` object (this "
 "object is available if any skew_correction is defined):"
 msgstr ""
+"Следующая информация доступна в объекте `skew_correction ` (этот объект "
+"доступен, если какой-либо skew_correction определен):"
 
 #: docs/Status_Reference.md:block 114 (unordered list)
 msgid ""
 "`current_profile_name`: Returns the name of the currently loaded SKEW_PROFILE."
 msgstr ""
+"`current_profile_name`: Возвращает имя текущего загруженного SKEW_PROFILE."
+
+#: docs/Status_Reference.md:block 73 (header)
+msgid "load_cell_probe"
+msgstr "load_cell_probe"
+
+#: docs/Status_Reference.md:block 74 (paragraph)
+msgid "The following information is available for `[load_cell_probe]`:"
+msgstr "Для `[load_cell_probe]` доступна следующая информация:"
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid "all items from [load_cell](Status_Reference.md#load_cell)"
+msgstr "все элементы из [load_cell](Status_Reference.md#load_cell)"
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid "all items from [probe](Status_Reference.md#probe)"
+msgstr "все товары из [проекта](Status_Reference.md#probe)"
+
+#: docs/Status_Reference.md:block 143 (paragraph)
+msgid ""
+"On a `generic_cartesian` kinematic, the following information is available in "
+"`dual_carriage`:"
+msgstr ""
+"В кинематике `generic_cartesian` в `dual_carriage` доступна следующая "
+"информация:"
+
+#: docs/Status_Reference.md:block 144 (unordered list)
+msgid ""
+"`carriages[\"<carriage>\"]`: The mode of the carriage `<carriage>`. Possible "
+"values are \"INACTIVE\" and \"PRIMARY\" for the primary carriage and "
+"\"INACTIVE\", \"PRIMARY\", \"COPY\", and \"MIRROR\" for the dual carriage."
+msgstr ""
+"` бракосочетания [\"<переговор>\"]`: Режим перевозки `<перевозка>`. Возможными"
+" значениями являются \"ИНАКТИВНЫЕ\" и \"ПРАВИТЕЛЬНЫЕ\" для первичной перевозки"
+" и \"ИНАКТИВНЫЕ\", \"ПРАВИТЕЛЬНЫЕ\", \"КОПИ\" и \"МИРОР\" для двойной "
+"перевозки."
+
+#: docs/Status_Reference.md:block 46 (header)
+msgid "gcode"
+msgstr "gcode"
+
+#: docs/Status_Reference.md:block 47 (paragraph)
+msgid "The following information is available in the `gcode` object:"
+msgstr "В объекте `gcode` доступна следующая информация:"
+
+#: docs/Status_Reference.md:block 48 (unordered list)
+msgid ""
+"`commands`: Returns a list of all currently available commands. For each "
+"command, if a help string is defined it will also be provided."
+msgstr ""
+"`commands`: возвращает список всех доступных в данный момент команд. Для "
+"каждой команды, если определена строка справки, она также будет "
+"предоставлена."
+
+#: docs/Status_Reference.md:block 57 (unordered list)
+msgid ""
+"`gcode_position`: The current position of the toolhead relative to the current"
+" G-Code origin. That is, positions that one might directly send to a `G1` "
+"command. This value is encoded as a [coordinate](#accessing-coordinates)."
+msgstr ""
+"`gcode_position`: текущее положение инструментальной головки относительно "
+"текущего начала координат G-кода. То есть позиции, которые можно напрямую "
+"передать команде `G1`. Это значение закодировано как [координата](#accessing-"
+"coordinates)."
+
+#: docs/Status_Reference.md:block 57 (unordered list)
+msgid ""
+"`position`: The last commanded position of the toolhead using the coordinate "
+"system specified in the config file. This value is encoded as a "
+"[coordinate](#accessing-coordinates)."
+msgstr ""
+"`position`: последнее заданное положение инструментальной головки в системе "
+"координат, указанной в файле конфигурации. Это значение закодировано как "
+"[координата](#accessing-coordinates)."
+
+#: docs/Status_Reference.md:block 57 (unordered list)
+msgid ""
+"`homing_origin`: The origin of the gcode coordinate system (relative to the "
+"coordinate system specified in the config file) to use after a `G28` command. "
+"The `SET_GCODE_OFFSET` command can alter this position. This value is encoded "
+"as a [coordinate](#accessing-coordinates)."
+msgstr ""
+"`homing_origin`: начало системы координат gcode (относительно системы "
+"координат, указанной в файле конфигурации), которое используется после "
+"команды `G28`. Команда `SET_GCODE_OFFSET` может изменять это положение. Это "
+"значение закодировано как [координата](#accessing-coordinates)."
+
+#: docs/Status_Reference.md:block 57 (unordered list)
+msgid ""
+"`axis_map`: Provides a mechanism for finding the coordinate component for a "
+"given G-Code id that is used in `G1` commands. See the [Accessing "
+"Coordinates](#accessing-coordinates) section for details."
+msgstr ""
+"`axis_map`: предоставляет механизм для поиска компонента координат для "
+"заданного идентификатора G-кода, используемого в командах `G1`. Подробности "
+"см. в разделе [Доступ к координатам](#accessing-coordinates)."
+
+#: docs/Status_Reference.md:block 60 (unordered list)
+msgid ""
+"`flow_compensation_enabled`: Returns True if flow compensation is enabled."
+msgstr ""
+"`flow_compensation_enabled`: возвращает True, если компенсация потока "
+"включена."
+
+#: docs/Status_Reference.md:block 60 (unordered list)
+msgid ""
+"`Diameter`: Returns the last width reading in mm if the sensor is active or "
+"the nominal filament diameter if it is not."
+msgstr ""
+"`Diameter`: возвращает последнее измерение ширины в мм, если датчик активен, "
+"или номинальный диаметр филамента, если нет."
+
+#: docs/Status_Reference.md:block 69 (unordered list)
+msgid ""
+"`idle_timeout`: The current 'timeout' (in seconds) to wait for the gcode to be"
+" triggered. (as set by [SET_IDLE_TIMEOUT](G-Codes.md#set_idle_timeout))"
+msgstr ""
+"`idle_timeout`: текущий «тайм-аут» (в секундах) ожидания срабатывания gcode "
+"(устанавливается командой [SET_IDLE_TIMEOUT](G-Codes.md#set_idle_timeout))."
+
+#: docs/Status_Reference.md:block 72 (unordered list)
+msgid ""
+"`color_data`: A list of color lists containing the RGBW values for a led in "
+"the chain. Each value is represented as a float from 0.0 to 1.0. Each color "
+"list contains 4 items (red, green, blue, white) even if the underlying LED "
+"supports fewer color channels. For example, the blue value (3rd item in color "
+"list) of the second neopixel in a chain could be accessed at "
+"`printer[\"neopixel <config_name>\"].color_data[1][2]`."
+msgstr ""
+"`color_data`: список списков цветов, содержащих значения RGBW для светодиода "
+"в цепочке. Каждое значение представлено числом с плавающей точкой от 0.0 до "
+"1.0. Каждый список цветов содержит 4 элемента (красный, зелёный, синий, "
+"белый), даже если сам светодиод поддерживает меньше цветовых каналов. "
+"Например, к синему значению (третий элемент в списке цветов) второго "
+"neopixel в цепочке можно обратиться так: `printer[\"neopixel <config_name>"
+"\"].color_data[1][2]`."
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid "`is_calibrated`: True/False whether the load cell is calibrated."
+msgstr "`is_calibrated`: True/False — откалиброван ли тензодатчик."
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid ""
+"`counts_per_gram`: The number of raw sensor counts that equals 1 gram of "
+"force."
+msgstr ""
+"`counts_per_gram`: количество необработанных отсчётов датчика, "
+"соответствующее 1 грамму силы."
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid ""
+"`reference_tare_counts`: The reference number of raw sensor counts for 0 "
+"force."
+msgstr ""
+"`reference_tare_counts`: опорное количество необработанных отсчётов датчика "
+"для нулевой силы."
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid "`tare_counts`: The current number of raw sensor counts for 0 force."
+msgstr ""
+"`tare_counts`: текущее количество необработанных отсчётов датчика для "
+"нулевой силы."
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid "`force_g`: The force in grams, averaged over the last polling period."
+msgstr "`force_g`: сила в граммах, усреднённая за последний период опроса."
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid "`min_force_g`: The minimum force in grams, over the last polling period."
+msgstr "`min_force_g`: минимальная сила в граммах за последний период опроса."
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid "`max_force_g`: The maximum force in grams, over the last polling period."
+msgstr "`max_force_g`: максимальная сила в граммах за последний период опроса."
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid ""
+"`errors`: The number of sensor errors detected since the last start of "
+"measurements."
+msgstr ""
+"`errors`: количество ошибок датчика, обнаруженных с момента последнего "
+"начала измерений."
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid ""
+"`overflows`: The number of data buffer overflows detected since the last start"
+" of measurements."
+msgstr ""
+"`overflows`: количество переполнений буфера данных, обнаруженных с момента "
+"последнего начала измерений."
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid "`sample_rate`: The sensor's sample rate in samples per second."
+msgstr "`sample_rate`: частота дискретизации датчика в отсчётах в секунду."
+
+#: docs/Status_Reference.md:block 78 (unordered list)
+msgid ""
+"`endstop_tare_counts`: The load cell probe keeps a tare value independent of "
+"the load cell. This is re-set at the start of each probe."
+msgstr ""
+"`endstop_tare_counts`: датчик на тензодатчике хранит значение тары "
+"независимо от тензодатчика. Оно сбрасывается в начале каждого измерения."
+
+#: docs/Status_Reference.md:block 78 (unordered list)
+msgid "`last_trigger_time`: Timestamp of the last homing trigger."
+msgstr ""
+"`last_trigger_time`: отметка времени последнего срабатывания при парковке."
+
+#: docs/Status_Reference.md:block 78 (unordered list)
+msgid "`last_z_result`: The Z position result of the last tap."
+msgstr "`last_z_result`: результат позиции Z последнего касания."
+
+#: docs/Status_Reference.md:block 78 (unordered list)
+msgid "`is_last_tap_valid`: True if the last tap result is valid."
+msgstr ""
+"`is_last_tap_valid`: True, если результат последнего касания действителен."
+
+#: docs/Status_Reference.md:block 87 (unordered list)
+msgid ""
+"`live_position`: The requested toolhead position interpolated to the current "
+"time. This value is encoded as a [coordinate](#accessing-coordinates)."
+msgstr ""
+"`live_position`: запрошенное положение инструментальной головки, "
+"интерполированное на текущий момент времени. Это значение закодировано как "
+"[координата](#accessing-coordinates)."
+
+#: docs/Status_Reference.md:block 89 (paragraph)
+msgid ""
+"The following information is available in [output_pin "
+"some_name](Config_Reference.md#output_pin) and [pwm_tool "
+"some_name](Config_Reference.md#pwm_tool) objects:"
+msgstr ""
+"В объектах [output_pin some_name](Config_Reference.md#output_pin) и "
+"[pwm_tool some_name](Config_Reference.md#pwm_tool) доступна следующая "
+"информация:"
+
+#: docs/Status_Reference.md:block 102 (unordered list)
+msgid ""
+"`last_probe_position`: The results of the last `PROBE` command. This value is "
+"encoded as a [coordinate](#accessing-coordinates). The probe hardware "
+"estimates that if one were to command the toolhead to XY position "
+"`last_probe_position.x`,`last_probe_position.y` and descend then the tip of "
+"the toolhead would first contact the bed at a Z height of "
+"`last_probe_position.z`. These coordinates are relative to the frame (that is,"
+" they use the coordinate system specified in the config file). Note, if this "
+"is used in a macro, due to the order of template expansion, the `PROBE` "
+"command must be run prior to the macro containing this reference."
+msgstr ""
+"`last_probe_position`: результаты последней команды `PROBE`. Это значение "
+"закодировано как [координата](#accessing-coordinates). Аппаратное "
+"обеспечение датчика оценивает, что если подать инструментальной головке "
+"команду на позицию XY `last_probe_position.x`, `last_probe_position.y` и "
+"опускать её, то наконечник инструментальной головки впервые коснётся стола "
+"на высоте Z `last_probe_position.z`. Эти координаты заданы относительно "
+"станины (то есть используют систему координат, указанную в файле "
+"конфигурации). Учтите: если это используется в макросе, то из-за порядка "
+"раскрытия шаблонов команда `PROBE` должна быть выполнена до макроса, "
+"содержащего эту ссылку."
+
+#: docs/Status_Reference.md:block 102 (unordered list)
+msgid ""
+"`last_z_result`: This value is deprecated; it will be removed in the near "
+"future."
+msgstr ""
+"`last_z_result`: это значение устарело; в ближайшем будущем оно будет "
+"удалено."
+
+#: docs/Status_Reference.md:block 142 (unordered list)
+msgid ""
+"`position`: The last commanded position of the toolhead relative to the "
+"coordinate system specified in the config file. This value is encoded as a "
+"[coordinate](#accessing-coordinates)."
+msgstr ""
+"`position`: последнее заданное положение инструментальной головки "
+"относительно системы координат, указанной в файле конфигурации. Это значение "
+"закодировано как [координата](#accessing-coordinates)."
+
+#: docs/Status_Reference.md:block 142 (unordered list)
+msgid ""
+"`axis_minimum`, `axis_maximum`: The axis travel limits (mm) after homing. This"
+" value is encoded as a [coordinate](#accessing-coordinates)."
+msgstr ""
+"`axis_minimum`, `axis_maximum`: пределы перемещения осей (мм) после "
+"парковки. Это значение закодировано как [координата](#accessing-coordinates)."
+
+#: docs/Status_Reference.md:block 142 (unordered list)
+msgid ""
+"`extra_axes`: Provides a mechanism for finding the coordinate component for "
+"extra axes available in standard `G1` type move commands. See the [Accessing "
+"Coordinates](#accessing-coordinates) section for details."
+msgstr ""
+"`extra_axes`: предоставляет механизм для поиска компонента координат для "
+"дополнительных осей, доступных в стандартных командах перемещения типа `G1`. "
+"Подробности см. в разделе [Доступ к координатам](#accessing-coordinates)."
+
+#: docs/Status_Reference.md:block 160 (header)
+msgid "Accessing Coordinates"
+msgstr "Доступ к координатам"
+
+#: docs/Status_Reference.md:block 161 (paragraph)
+msgid ""
+"Some status fields provide a \"coordinate\". For macro users these fields may "
+"be accessed by component name (eg,`{printer.toolhead.position.x}`), where the "
+"component name may be \"x\", \"y\", or \"z\"."
+msgstr ""
+"Некоторые поля статуса предоставляют «координату». Пользователи макросов "
+"могут обращаться к этим полям по имени компонента (например, `"
+"{printer.toolhead.position.x}`), где имя компонента может быть «x», «y» или «"
+"z»."
+
+#: docs/Status_Reference.md:block 162 (paragraph)
+msgid ""
+"For developers using the Klipper API Server these fields are transmitted as a "
+"list - for example: `{\"toolhead\": {\"position\": [1.0, 2.0, 3.0, 7.3, "
+"19.2]}}` . The first three components of the list correspond with the x, y, "
+"and z axes."
+msgstr ""
+"Для разработчиков, использующих API-сервер Klipper, эти поля передаются в "
+"виде списка — например: `{\"toolhead\": {\"position\": [1.0, 2.0, 3.0, 7.3, "
+"19.2]}}`. Первые три компонента списка соответствуют осям x, y и z."
+
+#: docs/Status_Reference.md:block 163 (paragraph)
+msgid ""
+"A coordinate will typically have at least 3 components (x, y, and z), however "
+"there may also be additional components. Care should be taken when accessing "
+"any of these additional components as the ordering and number of components "
+"may change at run-time."
+msgstr ""
+"Координата, как правило, имеет как минимум 3 компонента (x, y и z), однако "
+"могут быть и дополнительные компоненты. Следует соблюдать осторожность при "
+"доступе к любым из этих дополнительных компонентов, так как порядок и "
+"количество компонентов могут меняться во время работы."
+
+#: docs/Status_Reference.md:block 164 (paragraph)
+msgid ""
+"One may use `{printer.gcode_move.axis_map}` and/or "
+"`{printer.toolhead.extra_axes}` to determine the number of components and the "
+"ordering of components. For example, to access the \"E\" component one could "
+"use `{printer.toolhead.position[printer.gcode_move.axis_map.E]}`. Or, if one "
+"wanted to find the component associated with the \"extruder\" object, one "
+"could use `{printer.toolhead.position[printer.toolhead.extra_axes.extruder]}`."
+msgstr ""
+"Можно использовать `{printer.gcode_move.axis_map}` и/или `"
+"{printer.toolhead.extra_axes}`, чтобы определить количество компонентов и их "
+"порядок. Например, чтобы обратиться к компоненту «E», можно использовать `"
+"{printer.toolhead.position[printer.gcode_move.axis_map.E]}`. Или, если нужно "
+"найти компонент, связанный с объектом «extruder», можно использовать `"
+"{printer.toolhead.position[printer.toolhead.extra_axes.extruder]}`."
+
+#: docs/Status_Reference.md:block 57 (unordered list)
+msgid ""
+"`absolute_extrude`: Returns True if absolute extrusions are permitted. An "
+"`M83` force relative extrusion mode command causes this value to return False."
+" An `M82` command returns this value to True."
+msgstr ""
+"`absolute_extrude`: возвращает True, если разрешена абсолютная экструзия. "
+"Команда `M83`, включающая режим принудительной относительной экструзии, "
+"заставляет это значение возвращать False. Команда `M82` возвращает это "
+"значение в True."
+
+#: docs/Status_Reference.md:block 84 (unordered list)
+msgid ""
+"`mcu_kconfig`: The minimal build configuration (`savedefconfig` output) that "
+"the micro-controller firmware was compiled from, as reported by the micro-"
+"controller. `None` if the firmware predates this feature or does not provide "
+"it."
+msgstr ""
+"`mcu_kconfig`: минимальная конфигурация сборки (вывод `savedefconfig`), из "
+"которой была скомпилирована прошивка микроконтроллера, в том виде, как её "
+"сообщает микроконтроллер. `None`, если прошивка старше этой функции или не "
+"предоставляет её."
+
+#: docs/Status_Reference.md:block 129 (paragraph)
+msgid ""
+"[bme280 "
+"config_section_name](Config_Reference.md#bmp180bmp280bme280bmp388bme680-temperature-"
+"sensor), [htu21d config_section_name](Config_Reference.md#htu21d-sensor), "
+"[sht3x config_section_name](Config_Reference.md#sht3x-sensor), [lm75 "
+"config_section_name](Config_Reference.md#lm75-temperature-sensor), "
+"[temperature_host config_section_name](Config_Reference.md#host-temperature-"
+"sensor) and [temperature_combined "
+"config_section_name](Config_Reference.md#combined-temperature-sensor) objects:"
+msgstr ""
+"Объекты [bme280 config_section_name]"
+"(Config_Reference.md#bmp180bmp280bme280bmp388bme680-temperature-sensor), "
+"[htu21d config_section_name](Config_Reference.md#htu21d-sensor), [sht3x "
+"config_section_name](Config_Reference.md#sht3x-sensor), [lm75 "
+"config_section_name](Config_Reference.md#lm75-temperature-sensor), "
+"[temperature_host config_section_name](Config_Reference.md#host-temperature-"
+"sensor) и [temperature_combined config_section_name]"
+"(Config_Reference.md#combined-temperature-sensor):"
+
+#~ msgid ""
+#~ "`absolute_extrude`: This returns True if in `M82` absolute extrude mode or "
+#~ "False if in `M83` relative mode."
+#~ msgstr ""
+#~ "`absolute_extrude`: Возвращает True, если используется режим абсолютного "
+#~ "выдавливания `M82`, или False, если используется режим относительного "
+#~ "выдавливания `M83`."
+
+#~ msgid ""
+#~ "[bme280 "
+#~ "config_section_name](Config_Reference.md#bmp280bme280bme680-temperature-"
+#~ "sensor), [htu21d config_section_name](Config_Reference.md#htu21d-sensor), "
+#~ "[sht3x config_section_name](Config_Reference.md#sht31-sensor), [lm75 "
+#~ "config_section_name](Config_Reference.md#lm75-temperature-sensor), "
+#~ "[temperature_host config_section_name](Config_Reference.md#host-temperature-"
+#~ "sensor) and [temperature_combined "
+#~ "config_section_name](Config_Reference.md#combined-temperature-sensor) objects:"
+#~ msgstr ""
+#~ "[bme280 "
+#~ "config_section_name](Config_Reference.md#bmp280bme280bme680-temperature-"
+#~ "sensor), [htu21d config_section_name](Config_Reference.md#htu21d-sensor), "
+#~ "[sht3x config_section_name](Config_Reference.md# sht31-sensor), [lm75 "
+#~ "config_section_name](Config_Reference.md#lm75-temperature-sensor), "
+#~ "[temperature_host config_section_name](Config_Reference.md#host-temperature-"
+#~ "sensor) и [temperature_combined "
+#~ "config_section_name](Config_Reference.md#combined-temperature-sensor):"
+
+#~ msgid ""
+#~ "`gcode_position`: The current position of the toolhead relative to the current"
+#~ " G-Code origin. That is, positions that one might directly send to a `G1` "
+#~ "command. It is possible to access the x, y, z, and e components of this "
+#~ "position (eg, `gcode_position.x`)."
+#~ msgstr ""
+#~ "`gcode_position`: Текущее положение головки инструмента относительно текущего "
+#~ "начала G-кода. То есть, позиция, которую можно напрямую передать в команду "
+#~ "`G1`. Можно получить доступ к компонентам x, y, z и e этой позиции (например, "
+#~ "`gcode_position.x`)."
+
+#~ msgid ""
+#~ "`position`: The last commanded position of the toolhead using the coordinate "
+#~ "system specified in the config file. It is possible to access the x, y, z, and"
+#~ " e components of this position (eg, `position.x`)."
+#~ msgstr ""
+#~ "`позиция`: Последнее заданное положение головки инструмента в системе "
+#~ "координат, указанной в файле конфигурации. Можно получить доступ к компонентам"
+#~ " x, y, z и e этой позиции (например, `position.x`)."
+
+#~ msgid ""
+#~ "`homing_origin`: The origin of the gcode coordinate system (relative to the "
+#~ "coordinate system specified in the config file) to use after a `G28` command. "
+#~ "The `SET_GCODE_OFFSET` command can alter this position. It is possible to "
+#~ "access the x, y, and z components of this position (eg, `homing_origin.x`)."
+#~ msgstr ""
+#~ "`homing_origin`: Начало системы координат gcode (относительно системы "
+#~ "координат, указанной в файле конфигурации), которую следует использовать после"
+#~ " команды `G28`. Команда `SET_GCODE_OFFSET` может изменить это положение. Можно"
+#~ " получить доступ к компонентам x, y и z этой позиции (например, "
+#~ "`homing_origin.x`)."
+
+#~ msgid ""
+#~ "The following information is available in [output_pin "
+#~ "some_name](Config_Reference.md#output_pin) objects:"
+#~ msgstr ""
+#~ "Следующая информация доступна в объектах [output_pin "
+#~ "some_name](Config_Reference.md#output_pin):"
+
+#~ msgid ""
+#~ "`last_z_result`: Returns the Z result value of the last PROBE command. Note, "
+#~ "if this is used in a macro, due to the order of template expansion, the PROBE "
+#~ "(or similar) command must be run prior to the macro containing this reference."
+#~ msgstr ""
+#~ "`last_z_result`: Возвращает значение Z-результата последней команды PROBE. "
+#~ "Обратите внимание, если это используется в макросе, то из-за порядка "
+#~ "расширения шаблона команда PROBE (или аналогичная) должна быть запущена до "
+#~ "макроса, содержащего эту ссылку."
+
+#~ msgid ""
+#~ "`position`: The last commanded position of the toolhead relative to the "
+#~ "coordinate system specified in the config file. It is possible to access the "
+#~ "x, y, z, and e components of this position (eg, `position.x`)."
+#~ msgstr ""
+#~ "`позиция`: Последнее заданное положение головки инструмента относительно "
+#~ "системы координат, указанной в файле конфигурации. Можно получить доступ к "
+#~ "компонентам x, y, z и e этой позиции (например, `position.x`)."
+
+#~ msgid ""
+#~ "`axis_minimum`, `axis_maximum`: The axis travel limits (mm) after homing. It "
+#~ "is possible to access the x, y, z components of this limit value (eg, "
+#~ "`axis_minimum.x`, `axis_maximum.z`)."
+#~ msgstr ""
+#~ "`axis_minimum`, `axis_maximum`: Предельные значения перемещения оси (мм) после"
+#~ " наведения. Можно получить доступ к компонентам x, y, z этого предельного "
+#~ "значения (например, `axis_minimum.x`, `axis_maximum.z`)."
+
+#~ msgid ""
+#~ "`live_position`: The requested toolhead position interpolated to the current "
+#~ "time."
+#~ msgstr ""
+#~ "`live_position`: Запрашиваемая позиция головки инструмента, интерполированная "
+#~ "к текущему времени."
+
+#~ msgid "`Diameter`: The last reading from the sensor in mm."
+#~ msgstr "`Диаметр`: Последнее показание датчика в мм."
+
+#~ msgid ""
+#~ "`color_data`: A list of color lists containing the RGBW values for a led in "
+#~ "the chain. Each value is represented as a float from 0.0 to 1.0. Each color "
+#~ "list contains 4 items (red, green, blue, white) even if the underyling LED "
+#~ "supports fewer color channels. For example, the blue value (3rd item in color "
+#~ "list) of the second neopixel in a chain could be accessed at "
+#~ "`printer[\"neopixel <config_name>\"].color_data[1][2]`."
+#~ msgstr ""
+#~ "`color_data`: Список списков цветов, содержащих значения RGBW для светодиода в"
+#~ " цепочке. Каждое значение представлено в виде float от 0.0 до 1.0. Каждый "
+#~ "список цветов содержит 4 элемента (красный, зеленый, синий, белый), даже если "
+#~ "подстроечный светодиод поддерживает меньшее количество цветовых каналов. "
+#~ "Например, значение синего цвета (3-й элемент в списке цветов) второго "
+#~ "неопикселя в цепочке может быть доступно по адресу `printer[\"neopixel "
+#~ "<config_name>\"].color_data[1][2]`."
+
+#~ msgid "'is_calibrated': True/False is the load cell calibrated"
+#~ msgstr "'is_calibrated': True/False - это откалиброванный грузовой элемент"
+
+#~ msgid ""
+#~ "'counts_per_gram': The number of raw sensor counts that equals 1 gram of force"
+#~ msgstr ""
+#~ "'counts_per_gram': Количество необработанных датчиков составляет 1 грамм силы"
+
+#~ msgid ""
+#~ "'reference_tare_counts': The reference number of raw sensor counts for 0 force"
+#~ msgstr ""
+#~ "'reference_tare_counts': Исходное число первичных датчиков рассчитывается на 0"
+#~ " силу"
+
+#~ msgid "'tare_counts': The current number of raw sensor counts for 0 force"
+#~ msgstr ""
+#~ "'tare_counts': Текущее количество первичных датчиков рассчитывает на 0 силу"
+
+#~ msgid "'force_g': The force in grams, averaged over the last polling period."
+#~ msgstr "'force_g': Сила в граммах, в среднем за последний период голосования."
+
+#~ msgid "'min_force_g': The minimum force in grams, over the last polling period."
+#~ msgstr ""
+#~ "'min_force_g': Минимальная сила в граммах, за последний период голосования."
+
+#~ msgid "'max_force_g': The maximum force in grams, over the last polling period."
+#~ msgstr ""
+#~ "'max_force_g': Максимальная сила в граммах за последний период голосования."
+
+#~ msgid ""
+#~ "'endstop_tare_counts': the load cell probe keeps a tare value independent of "
+#~ "the load cell. This re-set at the start of each probe."
+#~ msgstr ""
+#~ "'endstop_tare_counts': пробоотборник несущей клетки сохраняет значение тары, "
+#~ "независимо от несущей клетки. Эта перезагрузка в начале каждого зонда."
+
+#~ msgid "'last_trigger_time': timestamp of the last homing trigger"
+#~ msgstr ""
+#~ "«last_trigger_time»: временная метка последнего триггера возвращения в "
+#~ "исходное положение"
 
 #~ msgid ""
 #~ "The following information is available in the `Config_Reference.md#bed_screws`"

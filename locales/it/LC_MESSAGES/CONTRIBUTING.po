@@ -1,17 +1,17 @@
-# elovalvoc047faba7aa1427f <ernesto.lovalvo@unipa.it>, 2022.
-# Ale Ale <ale.99.ale@gmail.com>, 2022, 2023.
+# elovalvoc047faba7aa1427f <ernesto.lovalvo@unipa.it>, 2022, 2025.
+# Ale Ale <ale.99.ale@gmail.com>, 2022, 2023, 2025.
 # Alfredo Monclus <alfredomonclus@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2023-12-27 15:10+0000\n"
-"Last-Translator: Alfredo Monclus <alfredomonclus@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:18+0000\n"
+"Last-Translator: elovalvoc047faba7aa1427f <ernesto.lovalvo@unipa.it>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/klipper/contributing/it/>\n"
 "Language: it\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid "Contributing to Klipper"
 msgstr "Contribuire a Klipper"
@@ -718,16 +718,6 @@ msgstr "Una volta soddisfatti i requisiti, è necessario:"
 
 #: docs/CONTRIBUTING.md:block 38 (ordered list)
 msgid ""
-"update klipper-tranlations repository "
-"[active_translations](https://github.com/Klipper3d/klipper-"
-"translations/blob/translations/active_translations)"
-msgstr ""
-"aggiorna il repository di klipper-translations "
-"[active_translations](https://github.com/Klipper3d/klipper-"
-"translations/blob/translations/active_translations)"
-
-#: docs/CONTRIBUTING.md:block 38 (ordered list)
-msgid ""
 "Optional: add a manual-index.md file in klipper-translations repository's "
 "`docs\\locals\\<lang>` folder to replace the language specific index.md "
 "(generated index.md does not render correctly)."
@@ -803,6 +793,22 @@ msgstr "@JamesH1978"
 #: docs/CONTRIBUTING.md:block 23 (table)
 msgid "Configuration files"
 msgstr "File di configurazione"
+
+#: docs/CONTRIBUTING.md:block 38 (ordered list)
+msgid ""
+"update klipper-translations repository "
+"[active_translations](https://github.com/Klipper3d/klipper-"
+"translations/blob/translations/active_translations)"
+msgstr ""
+
+#~ msgid ""
+#~ "update klipper-tranlations repository "
+#~ "[active_translations](https://github.com/Klipper3d/klipper-"
+#~ "translations/blob/translations/active_translations)"
+#~ msgstr ""
+#~ "aggiorna il repository di klipper-translations "
+#~ "[active_translations](https://github.com/Klipper3d/klipper-"
+#~ "translations/blob/translations/active_translations)"
 
 #~ msgid ""
 #~ "module: Capitalized, short (50 chars or less) summary\n"

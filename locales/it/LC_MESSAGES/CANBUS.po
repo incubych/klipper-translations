@@ -1,17 +1,17 @@
-# Davide Di Gloria <davidedigloria87@gmail.com>, 2022.
-# Dex94 <Dasvaresu@dr.com>, 2022.
-# Ale Ale <ale.99.ale@gmail.com>, 2022.
+# Davide Di Gloria <davidedigloria87@gmail.com>, 2022, 2025.
+# Dex94 <Dasvaresu@dr.com>, 2022, 2025.
+# Ale Ale <ale.99.ale@gmail.com>, 2022, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2022-11-01 13:33+0000\n"
-"Last-Translator: Ale Ale <ale.99.ale@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:17+0000\n"
+"Last-Translator: Davide Di Gloria <davidedigloria87@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/klipper/canbus/it/>\n"
 "Language: it\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid "This document describes Klipper's CAN bus support."
 msgstr "Questo documento descrive il supporto del CAN bus di Klipper."
@@ -202,13 +202,6 @@ msgstr ""
 
 #: docs/CANBUS.md:block 30 (unordered list)
 msgid ""
-"Even at a CAN bus frequency of 1000000, there may not be sufficient bandwidth "
-"to run a `SHAPER_CALIBRATE` test if both the XY steppers and the accelerometer"
-" all communicate via a single \"USB to CAN bus\" interface."
-msgstr ""
-
-#: docs/CANBUS.md:block 30 (unordered list)
-msgid ""
 "A USB to CAN bridge board will not appear as a USB serial device, it will not "
 "show up when running `ls /dev/serial/by-id`, and it can not be configured in "
 "Klipper's printer.cfg file with a `serial:` parameter. The bridge board "
@@ -233,6 +226,12 @@ msgid ""
 "functioning CAN bus (including terminating resistors and an additional node) "
 "may result in sporadic errors even when communicating with the bridge node."
 msgstr ""
+
+#~ msgid ""
+#~ "Even at a CAN bus frequency of 1000000, there may not be sufficient bandwidth "
+#~ "to run a `SHAPER_CALIBRATE` test if both the XY steppers and the accelerometer"
+#~ " all communicate via a single \"USB to CAN bus\" interface."
+#~ msgstr ""
 
 #~ msgid "~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0\n"
 #~ msgstr "~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0\n"

@@ -1,22 +1,22 @@
-# Yifei Ding <dingyifeiair@gmail.com>, 2021, 2022.
-# Arda <pengfei.fu@gmail.com>, 2022.
+# Yifei Ding <dingyifeiair@gmail.com>, 2021, 2022, 2025.
+# Arda <pengfei.fu@gmail.com>, 2022, 2025.
 # Neko.vecter <Vecterfang@icloud.com>, 2022.
-# xm Y <3260838022@qq.com>, 2023.
-# Hosted Weblate <mfvotmjhcj@iubridge.com>, 2024.
+# xm Y <3260838022@qq.com>, 2023, 2025.
+# Hosted Weblate <mfvotmjhcj@iubridge.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
 "POT-Creation-Date: 2021-07-10 16:29+0200\n"
-"PO-Revision-Date: 2024-02-23 22:02+0000\n"
-"Last-Translator: Hosted Weblate <mfvotmjhcj@iubridge.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/klipper/contributing/zh_Hans/>\n"
+"PO-Revision-Date: 2025-07-22 08:02+0000\n"
+"Last-Translator: xm Y <3260838022@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/klipper/contributing/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid "Contributing to Klipper"
 msgstr "为 Klipper 做贡献"
@@ -574,15 +574,6 @@ msgstr "满足要求后，您需要："
 
 #: docs/CONTRIBUTING.md:block 38 (ordered list)
 msgid ""
-"update klipper-tranlations repository "
-"[active_translations](https://github.com/Klipper3d/klipper-"
-"translations/blob/translations/active_translations)"
-msgstr ""
-"更新KLIPPER-翻译库[active_translations](https://github.com/Klipper3d/klipper-"
-"translations/blob/translations/active_translations)"
-
-#: docs/CONTRIBUTING.md:block 38 (ordered list)
-msgid ""
 "Optional: add a manual-index.md file in klipper-translations repository's "
 "`docs\\locals\\<lang>` folder to replace the language specific index.md "
 "(generated index.md does not render correctly)."
@@ -641,6 +632,21 @@ msgstr "@JamesH1978"
 #: docs/CONTRIBUTING.md:block 23 (table)
 msgid "Configuration files"
 msgstr "配置文件"
+
+#: docs/CONTRIBUTING.md:block 38 (ordered list)
+msgid ""
+"update klipper-translations repository "
+"[active_translations](https://github.com/Klipper3d/klipper-"
+"translations/blob/translations/active_translations)"
+msgstr ""
+
+#~ msgid ""
+#~ "update klipper-tranlations repository "
+#~ "[active_translations](https://github.com/Klipper3d/klipper-"
+#~ "translations/blob/translations/active_translations)"
+#~ msgstr ""
+#~ "更新KLIPPER-翻译库[active_translations](https://github.com/Klipper3d/klipper-"
+#~ "translations/blob/translations/active_translations)"
 
 #~ msgid ""
 #~ "module: Capitalized, short (50 chars or less) summary\n"

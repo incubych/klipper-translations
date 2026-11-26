@@ -1,20 +1,19 @@
-#
+# Pajoer Pa <pajoer@gmail.com>, 2026.
 msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
+msgstr ""
+"Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
+"PO-Revision-Date: 2026-03-07 09:10+0000\n"
+"Last-Translator: Pajoer Pa <pajoer@gmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/klipper/exclude_object/es/>\n"
+"Language: es\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #: docs/Exclude_Object.md:block 1 (header)
 msgid "Exclude Objects"
-msgstr ""
-
-#: docs/Exclude_Object.md:block 2 (paragraph)
-msgid ""
-"The `[exclude_object]` module allows Klipper to exclude objects while a print "
-"is in progress. To enable this feature include an [exclude_object config "
-"section](Config_Reference.md#exclude_object) (also see the [command "
-"reference](G-Codes.md#exclude-object) and [sample-"
-"macros.cfg](../config/sample-macros.cfg) file for a Marlin/RepRapFirmware "
-"compatible M486 G-Code macro.)"
-msgstr ""
+msgstr "Excluir objetos"
 
 #: docs/Exclude_Object.md:block 3 (paragraph)
 msgid ""
@@ -25,14 +24,22 @@ msgid ""
 "contents of the gcode file, how the internal state of the module is "
 "controlled, and how that state is provided to clients."
 msgstr ""
+"A diferencia de otras opciones de firmware para impresoras 3D, una impresora "
+"que utiliza Klipper emplea un conjunto de componentes y los usuarios tienen "
+"muchas opciones entre las que elegir. Por lo tanto, con el fin de proporcionar"
+" una experiencia de usuario coherente, el módulo `[exclude_object]` "
+"establecerá una especie de contrato o API. El contrato abarca el contenido del"
+" archivo gcode, cómo se controla el estado interno del módulo y cómo se "
+"proporciona ese estado a los clientes."
 
 #: docs/Exclude_Object.md:block 4 (header)
 msgid "Workflow Overview"
-msgstr ""
+msgstr "Descripción general del flujo de trabajo"
 
 #: docs/Exclude_Object.md:block 5 (paragraph)
 msgid "A typical workflow for printing a file might look like this:"
 msgstr ""
+"Un flujo de trabajo típico para imprimir un archivo podría ser el siguiente:"
 
 #: docs/Exclude_Object.md:block 6 (ordered list)
 msgid ""
@@ -41,6 +48,11 @@ msgid ""
 "Alternately, slicers may be configured to prepare object exclusion markers "
 "natively, or in it's own pre-processing step."
 msgstr ""
+"El corte se ha completado y el archivo se ha cargado para su impresión. "
+"Durante la carga, el archivo se procesa y se añaden marcadores "
+"`[exclude_object]` al archivo. Alternativamente, los cortadores pueden "
+"configurarse para preparar marcadores de exclusión de objetos de forma nativa "
+"o en su propio paso de preprocesamiento."
 
 #: docs/Exclude_Object.md:block 6 (ordered list)
 msgid ""
@@ -135,12 +147,6 @@ msgid ""
 "POLYGON=[[40,40],[50,60],[60,40]]`"
 msgstr ""
 
-#: docs/Exclude_Object.md:block 13 (paragraph)
-msgid ""
-"All available G-Code commands are documented in the [G-Code "
-"Reference](./G-Codes.md#excludeobject)"
-msgstr ""
-
 #: docs/Exclude_Object.md:block 14 (header)
 msgid "Status Information"
 msgstr ""
@@ -195,3 +201,39 @@ msgid ""
 "ahead to process upcoming gcode, there may be a delay between when the command"
 " is issued and when the status is updated."
 msgstr ""
+
+#: docs/Exclude_Object.md:block 2 (paragraph)
+msgid ""
+"The `[exclude_object]` module allows Klipper to exclude objects while a print "
+"is in progress. To enable this feature include an [exclude_object config "
+"section](Config_Reference.md#exclude_object) (also see the [command "
+"reference](G-Codes.md#exclude_object) and [sample-"
+"macros.cfg](../config/sample-macros.cfg) file for a Marlin/RepRapFirmware "
+"compatible M486 G-Code macro.)"
+msgstr ""
+
+#: docs/Exclude_Object.md:block 13 (paragraph)
+msgid ""
+"All available G-Code commands are documented in the [G-Code "
+"Reference](./G-Codes.md#exclude_object)"
+msgstr ""
+
+#~ msgid ""
+#~ "The `[exclude_object]` module allows Klipper to exclude objects while a print "
+#~ "is in progress. To enable this feature include an [exclude_object config "
+#~ "section](Config_Reference.md#exclude_object) (also see the [command "
+#~ "reference](G-Codes.md#exclude-object) and [sample-"
+#~ "macros.cfg](../config/sample-macros.cfg) file for a Marlin/RepRapFirmware "
+#~ "compatible M486 G-Code macro.)"
+#~ msgstr ""
+#~ "El módulo `[exclude_object]` permite a Klipper excluir objetos mientras se "
+#~ "está realizando una impresión. Para habilitar esta función, incluya una "
+#~ "sección de configuración [exclude_object](Config_Reference.md#exclude_object) "
+#~ "(consulte también la [referencia de comandos](G-Codes.md#exclude-object) y el "
+#~ "archivo [sample-macros.cfg](../config/sample-macros.cfg) para obtener una "
+#~ "macro M486 G-Code compatible con Marlin/RepRapFirmware)."
+
+#~ msgid ""
+#~ "All available G-Code commands are documented in the [G-Code "
+#~ "Reference](./G-Codes.md#excludeobject)"
+#~ msgstr ""

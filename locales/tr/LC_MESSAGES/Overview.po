@@ -1,24 +1,26 @@
-# Yusuf Yavuzyigit <yusufyavuzyigit25@gmail.com>, 2021.
-# Oguz <mustafa.oguz@live.com>, 2022.
-# Mustafa Said Ağca <m.said.agca@gmail.com>, 2022.
-# Kaan Özbilek <info@kaanozbilek.com>, 2023.
-# Kursat <sitting_1907@hotmail.com>, 2023.
-# Semih <semihbrn10@gmail.com>, 2024.
-# kasım atmaca <kasim.atmaca13@gmail.com>, 2024.
-# Sümer Okan <smr.okan@gmail.com>, 2024.
-# Murateba <robloxmurat5@gmail.com>, 2024.
-# Tuna Dinçer <hweord@gmail.com>, 2024.
+# Yusuf Yavuzyigit <yusufyavuzyigit25@gmail.com>, 2021, 2025.
+# Oguz <mustafa.oguz@live.com>, 2022, 2025.
+# Mustafa Said Ağca <m.said.agca@gmail.com>, 2022, 2025.
+# Kaan Özbilek <info@kaanozbilek.com>, 2023, 2025.
+# Kursat <sitting_1907@hotmail.com>, 2023, 2025.
+# Semih <semihbrn10@gmail.com>, 2024, 2025.
+# kasım atmaca <kasim.atmaca13@gmail.com>, 2024, 2025.
+# Sümer Okan <smr.okan@gmail.com>, 2024, 2025.
+# Murateba <robloxmurat5@gmail.com>, 2024, 2025.
+# Tuna Dinçer <hweord@gmail.com>, 2024, 2025.
+# Deleted User <noreply+98848@weblate.org>, 2025.
+# Kehribar <103407696+dpentx@users.noreply.github.com>, 2026.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-11-23 08:00+0000\n"
-"Last-Translator: Tuna Dinçer <hweord@gmail.com>\n"
+"PO-Revision-Date: 2026-02-16 07:09+0000\n"
+"Last-Translator: Kehribar <103407696+dpentx@users.noreply.github.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/klipper/overview/tr/>\n"
 "Language: tr\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9-dev\n"
+"X-Generator: Weblate 5.16-dev\n"
 
 msgid ""
 "Welcome to the Klipper documentation. If new to Klipper, start with the "
@@ -278,6 +280,8 @@ msgid ""
 "[Multi-MCU Homing](Multi_MCU_Homing.md): Homing and probing using multiple "
 "micro-controllers."
 msgstr ""
+"[Çoklu-MCU hedef araması](Multi_MCU_Homing): Birden çok denetleyici ile hedefi"
+" ve yönü belirle."
 
 #: docs/Overview.md:block 6 (unordered list)
 msgid ""
@@ -297,7 +301,7 @@ msgstr ""
 
 #: docs/Overview.md:block 10 (unordered list)
 msgid "[Hall filament width sensor](Hall_Filament_Width_Sensor.md)"
-msgstr ""
+msgstr "[Hall, filament ve genişlik sensörü](Hall_Filament_Width_Sensor.md)"
 
 #: docs/Overview.md:block 6 (unordered list)
 msgid ""

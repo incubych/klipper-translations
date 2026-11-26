@@ -1,18 +1,18 @@
-# Adrian Medeiros <lima.adrian13@gmail.com>, 2023.
-# João Alves <joao.2003.couto@gmail.com>, 2023.
-# Milton Miranda Neto <voidmmn@gmail.com>, 2023.
-# Andre Costa <andrecaeu@gmail.com>, 2024.
+# Adrian Medeiros <lima.adrian13@gmail.com>, 2023, 2025.
+# João Alves <joao.2003.couto@gmail.com>, 2023, 2025.
+# Milton Miranda Neto <voidmmn@gmail.com>, 2023, 2025.
+# Andre Costa <andrecaeu@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-03-03 16:45+0000\n"
-"Last-Translator: Andre Costa <andrecaeu@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:28+0000\n"
+"Last-Translator: Adrian Medeiros <lima.adrian13@gmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/klipper/overview/pt/>\n"
 "Language: pt\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "Welcome to the Klipper documentation. If new to Klipper, start with the "

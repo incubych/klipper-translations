@@ -1,18 +1,23 @@
-# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022.
+# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022, 2025.
 # Evgeniy Khramov <thejenjagamertjg@gmail.com>, 2022.
 # Yury <bar2104y@yandex.ru>, 2023.
-# gfbdrgng <hnaofegnp@hldrive.com>, 2024.
+# gfbdrgng <hnaofegnp@hldrive.com>, 2024, 2025.
+# Evgeniy Khramov <65224669+thejenja@users.noreply.github.com>, 2025.
+# gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>, 2025.
+# Andrei Stepanov <adem@users.noreply.hosted.weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-12-31 06:00+0000\n"
-"Last-Translator: gfbdrgng <hnaofegnp@hldrive.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/klipper/resonance_compensation/ru/>\n"
+"PO-Revision-Date: 2026-10-25 13:09+0000\n"
+"Last-Translator: Andrei Stepanov <adem@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/klipper/"
+"resonance_compensation/ru/>\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.10-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.11.dev0\n"
 
 msgid "Resonance Compensation"
 msgstr "Компенсация Резонанса"
@@ -156,7 +161,6 @@ msgstr ""
 "колебания, а затем измерьте расстояние между метками с помощью линейки или "
 "штангенциркуля:"
 
-#, fuzzy
 msgid ""
 "|![Mark ringing](img/ringing-mark.jpg)|![Measure ringing](img/ringing-"
 "measure.jpg)|"
@@ -407,7 +411,6 @@ msgstr ""
 "Затем проверьте сглаживание. Чтобы помочь в этом, в тестовой модели есть "
 "небольшой зазор в стене (0,15 мм):"
 
-#, fuzzy
 msgid "![Test gap](img/smoothing-test.png)"
 msgstr "![Test gap](img/smoothing-test.png)"
 
@@ -418,7 +421,6 @@ msgstr ""
 "С увеличением ускорения увеличивается и сглаживание, а фактический разрыв в "
 "отпечатке увеличивается:"
 
-#, fuzzy
 msgid "![Shaper smoothing](img/shaper-smoothing.jpg)"
 msgstr "![Shaper smoothing](img/shaper-smoothing.jpg)"
 
@@ -777,19 +779,6 @@ msgstr "Технические детали"
 msgid "Input shapers"
 msgstr "Входные формирователи"
 
-msgid ""
-"Input shapers used in Klipper are rather standard, and one can find more in-"
-"depth overview in the articles describing the corresponding shapers. This "
-"section contains a brief overview of some technical aspects of the supported "
-"input shapers. The table below shows some (usually approximate) parameters of "
-"each shaper."
-msgstr ""
-"Формирователи ввода, используемые в Klipper, довольно стандартны, и более "
-"подробный обзор можно найти в статьях, описывающих соответствующие "
-"формирователи. Этот раздел содержит краткий обзор некоторых технических "
-"аспектов поддерживаемых входных формирователей. В таблице ниже приведены "
-"некоторые (обычно приблизительные) параметры каждого формирователя."
-
 msgid "Input <br> shaper"
 msgstr "Входной <br> формирователь"
 
@@ -802,125 +791,62 @@ msgstr "Снижение вибрации 20x <br> (допустимая виб�
 msgid "Vibration reduction 10x <br> (10% vibration tolerance)"
 msgstr "Снижение вибрации в 10 раз <br> (допустимая вибрация 10%)"
 
-#, fuzzy
 msgid "ZV"
 msgstr "ZV"
 
-#, fuzzy
 msgid "0.5 / shaper_freq"
 msgstr "0.5 / shaper_freq"
 
 msgid "N/A"
 msgstr "Н/Д"
 
-#, fuzzy
 msgid "± 5% shaper_freq"
 msgstr "± 5% shaper_freq"
 
-#, fuzzy
 msgid "MZV"
 msgstr "MZV"
 
-#, fuzzy
 msgid "0.75 / shaper_freq"
 msgstr "0.75 / shaper_freq"
 
-#, fuzzy
 msgid "± 4% shaper_freq"
 msgstr "± 4% shaper_freq"
 
-#, fuzzy
 msgid "-10%...+15% shaper_freq"
 msgstr "-10%...+15% shaper_freq"
 
-#, fuzzy
 msgid "ZVD"
 msgstr "ZVD"
 
-#, fuzzy
 msgid "1 / shaper_freq"
 msgstr "1 / shaper_freq"
 
-#, fuzzy
 msgid "± 15% shaper_freq"
 msgstr "± 15% shaper_freq"
 
-#, fuzzy
 msgid "± 22% shaper_freq"
 msgstr "± 22% shaper_freq"
 
-#, fuzzy
 msgid "EI"
 msgstr "EI"
 
-#, fuzzy
 msgid "± 20% shaper_freq"
 msgstr "± 20% shaper_freq"
 
-#, fuzzy
 msgid "± 25% shaper_freq"
 msgstr "± 25% shaper_freq"
 
-#, fuzzy
 msgid "2HUMP_EI"
 msgstr "2HUMP_EI"
 
-#, fuzzy
 msgid "1.5 / shaper_freq"
 msgstr "1.5 / shaper_freq"
 
-#, fuzzy
-msgid "± 35% shaper_freq"
-msgstr "± 35% shaper_freq"
-
-#, fuzzy
-msgid "± 40 shaper_freq"
-msgstr "± 40 shaper_freq"
-
-#, fuzzy
 msgid "3HUMP_EI"
 msgstr "3HUMP_EI"
 
-#, fuzzy
 msgid "2 / shaper_freq"
 msgstr "2 / shaper_freq"
-
-#, fuzzy
-msgid "-45...+50% shaper_freq"
-msgstr "-45...+50% shaper_freq"
-
-#, fuzzy
-msgid "-50%...+55% shaper_freq"
-msgstr "-50%...+55% shaper_freq"
-
-msgid ""
-"A note on vibration reduction: the values in the table above are approximate. "
-"If the damping ratio of the printer is known for each axis, the shaper can be "
-"configured more precisely and it will then reduce the resonances in a bit "
-"wider range of frequencies. However, the damping ratio is usually unknown and "
-"is hard to estimate without a special equipment, so Klipper uses 0.1 value by "
-"default, which is a good all-round value. The frequency ranges in the table "
-"cover a number of different possible damping ratios around that value (approx."
-" from 0.05 to 0.2)."
-msgstr ""
-"Примечание по снижению вибраций: значения в таблице выше являются "
-"приблизительными. Если известен коэффициент демпфирования принтера для каждой "
-"оси, шейпер можно настроить более точно, и тогда он будет уменьшать резонансы "
-"в более широком диапазоне частот. Однако коэффициент демпфирования обычно "
-"неизвестен, и его трудно оценить без специального оборудования, поэтому "
-"Klipper по умолчанию использует значение 0,1, которое является хорошим "
-"универсальным значением. Диапазоны частот в таблице охватывают несколько "
-"различных возможных коэффициентов демпфирования вокруг этого значения "
-"(примерно от 0,05 до 0,2)."
-
-msgid ""
-"Also note that EI, 2HUMP_EI, and 3HUMP_EI are tuned to reduce vibrations to "
-"5%, so the values for 10% vibration tolerance are provided only for the "
-"reference."
-msgstr ""
-"Также обратите внимание, что EI, 2HUMP_EI и 3HUMP_EI настроены на снижение "
-"вибраций до 5 %, поэтому значения для 10 % допустимых вибраций приведены "
-"только для справки."
 
 msgid "**How to use this table:**"
 msgstr "**Как использовать эту таблицу:**"
@@ -951,30 +877,6 @@ msgstr ""
 "MZV с shaper_freq = 35 Гц снижает вибрации до 5 % для частот [33,6, 36,4] Гц. "
 "3HUMP_EI с shaper_freq = 50 Гц снижает вибрации до 5 % в диапазоне [27,5, 75] "
 "Гц."
-
-msgid ""
-"One can use this table to check which shaper they should be using if they need"
-" to reduce vibrations at several frequencies. For example, if one has "
-"resonances at 35 Hz and 60 Hz on the same axis: a) EI shaper needs to have "
-"shaper_freq = 35 / (1 - 0.2) = 43.75 Hz, and it will reduce resonances until "
-"43.75 * (1 + 0.2) = 52.5 Hz, so it is not sufficient; b) 2HUMP_EI shaper needs"
-" to have shaper_freq = 35 / (1 - 0.35) = 53.85 Hz and will reduce vibrations "
-"until 53.85 * (1 + 0.35) = 72.7 Hz - so this is an acceptable configuration. "
-"Always try to use as high shaper_freq as possible for a given shaper (perhaps "
-"with some safety margin, so in this example shaper_freq ≈ 50-52 Hz would work "
-"best), and try to use a shaper with as small shaper duration as possible."
-msgstr ""
-"С помощью этой таблицы можно проверить, какой формирователь следует "
-"использовать, если нужно уменьшить вибрации на нескольких частотах. Например, "
-"если на одной оси есть резонансы на 35 и 60 Гц: a) формирователь EI должен "
-"иметь shaper_freq = 35 / (1 - 0,2) = 43,75 Гц, и он будет уменьшать резонансы "
-"до 43,75 * (1 + 0,2) = 52. 5 Гц, так что этого недостаточно; б) шейпер "
-"2HUMP_EI должен иметь shaper_freq = 35 / (1 - 0,35) = 53,85 Гц и будет "
-"уменьшать колебания до 53,85 * (1 + 0,35) = 72,7 Гц - так что это приемлемая "
-"конфигурация. Всегда старайтесь использовать как можно более высокий "
-"shaper_freq для данного шейпера (возможно, с некоторым запасом прочности, так "
-"что в данном примере лучше всего подойдет shaper_freq ≈ 50-52 Гц), и "
-"старайтесь использовать шейпер с как можно меньшей длительностью шейпера."
 
 msgid ""
 "If one needs to reduce vibrations at several very different frequencies (say, "
@@ -1162,19 +1064,16 @@ msgstr ""
 "печатью, выполните команду"
 
 #: docs/Resonance_Compensation.md:block 61 (ordered list)
-#, fuzzy
 msgid "`SET_PRESSURE_ADVANCE ADVANCE=0`"
 msgstr "`SET_PRESSURE_ADVANCE ADVANCE=0`"
 
 #: docs/Resonance_Compensation.md:block 61 (ordered list)
-#, fuzzy
 msgid ""
 "`SET_INPUT_SHAPER SHAPER_TYPE=2HUMP_EI SHAPER_FREQ_X=60 SHAPER_FREQ_Y=60`"
 msgstr ""
 "`SET_INPUT_SHAPER SHAPER_TYPE=2HUMP_EI SHAPER_FREQ_X=60 SHAPER_FREQ_Y=60`"
 
 #: docs/Resonance_Compensation.md:block 61 (ordered list)
-#, fuzzy
 msgid ""
 "`TUNING_TOWER COMMAND=SET_VELOCITY_LIMIT PARAMETER=ACCEL START=1500 "
 "STEP_DELTA=500 STEP_HEIGHT=5`"
@@ -1183,21 +1082,18 @@ msgstr ""
 "STEP_DELTA=500 STEP_HEIGHT=5`"
 
 #: docs/Resonance_Compensation.md:block 63 (ordered list)
-#, fuzzy
 msgid ""
 "`SET_INPUT_SHAPER SHAPER_TYPE=2HUMP_EI SHAPER_FREQ_X=50 SHAPER_FREQ_Y=50`"
 msgstr ""
 "`SET_INPUT_SHAPER SHAPER_TYPE=2HUMP_EI SHAPER_FREQ_X=50 SHAPER_FREQ_Y=50`"
 
 #: docs/Resonance_Compensation.md:block 65 (ordered list)
-#, fuzzy
 msgid ""
 "`SET_INPUT_SHAPER SHAPER_TYPE=2HUMP_EI SHAPER_FREQ_X=40 SHAPER_FREQ_Y=40`"
 msgstr ""
 "`SET_INPUT_SHAPER SHAPER_TYPE=2HUMP_EI SHAPER_FREQ_X=40 SHAPER_FREQ_Y=40`"
 
 #: docs/Resonance_Compensation.md:block 72 (ordered list)
-#, fuzzy
 msgid "`SET_INPUT_SHAPER SHAPER_TYPE=EI SHAPER_FREQ_X=... SHAPER_FREQ_Y=...`"
 msgstr "`SET_INPUT_SHAPER SHAPER_TYPE=EI SHAPER_FREQ_X=... SHAPER_FREQ_Y=...`"
 
@@ -1224,18 +1120,6 @@ msgstr ""
 "дополнительно определить секцию `[delayed_gcode]` в файле `printer.cfg "
 "следующим образом:"
 
-#: docs/Resonance_Compensation.md:block 87 (paragraph)
-msgid ""
-"Note that `SHAPER_TYPE_Y` and `SHAPER_FREQ_Y` should be the same in both "
-"commands. It is also possible to put a similar snippet into the start g-code "
-"in the slicer, however then the shaper will not be enabled until any print is "
-"started."
-msgstr ""
-"Обратите внимание, что `SHAPER_TYPE_Y` и `SHAPER_FREQ_Y` должны быть "
-"одинаковыми в обеих командах. Можно также поместить аналогичный фрагмент в "
-"g-код запуска слайсера, однако тогда шейпер не будет включен до тех пор, пока "
-"не будет запущена печать."
-
 #: docs/Resonance_Compensation.md:block 88 (paragraph)
 msgid ""
 "Note that the input shaper only needs to be configured once. Subsequent "
@@ -1251,7 +1135,6 @@ msgid "Prepare for test: `SET_VELOCITY_LIMIT MINIMUM_CRUISE_RATIO=0`"
 msgstr "Подготовьтесь к тесту: `SET_VELOCITY_LIMIT MINIMUM_CRUISE_RATIO=0`"
 
 #: docs/Resonance_Compensation.md:block 61 (ordered list)
-#, fuzzy
 msgid "`SET_VELOCITY_LIMIT MINIMUM_CRUISE_RATIO=0`"
 msgstr "`SET_VELOCITY_LIMIT MINIMUM_CRUISE_RATIO=0`"
 
@@ -1262,6 +1145,291 @@ msgid ""
 msgstr ""
 "Отключите функцию `minimum_cruise_ratio`, выполнив следующую команду: "
 "`SET_VELOCITY_LIMIT MINIMUM_CRUISE_RATIO=0`"
+
+#: docs/Resonance_Compensation.md:block 87 (paragraph)
+msgid ""
+"However, users of `generic_cartesian` kinematics should specify carriage names"
+" in `CARRIAGE=` parameters of `SET_DUAL_CARRIAGE` instead of their numbers. "
+"Note that `SHAPER_TYPE_Y` and `SHAPER_FREQ_Y` should be the same in both "
+"commands. If you need to configure an input shaper for Z axis, include its "
+"parameters in both `SET_INPUT_SHAPER` commands."
+msgstr ""
+"Однако пользователям кинематики `generic_cartesian` следует указывать имена "
+"кареток в параметрах `CARRIAGE=` команды `SET_DUAL_CARRIAGE` вместо их "
+"номеров. Учтите, что `SHAPER_TYPE_Y` и `SHAPER_FREQ_Y` должны быть "
+"одинаковыми в обеих командах. Если вам нужно настроить input shaper для оси "
+"Z, включите его параметры в обе команды `SET_INPUT_SHAPER`."
+
+#: docs/Resonance_Compensation.md:block 88 (paragraph)
+msgid ""
+"Besides `delayed_gcode`, it is also possible to put a similar snippet into the"
+" start g-code in the slicer, however then the shaper will not be enabled until"
+" any print is started."
+msgstr ""
+"Помимо `delayed_gcode`, можно также поместить аналогичный фрагмент в "
+"начальный g-код в слайсере, однако тогда шейпер не будет включён до начала "
+"какой-либо печати."
+
+#: docs/Resonance_Compensation.md:block 92 (header)
+msgid "Should I enable and tune input shaper for Z axis?"
+msgstr "Стоит ли включать и настраивать input shaper для оси Z?"
+
+#: docs/Resonance_Compensation.md:block 93 (paragraph)
+msgid ""
+"Most of the users are not likely to see improvements in the quality of the "
+"prints directly, much unlike X and Y shapers. However, users of delta "
+"printers, printers with flying gantry, or printers with heavy moving beds may "
+"be able to increase the `max_z_accel` and `max_z_velocity` kinematics limits "
+"and thus get faster Z movements. This can be especially useful e.g. for "
+"toolchangers, but also when Z-hops are enabled in slicer. And in general, "
+"after enabling Z input shaper many users will hear that Z axis operates more "
+"smoothly, which may increase the comfort of printer operation, and may "
+"somewhat extend lifespan of Z axis parts."
+msgstr ""
+"Большинство пользователей вряд ли заметят улучшение качества печати "
+"напрямую, в отличие от шейперов X и Y. Однако пользователи дельта-принтеров, "
+"принтеров с летающим порталом или принтеров с тяжёлым подвижным столом могут "
+"увеличить кинематические пределы `max_z_accel` и `max_z_velocity` и тем "
+"самым добиться более быстрых перемещений по Z. Это может быть особенно "
+"полезно, например, для сменных инструментов, а также при включённых в "
+"слайсере Z-прыжках. И в целом после включения input shaper для Z многие "
+"пользователи услышат, что ось Z работает более плавно, что может повысить "
+"комфорт работы с принтером и несколько продлить срок службы деталей оси Z."
+
+#: docs/Resonance_Compensation.md:block 96 (paragraph)
+msgid ""
+"This section contains a brief overview of some technical aspects of the "
+"supported input shapers. Input shapers used in Klipper are rather standard, "
+"with the exception of MZV, and one can find more in-depth overview in the "
+"articles describing the corresponding shapers."
+msgstr ""
+"В этом разделе приведён краткий обзор некоторых технических аспектов "
+"поддерживаемых input shaper. Input shaper, используемые в Klipper, "
+"достаточно стандартны, за исключением MZV, и более подробный обзор можно "
+"найти в статьях, описывающих соответствующие шейперы."
+
+#: docs/Resonance_Compensation.md:block 97 (paragraph)
+msgid ""
+"MZV stands for a Modified-ZV input shaper. The classic definition of ZV shaper"
+" assumes two pulses and the total duration `t` equal to 1/2 of the damped "
+"period of oscillations `Td`. However, it is possible to construct a "
+"generalized form of ZV input shaper with `n >= 3` pulses and an arbitrary "
+"total duration `t >= 0.5 * Td` (with the maximum of `t` depending on `n` "
+"value), see for instance SNA-ZV and MIS-ZV input shapers, which can be seen as"
+" special cases of a more generalized implementation of MZV input shaper in "
+"Klipper. The default MZV parameters in Klipper are `n=3`, `t=0.75` (of `Td`), "
+"and this shaper was designed to serve as an intermediate shaper between ZV and"
+" ZVD, offering better vibrations suppression than ZV when the determined "
+"(measured) shaper parameters deviate from the ones actually required by the "
+"printer, and smaller smoothing than ZVD. Effectively, its specific duration "
+"`t=0.75`, exactly between ZV (with `t=0.5` of `Td`) and ZVD (`t=1` of `Td`), "
+"and it happens to work well for many real-life 3D printers. However, "
+"experienced users can modify the default parameters of the MZV input shaper "
+"and try other variations that may work better for their specific printers "
+"(with these non-default variations specified as, e.g. `mzv(n=3,t=0.8)` or "
+"`mzv(n=5,t=1.1)` in the `[input_shaper]` section or as a parameter to "
+"`SET_INPUT_SHAPER` command, as well as in a parameter to "
+"`~/klipper/scripts/calibrate_shaper.py` script, e.g. as "
+"`--shapers='2hump_ei,3hump_ei,mzv(n=6,t=1.0)'`. These custom parameters of the"
+" shapers are supported by `~/klipper/scripts/graph_shaper.py` scripts via e.g."
+" `--shaper='mzv(n=3,t=0.6666666666)'` parameter."
+msgstr ""
+"MZV расшифровывается как Modified-ZV input shaper. Классическое определение "
+"шейпера ZV предполагает два импульса и общую длительность `t`, равную 1/2 "
+"затухающего периода колебаний `Td`. Однако можно построить обобщённую форму "
+"input shaper ZV с `n >= 3` импульсами и произвольной общей длительностью `t >"
+"= 0.5 * Td` (при этом максимум `t` зависит от значения `n`); см., например, "
+"input shaper SNA-ZV и MIS-ZV, которые можно рассматривать как частные случаи "
+"более обобщённой реализации input shaper MZV в Klipper. Параметры MZV по "
+"умолчанию в Klipper — `n=3`, `t=0.75` (от `Td`), и этот шейпер был "
+"разработан как промежуточный между ZV и ZVD, обеспечивая лучшее подавление "
+"вибраций, чем ZV, когда определённые (измеренные) параметры шейпера "
+"отклоняются от фактически требуемых принтером, и меньшее сглаживание, чем "
+"ZVD. Фактически его удельная длительность `t=0.75` находится ровно между ZV "
+"(с `t=0.5` от `Td`) и ZVD (`t=1` от `Td`), и он хорошо работает для многих "
+"реальных 3D-принтеров. Однако опытные пользователи могут изменить параметры "
+"input shaper MZV по умолчанию и попробовать другие варианты, которые могут "
+"лучше работать для их конкретных принтеров (эти нестандартные варианты "
+"задаются как, например, `mzv(n=3,t=0.8)` или `mzv(n=5,t=1.1)` в разделе "
+"`[input_shaper]` либо как параметр команды `SET_INPUT_SHAPER`, а также как "
+"параметр скрипта `~/klipper/scripts/calibrate_shaper.py`, например, `--"
+"shapers='2hump_ei,3hump_ei,mzv(n=6,t=1.0)'`. Эти пользовательские параметры "
+"шейперов поддерживаются скриптами `~/klipper/scripts/graph_shaper.py` через "
+"параметр вида `--shaper='mzv(n=3,t=0.6666666666)'`."
+
+#: docs/Resonance_Compensation.md:block 98 (paragraph)
+msgid ""
+"The table below shows some (usually approximate) parameters of each shaper "
+"with their default parameters."
+msgstr ""
+"В таблице ниже приведены некоторые (обычно приблизительные) параметры "
+"каждого шейпера с их параметрами по умолчанию."
+
+#: docs/Resonance_Compensation.md:block 99 (table)
+msgid "-40...+45% shaper_freq"
+msgstr "-40...+45% shaper_freq"
+
+#: docs/Resonance_Compensation.md:block 99 (table)
+msgid "-45..+50% shaper_freq"
+msgstr "-45..+50% shaper_freq"
+
+#: docs/Resonance_Compensation.md:block 99 (table)
+msgid "-50...+60% shaper_freq"
+msgstr "-50...+60% shaper_freq"
+
+#: docs/Resonance_Compensation.md:block 99 (table)
+msgid "-55%...+65% shaper_freq"
+msgstr "-55%...+65% shaper_freq"
+
+#: docs/Resonance_Compensation.md:block 100 (paragraph)
+msgid ""
+"A note on vibration reduction: the values in the table above are approximate. "
+"If the damping ratio of the printer is known for each axis, the shaper can be "
+"configured more precisely and it will then reduce the resonances in a bit "
+"wider range of frequencies. However, the damping ratio is usually unknown and "
+"is hard to estimate without a special equipment, so Klipper uses 0.1 value by "
+"default, which is a good all-round value. The frequency ranges in the table "
+"cover a number of different possible damping ratios around that value (approx."
+" from 0.075 to 0.15)."
+msgstr ""
+"Замечание о снижении вибраций: значения в таблице выше приблизительны. Если "
+"коэффициент демпфирования принтера известен для каждой оси, шейпер можно "
+"настроить точнее, и тогда он будет снижать резонансы в несколько более "
+"широком диапазоне частот. Однако коэффициент демпфирования обычно "
+"неизвестен, и его трудно оценить без специального оборудования, поэтому "
+"Klipper по умолчанию использует значение 0,1, которое является хорошим "
+"универсальным значением. Диапазоны частот в таблице охватывают ряд различных "
+"возможных коэффициентов демпфирования вокруг этого значения (примерно от "
+"0,075 до 0,15)."
+
+#: docs/Resonance_Compensation.md:block 101 (paragraph)
+msgid ""
+"Also note that EI, 2HUMP_EI, and 3HUMP_EI are tuned to reduce vibrations to "
+"5%, so the values for 10% vibration tolerance are provided only for the "
+"reference. However, a user can force a desired vibration tolerance for EI "
+"input shaper in a manner similar to MZV input shaper as, e.g. `ei(v_tol=0.02)`"
+" or `ei(v_tol=0.1)`, in which case the vibration reduction range will be "
+"different."
+msgstr ""
+"Также учтите, что EI, 2HUMP_EI и 3HUMP_EI настроены на снижение вибраций до "
+"5%, поэтому значения для допуска вибраций 10% приведены только для справки. "
+"Однако пользователь может задать желаемый допуск вибраций для input shaper "
+"EI способом, аналогичным input shaper MZV, например `ei(v_tol=0.02)` или `ei"
+"(v_tol=0.1)`, и в этом случае диапазон снижения вибраций будет другим."
+
+#: docs/Resonance_Compensation.md:block 103 (unordered list)
+msgid ""
+"One can use this table to check which shaper they should be using if they need"
+" to reduce vibrations at several frequencies. For example, if one has "
+"resonances at 35 Hz and 60 Hz on the same axis: a) EI shaper needs to have "
+"shaper_freq = 35 / (1 - 0.2) = 43.75 Hz, and it will reduce resonances until "
+"43.75 * (1 + 0.2) = 52.5 Hz, so it is not sufficient; b) 2HUMP_EI shaper needs"
+" to have shaper_freq = 35 / (1 - 0.4) = 58.3 Hz and will reduce vibrations "
+"until 58.3 * (1 + 0.45) = 84.5 Hz - so this is an acceptable configuration. "
+"Always try to use as high shaper_freq as possible for a given shaper (perhaps "
+"with some safety margin, so in this example shaper_freq ≈ 55 Hz would work "
+"best), and try to use a shaper with as small shaper duration as possible."
+msgstr ""
+"Эту таблицу можно использовать, чтобы проверить, какой шейпер следует "
+"применять, если требуется снизить вибрации на нескольких частотах. Например, "
+"если на одной оси есть резонансы на 35 Гц и 60 Гц: a) шейпер EI должен иметь "
+"shaper_freq = 35 / (1 - 0.2) = 43,75 Гц, и он будет снижать резонансы до "
+"43,75 * (1 + 0.2) = 52,5 Гц, поэтому его недостаточно; b) шейпер 2HUMP_EI "
+"должен иметь shaper_freq = 35 / (1 - 0.4) = 58,3 Гц и будет снижать вибрации "
+"до 58,3 * (1 + 0.45) = 84,5 Гц — значит, эта конфигурация приемлема. Всегда "
+"старайтесь использовать как можно более высокое значение shaper_freq для "
+"данного шейпера (возможно, с некоторым запасом, так что в этом примере лучше "
+"всего подойдёт shaper_freq ≈ 55 Гц), и старайтесь использовать шейпер с как "
+"можно меньшей длительностью."
+
+#~ msgid ""
+#~ "Input shapers used in Klipper are rather standard, and one can find more in-"
+#~ "depth overview in the articles describing the corresponding shapers. This "
+#~ "section contains a brief overview of some technical aspects of the supported "
+#~ "input shapers. The table below shows some (usually approximate) parameters of "
+#~ "each shaper."
+#~ msgstr ""
+#~ "Формирователи ввода, используемые в Klipper, довольно стандартны, и более "
+#~ "подробный обзор можно найти в статьях, описывающих соответствующие "
+#~ "формирователи. Этот раздел содержит краткий обзор некоторых технических "
+#~ "аспектов поддерживаемых входных формирователей. В таблице ниже приведены "
+#~ "некоторые (обычно приблизительные) параметры каждого формирователя."
+
+#~ msgid "± 35% shaper_freq"
+#~ msgstr "± 35% shaper_freq"
+
+#~ msgid "± 40 shaper_freq"
+#~ msgstr "± 40 shaper_freq"
+
+#~ msgid "-45...+50% shaper_freq"
+#~ msgstr "-45...+50% shaper_freq"
+
+#~ msgid "-50%...+55% shaper_freq"
+#~ msgstr "-50%...+55% shaper_freq"
+
+#~ msgid ""
+#~ "A note on vibration reduction: the values in the table above are approximate. "
+#~ "If the damping ratio of the printer is known for each axis, the shaper can be "
+#~ "configured more precisely and it will then reduce the resonances in a bit "
+#~ "wider range of frequencies. However, the damping ratio is usually unknown and "
+#~ "is hard to estimate without a special equipment, so Klipper uses 0.1 value by "
+#~ "default, which is a good all-round value. The frequency ranges in the table "
+#~ "cover a number of different possible damping ratios around that value (approx."
+#~ " from 0.05 to 0.2)."
+#~ msgstr ""
+#~ "Примечание по снижению вибраций: значения в таблице выше являются "
+#~ "приблизительными. Если известен коэффициент демпфирования принтера для каждой "
+#~ "оси, шейпер можно настроить более точно, и тогда он будет уменьшать резонансы "
+#~ "в более широком диапазоне частот. Однако коэффициент демпфирования обычно "
+#~ "неизвестен, и его трудно оценить без специального оборудования, поэтому "
+#~ "Klipper по умолчанию использует значение 0,1, которое является хорошим "
+#~ "универсальным значением. Диапазоны частот в таблице охватывают несколько "
+#~ "различных возможных коэффициентов демпфирования вокруг этого значения "
+#~ "(примерно от 0,05 до 0,2)."
+
+#~ msgid ""
+#~ "Also note that EI, 2HUMP_EI, and 3HUMP_EI are tuned to reduce vibrations to "
+#~ "5%, so the values for 10% vibration tolerance are provided only for the "
+#~ "reference."
+#~ msgstr ""
+#~ "Также обратите внимание, что EI, 2HUMP_EI и 3HUMP_EI настроены на снижение "
+#~ "вибраций до 5 %, поэтому значения для 10 % допустимых вибраций приведены "
+#~ "только для справки."
+
+#~ msgid ""
+#~ "One can use this table to check which shaper they should be using if they need"
+#~ " to reduce vibrations at several frequencies. For example, if one has "
+#~ "resonances at 35 Hz and 60 Hz on the same axis: a) EI shaper needs to have "
+#~ "shaper_freq = 35 / (1 - 0.2) = 43.75 Hz, and it will reduce resonances until "
+#~ "43.75 * (1 + 0.2) = 52.5 Hz, so it is not sufficient; b) 2HUMP_EI shaper needs"
+#~ " to have shaper_freq = 35 / (1 - 0.35) = 53.85 Hz and will reduce vibrations "
+#~ "until 53.85 * (1 + 0.35) = 72.7 Hz - so this is an acceptable configuration. "
+#~ "Always try to use as high shaper_freq as possible for a given shaper (perhaps "
+#~ "with some safety margin, so in this example shaper_freq ≈ 50-52 Hz would work "
+#~ "best), and try to use a shaper with as small shaper duration as possible."
+#~ msgstr ""
+#~ "С помощью этой таблицы можно проверить, какой формирователь следует "
+#~ "использовать, если нужно уменьшить вибрации на нескольких частотах. Например, "
+#~ "если на одной оси есть резонансы на 35 и 60 Гц: a) формирователь EI должен "
+#~ "иметь shaper_freq = 35 / (1 - 0,2) = 43,75 Гц, и он будет уменьшать резонансы "
+#~ "до 43,75 * (1 + 0,2) = 52. 5 Гц, так что этого недостаточно; б) шейпер "
+#~ "2HUMP_EI должен иметь shaper_freq = 35 / (1 - 0,35) = 53,85 Гц и будет "
+#~ "уменьшать колебания до 53,85 * (1 + 0,35) = 72,7 Гц - так что это приемлемая "
+#~ "конфигурация. Всегда старайтесь использовать как можно более высокий "
+#~ "shaper_freq для данного шейпера (возможно, с некоторым запасом прочности, так "
+#~ "что в данном примере лучше всего подойдет shaper_freq ≈ 50-52 Гц), и "
+#~ "старайтесь использовать шейпер с как можно меньшей длительностью шейпера."
+
+#~ msgid ""
+#~ "Note that `SHAPER_TYPE_Y` and `SHAPER_FREQ_Y` should be the same in both "
+#~ "commands. It is also possible to put a similar snippet into the start g-code "
+#~ "in the slicer, however then the shaper will not be enabled until any print is "
+#~ "started."
+#~ msgstr ""
+#~ "Обратите внимание, что `SHAPER_TYPE_Y` и `SHAPER_FREQ_Y` должны быть "
+#~ "одинаковыми в обеих командах. Можно также поместить аналогичный фрагмент в "
+#~ "g-код запуска слайсера, однако тогда шейпер не будет включен до тех пор, пока "
+#~ "не будет запущена печать."
 
 #~ msgid ""
 #~ "[input_shaper]\n"

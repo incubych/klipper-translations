@@ -1,16 +1,17 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2025.
 # தமிழ்நேரம் <anishprabu.t@gmail.com>, 2025.
+# தமிழ்நேரம் <tamilneram247@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2025-01-08 00:04+0000\n"
-"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"PO-Revision-Date: 2026-03-21 16:09+0000\n"
+"Last-Translator: தமிழ்நேரம் <tamilneram247@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/klipper/api_server/ta/>\n"
 "Language: ta\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid ""
 "This document describes Klipper's Application Programmer Interface (API). This"
@@ -539,7 +540,7 @@ msgstr ""
 "pause_resume/pause \"}`"
 
 msgid "pause_resume/resume"
-msgstr "pause_resume/resume"
+msgstr "மீண்டும்_தொடர்/தொடர்"
 
 msgid ""
 "This endpoint is similar to running the \"RESUME\" G-Code command. For "
@@ -549,7 +550,7 @@ msgstr ""
 "எடுத்துக்காட்டாக: `{\" ஐடி \": 123,\" முறை \":\" pause_resume/resume \"}`"
 
 msgid "query_endstops/status"
-msgstr "query_endstops/status"
+msgstr "வினாவல்_முடிவு/நிலைமை"
 
 msgid ""
 "This endpoint will query the active endpoints and return their status. For "
@@ -722,7 +723,7 @@ msgstr ""
 
 #: docs/API_Server.md:block 106 (header)
 msgid "bed_mesh/dump_mesh"
-msgstr "bed_mesh/dump_mesh"
+msgstr "படுக்கை_கண்ணி/குப்பை_கண்ணி"
 
 #: docs/API_Server.md:block 107 (paragraph)
 msgid ""
@@ -738,24 +739,6 @@ msgstr "எடுத்துக்காட்டாக: `{\" ஐடி \": 123
 #: docs/API_Server.md:block 109 (paragraph)
 msgid "might return:"
 msgstr "திரும்பலாம்:"
-
-#: docs/API_Server.md:block 111 (paragraph)
-msgid ""
-"The `dump_mesh` endpoint takes one optional parameter, `mesh_args`. This "
-"parameter must be an object, where the keys and values are parameters "
-"available to [BED_MESH_CALIBRATE](#bed_mesh_calibrate). This will update the "
-"mesh configuration and probe points using the supplied parameters prior to "
-"returning the result. It is recommended to omit mesh parameters unless it is "
-"desired to visualize the probe points and/or travel path before performing "
-"`BED_MESH_CALIBRATE`."
-msgstr ""
-"`டம்ப்_மேச்` எண்ட்பாயிண்ட் ஒரு விருப்ப அளவுருவை எடுக்கும்,` Mesh_args`. இந்த "
-"அளவுரு ஒரு பொருளாக இருக்க வேண்டும், அங்கு விசைகள் மற்றும் மதிப்புகள் "
-"[bed_mesh_calibrate] (#bed_mesh_calibrate) க்கு கிடைக்கும் அளவுருக்கள். இது "
-"முடிவைத் திருப்புவதற்கு முன் வழங்கப்பட்ட அளவுருக்களைப் பயன்படுத்தி கண்ணி "
-"உள்ளமைவு மற்றும் ஆய்வு புள்ளிகளைப் புதுப்பிக்கும். `BED_MESH_CALIBRATE` "
-"நிகழ்த்துவதற்கு முன் ஆய்வு புள்ளிகள் மற்றும்/அல்லது பயண பாதையை காட்சிப்படுத்த "
-"விரும்பினால் தவிர, கண்ணி அளவுருக்களைத் தவிர்க்க பரிந்துரைக்கப்படுகிறது."
 
 #: docs/API_Server.md:block 88 (header)
 msgid "load_cell/dump_force"
@@ -775,6 +758,61 @@ msgid ""
 "\"counts\", \"tare_counts\"]}}` and might later produce asynchronous messages "
 "such as: `{\"params\":{\"data\":[[3292.432935, 40.65, 562534, -234467]]}}`"
 msgstr ""
+
+#: docs/API_Server.md:block 92 (header)
+msgid "load_cell_probe/dump_taps"
+msgstr ""
+
+#: docs/API_Server.md:block 93 (paragraph)
+msgid ""
+"This endpoint is used to subscribe to details of probing \"tap\" events. Using"
+" this endpoint may increase Klipper's system load."
+msgstr ""
+
+#: docs/API_Server.md:block 94 (paragraph)
+msgid ""
+"A request may look like: `{\"id\": 123, \"method\":\"load_cell/dump_force\", "
+"\"params\": {\"sensor\": \"load_cell\", \"response_template\": {}}}` and might"
+" return: `{\"id\": 123,\"result\":{\"header\":[\"probe_tap_event\"]}}` and "
+"might later produce asynchronous messages such as:"
+msgstr ""
+
+#: docs/API_Server.md:block 96 (paragraph)
+msgid "This data can be used to render:"
+msgstr ""
+
+#: docs/API_Server.md:block 97 (unordered list)
+msgid "The time/force graph"
+msgstr ""
+
+#: docs/API_Server.md:block 115 (paragraph)
+msgid ""
+"The `dump_mesh` endpoint takes one optional parameter, `mesh_args`. This "
+"parameter must be an object, where the keys and values are parameters "
+"available to [BED_MESH_CALIBRATE](G-Codes.md#bed_mesh_calibrate). This will "
+"update the mesh configuration and probe points using the supplied parameters "
+"prior to returning the result. It is recommended to omit mesh parameters "
+"unless it is desired to visualize the probe points and/or travel path before "
+"performing `BED_MESH_CALIBRATE`."
+msgstr ""
+
+#~ msgid ""
+#~ "The `dump_mesh` endpoint takes one optional parameter, `mesh_args`. This "
+#~ "parameter must be an object, where the keys and values are parameters "
+#~ "available to [BED_MESH_CALIBRATE](#bed_mesh_calibrate). This will update the "
+#~ "mesh configuration and probe points using the supplied parameters prior to "
+#~ "returning the result. It is recommended to omit mesh parameters unless it is "
+#~ "desired to visualize the probe points and/or travel path before performing "
+#~ "`BED_MESH_CALIBRATE`."
+#~ msgstr ""
+#~ "`டம்ப்_மேச்` எண்ட்பாயிண்ட் ஒரு விருப்ப அளவுருவை எடுக்கும்,` Mesh_args`. இந்த "
+#~ "அளவுரு ஒரு பொருளாக இருக்க வேண்டும், அங்கு விசைகள் மற்றும் மதிப்புகள் "
+#~ "[bed_mesh_calibrate](#bed_mesh_calibrate) க்கு கிடைக்கும் அளவுருக்கள். இது "
+#~ "முடிவைத் திருப்புவதற்கு முன் வழங்கப்பட்ட அளவுருக்களைப் பயன்படுத்தி கண்ணி "
+#~ "உள்ளமைவு மற்றும் ஆய்வு புள்ளிகளைப் புதுப்பிக்கும். `BED_MESH_CALIBRATE` "
+#~ "நிகழ்த்துவதற்கு முன் ஆய்வுப் புள்ளிகள் மற்றும்/அல்லது பயண பாதையைக் "
+#~ "காட்சிப்படுத்த விரும்பினால் தவிர, கண்ணி அளவுருக்களைத் தவிர்க்கப் "
+#~ "பரிந்துரைக்கப்படுகிறது."
 
 #~ msgid "hx71x/dump_hx71x"
 #~ msgstr "HX71X/DUMP_HX71X"

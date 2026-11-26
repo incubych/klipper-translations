@@ -1,16 +1,16 @@
-# Luc Van den Borre <luc@orotec.be>, 2023.
-# Lasse Lauwerys <lauweryslasse@gmail.com>, 2023.
+# Luc Van den Borre <luc@orotec.be>, 2023, 2025.
+# Lasse Lauwerys <lauweryslasse@gmail.com>, 2023, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2023-10-26 01:04+0000\n"
-"Last-Translator: Lasse Lauwerys <lauweryslasse@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:48+0000\n"
+"Last-Translator: Luc Van den Borre <luc@orotec.be>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/klipper/overview/nl/>\n"
 "Language: nl\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1.1\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "Welcome to the Klipper documentation. If new to Klipper, start with the "

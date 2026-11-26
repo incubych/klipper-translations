@@ -1,20 +1,22 @@
-# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022.
+# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022, 2025.
 # Evgeniy Khramov <thejenjagamertjg@gmail.com>, 2022.
-# VICTOR <subfyn@gmail.com>, 2023.
-# xXx <xxx_xxx_xxxxxxxxx@mail.ru>, 2023.
-# dsa-t <dudesuchamazing@gmail.com>, 2023.
-# Mika <akimivanov43@gmail.com>, 2024.
+# VICTOR <subfyn@gmail.com>, 2023, 2025.
+# xXx <xxx_xxx_xxxxxxxxx@mail.ru>, 2023, 2025.
+# dsa-t <dudesuchamazing@gmail.com>, 2023, 2025.
+# Mika <akimivanov43@gmail.com>, 2024, 2025.
+# Evgeniy Khramov <65224669+thejenja@users.noreply.github.com>, 2025.
+# gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-04-07 09:02+0000\n"
-"Last-Translator: Mika <akimivanov43@gmail.com>\n"
+"PO-Revision-Date: 2025-09-10 09:02+0000\n"
+"Last-Translator: gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/klipper/rpi_microcontroller/ru/>\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 msgid ""
 "This document describes the process of running Klipper on a RPi and use the "
@@ -187,12 +189,10 @@ msgid "Func"
 msgstr "Функция"
 
 #: docs/RPi_microcontroller.md:block 45 (table)
-#, fuzzy
 msgid "0"
 msgstr "0"
 
 #: docs/RPi_microcontroller.md:block 45 (table)
-#, fuzzy
 msgid "12"
 msgstr "12"
 
@@ -201,7 +201,6 @@ msgid "4"
 msgstr "4"
 
 #: docs/RPi_microcontroller.md:block 45 (table)
-#, fuzzy
 msgid "18"
 msgstr "18"
 
@@ -214,12 +213,10 @@ msgid "1"
 msgstr "1"
 
 #: docs/RPi_microcontroller.md:block 45 (table)
-#, fuzzy
 msgid "13"
 msgstr "13"
 
 #: docs/RPi_microcontroller.md:block 45 (table)
-#, fuzzy
 msgid "19"
 msgstr "19"
 
@@ -234,17 +231,6 @@ msgid ""
 msgstr ""
 "Убедитесь, что драйвер Linux SPI включен, запустив `sudo raspi-config` и "
 "включив SPI в меню \"Параметры взаимодействия\"."
-
-#: docs/RPi_microcontroller.md:block 30 (paragraph)
-msgid ""
-"The chosen pin can thus be used within the configuration as "
-"`gpiochip<n>/gpio<o>` where **n** is the chip number as seen by the "
-"`gpiodetect` command and **o** is the line number seen by the`gpioinfo` "
-"command."
-msgstr ""
-"Таким образом, выбранный вывод может использоваться в конфигурации как "
-"`gpiochip<n>/gpio<o>`, где **n** - номер чипа, отображаемый командой "
-"`gpiodetect`, а **o** - номер строки, отображаемый командой 'gpioinfo`."
 
 #: docs/RPi_microcontroller.md:block 23 (paragraph)
 msgid ""
@@ -326,6 +312,24 @@ msgstr ""
 "Это добавит аппаратное управление шим к gpio12 и gpio13 на Pi (поскольку "
 "наложение было настроено на маршрутизацию pwm0 на вывод=12, а pwm1 на "
 "вывод=13)."
+
+#: docs/RPi_microcontroller.md:block 32 (paragraph)
+msgid ""
+"The chosen pin can thus be used within the configuration as "
+"`gpiochip<n>/gpio<o>` where **n** is the chip number as seen by the "
+"`gpiodetect` command and **o** is the line number seen by the`gpioinfo` "
+"command."
+msgstr ""
+"Таким образом, выбранный вывод может использоваться в конфигурации как "
+"`gpiochip<n>/gpio<o>`, где **n** - номер чипа, отображаемый командой "
+"`gpiodetect`, а **o** - номер строки, отображаемый командой 'gpioinfo`."
+
+#~ msgid ""
+#~ "The chosen pin can thus be used within the configuration as "
+#~ "`gpiochip<n>/gpio<o>` where **n** is the chip number as seen by the "
+#~ "`gpiodetect` command and **o** is the line number seen by the` gpioinfo` "
+#~ "command."
+#~ msgstr ""
 
 #, fuzzy
 #~ msgid ""
@@ -633,13 +637,6 @@ msgstr ""
 #~ "OrangePi models or if a Port Expander is used. In these cases it is useful to "
 #~ "use the commands to access the *Linux GPIO character device* to verify the "
 #~ "configuration."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The chosen pin can thus be used within the configuration as "
-#~ "`gpiochip<n>/gpio<o>` where **n** is the chip number as seen by the "
-#~ "`gpiodetect` command and **o** is the line number seen by the` gpioinfo` "
-#~ "command."
 #~ msgstr ""
 
 #~ msgid "Enabling SPI"

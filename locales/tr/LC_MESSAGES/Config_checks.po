@@ -1,18 +1,18 @@
-# Yücelen Gül <yuceleng@gmail.com>, 2022.
-# Mustafa Said Ağca <m.said.agca@gmail.com>, 2022.
-# Furkan Öz <info.furkanoz@gmail.com>, 2024.
-# Ali Azbay <aliyapkod@gmail.com>, 2024.
+# Yücelen Gül <yuceleng@gmail.com>, 2022, 2025.
+# Mustafa Said Ağca <m.said.agca@gmail.com>, 2022, 2025.
+# Furkan Öz <info.furkanoz@gmail.com>, 2024, 2025.
+# Ali Azbay <aliyapkod@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-07-18 22:09+0000\n"
-"Last-Translator: Ali Azbay <aliyapkod@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:07+0000\n"
+"Last-Translator: Yücelen Gül <yuceleng@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/klipper/config_checks/tr/>\n"
 "Language: tr\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document provides a list of steps to help confirm the pin settings in the"
@@ -287,16 +287,6 @@ msgstr ""
 "tetikleyerek tekrar çalıştırın. QUERY_ENDSTOPS komutu endstop'u \"TRIGGERED\" "
 "(Tetiklendi) olarak bildirmelidir."
 
-#: docs/Config_checks.md:block 15 (paragraph)
-msgid ""
-"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
-"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
-"^PA2\"), or remove the \"!\" if there is already one present."
-msgstr ""
-"Eğer endstop ters çevrilmiş gibi görünüyorsa (tetiklendiğinde \"açık\" olarak "
-"rapor veriyorsa veya tam tersi) pin tanımına bir \"!\" ekleyin (örneğin, "
-"\"endstop_pin: ^!PA2\") veya zaten varsa \"!\" ifadesini kaldırın."
-
 #: docs/Config_checks.md:block 18 (paragraph)
 msgid ""
 "Use the STEPPER_BUZZ command to verify the connectivity of each stepper motor."
@@ -342,6 +332,22 @@ msgid ""
 msgstr ""
 "Ekstrüderi kalibre etmek için komut konsoluna gidin ve PID_CALIBRATE komutunu "
 "çalıştırın. Örneğin: `PID_CALIBRATE HEATER=extruder TARGET=170`"
+
+#: docs/Config_checks.md:block 15 (paragraph)
+msgid ""
+"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+"^!PA2\"), or remove the \"!\" if there is already one present."
+msgstr ""
+
+#~ msgid ""
+#~ "If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+#~ "versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+#~ "^PA2\"), or remove the \"!\" if there is already one present."
+#~ msgstr ""
+#~ "Eğer endstop ters çevrilmiş gibi görünüyorsa (tetiklendiğinde \"açık\" olarak "
+#~ "rapor veriyorsa veya tam tersi) pin tanımına bir \"!\" ekleyin (örneğin, "
+#~ "\"endstop_pin: ^!PA2\") veya zaten varsa \"!\" ifadesini kaldırın."
 
 #~ msgid ""
 #~ "Start by verifying that temperatures are being properly reported. Navigate to "

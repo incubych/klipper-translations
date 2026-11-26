@@ -1,16 +1,16 @@
-# Fred Chan <fred2088@gmail.com>, 2022.
-# Yifei Ding <dingyifeiair@gmail.com>, 2022.
+# Fred Chan <fred2088@gmail.com>, 2022, 2025.
+# Yifei Ding <dingyifeiair@gmail.com>, 2022, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2022-09-15 07:23+0000\n"
+"PO-Revision-Date: 2025-07-22 08:32+0000\n"
 "Last-Translator: Yifei Ding <dingyifeiair@gmail.com>\n"
-"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/klipper/manual_level/zh_Hant/>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/projects/klipper/manual_level/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.1-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document describes tools for calibrating a Z endstop and for performing "

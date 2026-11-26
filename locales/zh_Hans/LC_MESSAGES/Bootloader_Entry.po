@@ -1,15 +1,15 @@
-# Hosted Weblate <mfvotmjhcj@iubridge.com>, 2023, 2024.
+# Hosted Weblate <mfvotmjhcj@iubridge.com>, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-02-18 14:02+0000\n"
+"PO-Revision-Date: 2025-07-22 09:01+0000\n"
 "Last-Translator: Hosted Weblate <mfvotmjhcj@iubridge.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/klipper/bootloader_entry/zh_Hans/>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/klipper/bootloader_entry/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.4\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: docs/Bootloader_Entry.md:block 1 (header)
 msgid "Bootloader Entry"
@@ -68,15 +68,6 @@ msgstr "`<Ctrl-A><Ctrl-P>`表示按住`Ctrl`，按住并松开`a`，按住并松
 #: docs/Bootloader_Entry.md:block 15 (header)
 msgid "Physical serial"
 msgstr "物理序列"
-
-#: docs/Bootloader_Entry.md:block 16 (paragraph)
-msgid ""
-"If a physical serial port is being used on the MCU (even if a USB serial "
-"adapter is being used to connect to it), sending the string "
-"`<SPACE><FS><SPACE>Request Serial Bootloader!!<SPACE>~`."
-msgstr ""
-"如果MCU上正在使用物理串口(即使使用USB串口适配器连接)，则发送字符串`<space><FS><space>RequestSerial "
-"BootLoader！！<space>~`。"
 
 #: docs/Bootloader_Entry.md:block 17 (paragraph)
 msgid "`<SPACE>` is an ASCII literal space, 0x20."
@@ -212,6 +203,22 @@ msgid ""
 msgstr ""
 "请注意，在某些主板上，如Octopus Pro "
 "v1，进入DFU模式可能会导致不必要的操作(如在DFU模式下为加热器供电)。建议在使用DFU模式时断开加热器，否则将防止不必要的操作。有关更多详细信息，请参阅您的主板文档。"
+
+#: docs/Bootloader_Entry.md:block 16 (paragraph)
+msgid ""
+"If a physical serial port is being used on the MCU (even if a USB serial "
+"adapter is being used to connect to it), sending the string "
+"`<SPACE><FS><SPACE>Request Serial Bootloader!!<SPACE>~` requests the "
+"bootloader."
+msgstr ""
+
+#~ msgid ""
+#~ "If a physical serial port is being used on the MCU (even if a USB serial "
+#~ "adapter is being used to connect to it), sending the string "
+#~ "`<SPACE><FS><SPACE>Request Serial Bootloader!!<SPACE>~`."
+#~ msgstr ""
+#~ "如果MCU上正在使用物理串口(即使使用USB串口适配器连接)，则发送字符串`<space><FS><space>RequestSerial "
+#~ "BootLoader！！<space>~`。"
 
 #~ msgid ""
 #~ "> cd klipper/scripts\n"

@@ -1,17 +1,19 @@
-# Robert Jaroszewicz <mediagott1977@googlemail.com>, 2022.
-# Mateusz Kapała <lolekwielki@gmail.com>, 2023.
-# Woo Cash <woocash87@gmail.com>, 2024.
+# Robert Jaroszewicz <mediagott1977@googlemail.com>, 2022, 2025.
+# Mateusz Kapała <lolekwielki@gmail.com>, 2023, 2025.
+# Woo Cash <woocash87@gmail.com>, 2024, 2025.
+# Tomasz Matuszewski <garage.make.zone@gmail.com>, 2025.
+# Damian Jasinski <flasch44@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-02-27 18:50+0000\n"
-"Last-Translator: Woo Cash <woocash87@gmail.com>\n"
+"PO-Revision-Date: 2025-11-16 22:51+0000\n"
+"Last-Translator: Damian Jasinski <flasch44@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/klipper/canbus/pl/>\n"
 "Language: pl\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 msgid "This document describes Klipper's CAN bus support."
 msgstr "Ten dokument opisuje obsługę magistrali CAN przez Klippera."
@@ -72,7 +74,7 @@ msgid ""
 msgstr ""
 
 msgid "Configuring Klipper"
-msgstr ""
+msgstr "Konfiguracja Klippera"
 
 msgid ""
 "Update the Klipper [mcu configuration](Config_Reference.md#mcu) to use the CAN"
@@ -174,13 +176,6 @@ msgstr ""
 
 #: docs/CANBUS.md:block 30 (unordered list)
 msgid ""
-"Even at a CAN bus frequency of 1000000, there may not be sufficient bandwidth "
-"to run a `SHAPER_CALIBRATE` test if both the XY steppers and the accelerometer"
-" all communicate via a single \"USB to CAN bus\" interface."
-msgstr ""
-
-#: docs/CANBUS.md:block 30 (unordered list)
-msgid ""
 "A USB to CAN bridge board will not appear as a USB serial device, it will not "
 "show up when running `ls /dev/serial/by-id`, and it can not be configured in "
 "Klipper's printer.cfg file with a `serial:` parameter. The bridge board "
@@ -205,6 +200,12 @@ msgid ""
 "functioning CAN bus (including terminating resistors and an additional node) "
 "may result in sporadic errors even when communicating with the bridge node."
 msgstr ""
+
+#~ msgid ""
+#~ "Even at a CAN bus frequency of 1000000, there may not be sufficient bandwidth "
+#~ "to run a `SHAPER_CALIBRATE` test if both the XY steppers and the accelerometer"
+#~ " all communicate via a single \"USB to CAN bus\" interface."
+#~ msgstr ""
 
 #~ msgid "~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0\n"
 #~ msgstr ""

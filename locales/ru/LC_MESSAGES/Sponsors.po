@@ -1,18 +1,19 @@
-# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022.
-# VICTOR <subfyn@gmail.com>, 2023.
-# xXx <xxx_xxx_xxxxxxxxx@mail.ru>, 2023.
-# gfbdrgng <hnaofegnp@hldrive.com>, 2024.
+# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022, 2025.
+# VICTOR <subfyn@gmail.com>, 2023, 2025.
+# xXx <xxx_xxx_xxxxxxxxx@mail.ru>, 2023, 2025.
+# gfbdrgng <hnaofegnp@hldrive.com>, 2024, 2025.
+# gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-12-19 09:54+0000\n"
-"Last-Translator: gfbdrgng <hnaofegnp@hldrive.com>\n"
+"PO-Revision-Date: 2025-09-08 13:02+0000\n"
+"Last-Translator: gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/klipper/sponsors/ru/>\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.9.2-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #: docs/Sponsors.md:block 1 (header)
 msgid "Sponsors"
@@ -86,17 +87,14 @@ msgid "[Mainsail](https://github.com/mainsail-crew/mainsail)"
 msgstr "[Грот](https://github.com/mainsail-crew/mainsail)"
 
 #: docs/Sponsors.md:block 13 (unordered list)
-#, fuzzy
 msgid "[Fluidd](https://github.com/fluidd-core/fluidd)"
 msgstr "[Fluidd](https://github.com/fluidd-core/fluidd)"
 
 #: docs/Sponsors.md:block 13 (unordered list)
-#, fuzzy
 msgid "[OctoPrint](https://octoprint.org/)"
 msgstr "[OctoPrint](https://octoprint.org/)"
 
 #: docs/Sponsors.md:block 13 (unordered list)
-#, fuzzy
 msgid "[KlipperScreen](https://github.com/jordanruthe/KlipperScreen)"
 msgstr "[KlipperScreen](https://github.com/jordanruthe/KlipperScreen)"
 
@@ -110,7 +108,6 @@ msgstr ""
 "<https://www.patreon.com/koconnor>"
 
 #: docs/Sponsors.md:block 4 (paragraph)
-#, fuzzy
 msgid ""
 "[<img src=\"./img/sponsors/BTT_BTT.png\" width=\"200\" "
 "style=\"margin:25px\"/>](https://bigtree-tech.com/collections/all-products)"
@@ -124,6 +121,9 @@ msgid ""
 "style=\"margin:25px\" "
 "/>](https://obico.io/klipper.html?source=klipper_sponsor)"
 msgstr ""
+"[<img src=\"./img/sponsors/obico-light-horizontal.png\" width=\"200\" "
+"style=\"margin:25px\" "
+"/>](https://obico.io/klipper.html?source=klipper_sponsor)"
 
 #, fuzzy
 #~ msgid ""

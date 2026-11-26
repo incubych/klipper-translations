@@ -1,15 +1,15 @@
-# ktyubeshi <kt.yubeshi@gmail.com>, 2023.
+# ktyubeshi <kt.yubeshi@gmail.com>, 2023, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2023-08-26 07:55+0000\n"
-"Last-Translator: ktyubeshi <kt.yubeshi@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:49+0000\n"
+"Last-Translator: yubeshi <kt.yubeshi@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/klipper/contributing/ja/>\n"
 "Language: ja\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0.1-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid "Contributing to Klipper"
 msgstr "Klipper に貢献する"
@@ -609,16 +609,6 @@ msgstr "要件を満たしたら次のことが必要です :"
 
 #: docs/CONTRIBUTING.md:block 38 (ordered list)
 msgid ""
-"update klipper-tranlations repository "
-"[active_translations](https://github.com/Klipper3d/klipper-"
-"translations/blob/translations/active_translations)"
-msgstr ""
-"klipper-tranlations リポジトリの "
-"[active_translations](https://github.com/Klipper3d/klipper-"
-"translations/blob/translations/active_translations) を更新"
-
-#: docs/CONTRIBUTING.md:block 38 (ordered list)
-msgid ""
 "Optional: add a manual-index.md file in klipper-translations repository's "
 "`docs\\locals\\<lang>` folder to replace the language specific index.md "
 "(generated index.md does not render correctly)."
@@ -681,6 +671,22 @@ msgstr "@JamesH1978"
 #: docs/CONTRIBUTING.md:block 23 (table)
 msgid "Configuration files"
 msgstr "Config ファイル"
+
+#: docs/CONTRIBUTING.md:block 38 (ordered list)
+msgid ""
+"update klipper-translations repository "
+"[active_translations](https://github.com/Klipper3d/klipper-"
+"translations/blob/translations/active_translations)"
+msgstr ""
+
+#~ msgid ""
+#~ "update klipper-tranlations repository "
+#~ "[active_translations](https://github.com/Klipper3d/klipper-"
+#~ "translations/blob/translations/active_translations)"
+#~ msgstr ""
+#~ "klipper-tranlations リポジトリの "
+#~ "[active_translations](https://github.com/Klipper3d/klipper-"
+#~ "translations/blob/translations/active_translations) を更新"
 
 #~ msgid ""
 #~ "module: Capitalized, short (50 chars or less) summary\n"

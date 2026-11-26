@@ -1,19 +1,20 @@
 # Zs.Antal <zsikaiantal@gmail.com>, 2022.
 # "Zs.Antal" <zsikaiantal@icloud.com>, 2024.
+# "Zs.Antal" <antonio092130@icloud.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-04-06 06:02+0000\n"
-"Last-Translator: \"Zs.Antal\" <zsikaiantal@icloud.com>\n"
+"PO-Revision-Date: 2025-07-22 08:35+0000\n"
+"Last-Translator: \"Zs.Antal\" <antonio092130@icloud.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/klipper/skew_correction/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: docs/Skew_Correction.md:block 1 (header)
 msgid "Skew correction"
@@ -74,16 +75,6 @@ msgstr "![skew_lengths](img/skew_lengths.png)"
 #: docs/Skew_Correction.md:block 9 (header)
 msgid "Configure your skew"
 msgstr "Konfiguráld a ferdeséget"
-
-#: docs/Skew_Correction.md:block 10 (paragraph)
-msgid ""
-"Make sure `[skew_correction]` is in printer.cfg. You may now use the "
-"`SET_SKEW` gcode to configure skew_correcton. For example, if your measured "
-"lengths along XY are as follows:"
-msgstr ""
-"Győződj meg róla, hogy a `[skew_correction]` szerepel a printer.cfg fájlban. "
-"Most már használhatod a `SET_SKEW` G-kódot a skew_correction beállításához. "
-"Például, ha az X-Y mentén mért hosszok a következők:"
 
 #: docs/Skew_Correction.md:block 12 (paragraph)
 msgid "`SET_SKEW` can be used to configure skew correction for the XY plane."
@@ -187,6 +178,22 @@ msgstr ""
 " az A saroktól a C sarokig tartó hossz, a B saroktól a D sarokig tartó hossz, "
 "és az A saroktól a D sarokig tartó hossz. Az AD hosszmérésnél ne vedd "
 "figyelembe a sarkokon lévő síkokat, amelyeket néhány tesztobjektum biztosít."
+
+#: docs/Skew_Correction.md:block 10 (paragraph)
+msgid ""
+"Make sure `[skew_correction]` is in printer.cfg. You may now use the "
+"`SET_SKEW` gcode to configure skew_correction. For example, if your measured "
+"lengths along XY are as follows:"
+msgstr ""
+
+#~ msgid ""
+#~ "Make sure `[skew_correction]` is in printer.cfg. You may now use the "
+#~ "`SET_SKEW` gcode to configure skew_correcton. For example, if your measured "
+#~ "lengths along XY are as follows:"
+#~ msgstr ""
+#~ "Győződj meg róla, hogy a `[skew_correction]` szerepel a printer.cfg fájlban. "
+#~ "Most már használhatod a `SET_SKEW` G-kódot a skew_correction beállításához. "
+#~ "Például, ha az X-Y mentén mért hosszok a következők:"
 
 #~ msgid ""
 #~ "Length AC = 140.4\n"

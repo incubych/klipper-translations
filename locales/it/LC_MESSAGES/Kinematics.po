@@ -1,18 +1,18 @@
-# Davide Di Gloria <davidedigloria87@gmail.com>, 2022.
+# Davide Di Gloria <davidedigloria87@gmail.com>, 2022, 2025.
 # Dex94 <Dasvaresu@dr.com>, 2022.
-# elovalvoc047faba7aa1427f <ernesto.lovalvo@unipa.it>, 2022.
-# Ale Ale <ale.99.ale@gmail.com>, 2022.
+# elovalvoc047faba7aa1427f <ernesto.lovalvo@unipa.it>, 2022, 2025.
+# Ale Ale <ale.99.ale@gmail.com>, 2022, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2022-08-08 09:23+0000\n"
-"Last-Translator: Ale Ale <ale.99.ale@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:18+0000\n"
+"Last-Translator: elovalvoc047faba7aa1427f <ernesto.lovalvo@unipa.it>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/klipper/kinematics/it/>\n"
 "Language: it\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document provides an overview of how Klipper implements robot motion (its"

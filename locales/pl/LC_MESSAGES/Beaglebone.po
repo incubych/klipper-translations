@@ -1,17 +1,18 @@
-# Robert Jaroszewicz <mediagott1977@googlemail.com>, 2022.
+# Robert Jaroszewicz <mediagott1977@googlemail.com>, 2022, 2025.
 # Mateusz Kapała <lolekwielki@gmail.com>, 2023.
 # Woo Cash <woocash87@gmail.com>, 2024.
+# Damian Jasinski <flasch44@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-02-27 18:50+0000\n"
-"Last-Translator: Woo Cash <woocash87@gmail.com>\n"
+"PO-Revision-Date: 2025-11-16 22:51+0000\n"
+"Last-Translator: Damian Jasinski <flasch44@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/klipper/beaglebone/pl/>\n"
 "Language: pl\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 msgid ""
 "This document describes the process of running Klipper on a Beaglebone PRU."
@@ -22,9 +23,10 @@ msgstr "Tworzenie obrazu systemu operacyjnego"
 
 msgid "And setup OctoPrint to start at bootup:"
 msgstr ""
+"Następnie skonfiguruj OctoPrint tak, aby uruchamiał się przy starcie systemu:"
 
 msgid "Then start the Octoprint service:"
-msgstr ""
+msgstr "Następnie uruchom usługę Octoprint:"
 
 msgid "Then install this micro-controller code as well:"
 msgstr ""
@@ -240,13 +242,6 @@ msgid ""
 " can't use them for stepper control."
 msgstr ""
 
-#: docs/Beaglebone.md:block 53 (paragraph)
-msgid ""
-"Complete the installation by configuring Klipper following the instructions in"
-" the main [Installation](Installation.md#configuring-octoprint-to-use-klipper)"
-" document."
-msgstr ""
-
 #: docs/Beaglebone.md:block 55 (paragraph)
 msgid ""
 "Unfortunately, the Beaglebone processor can sometimes struggle to run "
@@ -393,6 +388,18 @@ msgid ""
 "UART2(RX,TX): BB-UART2-00A0.dtbo UART3(RX,TX): BB-UART3-00A0.dtbo "
 "UART4(RS-485): BB-UART4-RS485-00A0.dtbo UART5(RX,TX): BB-UART5-00A0.dtbo"
 msgstr ""
+
+#: docs/Beaglebone.md:block 53 (paragraph)
+msgid ""
+"Complete the installation by configuring Klipper following the instructions in"
+" the main [Installation](Installation.md#configuring-klipper) document."
+msgstr ""
+
+#~ msgid ""
+#~ "Complete the installation by configuring Klipper following the instructions in"
+#~ " the main [Installation](Installation.md#configuring-octoprint-to-use-klipper)"
+#~ " document."
+#~ msgstr ""
 
 #~ msgid ""
 #~ "git clone https://github.com/foosel/OctoPrint.git\n"

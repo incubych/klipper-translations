@@ -1,18 +1,20 @@
-# Yifei Ding <dingyifeiair@gmail.com>, 2021, 2022.
-# badpoi <a1635835119@gmail.com>, 2021.
-# "Neko.vecter" <Vecterfang@icloud.com>, 2023, 2024.
-# Petal <Petalzu@outlook.com>, 2023.
+# Yifei Ding <dingyifeiair@gmail.com>, 2021, 2022, 2025.
+# badpoi <a1635835119@gmail.com>, 2021, 2025.
+# "Neko.vecter" <Vecterfang@icloud.com>, 2023, 2024, 2025, 2026.
+# Petal <Petalzu@outlook.com>, 2023, 2025.
+# Temparo <temperacket@outlook.com>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-03-18 18:18+0000\n"
+"PO-Revision-Date: 2026-09-09 14:51+0000\n"
 "Last-Translator: \"Neko.vecter\" <Vecterfang@icloud.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/klipper/config_checks/zh_Hans/>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/klipper/config_checks/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 2026.9.1\n"
 
 msgid ""
 "This document provides a list of steps to help confirm the pin settings in the"
@@ -225,14 +227,6 @@ msgid ""
 msgstr ""
 "手动移动所有打印机轴，使其不与端挡接触。通过命令控制台发送QUERY_ENDSTOPS命令。它应该以所有配置的端站的当前状态进行响应，并且它们都应该报告“打开”状态。对于每个endstop，在手动触发endstop的同时重新运行QUERY_endstops命令。QUERY_ENDSTOPS命令应将endstop报告为“TRIGGERED”。"
 
-#: docs/Config_checks.md:block 15 (paragraph)
-msgid ""
-"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
-"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
-"^PA2\"), or remove the \"!\" if there is already one present."
-msgstr ""
-"如果endstop出现反转（触发时报告“打开”，反之亦然），则在端号定义中添加一个“！”（例如，“endstop_pin:^PA2”），或者如果已经存在“！”，则删除该“！”。"
-
 #: docs/Config_checks.md:block 18 (paragraph)
 msgid ""
 "Use the STEPPER_BUZZ command to verify the connectivity of each stepper motor."
@@ -266,6 +260,22 @@ msgid ""
 "PID_CALIBRATE command. For example: `PID_CALIBRATE HEATER=extruder TARGET=170`"
 msgstr ""
 "要校准挤出机，需要在控制台并使用PID_calibrate命令。例如：`PID_CALIBRATE HEATER=extruder TARGET=170`"
+
+#: docs/Config_checks.md:block 15 (paragraph)
+msgid ""
+"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+"^!PA2\"), or remove the \"!\" if there is already one present."
+msgstr ""
+"如果限位开关的状态似乎被反转（触发时报告“开”，反之亦然），请在引脚定义中添加"
+"一个“!”（例如，“endstop_pin: ^!PA2”），或者如果已经存在“!”，则将其删除。"
+
+#~ msgid ""
+#~ "If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+#~ "versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+#~ "^PA2\"), or remove the \"!\" if there is already one present."
+#~ msgstr ""
+#~ "如果endstop出现反转（触发时报告“打开”，反之亦然），则在端号定义中添加一个“！”（例如，“endstop_pin:^PA2”），或者如果已经存在“！”，则删除该“！”。"
 
 #~ msgid ""
 #~ "Start by verifying that temperatures are being properly reported. Navigate to "

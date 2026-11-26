@@ -1,20 +1,21 @@
 # Francis Poulizac <fpoulizac@vivaldi.net>, 2021.
 # Tl <rflma99@pm.me>, 2022.
 # Jonathan <jonathanhav09@sfr.fr>, 2022.
-# Francis Poulizac <francis@poulizac.fr>, 2022, 2023.
-# jean-luc MATTEI <jlucm@free.fr>, 2022, 2023.
+# Francis Poulizac <francis@poulizac.fr>, 2022, 2023, 2025.
+# jean-luc MATTEI <jlucm@free.fr>, 2022, 2023, 2025.
 # Alfredo Monclus <alfredomonclus@gmail.com>, 2023.
+# Posemartonis <weblate.drainage895@passmail.net>, 2026.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2023-12-27 15:09+0000\n"
-"Last-Translator: Alfredo Monclus <alfredomonclus@gmail.com>\n"
+"PO-Revision-Date: 2026-03-23 12:09+0000\n"
+"Last-Translator: Posemartonis <weblate.drainage895@passmail.net>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/klipper/rpi_microcontroller/fr/>\n"
 "Language: fr\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid ""
 "This document describes the process of running Klipper on a RPi and use the "
@@ -126,7 +127,7 @@ msgstr "Pour vérifier la puce gpio disponible exécutez :"
 msgid "To check the pin number and the pin availability tun:"
 msgstr ""
 "Pour vérifier la numérotation des broches du connecteur GPIO et leur "
-"disponibilité, exécutez :"
+"disponibilité, exécutez :"
 
 msgid ""
 "***Warning:*** only gpio marked as `unused` can be used. It is not possible "
@@ -236,18 +237,6 @@ msgstr ""
 "Assurez-vous que le pilote SPI Linux est activé en exécutant `sudo raspi-"
 "config` et en activant SPI dans le menu « Options d’interface »."
 
-#: docs/RPi_microcontroller.md:block 30 (paragraph)
-msgid ""
-"The chosen pin can thus be used within the configuration as "
-"`gpiochip<n>/gpio<o>` where **n** is the chip number as seen by the "
-"`gpiodetect` command and **o** is the line number seen by the`gpioinfo` "
-"command."
-msgstr ""
-"La broche choisie peut donc être utilisée dans la configuration comme "
-"`gpiochip<n>/gpio<o>` où **n** est le numéro de puce tel qu'il est vu par la "
-"commande `gpiodetect` et **o** est le numéro de ligne vu par la commande "
-"`gpioinfo`."
-
 #: docs/RPi_microcontroller.md:block 23 (paragraph)
 msgid ""
 "On Raspberry Pi and on many clones the pins exposed on the GPIO belong to the "
@@ -316,6 +305,25 @@ msgid ""
 "This will add hardware pwm control to gpio12 and gpio13 on the Pi (because the"
 " overlay was configured to route pwm0 to pin=12 and pwm1 to pin=13)."
 msgstr ""
+
+#: docs/RPi_microcontroller.md:block 32 (paragraph)
+msgid ""
+"The chosen pin can thus be used within the configuration as "
+"`gpiochip<n>/gpio<o>` where **n** is the chip number as seen by the "
+"`gpiodetect` command and **o** is the line number seen by the`gpioinfo` "
+"command."
+msgstr ""
+"La broche choisie peut donc être utilisée dans la configuration comme "
+"`gpiochip<n>/gpio<o>` où **n** est le numéro de puce tel qu'il est vu par la "
+"commande `gpiodetect` et **o** est le numéro de ligne vu par la commande "
+"`gpioinfo`."
+
+#~ msgid ""
+#~ "The chosen pin can thus be used within the configuration as "
+#~ "`gpiochip<n>/gpio<o>` where **n** is the chip number as seen by the "
+#~ "`gpiodetect` command and **o** is the line number seen by the` gpioinfo` "
+#~ "command."
+#~ msgstr ""
 
 #~ msgid ""
 #~ "cd ~/klipper/\n"
@@ -599,13 +607,6 @@ msgstr ""
 #~ "OrangePi models or if a Port Expander is used. In these cases it is useful to "
 #~ "use the commands to access the *Linux GPIO character device* to verify the "
 #~ "configuration."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The chosen pin can thus be used within the configuration as "
-#~ "`gpiochip<n>/gpio<o>` where **n** is the chip number as seen by the "
-#~ "`gpiodetect` command and **o** is the line number seen by the` gpioinfo` "
-#~ "command."
 #~ msgstr ""
 
 #~ msgid "Enabling SPI"

@@ -1,20 +1,21 @@
 # 京都タラレバ息子 <japan100@gmail.com>, 2023.
-# Lol A-girl-with-tea <f300f300f300@gmail.com>, 2023.
-# ktyubeshi <kt.yubeshi@gmail.com>, 2023.
-# umesaburo sagawa <atowa-notonare-yamatonare427@pm.me>, 2024.
+# Lol A-girl-with-tea <f300f300f300@gmail.com>, 2023, 2025.
+# ktyubeshi <kt.yubeshi@gmail.com>, 2023, 2025.
+# umesaburo sagawa <atowa-notonare-yamatonare427@pm.me>, 2024, 2025.
 # immeteor2 <ryumeteor175@gmail.com>, 2024.
 # Tachibana Saza <tachibanasaza@proton.me>, 2025.
+# Meteor2 <ryumeteor175@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2025-04-03 19:07+0000\n"
-"Last-Translator: Tachibana Saza <tachibanasaza@proton.me>\n"
+"PO-Revision-Date: 2025-07-22 08:49+0000\n"
+"Last-Translator: Meteor2 <ryumeteor175@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/klipper/config_checks/ja/>\n"
 "Language: ja\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.11-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document provides a list of steps to help confirm the pin settings in the"
@@ -207,13 +208,6 @@ msgid ""
 "QUERY_ENDSTOPS command should report the endstop as \"TRIGGERED\"."
 msgstr ""
 
-#: docs/Config_checks.md:block 15 (paragraph)
-msgid ""
-"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
-"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
-"^PA2\"), or remove the \"!\" if there is already one present."
-msgstr ""
-
 #: docs/Config_checks.md:block 18 (paragraph)
 msgid ""
 "Use the STEPPER_BUZZ command to verify the connectivity of each stepper motor."
@@ -242,6 +236,19 @@ msgid ""
 "To calibrate the extruder, navigate to the command console and run the "
 "PID_CALIBRATE command. For example: `PID_CALIBRATE HEATER=extruder TARGET=170`"
 msgstr ""
+
+#: docs/Config_checks.md:block 15 (paragraph)
+msgid ""
+"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+"^!PA2\"), or remove the \"!\" if there is already one present."
+msgstr ""
+
+#~ msgid ""
+#~ "If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+#~ "versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+#~ "^PA2\"), or remove the \"!\" if there is already one present."
+#~ msgstr ""
 
 #, fuzzy
 #~ msgid ""

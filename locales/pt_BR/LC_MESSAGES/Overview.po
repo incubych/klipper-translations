@@ -1,22 +1,25 @@
-# William Weber Berrutti <wwberrutti@protonmail.ch>, 2021.
-# Savio Fialho <saviofialhoan@gmail.com>, 2022.
+# William Weber Berrutti <wwberrutti@protonmail.ch>, 2021, 2025.
+# Savio Fialho <saviofialhoan@gmail.com>, 2022, 2025.
 # Yifei Ding <dingyifeiair@gmail.com>, 2022.
-# Wagner Reck <wagner.reck@gmail.com>, 2022.
-# Francisco Lima <limamg@gmail.com>, 2022.
-# Roberto Besser <rmbesser@gmail.com>, 2023.
+# Wagner Reck <wagner.reck@gmail.com>, 2022, 2025.
+# Francisco Lima <limamg@gmail.com>, 2022, 2025.
+# Roberto Besser <rmbesser@gmail.com>, 2023, 2025.
 # delvani <inavleb@users.noreply.hosted.weblate.org>, 2024.
 # Jose Delvani <jsdelvani@users.noreply.hosted.weblate.org>, 2024.
+# Deleted User <jsdelvani@users.noreply.hosted.weblate.org>, 2025.
+# Deleted User <inavleb@users.noreply.hosted.weblate.org>, 2025.
+# Elyan Mouzinho Santana <elyanmouzinho@live.com>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-09-28 04:15+0000\n"
-"Last-Translator: Jose Delvani <jsdelvani@users.noreply.hosted.weblate.org>\n"
+"PO-Revision-Date: 2025-10-30 17:02+0000\n"
+"Last-Translator: Elyan Mouzinho Santana <elyanmouzinho@live.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/klipper/overview/pt_BR/>\n"
 "Language: pt_BR\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.8-dev\n"
+"X-Generator: Weblate 5.14.1-dev\n"
 
 msgid ""
 "Welcome to the Klipper documentation. If new to Klipper, start with the "
@@ -341,7 +344,7 @@ msgstr "[Sonda indutiva de corrente parasita](Eddy_Probe.md)"
 
 #: docs/Overview.md:block 10 (unordered list)
 msgid "[Load Cells](Load_Cell.md)"
-msgstr ""
+msgstr "[Carregar células](Load_Cell.md)"
 
 #~ msgid ""
 #~ "[Exclude Object](Exclude_Object.md): The guide to the Exclude Objecs "

@@ -1,17 +1,17 @@
 # Wivik <seb+weblate@zedas.fr>, 2021.
-# Francis Poulizac <francis@poulizac.fr>, 2022, 2023.
-# jean-luc MATTEI <jlucm@free.fr>, 2023.
+# Francis Poulizac <francis@poulizac.fr>, 2022, 2023, 2025.
+# jean-luc MATTEI <jlucm@free.fr>, 2023, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2023-04-26 06:52+0000\n"
-"Last-Translator: jean-luc MATTEI <jlucm@free.fr>\n"
+"PO-Revision-Date: 2025-07-22 08:25+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/klipper/hall_filament_width_sensor/fr/>\n"
 "Language: fr\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid "How does it work?"
 msgstr "Comment cela fonctionne-t-il ?"
@@ -142,6 +142,50 @@ msgstr ""
 "ajuste le multiplicateur d'extrusion. J'utilise le connecteur aux2 sur une "
 "carte de type ramps avec les broches analog11 et analog12. Vous pouvez "
 "utiliser différentes broches et différentes cartes."
+
+#: docs/Hall_Filament_Width_Sensor.md:block 15 (header)
+msgid "Use as a runout switch only"
+msgstr ""
+
+#: docs/Hall_Filament_Width_Sensor.md:block 16 (paragraph)
+msgid ""
+"By default, the sensor measures filament diameter and adjusts the extrusion "
+"multiplier to compensate for variations."
+msgstr ""
+
+#: docs/Hall_Filament_Width_Sensor.md:block 17 (paragraph)
+msgid ""
+"If you want to use the sensor as a runout switch only, set the "
+"`enable_flow_compensation` config parameter to `false`. In this mode, the "
+"sensor will only trigger runout events when filament is not detected, it will "
+"not modify the extrusion multiplier."
+msgstr ""
+
+#: docs/Hall_Filament_Width_Sensor.md:block 18 (paragraph)
+msgid ""
+"This is useful for printers where the filament sensor is not accurate enough "
+"for flow compensation but can reliably detect filament runout, or when "
+"printing with flexible filaments which have unstable diameter characteristics."
+msgstr ""
+
+#: docs/Hall_Filament_Width_Sensor.md:block 19 (paragraph)
+msgid ""
+"Issue **ENABLE_FILAMENT_WIDTH_SENSOR FLOW_COMPENSATION=1** to enable flow "
+"compensation or **ENABLE_FILAMENT_WIDTH_SENSOR FLOW_COMPENSATION=0** to "
+"disable it."
+msgstr ""
+
+#: docs/Hall_Filament_Width_Sensor.md:block 20 (paragraph)
+msgid ""
+"Note that disabling filament width compensation automatically resets the "
+"extrusion multiplier to 100%."
+msgstr ""
+
+#: docs/Hall_Filament_Width_Sensor.md:block 21 (paragraph)
+msgid ""
+"**QUERY_FILAMENT_WIDTH** includes the current state of flow compensation in "
+"its output."
+msgstr ""
 
 #~ msgid ""
 #~ "[menu __main __filament __width_current]\n"

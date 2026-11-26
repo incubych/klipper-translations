@@ -1,15 +1,15 @@
-# Niolay Danov <nikdan@abv.bg>, 2024.
+# Niolay Danov <nikdan@abv.bg>, 2024, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-10-31 21:01+0000\n"
+"PO-Revision-Date: 2025-07-22 08:44+0000\n"
 "Last-Translator: Niolay Danov <nikdan@abv.bg>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/klipper/canbus/bg/>\n"
 "Language: bg\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.2-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid "This document describes Klipper's CAN bus support."
 msgstr "Този документ описва поддръжката на CAN шината на Klipper."
@@ -237,17 +237,6 @@ msgstr ""
 
 #: docs/CANBUS.md:block 30 (unordered list)
 msgid ""
-"Even at a CAN bus frequency of 1000000, there may not be sufficient bandwidth "
-"to run a `SHAPER_CALIBRATE` test if both the XY steppers and the accelerometer"
-" all communicate via a single \"USB to CAN bus\" interface."
-msgstr ""
-"Дори при честота на шината CAN 1000000 може да няма достатъчна широчина на "
-"честотната лента за провеждане на теста `SHAPER_CALIBRATE`, ако стъпковите "
-"устройства XY и акселерометърът комуникират чрез един интерфейс \"USB към шина"
-" CAN\"."
-
-#: docs/CANBUS.md:block 30 (unordered list)
-msgid ""
 "A USB to CAN bridge board will not appear as a USB serial device, it will not "
 "show up when running `ls /dev/serial/by-id`, and it can not be configured in "
 "Klipper's printer.cfg file with a `serial:` parameter. The bridge board "
@@ -279,6 +268,16 @@ msgid ""
 "functioning CAN bus (including terminating resistors and an additional node) "
 "may result in sporadic errors even when communicating with the bridge node."
 msgstr ""
+
+#~ msgid ""
+#~ "Even at a CAN bus frequency of 1000000, there may not be sufficient bandwidth "
+#~ "to run a `SHAPER_CALIBRATE` test if both the XY steppers and the accelerometer"
+#~ " all communicate via a single \"USB to CAN bus\" interface."
+#~ msgstr ""
+#~ "Дори при честота на шината CAN 1000000 може да няма достатъчна широчина на "
+#~ "честотната лента за провеждане на теста `SHAPER_CALIBRATE`, ако стъпковите "
+#~ "устройства XY и акселерометърът комуникират чрез един интерфейс \"USB към шина"
+#~ " CAN\"."
 
 #~ msgid "~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0\n"
 #~ msgstr "~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0\n"

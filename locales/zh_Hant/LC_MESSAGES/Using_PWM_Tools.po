@@ -1,20 +1,15 @@
-# Fred Chan <fred2088@gmail.com>, 2022.
+# Fred Chan <fred2088@gmail.com>, 2022, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2022-02-23 12:56+0000\n"
+"PO-Revision-Date: 2025-07-22 08:32+0000\n"
 "Last-Translator: Fred Chan <fred2088@gmail.com>\n"
-"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/klipper/using_pwm_tools/zh_Hant/>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/projects/klipper/using_pwm_tools/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.11-dev\n"
-
-msgid ""
-"This document describes how to setup a PWM-controlled laser or spindle using "
-"`output_pin` and some macros."
-msgstr "該文件介紹如何配置 `output_pin` 和宏命令以實現使用 PWM 訊號對鐳射器或主軸進行控制。"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid "How does it work?"
 msgstr "它如何運作？"
@@ -45,20 +40,6 @@ msgstr ""
 "在驅動鐳射器時，應採用一切可能的預防措施。二極管鐳射一般是使用反訊號的，即當微控制器重啟時，鐳射將會*全功率輸出*，直至微處理器恢復正常運作。 "
 "慎重而言，建議在鐳射器上電期間*始終*佩戴合適波長的護目鏡；並在不使用鐳射時對鐳射器斷電。同時，應該為鐳射器設定安全定時，保證在上位機和微控制器發生錯誤時，鐳射器能自動停止。"
 
-msgid "Current Limitations"
-msgstr "電流限制"
-
-msgid ""
-"There is a limitation of how frequent PWM updates may occur. While being very "
-"precise, a PWM update may only occur every 0.1 seconds, rendering it almost "
-"useless for raster engraving. However, there exists an [experimental "
-"branch](https://github.com/Cirromulus/klipper/tree/laser_tool) with its own "
-"tradeoffs. In long term, it is planned to add this functionality to main-line "
-"klipper."
-msgstr ""
-"PWM脈衝發生的頻率存在上限。儘管相當精確，但每隔0.1秒才能產生一個PWM脈衝，因而幾乎無法用作光柵蝕刻。相對地，可使用以下[測試分支](https://github.com/Cirromulus/klipper/tree/laser_tool)"
-" 。它與主分支各有考量。長期計劃中將上述功能加入到 Klipper 的主分支中。"
-
 msgid "Commands"
 msgstr "命令"
 
@@ -77,11 +58,41 @@ msgstr "如果你使用的是 LaserWeb 軟體，一個可用的配置為："
 msgid "Using PWM tools"
 msgstr "使用 PWM 工具"
 
+#: docs/Using_PWM_Tools.md:block 2 (paragraph)
+msgid ""
+"This document describes how to setup a PWM-controlled laser or spindle using "
+"`pwm_tool` and some macros."
+msgstr ""
+
 #: docs/Using_PWM_Tools.md:block 6 (paragraph)
 msgid ""
-"For an example configuration, see [config/sample-pwm-tool.cfg](/config/sample-"
-"pwm-tool.cfg)."
-msgstr "有關示例配置，請參閱 [config/sample-pwm-tool.cfg](/config/sample-pwm-tool.cfg)。"
+"For an example configuration, see [config/sample-pwm-"
+"tool.cfg](../config/sample-pwm-tool.cfg)."
+msgstr ""
+
+#~ msgid ""
+#~ "For an example configuration, see [config/sample-pwm-tool.cfg](/config/sample-"
+#~ "pwm-tool.cfg)."
+#~ msgstr "有關示例配置，請參閱 [config/sample-pwm-tool.cfg](/config/sample-pwm-tool.cfg)。"
+
+#~ msgid ""
+#~ "This document describes how to setup a PWM-controlled laser or spindle using "
+#~ "`output_pin` and some macros."
+#~ msgstr "該文件介紹如何配置 `output_pin` 和宏命令以實現使用 PWM 訊號對鐳射器或主軸進行控制。"
+
+#~ msgid "Current Limitations"
+#~ msgstr "電流限制"
+
+#~ msgid ""
+#~ "There is a limitation of how frequent PWM updates may occur. While being very "
+#~ "precise, a PWM update may only occur every 0.1 seconds, rendering it almost "
+#~ "useless for raster engraving. However, there exists an [experimental "
+#~ "branch](https://github.com/Cirromulus/klipper/tree/laser_tool) with its own "
+#~ "tradeoffs. In long term, it is planned to add this functionality to main-line "
+#~ "klipper."
+#~ msgstr ""
+#~ "PWM脈衝發生的頻率存在上限。儘管相當精確，但每隔0.1秒才能產生一個PWM脈衝，因而幾乎無法用作光柵蝕刻。相對地，可使用以下[測試分支](https://github.com/Cirromulus/klipper/tree/laser_tool)"
+#~ " 。它與主分支各有考量。長期計劃中將上述功能加入到 Klipper 的主分支中。"
 
 #~ msgid ""
 #~ "GCODE START:\n"

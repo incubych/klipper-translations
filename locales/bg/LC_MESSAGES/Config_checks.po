@@ -1,16 +1,16 @@
-# Nikolai Danov <nikolaidanov67@gmail.com>, 2022.
-# Niolay Danov <nikdan@abv.bg>, 2024.
+# Nikolai Danov <nikolaidanov67@gmail.com>, 2022, 2025.
+# Niolay Danov <nikdan@abv.bg>, 2024, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-10-10 20:55+0000\n"
-"Last-Translator: Niolay Danov <nikdan@abv.bg>\n"
+"PO-Revision-Date: 2025-07-22 08:43+0000\n"
+"Last-Translator: Nikolai Danov <nikolaidanov67@gmail.com>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/klipper/config_checks/bg/>\n"
 "Language: bg\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document provides a list of steps to help confirm the pin settings in the"
@@ -292,16 +292,6 @@ msgstr ""
 "командата QUERY_ENDSTOPS, като ръчно задействате крайния стоп. Командата "
 "QUERY_ENDSTOPS трябва да отчете крайната спирка като \"TRIGGERED\"."
 
-#: docs/Config_checks.md:block 15 (paragraph)
-msgid ""
-"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
-"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
-"^PA2\"), or remove the \"!\" if there is already one present."
-msgstr ""
-"Ако крайният ограничител изглежда инвертиран (съобщава за \"отворен\", когато "
-"е задействан, и обратно), тогава добавете \"!\" към дефиницията на извода "
-"(например \"endstop_pin: ^PA2\") или премахнете \"!\", ако вече има такъв."
-
 #: docs/Config_checks.md:block 18 (paragraph)
 msgid ""
 "Use the STEPPER_BUZZ command to verify the connectivity of each stepper motor."
@@ -350,6 +340,22 @@ msgid ""
 msgstr ""
 "За да калибрирате екструдера, отидете в командната конзола и изпълнете "
 "командата PID_CALIBRATE. Например: `PID_CALIBRATE HEATER=extruder TARGET=170`"
+
+#: docs/Config_checks.md:block 15 (paragraph)
+msgid ""
+"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+"^!PA2\"), or remove the \"!\" if there is already one present."
+msgstr ""
+
+#~ msgid ""
+#~ "If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+#~ "versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+#~ "^PA2\"), or remove the \"!\" if there is already one present."
+#~ msgstr ""
+#~ "Ако крайният ограничител изглежда инвертиран (съобщава за \"отворен\", когато "
+#~ "е задействан, и обратно), тогава добавете \"!\" към дефиницията на извода "
+#~ "(например \"endstop_pin: ^PA2\") или премахнете \"!\", ако вече има такъв."
 
 #~ msgid ""
 #~ "Start by verifying that temperatures are being properly reported. Navigate to "

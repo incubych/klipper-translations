@@ -1,15 +1,16 @@
-# jean-luc MATTEI <jlucm@free.fr>, 2022.
+# jean-luc MATTEI <jlucm@free.fr>, 2022, 2025.
+# Posemartonis <weblate.drainage895@passmail.net>, 2026.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2022-11-30 10:48+0000\n"
-"Last-Translator: jean-luc MATTEI <jlucm@free.fr>\n"
+"PO-Revision-Date: 2026-03-23 12:09+0000\n"
+"Last-Translator: Posemartonis <weblate.drainage895@passmail.net>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/klipper/skew_correction/fr/>\n"
 "Language: fr\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.15-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid ""
 "Software based skew correction can help resolve dimensional inaccuracies "
@@ -128,17 +129,6 @@ msgstr ""
 "impression. Vous pouvez le faire en supprimant le module `[skew_correction]` "
 "du fichier printer.cfg ou en tapant un gcode `SET_SKEW CLEAR=1`."
 
-#: docs/skew_correction.md:block 10 (paragraph)
-msgid ""
-"Make sure `[skew_correction]` is in printer.cfg. You may now use the "
-"`SET_SKEW` gcode to configure skew_correcton. For example, if your measured "
-"lengths along XY are as follows:"
-msgstr ""
-"Assurez-vous que `[skew_correction]` est bien dans le fichier printer.cfg. "
-"Vous pouvez maintenant utiliser le gcode `SET_SKEW` pour configurer "
-"skew_correcton. Par exemple, si vos longueurs mesurées le long de XY sont les "
-"suivantes :"
-
 #: docs/skew_correction.md:block 16 (paragraph)
 msgid ""
 "The `[skew_correction]` module also supports profile management in a manner "
@@ -169,6 +159,28 @@ msgid ""
 " Corner D, and the length from Corner A to Corner D. When measuring length AD "
 "do not include the flats on the corners that some test objects provide."
 msgstr ""
+"Le module `[skew_correction]` nécessite 3 mesures pour chaque plan que vous "
+"souhaitez corriger ; la longueur du coin A au coin C, la longueur du coin B au"
+" coin D et la longueur du coin A au coin D. Lorsque l'on mesure la longueur AD"
+" il ne faut pas inclure les surfaces sur les coins que certains objets de test"
+" fournissent."
+
+#: docs/Skew_Correction.md:block 10 (paragraph)
+msgid ""
+"Make sure `[skew_correction]` is in printer.cfg. You may now use the "
+"`SET_SKEW` gcode to configure skew_correction. For example, if your measured "
+"lengths along XY are as follows:"
+msgstr ""
+
+#~ msgid ""
+#~ "Make sure `[skew_correction]` is in printer.cfg. You may now use the "
+#~ "`SET_SKEW` gcode to configure skew_correcton. For example, if your measured "
+#~ "lengths along XY are as follows:"
+#~ msgstr ""
+#~ "Assurez-vous que `[skew_correction]` est bien dans le fichier printer.cfg. "
+#~ "Vous pouvez maintenant utiliser le gcode `SET_SKEW` pour configurer "
+#~ "skew_correcton. Par exemple, si vos longueurs mesurées le long de XY sont les "
+#~ "suivantes :"
 
 #~ msgid ""
 #~ "Length AC = 140.4\n"

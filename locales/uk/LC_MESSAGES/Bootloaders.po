@@ -1,16 +1,18 @@
 # Максим Горпиніч <mgorpinic2005@gmail.com>, 2024.
 # Максим Горпиніч <maksimgorpinic2005a@gmail.com>, 2025.
+# Deleted User <mgorpinic2005@gmail.com>, 2025.
+# Максим Горпиніч <maksimgorpinic4@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2025-02-20 08:20+0000\n"
-"Last-Translator: Максим Горпиніч <maksimgorpinic2005a@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:42+0000\n"
+"Last-Translator: Максим Горпиніч <maksimgorpinic4@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/klipper/bootloaders/uk/>\n"
 "Language: uk\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.10.1-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document provides information on common bootloaders found on micro-"
@@ -711,17 +713,6 @@ msgstr ""
 "присутні і ввести завантажувач. Якщо це не відбувається, можна ввести "
 "завантажувача, натиснувши кнопку скидання двічі у спадку."
 
-#: docs/Bootloaders.md:block 116 (paragraph)
-msgid ""
-"The `flash_can.py` utility supplied in the `lib/canboot` folder may be used to"
-" upload Klipper firmware. The device UUID is necessary to flash. If you do not"
-" have a UUID it is possible to query nodes currently running the bootloader:"
-msgstr ""
-"`flash_can.py` утиліта поставляється в папці `lib/canboot` може бути "
-"використана для завантаження прошивки Klipper. Пристрої UUID необхідно "
-"спалахувати. Якщо ви не маєте UUID, це можливо для запиту вузлів, які наразі "
-"працюють завантажувачем:"
-
 #: docs/Bootloaders.md:block 118 (paragraph)
 msgid ""
 "This will return UUIDs for all connected nodes not currently assigned a UUID. "
@@ -857,18 +848,6 @@ msgstr ""
 "робиться з виділеним SWD апаратним донголом. Крім того, можна скористатися "
 "[Равесняний Пі з OpenOCD](#running-openocd-on-the-raspberry-pi)."
 
-#: docs/Bootloaders.md:block 53 (paragraph)
-msgid ""
-"When using OpenOCD with the SAMC21, extra steps must be taken to first put the"
-" chip into Cold Plugging mode if the board makes use of the SWD pins for other"
-" purposes. If using OpenOCD on a Rasberry Pi, this can be done by running the "
-"following commands before invoking OpenOCD."
-msgstr ""
-"При використанні OpenOCD з SAMC21 додаткові кроки повинні бути прийняті, щоб "
-"спочатку покласти чіп в режим холодного роз'єму, якщо дошка використовує SWD "
-"шпильки для інших цілей. Якщо використовувати OpenOCD на Rasberry Pi, це можна"
-" зробити, використовуючи команду, перш ніж викликати OpenOCD."
-
 #: docs/Bootloaders.md:block 55 (paragraph)
 msgid "To flash a program with OpenOCD use the following chip config:"
 msgstr ""
@@ -891,6 +870,43 @@ msgstr ""
 "Вам може знадобитися утримувати кнопку скидання на платі під час запуску "
 "OpenOCD. Має відобразитися щось на зразок: Після чого можна відпустити кнопку "
 "скидання."
+
+#: docs/Bootloaders.md:block 53 (paragraph)
+msgid ""
+"When using OpenOCD with the SAMC21, extra steps must be taken to first put the"
+" chip into Cold Plugging mode if the board makes use of the SWD pins for other"
+" purposes. If using OpenOCD on a Raspberry Pi, this can be done by running the"
+" following commands before invoking OpenOCD."
+msgstr ""
+
+#: docs/Bootloaders.md:block 124 (paragraph)
+msgid ""
+"The `flashtool.py` utility supplied in the `lib/katapult` folder may be used "
+"to upload Klipper firmware. The device UUID is necessary to flash. If you do "
+"not have a UUID it is possible to query nodes currently running the "
+"bootloader:"
+msgstr ""
+
+#~ msgid ""
+#~ "The `flash_can.py` utility supplied in the `lib/canboot` folder may be used to"
+#~ " upload Klipper firmware. The device UUID is necessary to flash. If you do not"
+#~ " have a UUID it is possible to query nodes currently running the bootloader:"
+#~ msgstr ""
+#~ "`flash_can.py` утиліта поставляється в папці `lib/canboot` може бути "
+#~ "використана для завантаження прошивки Klipper. Пристрої UUID необхідно "
+#~ "спалахувати. Якщо ви не маєте UUID, це можливо для запиту вузлів, які наразі "
+#~ "працюють завантажувачем:"
+
+#~ msgid ""
+#~ "When using OpenOCD with the SAMC21, extra steps must be taken to first put the"
+#~ " chip into Cold Plugging mode if the board makes use of the SWD pins for other"
+#~ " purposes. If using OpenOCD on a Rasberry Pi, this can be done by running the "
+#~ "following commands before invoking OpenOCD."
+#~ msgstr ""
+#~ "При використанні OpenOCD з SAMC21 додаткові кроки повинні бути прийняті, щоб "
+#~ "спочатку покласти чіп в режим холодного роз'єму, якщо дошка використовує SWD "
+#~ "шпильки для інших цілей. Якщо використовувати OpenOCD на Rasberry Pi, це можна"
+#~ " зробити, використовуючи команду, перш ніж викликати OpenOCD."
 
 #~ msgid ""
 #~ "wget 'https://github.com/arduino/Arduino/raw/1.8.5/hardware/arduino/avr/bootloaders/stk500v2/stk500boot_v2_mega2560.hex'\n"

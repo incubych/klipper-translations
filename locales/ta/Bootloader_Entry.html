@@ -1493,7 +1493,7 @@
 <p><code>&lt;sevider&gt;</code> என்பது உங்கள் தொடர் சாதனம், அதாவது <code>/dev/serial.by-id/usb-klipper [...]</code> அல்லது <code>/dev/ttyacm0</code></p>
 <p><code>&lt;ctrl-a&gt; &lt;ctrl-p&gt;</code> என்றால் <code>ctrl</code> ஐ வைத்திருப்பது,<code>A</code> ஐ அழுத்தி விடுவித்தல், <code>p</code> ஐ அழுத்தி வெளியிடுவது, பின்னர்<code>ctrl</code> ஐ வெளியிடுகிறது</p>
 <h3 id="_5">இயற்பியல் தொடர்<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>MCU இல் ஒரு இயற்பியல் சீரியல் துறைமுகம் பயன்படுத்தப்பட்டால் (ஒரு யூ.எச்.பி சீரியல் அடாப்டர் அதனுடன் இணைக்கப் பயன்படுத்தப்பட்டாலும் கூட), `<space> <fs> <space> என்ற சரத்தை அனுப்புகிறது தொடர் துவக்க ஏற்றி !! .</p>
+<p>If a physical serial port is being used on the MCU (even if a USB serial adapter is being used to connect to it), sending the string <code>&lt;SPACE&gt;&lt;FS&gt;&lt;SPACE&gt;Request Serial Bootloader!!&lt;SPACE&gt;~</code> requests the bootloader.</p>
 <p><code>&lt;space&gt;</code> என்பது ஒரு ASCII நேரடி இடம், 0x20.</p>
 <p><code>&lt;fs&gt;</code> என்பது ASCII கோப்பு பிரிப்பான், 0x1c.</p>
 <p>[MCU நெறிமுறை] (புரோட்டோகால்.</p>

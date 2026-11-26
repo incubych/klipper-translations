@@ -1,35 +1,21 @@
-# Ruslan Kyba <kybargr@gmail.com>, 2024.
+# Ruslan Kyba <kybargr@gmail.com>, 2024, 2025.
 # Максим Горпиніч <mgorpinic2005@gmail.com>, 2024.
+# Deleted User <mgorpinic2005@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-11-05 21:00+0000\n"
-"Last-Translator: Максим Горпиніч <mgorpinic2005@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:41+0000\n"
+"Last-Translator: Ruslan Kyba <kybargr@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/klipper/exclude_object/uk/>\n"
 "Language: uk\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.8.2\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: docs/Exclude_Object.md:block 1 (header)
 msgid "Exclude Objects"
 msgstr "Виключити Об'єкти"
-
-#: docs/Exclude_Object.md:block 2 (paragraph)
-msgid ""
-"The `[exclude_object]` module allows Klipper to exclude objects while a print "
-"is in progress. To enable this feature include an [exclude_object config "
-"section](Config_Reference.md#exclude_object) (also see the [command "
-"reference](G-Codes.md#exclude-object) and [sample-"
-"macros.cfg](../config/sample-macros.cfg) file for a Marlin/RepRapFirmware "
-"compatible M486 G-Code macro.)"
-msgstr ""
-"Модуль `[exclude_object]` дозволяє Klipper виключати об’єкти під час друку. "
-"Щоб увімкнути цю функцію, додайте [exclude_object config "
-"section](Config_Reference.md#exclude_object) (також дивіться [довідник "
-"команд](G-Codes.md#exclude-object) і [sample-macros.cfg](../config/sample-"
-"macros.cfg) файл для сумісного з Marlin/RepRapFirmware макросу M486 G-Code.)"
 
 #: docs/Exclude_Object.md:block 3 (paragraph)
 msgid ""
@@ -201,14 +187,6 @@ msgstr ""
 "`EXCLUDE_OBJECT_DEFINE НАМ=Калібрація_пірамід Центр=50,50 "
 "ПОЛІГОН=[40,40],[50,60],[60,40]]`"
 
-#: docs/Exclude_Object.md:block 13 (paragraph)
-msgid ""
-"All available G-Code commands are documented in the [G-Code "
-"Reference](./G-Codes.md#excludeobject)"
-msgstr ""
-"Всі доступні команди G-Code задокументовані в [G-Code "
-"Reference](./G-Codes.md#excludeobject)"
-
 #: docs/Exclude_Object.md:block 14 (header)
 msgid "Status Information"
 msgstr "Інформація про стан"
@@ -278,3 +256,40 @@ msgstr ""
 "`exclude_object.excluded_objects` array. З того, як Klipper видається вперед, "
 "щоб обробляти майбутні gcode, може бути затримка між коли команда видається, і"
 " коли статус оновлений."
+
+#: docs/Exclude_Object.md:block 2 (paragraph)
+msgid ""
+"The `[exclude_object]` module allows Klipper to exclude objects while a print "
+"is in progress. To enable this feature include an [exclude_object config "
+"section](Config_Reference.md#exclude_object) (also see the [command "
+"reference](G-Codes.md#exclude_object) and [sample-"
+"macros.cfg](../config/sample-macros.cfg) file for a Marlin/RepRapFirmware "
+"compatible M486 G-Code macro.)"
+msgstr ""
+
+#: docs/Exclude_Object.md:block 13 (paragraph)
+msgid ""
+"All available G-Code commands are documented in the [G-Code "
+"Reference](./G-Codes.md#exclude_object)"
+msgstr ""
+
+#~ msgid ""
+#~ "The `[exclude_object]` module allows Klipper to exclude objects while a print "
+#~ "is in progress. To enable this feature include an [exclude_object config "
+#~ "section](Config_Reference.md#exclude_object) (also see the [command "
+#~ "reference](G-Codes.md#exclude-object) and [sample-"
+#~ "macros.cfg](../config/sample-macros.cfg) file for a Marlin/RepRapFirmware "
+#~ "compatible M486 G-Code macro.)"
+#~ msgstr ""
+#~ "Модуль `[exclude_object]` дозволяє Klipper виключати об’єкти під час друку. "
+#~ "Щоб увімкнути цю функцію, додайте [exclude_object config "
+#~ "section](Config_Reference.md#exclude_object) (також дивіться [довідник "
+#~ "команд](G-Codes.md#exclude-object) і [sample-macros.cfg](../config/sample-"
+#~ "macros.cfg) файл для сумісного з Marlin/RepRapFirmware макросу M486 G-Code.)"
+
+#~ msgid ""
+#~ "All available G-Code commands are documented in the [G-Code "
+#~ "Reference](./G-Codes.md#excludeobject)"
+#~ msgstr ""
+#~ "Всі доступні команди G-Code задокументовані в [G-Code "
+#~ "Reference](./G-Codes.md#excludeobject)"

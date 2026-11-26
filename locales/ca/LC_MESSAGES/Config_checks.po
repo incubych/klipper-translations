@@ -1,15 +1,15 @@
-# Oriol Tous Casadesús <otousc@gmail.com>, 2023, 2024.
+# Oriol Tous Casadesús <otousc@gmail.com>, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-01-13 10:11+0000\n"
+"PO-Revision-Date: 2025-07-22 08:53+0000\n"
 "Last-Translator: Oriol Tous Casadesús <otousc@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/klipper/config_checks/ca/>\n"
 "Language: ca\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document provides a list of steps to help confirm the pin settings in the"
@@ -292,16 +292,6 @@ msgstr ""
 "l'aactiveu manualment. L'ordre QUERY_ENDSTOPS hauria d'indicar que el sensor "
 "està \"Activat\" o tancat."
 
-#: docs/Config_checks.md:block 15 (paragraph)
-msgid ""
-"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
-"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
-"^PA2\"), or remove the \"!\" if there is already one present."
-msgstr ""
-"Si l'estat del sensor apareix invertit (informa \"obert\" quan s'activa i "
-"viceversa), afegiu un \"!\" a la definició del pin (per exemple, "
-"\"endstop_pin: ^PA2\"), o traieu el \"!\" si ja n'hi ha un present."
-
 #: docs/Config_checks.md:block 18 (paragraph)
 msgid ""
 "Use the STEPPER_BUZZ command to verify the connectivity of each stepper motor."
@@ -349,6 +339,22 @@ msgid ""
 msgstr ""
 "Per calibrar l'extrusora, aneu a la consola d'ordres i executeu l'ordre "
 "PID_CALIBRATE. Per exemple: `PID_CALIBRATE HEATER=extruder TARGET=170`"
+
+#: docs/Config_checks.md:block 15 (paragraph)
+msgid ""
+"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+"^!PA2\"), or remove the \"!\" if there is already one present."
+msgstr ""
+
+#~ msgid ""
+#~ "If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+#~ "versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+#~ "^PA2\"), or remove the \"!\" if there is already one present."
+#~ msgstr ""
+#~ "Si l'estat del sensor apareix invertit (informa \"obert\" quan s'activa i "
+#~ "viceversa), afegiu un \"!\" a la definició del pin (per exemple, "
+#~ "\"endstop_pin: ^PA2\"), o traieu el \"!\" si ja n'hi ha un present."
 
 #~ msgid ""
 #~ "Start by verifying that temperatures are being properly reported. Navigate to "

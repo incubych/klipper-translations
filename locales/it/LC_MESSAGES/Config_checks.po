@@ -1,21 +1,21 @@
-# Stefano Serioli <stefano.serioli@outlook.com>, 2021.
+# Stefano Serioli <stefano.serioli@outlook.com>, 2021, 2025.
 # Nicola Falciani <nicola.fal@gmail.com>, 2022.
-# Davide Cerati <davide.cerati6@gmail.com>, 2022.
-# Ale Ale <ale.99.ale@gmail.com>, 2022.
-# Diddi Deejay <diddideejay.official@gmail.com>, 2023.
+# Davide Cerati <davide.cerati6@gmail.com>, 2022, 2025.
+# Ale Ale <ale.99.ale@gmail.com>, 2022, 2025.
+# Diddi Deejay <diddideejay.official@gmail.com>, 2023, 2025.
 # Ezio Santellocco <eziosantellocco97@gmail.com>, 2024.
-# Antonio Ciavarro <a.ciavarro@gmail.com>, 2024.
+# Antonio Ciavarro <a.ciavarro@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-11-12 11:00+0000\n"
-"Last-Translator: Antonio Ciavarro <a.ciavarro@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:16+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/klipper/config_checks/it/>\n"
 "Language: it\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.2\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document provides a list of steps to help confirm the pin settings in the"
@@ -299,16 +299,6 @@ msgstr ""
 "uno alla volta, gli endstop. Il comando QUERY_ENDSTOPS dovrebbe riportare "
 "l'endstop chiuso manualmente come \"TRIGGERED\"."
 
-#: docs/Config_checks.md:block 15 (paragraph)
-msgid ""
-"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
-"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
-"^PA2\"), or remove the \"!\" if there is already one present."
-msgstr ""
-"Se l'endstop appare invertito (riporta \"open\" quando chiuso e viceversa) "
-"allora aggiungi \"!\" alla definizione del pin corrispondente (per esempio "
-"\"endstop_pin: ^PA2 \") o rimuovi il punto esclamativo \"!\" se è presente."
-
 #: docs/Config_checks.md:block 18 (paragraph)
 msgid ""
 "Use the STEPPER_BUZZ command to verify the connectivity of each stepper motor."
@@ -337,6 +327,22 @@ msgid ""
 "To calibrate the extruder, navigate to the command console and run the "
 "PID_CALIBRATE command. For example: `PID_CALIBRATE HEATER=extruder TARGET=170`"
 msgstr ""
+
+#: docs/Config_checks.md:block 15 (paragraph)
+msgid ""
+"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+"^!PA2\"), or remove the \"!\" if there is already one present."
+msgstr ""
+
+#~ msgid ""
+#~ "If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+#~ "versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+#~ "^PA2\"), or remove the \"!\" if there is already one present."
+#~ msgstr ""
+#~ "Se l'endstop appare invertito (riporta \"open\" quando chiuso e viceversa) "
+#~ "allora aggiungi \"!\" alla definizione del pin corrispondente (per esempio "
+#~ "\"endstop_pin: ^PA2 \") o rimuovi il punto esclamativo \"!\" se è presente."
 
 #~ msgid ""
 #~ "Start by verifying that temperatures are being properly reported. Navigate to "

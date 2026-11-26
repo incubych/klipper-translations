@@ -1,26 +1,31 @@
-# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022.
-# VICTOR <subfyn@gmail.com>, 2023.
-# gfbdrgng <hnaofegnp@hldrive.com>, 2024.
+# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022, 2025.
+# VICTOR <subfyn@gmail.com>, 2023, 2025.
+# gfbdrgng <hnaofegnp@hldrive.com>, 2024, 2025.
+# gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>, 2025.
+# Vugar Rasulov <rasuloffvgr@gmail.com>, 2025.
+# Andrei Stepanov <adem@users.noreply.hosted.weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-12-30 05:00+0000\n"
-"Last-Translator: gfbdrgng <hnaofegnp@hldrive.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/klipper/api_server/ru/>\n"
+"PO-Revision-Date: 2026-10-25 13:09+0000\n"
+"Last-Translator: Andrei Stepanov <adem@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/klipper/"
+"api_server/ru/>\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.10-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.11.dev0\n"
 
 msgid ""
 "This document describes Klipper's Application Programmer Interface (API). This"
 " interface enables external applications to query and control the Klipper host"
 " software."
 msgstr ""
-"В этом документе описывается интерфейс прикладного программиста Klipper (API)."
-" Этот интерфейс позволяет внешним приложениям запрашивать программное "
-"обеспечение хоста Klipper и управлять им."
+"В этом документе описывает интерфейс прикладного программирования (API) "
+"Klipper. Этот интерфейс позволяет внешним приложениям запрашивать и "
+"контролировать программное обеспечение хоста Klipper."
 
 msgid "Enabling the API socket"
 msgstr "Включение сокета API"
@@ -264,7 +269,6 @@ msgstr ""
 "имя клиента и версию его программного обеспечения при первом подключении к "
 "серверу Klipper API."
 
-#, fuzzy
 msgid "emergency_stop"
 msgstr "emergency_stop"
 
@@ -277,7 +281,6 @@ msgstr ""
 "состояние \"выключения\". Она ведет себя аналогично команде G-кода `M112`. "
 "Например: `{\" идентификатор\": 123, \"метод\": \"emergency_stop\"}}"
 
-#, fuzzy
 msgid "register_remote_method"
 msgstr "register_remote_method"
 
@@ -410,7 +413,6 @@ msgstr ""
 "{\" статус\": {\" Вебхуки\": {\" состояние\": \" отключение\"}}, \" время "
 "событий\": 3052165.418815847}}`"
 
-#, fuzzy
 msgid "gcode/help"
 msgstr "gcode/help"
 
@@ -428,7 +430,6 @@ msgstr ""
 "\"PID_CALIBRATE\": \"Запустить тест калибровки ПИД\", \"QUERY_ADC\": "
 "\"Сообщить последнее значение аналогового пина\", ...}}`"
 
-#, fuzzy
 msgid "gcode/script"
 msgstr "gcode/script"
 
@@ -464,7 +465,6 @@ msgstr ""
 " Ответное сообщение JSON отправляется, когда обработка сценария полностью "
 "завершена."
 
-#, fuzzy
 msgid "gcode/restart"
 msgstr "gcode/restart"
 
@@ -484,7 +484,6 @@ msgstr ""
 "Как и в случае с конечной точкой \"gcode/script\", эта конечная точка "
 "завершается только после выполнения всех ожидающих команд G-Code."
 
-#, fuzzy
 msgid "gcode/firmware_restart"
 msgstr "gcode/firmware_restart"
 
@@ -497,7 +496,6 @@ msgstr ""
 " \"FIRMWARE_RESTART\". Например: `{\"id\": 123, \"method\": "
 "\"gcode/firmware_restart\"}`"
 
-#, fuzzy
 msgid "gcode/subscribe_output"
 msgstr "gcode/subscribe_output"
 
@@ -525,7 +523,6 @@ msgstr ""
 "G-Code не рекомендуется. Используйте конечную точку \"objects/subscribe\" для "
 "получения обновлений о состоянии Klipper."
 
-#, fuzzy
 msgid "pause_resume/cancel"
 msgstr "pause_resume/cancel"
 
@@ -536,7 +533,6 @@ msgstr ""
 "Эта конечная точка аналогична выполнению команды G-кода \"PRINT_CANCEL\". "
 "Например: `{\"id\": 123, \"method\": \"pause_resume/cancel\"}`"
 
-#, fuzzy
 msgid "pause_resume/pause"
 msgstr "pause_resume/pause"
 
@@ -547,7 +543,6 @@ msgstr ""
 "Эта конечная точка аналогична выполнению команды G-кода \"PAUSE\". Например: "
 "`{\"id\": 123, \"method\": \"pause_resume/pause\"}`"
 
-#, fuzzy
 msgid "pause_resume/resume"
 msgstr "pause_resume/resume"
 
@@ -558,7 +553,6 @@ msgstr ""
 "Эта конечная точка аналогична выполнению команды G-кода \"RESUME\". Например: "
 "`{\"id\": 123, \"method\": \"pause_resume/resume\"}`"
 
-#, fuzzy
 msgid "query_endstops/status"
 msgstr "query_endstops/status"
 
@@ -578,7 +572,6 @@ msgid "API server"
 msgstr "Сервер API"
 
 #: docs/API_Server.md:block 71 (header)
-#, fuzzy
 msgid "motion_report/dump_stepper"
 msgstr "motion_report/dump_stepper"
 
@@ -627,7 +620,6 @@ msgstr ""
 " полей, содержащихся в последующих ответах \"данные\"."
 
 #: docs/API_Server.md:block 75 (header)
-#, fuzzy
 msgid "motion_report/dump_trapq"
 msgstr "motion_report/dump_trapq"
 
@@ -665,7 +657,6 @@ msgstr ""
 "0.0]]]}}`"
 
 #: docs/API_Server.md:block 79 (header)
-#, fuzzy
 msgid "adxl345/dump_adxl345"
 msgstr "adxl345/dump_adxl345"
 
@@ -699,7 +690,6 @@ msgstr ""
 " [3292.433256,-382.45935,-1606.32927,9561.48375]]}}`"
 
 #: docs/API_Server.md:block 83 (header)
-#, fuzzy
 msgid "angle/dump_angle"
 msgstr "angle/dump_angle"
 
@@ -743,7 +733,6 @@ msgstr ""
 "сервер Klipper's Unix Domain Socket."
 
 #: docs/API_Server.md:block 106 (header)
-#, fuzzy
 msgid "bed_mesh/dump_mesh"
 msgstr "bed_mesh/dump_mesh"
 
@@ -762,33 +751,18 @@ msgstr "Например: `{\"id\": 123, \"method\": \"bed_mesh/dump_mesh\"}`"
 msgid "might return:"
 msgstr "может вернуться:"
 
-#: docs/API_Server.md:block 111 (paragraph)
-msgid ""
-"The `dump_mesh` endpoint takes one optional parameter, `mesh_args`. This "
-"parameter must be an object, where the keys and values are parameters "
-"available to [BED_MESH_CALIBRATE](#bed_mesh_calibrate). This will update the "
-"mesh configuration and probe points using the supplied parameters prior to "
-"returning the result. It is recommended to omit mesh parameters unless it is "
-"desired to visualize the probe points and/or travel path before performing "
-"`BED_MESH_CALIBRATE`."
-msgstr ""
-"Конечная точка `dump_mesh` принимает один необязательный параметр, "
-"`mesh_args`. Этот параметр должен быть объектом, где ключами и значениями "
-"являются параметры, доступные для [BED_MESH_CALIBRATE](#bed_mesh_calibrate). "
-"Перед возвратом результата будет обновлена конфигурация сетки и точки "
-"зондирования с использованием предоставленных параметров. Рекомендуется "
-"опустить параметры сетки, если не требуется визуализировать точки зондирования"
-" и/или траекторию движения перед выполнением `BED_MESH_CALIBRATE`."
-
 #: docs/API_Server.md:block 88 (header)
 msgid "load_cell/dump_force"
-msgstr ""
+msgstr "load_cell/dump_force"
 
 #: docs/API_Server.md:block 89 (paragraph)
 msgid ""
 "This endpoint is used to subscribe to force data produced by a load_cell. "
 "Using this endpoint may increase Klipper's system load."
 msgstr ""
+"Эта конечная точка используется для подписки на данные о силе, создаваемые "
+"тензодатчиком. Использование этой конечной точки может увеличить нагрузку на "
+"систему Klipper."
 
 #: docs/API_Server.md:block 90 (paragraph)
 msgid ""
@@ -798,8 +772,82 @@ msgid ""
 "\"counts\", \"tare_counts\"]}}` and might later produce asynchronous messages "
 "such as: `{\"params\":{\"data\":[[3292.432935, 40.65, 562534, -234467]]}}`"
 msgstr ""
+"Запрос может выглядеть так: `{\"id\": 123, \"method\":\"load_cell/"
+"dump_force\", \"params\": {\"sensor\": \"load_cell\", \"response_template\": "
+"{}}}` и может вернуть: `{\"id\": 123,\"result\":{\"header\":[\"time\", "
+"\"force (g)\", \"counts\", \"tare_counts\"]}}`, а позже может породить "
+"асинхронные сообщения вроде: `{\"params\":{\"data\":[[3292.432935, 40.65, "
+"562534, -234467]]}}`"
 
-#, fuzzy
+#: docs/API_Server.md:block 92 (header)
+msgid "load_cell_probe/dump_taps"
+msgstr "load_cell_probe/dump_taps"
+
+#: docs/API_Server.md:block 93 (paragraph)
+msgid ""
+"This endpoint is used to subscribe to details of probing \"tap\" events. Using"
+" this endpoint may increase Klipper's system load."
+msgstr ""
+"Эта конечная точка используется для подписки на подробности событий касания "
+"при измерении «tap». Использование этой конечной точки может увеличить "
+"нагрузку на систему Klipper."
+
+#: docs/API_Server.md:block 94 (paragraph)
+msgid ""
+"A request may look like: `{\"id\": 123, \"method\":\"load_cell/dump_force\", "
+"\"params\": {\"sensor\": \"load_cell\", \"response_template\": {}}}` and might"
+" return: `{\"id\": 123,\"result\":{\"header\":[\"probe_tap_event\"]}}` and "
+"might later produce asynchronous messages such as:"
+msgstr ""
+"Запрос может выглядеть так: `{\"id\": 123, \"method\":\"load_cell/"
+"dump_force\", \"params\": {\"sensor\": \"load_cell\", \"response_template\": "
+"{}}}` и может вернуть: `{\"id\": 123,\"result\":"
+"{\"header\":[\"probe_tap_event\"]}}`, а позже может породить асинхронные "
+"сообщения вроде:"
+
+#: docs/API_Server.md:block 96 (paragraph)
+msgid "This data can be used to render:"
+msgstr "Эти данные можно использовать для построения:"
+
+#: docs/API_Server.md:block 97 (unordered list)
+msgid "The time/force graph"
+msgstr "Графика зависимости силы от времени"
+
+#: docs/API_Server.md:block 115 (paragraph)
+msgid ""
+"The `dump_mesh` endpoint takes one optional parameter, `mesh_args`. This "
+"parameter must be an object, where the keys and values are parameters "
+"available to [BED_MESH_CALIBRATE](G-Codes.md#bed_mesh_calibrate). This will "
+"update the mesh configuration and probe points using the supplied parameters "
+"prior to returning the result. It is recommended to omit mesh parameters "
+"unless it is desired to visualize the probe points and/or travel path before "
+"performing `BED_MESH_CALIBRATE`."
+msgstr ""
+"Конечная точка `dump_mesh` принимает один необязательный параметр — "
+"`mesh_args`. Этот параметр должен быть объектом, где ключи и значения — это "
+"параметры, доступные для [BED_MESH_CALIBRATE](G-Codes.md#bed_mesh_calibrate)"
+". Это обновит конфигурацию сетки и точки измерения с использованием "
+"переданных параметров перед возвратом результата. Рекомендуется опускать "
+"параметры сетки, если только не требуется визуализировать точки измерения и/"
+"или траекторию перемещения перед выполнением `BED_MESH_CALIBRATE`."
+
+#~ msgid ""
+#~ "The `dump_mesh` endpoint takes one optional parameter, `mesh_args`. This "
+#~ "parameter must be an object, where the keys and values are parameters "
+#~ "available to [BED_MESH_CALIBRATE](#bed_mesh_calibrate). This will update the "
+#~ "mesh configuration and probe points using the supplied parameters prior to "
+#~ "returning the result. It is recommended to omit mesh parameters unless it is "
+#~ "desired to visualize the probe points and/or travel path before performing "
+#~ "`BED_MESH_CALIBRATE`."
+#~ msgstr ""
+#~ "Конечная точка `dump_mesh` принимает один необязательный параметр, "
+#~ "`mesh_args`. Этот параметр должен быть объектом, где ключами и значениями "
+#~ "являются параметры, доступные для [BED_MESH_CALIBRATE](#bed_mesh_calibrate). "
+#~ "Перед возвратом результата будет обновлена конфигурация сетки и точки "
+#~ "зондирования с использованием предоставленных параметров. Рекомендуется "
+#~ "опустить параметры сетки, если не требуется визуализировать точки зондирования"
+#~ " и/или траекторию движения перед выполнением `BED_MESH_CALIBRATE`."
+
 #~ msgid "hx71x/dump_hx71x"
 #~ msgstr "hx71x/dump_hx71x"
 
@@ -829,7 +877,6 @@ msgstr ""
 #~ "`{\"params\":{\"data\":[[3292.432935, 562534, 0.067059278], [3292.4394937, "
 #~ "5625322, 0.670590639]]}}`"
 
-#, fuzzy
 #~ msgid "ads1220/dump_ads1220"
 #~ msgstr "ads1220/dump_ads1220"
 

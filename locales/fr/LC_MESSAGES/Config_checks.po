@@ -1,20 +1,21 @@
-# wilmouths <wilmouthsteven@gmail.com>, 2021.
-# Wivik <seb+weblate@zedas.fr>, 2021.
-# gbonaspetti <gbonaspetti@hotmail.com>, 2022.
-# Yifei Ding <dingyifeiair@gmail.com>, 2022.
-# jean-luc MATTEI <jlucm@free.fr>, 2023.
-# Sébastien Thieury <dev.sebthieu@serendip-it.fr>, 2024.
+# wilmouths <wilmouthsteven@gmail.com>, 2021, 2025.
+# Wivik <seb+weblate@zedas.fr>, 2021, 2025.
+# gbonaspetti <gbonaspetti@hotmail.com>, 2022, 2025.
+# Yifei Ding <dingyifeiair@gmail.com>, 2022, 2025.
+# jean-luc MATTEI <jlucm@free.fr>, 2023, 2025.
+# Sébastien Thieury <dev.sebthieu@serendip-it.fr>, 2024, 2025.
+# Posemartonis <weblate.drainage895@passmail.net>, 2026.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-06-12 11:47+0000\n"
-"Last-Translator: Sébastien Thieury <dev.sebthieu@serendip-it.fr>\n"
+"PO-Revision-Date: 2026-03-07 09:10+0000\n"
+"Last-Translator: Posemartonis <weblate.drainage895@passmail.net>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/klipper/config_checks/fr/>\n"
 "Language: fr\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid ""
 "This document provides a list of steps to help confirm the pin settings in the"
@@ -256,14 +257,14 @@ msgid ""
 "If the temperature does not increase then verify the \"heater_pin\" setting in"
 " the config."
 msgstr ""
-"Naviguez vers la section du graphique de température et tapez 50 puis appuyez "
-"sur Entrée dans la boîte de température de l'extrudeur/Boîte à outil des "
-"températures. La température de l'extrudeuse dans le graphique devrait "
-"commencer à augmenter (environ 30 secondes). Ensuite, allez dans le menu "
-"déroulant de la température de l'extrudeuse et sélectionnez \"Off\". Après "
-"plusieurs minutes, la température devrait commencer à revenir à sa valeur "
-"initiale de température ambiante. Si la température n'augmente pas, vérifiez "
-"le paramètre \"heater_pin\" dans la config."
+"Accédez à la section du graphique de température et tapez 50, puis entrez dans"
+" la zone de température de l'extrudeuse/de l'outil. La température de "
+"l'extrudeuse indiquée sur le graphique devrait commencer à augmenter (dans un "
+"délai d'environ 30 secondes). Accédez ensuite à la liste déroulante de la "
+"température de l'extrudeuse et sélectionnez « Désactivé ». Après quelques "
+"minutes, la température devrait commencer à revenir à sa valeur initiale de "
+"température ambiante. Si la température n'augmente pas, vérifiez le paramètre "
+"\"heater_pin\" dans la configuration."
 
 #: docs/Config_checks.md:block 12 (paragraph)
 msgid ""
@@ -299,16 +300,6 @@ msgstr ""
 " état \"ouvert\". Pour chacun des fins de course, relancez la commande "
 "QUERY_ENDSTOPS en déclenchant manuellement le fin de course. La commande "
 "QUERY_ENDSTOPS devrait indiquer que le fin de course est \"TRIGGERED\"."
-
-#: docs/Config_checks.md:block 15 (paragraph)
-msgid ""
-"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
-"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
-"^PA2\"), or remove the \"!\" if there is already one present."
-msgstr ""
-"Si le fin de course semble inversé (il indique \"ouvert\" lorsqu'il est "
-"déclenché et vice-versa), ajoutez un \"!\" à la définition de la broche (par "
-"exemple, \"endstop_pin : ^PA2\"), ou retirez le \"!\" s'il y en a déjà un."
 
 #: docs/Config_checks.md:block 18 (paragraph)
 msgid ""
@@ -359,6 +350,22 @@ msgstr ""
 "Pour calibrer l'extrudeur, allez dans la console de commande et exécutez la "
 "commande PID_CALIBRATE. Par exemple : `PID_CALIBRATE HEATER=extruder "
 "TARGET=170`"
+
+#: docs/Config_checks.md:block 15 (paragraph)
+msgid ""
+"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+"^!PA2\"), or remove the \"!\" if there is already one present."
+msgstr ""
+
+#~ msgid ""
+#~ "If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+#~ "versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+#~ "^PA2\"), or remove the \"!\" if there is already one present."
+#~ msgstr ""
+#~ "Si le fin de course semble inversé (il indique \"ouvert\" lorsqu'il est "
+#~ "déclenché et vice-versa), ajoutez un \"!\" à la définition de la broche (par "
+#~ "exemple, \"endstop_pin : ^PA2\"), ou retirez le \"!\" s'il y en a déjà un."
 
 #~ msgid ""
 #~ "Start by verifying that temperatures are being properly reported. Navigate to "

@@ -1,0 +1,1646 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>Lastceller - Klipper documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../_klipper3d/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-VEN1PGNQL4"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-VEN1PGNQL4",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VEN1PGNQL4"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lastceller" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Klipper documentation" class="md-header__button md-logo" aria-label="Klipper documentation" data-md-component="logo">
+      
+  <img src="../../img/klipper.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Klipper documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lastceller
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2 0-.68.06-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.923 7.923 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8.008 8.008 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.65 15.65 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
+                    简体中文
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/zh-Hant/" hreflang="zh-Hant" class="md-select__link">
+                    繁體中文
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/hu/" hreflang="hu" class="md-select__link">
+                    Magyar
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/de/" hreflang="de" class="md-select__link">
+                    Deutsch
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/it/" hreflang="it" class="md-select__link">
+                    Italiano
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/fr/" hreflang="fr" class="md-select__link">
+                    Français
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Klipper3d/klipper/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Klipper3d/klipper
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Klipper documentation" class="md-nav__button md-logo" aria-label="Klipper documentation" data-md-component="logo">
+      
+  <img src="../../img/klipper.svg" alt="logo">
+
+    </a>
+    Klipper documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Klipper3d/klipper/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Klipper3d/klipper
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Overview.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Features.html" class="md-nav__link">
+        Features
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ.html" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Releases.html" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Config_Changes.html" class="md-nav__link">
+        Configuration Changes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contact.html" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Installation and Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation and Configuration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Installation and Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Installation.html" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OctoPrint.html" class="md-nav__link">
+        OctoPrint for Klipper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          Configuration Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Configuration Reference" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Config_Reference.html" class="md-nav__link">
+        Configuration reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rotation_Distance.html" class="md-nav__link">
+        Rotation distance
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Config_checks.html" class="md-nav__link">
+        Configuration checks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4" type="checkbox" id="__nav_7_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_4">
+          Bed Level
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bed Level" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_4">
+          <span class="md-nav__icon md-icon"></span>
+          Bed Level
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bed_Level.html" class="md-nav__link">
+        Bed leveling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Delta_Calibrate.html" class="md-nav__link">
+        Delta calibration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Probe_Calibrate.html" class="md-nav__link">
+        Probe calibration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLTouch.html" class="md-nav__link">
+        BL-Touch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manual_Level.html" class="md-nav__link">
+        Manual leveling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bed_Mesh.html" class="md-nav__link">
+        Bed Mesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Endstop_Phase.html" class="md-nav__link">
+        Endstop phase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Axis_Twist_Compensation.html" class="md-nav__link">
+        Axis Twist Compensation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_5" type="checkbox" id="__nav_7_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_5">
+          Resonance Compensation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resonance Compensation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          Resonance Compensation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Resonance_Compensation.html" class="md-nav__link">
+        Resonance Compensation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Measuring_Resonances.html" class="md-nav__link">
+        Measuring Resonances
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Pressure_Advance.html" class="md-nav__link">
+        Pressure advance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../G-Codes.html" class="md-nav__link">
+        G-Codes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_8" type="checkbox" id="__nav_7_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_8">
+          Command templates
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Command templates" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_8">
+          <span class="md-nav__icon md-icon"></span>
+          Command templates
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Command_Templates.html" class="md-nav__link">
+        Commands templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Status_Reference.html" class="md-nav__link">
+        Status reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TMC_Drivers.html" class="md-nav__link">
+        TMC drivers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Multi_MCU_Homing.html" class="md-nav__link">
+        Multiple Micro-controller Homing and Probing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Slicers.html" class="md-nav__link">
+        Slicers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Skew_Correction.html" class="md-nav__link">
+        Skew correction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Exclude_Object.html" class="md-nav__link">
+        Exclude Objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using_PWM_Tools.html" class="md-nav__link">
+        Using PWM tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Developer Documentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developer Documentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Code_Overview.html" class="md-nav__link">
+        Code overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Kinematics.html" class="md-nav__link">
+        Kinematics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Protocol.html" class="md-nav__link">
+        Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API_Server.html" class="md-nav__link">
+        API server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MCU_Commands.html" class="md-nav__link">
+        MCU commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CANBUS_protocol.html" class="md-nav__link">
+        CANBUS protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Debugging.html" class="md-nav__link">
+        Debugging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Benchmarks.html" class="md-nav__link">
+        Benchmarks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CONTRIBUTING.html" class="md-nav__link">
+        Contributing to Klipper
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Packaging.html" class="md-nav__link">
+        Packaging Klipper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Device Specific Documents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Device Specific Documents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Device Specific Documents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Example_Configs.html" class="md-nav__link">
+        Example configurations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SDCard_Updates.html" class="md-nav__link">
+        SDCard updates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RPi_microcontroller.html" class="md-nav__link">
+        RPi microcontroller
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Beaglebone.html" class="md-nav__link">
+        Beaglebone
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bootloaders.html" class="md-nav__link">
+        Bootloaders
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bootloader_Entry.html" class="md-nav__link">
+        Bootloader Entry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CANBUS.html" class="md-nav__link">
+        CANBUS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CANBUS_Troubleshooting.html" class="md-nav__link">
+        CANBUS Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TSL1401CL_Filament_Width_Sensor.html" class="md-nav__link">
+        TSL1401CL filament width sensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hall_Filament_Width_Sensor.html" class="md-nav__link">
+        Hall filament width sensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Eddy_Probe.html" class="md-nav__link">
+        Eddy Current Inductive probe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Load_Cell.html" class="md-nav__link">
+        Load Cells
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sponsors.html" class="md-nav__link">
+        Sponsors
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#relaterad-dokumentation" class="md-nav__link">
+    Relaterad dokumentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anvanda-load_cell_diagnostic" class="md-nav__link">
+    Använda LOAD_CELL_DIAGNOSTIC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kalibrera-en-lastcell" class="md-nav__link">
+    Kalibrera en lastcell
+  </a>
+  
+    <nav class="md-nav" aria-label="Kalibrera en lastcell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#applicera-en-kand-kraft-eller-belastning" class="md-nav__link">
+    Applicera en känd kraft eller belastning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lasa-kraftdata" class="md-nav__link">
+    Läsa kraftdata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarera-en-lastcell" class="md-nav__link">
+    Tarera en lastcell
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/Klipper3d/klipper/blob/master/docs/locales/sv/Load_Cell.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="lastceller">Lastceller<a class="headerlink" href="#lastceller" title="Permanent link">&para;</a></h1>
+<p>Det här dokumentet beskriver Klippers stöd för lastceller. Grundläggande lastcellsfunktioner kan läsa kraftdata och väga exempelvis filament. En kalibrerad kraftsensor är en viktig del av en lastcellsbaserad prob.</p>
+<h2 id="relaterad-dokumentation">Relaterad dokumentation<a class="headerlink" href="#relaterad-dokumentation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="Config_Reference.html#load_cell">Konfigurationsreferens för load_cell</a></li>
+<li><a href="G-Codes.html#load_cell">G-kodkommandon för load_cell</a></li>
+<li><a href="Status_Reference.html#load_cell">Statusreferens för load_cell</a></li>
+</ul>
+<h2 id="anvanda-load_cell_diagnostic">Använda <code>LOAD_CELL_DIAGNOSTIC</code><a class="headerlink" href="#anvanda-load_cell_diagnostic" title="Permanent link">&para;</a></h2>
+<p>When you first connect a load cell its good practice to check for issues by running <code>LOAD_CELL_DIAGNOSTIC</code>. This tool collects 10 seconds of data from the load cell and reports statistics:</p>
+<div class="highlight"><pre><span></span><code>$ LOAD_CELL_DIAGNOSTIC
+// Collecting load cell data for 10 seconds...
+// Samples Collected: 3211
+// Measured samples per second: 332.0
+// Good samples: 3211, Saturated samples: 0, Unique values: 900
+// Sample range: [4.01% to 4.02%]
+// Sample range / sensor capacity: 0.00524%
+</code></pre></div>
+
+<p>Saker du kan kontrollera med dessa data:</p>
+<ul>
+<li>Sensorns konfigurerade samplingsfrekvens bör ligga nära värdet "Measured samples per second". Om den inte gör det kan det finnas ett konfigurations- eller kabelproblem.</li>
+<li>"Saturated samples" ska vara 0. Mättade sampel innebär att lastcellen utsätts för mer kraft än den kan mäta.</li>
+<li>"Unique values" bör vara en stor andel av "Samples Collected". Om "Unique values" är 1 är det mycket sannolikt ett kabelproblem.</li>
+<li>Knacka på eller tryck på sensorn medan <code>LOAD_CELL_DIAGNOSTIC</code> körs. Om allt fungerar korrekt ska "Sample range" öka.</li>
+</ul>
+<h2 id="kalibrera-en-lastcell">Kalibrera en lastcell<a class="headerlink" href="#kalibrera-en-lastcell" title="Permanent link">&para;</a></h2>
+<p>Lastceller kalibreras med kommandot <code>LOAD_CELL_CALIBRATE</code>. Det är ett interaktivt kalibreringsverktyg som leder dig genom tre steg:</p>
+<ol>
+<li>Använd först kommandot <code>TARE</code> för att fastställa nollkraftsvärdet. Det är konfigurationsvärdet <code>reference_tare_counts</code>.</li>
+<li>Applicera sedan en känd belastning eller kraft på lastcellen och kör <code>CALIBRATE GRAMS=nnn</code>. Då beräknas värdet <code>counts_per_gram</code>. Se <a href="#applying-a-known-force-or-load">nästa avsnitt</a> för förslag på hur detta görs.</li>
+<li>Använd slutligen kommandot <code>ACCEPT</code> för att spara resultaten.</li>
+</ol>
+<p>Du kan när som helst avbryta kalibreringen med <code>ABORT</code>.</p>
+<h3 id="applicera-en-kand-kraft-eller-belastning">Applicera en känd kraft eller belastning<a class="headerlink" href="#applicera-en-kand-kraft-eller-belastning" title="Permanent link">&para;</a></h3>
+<p>Steget <code>CALIBRATE GRAMS=nnn</code> kan utföras på flera sätt. Om lastcellen sitter under en plattform, till exempel bädden eller en filamenthållare, är det ofta enklast att lägga en känd massa på plattformen, exempelvis ett par filamentrullar på 1 kg.</p>
+<p>Om lastcellen sitter i skrivarens verktygshuvud är en annan metod enklare. Placera en digitalvåg på skrivarens bädd och sänk verktygshuvudet försiktigt mot vågen, eller höj bädden mot verktygshuvudet om bädden rör sig. Du kan möjligen använda <code>FORCE_MOVE</code>, men oftast måste Z-axeln flyttas manuellt med motorerna avstängda tills verktygshuvudet trycker mot vågen.</p>
+<p>En bra kalibreringskraft är helst en stor andel av lastcellens nominella kapacitet. En lastcell på 5 kg kalibreras idealiskt med en massa på 5 kg. Det kan fungera väl för sensorer under bädden som måste bära mycket vikt. För prober i verktygshuvudet kan den belastningen skada bädden eller verktygshuvudet. Försök använda minst 1 kg kraft; de flesta skrivare bör tåla det utan problem.</p>
+<p>Notera värdena som rapporteras vid kalibrering noggrant:</p>
+<div class="highlight"><pre><span></span><code>$ CALIBRATE GRAMS=555
+// Calibration value: -2.78% (-59803108), Counts/gram: 73039.78739,
+Total capacity: +/- 29.14Kg
+</code></pre></div>
+
+<p><code>Total capacity</code> ska ligga nära lastcellens teoretiska kapacitet utifrån sensorns kapacitet. Om värdet är mycket större kan en högre förstärkning ha använts i sensorn eller en känsligare lastcell behövas. Detta är mindre kritiskt för 32- och 24-bitars sensorer men betydligt viktigare för sensorer med låg bitbredd.</p>
+<h2 id="lasa-kraftdata">Läsa kraftdata<a class="headerlink" href="#lasa-kraftdata" title="Permanent link">&para;</a></h2>
+<p>Kraftdata kan läsas med ett G-kodkommando:</p>
+<div class="highlight"><pre><span></span><code>LOAD_CELL_READ
+// 10.6g (1.94%)
+</code></pre></div>
+
+<p>Data läses också kontinuerligt och kan hämtas från skrivarobjektet <code>load_cell</code> i ett makro:</p>
+<div class="highlight"><pre><span></span><code>{% set grams = printer.load_cell.force_g %}
+</code></pre></div>
+
+<p>Detta ger en genomsnittlig kraft under den senaste sekunden, på samma sätt som temperatursensorer fungerar.</p>
+<h2 id="tarera-en-lastcell">Tarera en lastcell<a class="headerlink" href="#tarera-en-lastcell" title="Permanent link">&para;</a></h2>
+<p>Tarering, ibland kallad nollställning, ställer in den aktuella vikt som rapporteras av load_cell till 0. Det är användbart för mätning i förhållande till en känd vikt. Vid mätning av en filamentrulle ställer <code>LOAD_CELL_TARE</code> exempelvis vikten till 0. När filament sedan skrivs ut rapporterar load_cell vikten av det använda filamentet.</p>
+<div class="highlight"><pre><span></span><code>LOAD_CELL_TARE
+// Load cell tare value: 5.32% (445903)
+</code></pre></div>
+
+<p>Det aktuella tareringsvärdet rapporteras i skrivarens status och kan läsas i ett makro:</p>
+<div class="highlight"><pre><span></span><code>{% set tare_counts = printer.load_cell.tare_counts %}
+</code></pre></div>
+
+<h1 id="lastcellsprober">Lastcellsprober<a class="headerlink" href="#lastcellsprober" title="Permanent link">&para;</a></h1>
+<h2 id="relaterad-dokumentation_1">Relaterad dokumentation<a class="headerlink" href="#relaterad-dokumentation_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="Config_Reference.html#load_cell_probe">Konfigurationsreferens för load_cell_probe</a></li>
+<li><a href="G-Codes.html#load_cell_probe">G-kodkommandon för load_cell_probe</a></li>
+<li><a href="Status_Reference.html#load_cell_probe">Statusreferens för load_cell_probe</a></li>
+</ul>
+<h2 id="sakerhet-for-lastcellsprob">Säkerhet för lastcellsprob<a class="headerlink" href="#sakerhet-for-lastcellsprob" title="Permanent link">&para;</a></h2>
+<p>Eftersom lastceller är prober med direktkontakt med munstycket riskerar skrivaren att skadas om för stor kraft används. Lastcellsprobens system har flera säkerhetskontroller som försöker skydda maskinen från överdriven kraft på verktygshuvudet. Det är viktigt att förstå dem, eftersom dåligt valda konfigurationsvärden kan kringgå de flesta.</p>
+<h4 id="kalibreringskontroll">Kalibreringskontroll<a class="headerlink" href="#kalibreringskontroll" title="Permanent link">&para;</a></h4>
+<p>Vid varje start av en nollställningsrörelse kontrollerar load_cell_probe att lastcellen är kalibrerad. Annars stoppas rörelsen med felet <code>!! Load Cell not calibrated</code>.</p>
+<h4 id="counts_per_gram"><code>counts_per_gram</code><a class="headerlink" href="#counts_per_gram" title="Permanent link">&para;</a></h4>
+<p>Den här inställningen omvandlar råa sensorräkningar till gram. Alla säkerhetsgränser anges i gram. Om <code>counts_per_gram</code> inte är korrekt kan den säkra kraften på verktygshuvudet lätt överskridas. Gissa aldrig detta värde; använd <code>LOAD_CELL_CALIBRATE</code> för att fastställa lastcellens faktiska <code>counts_per_gram</code>.</p>
+<h4 id="trigger_force"><code>trigger_force</code><a class="headerlink" href="#trigger_force" title="Permanent link">&para;</a></h4>
+<p>Detta är kraften i gram som får ändstoppet att stoppa nollställningsrörelsen. När rörelsen startar tarerar ändstoppet sig självt med lastcellens aktuella avläsning. <code>trigger_force</code> mäts från detta tareringsvärde. Värdet överskrids alltid något när proben kolliderar med bädden, så var försiktig. En inställning på 100 g kan exempelvis ge en toppkraft på 350 g innan verktygshuvudet stannar. Överskridandet ökar vid högre <code>speed</code>, låg ADC-samplingsfrekvens eller <a href="Multi_MCU_Homing.html">nollställning med flera MCU:er</a>.</p>
+<h4 id="reference_tare_counts"><code>reference_tare_counts</code><a class="headerlink" href="#reference_tare_counts" title="Permanent link">&para;</a></h4>
+<p>Detta är grundvärdet för tarering som sätts av <code>LOAD_CELL_CALIBRATE</code>. Värdet samverkar med <code>force_safety_limit</code> för att begränsa den högsta kraften på verktygshuvudet.</p>
+<h4 id="force_safety_limit"><code>force_safety_limit</code><a class="headerlink" href="#force_safety_limit" title="Permanent link">&para;</a></h4>
+<p>Detta är den största absoluta kraft, relativt <code>reference_tare_counts</code>, som proben tillåter vid nollställning eller sondering. Om MCU:n ser att kraften överskrids stängs skrivaren av med felet <code>!! Load cell endstop: too much force!</code>. Det finns flera sätt detta kan utlösas på:</p>
+<p>The first risk this protects against is picking too large of a value for <code>drift_filter_cutoff_frequency</code>. This can cause the drift filter to filter out a probe event and continue the homing move. If this happens, the <code>force_safety_limit</code> acts as a backup protection.</p>
+<p>Det andra problemet är att sondera upprepade gånger på samma plats. Klipper drar inte tillbaka proben vid ett enstaka <code>PROBE</code>-kommando. Det kan lämna kraft på verktygshuvudet efter sonderingscykeln. Eftersom externa krafter kan variera kraftigt mellan platser tarerar <code>load_cell_probe</code> före varje sondning. Om du upprepar <code>PROBE</code> tareras ändstoppet vid den aktuella kraften. Flera cykler ökar kraften på verktygshuvudet; <code>force_safety_limit</code> hindrar cykeln från att löpa okontrollerat.</p>
+<p>Another way this runaway can happen is damage to a strain gauge. If the metal part is permanently bent it will change the <code>reference_tare_counts</code> of the device. This puts the starting tare value much closer to the limit making it more likely to be violated. You want to be notified if this is happening because your hardware has been permanently damaged.</p>
+<p>Den sista utlösningsorsaken är temperaturförändringar. Om töjningsgivarna värms upp kan <code>reference_tare_counts</code> skilja sig mycket mellan omgivnings- och driftstemperatur. Då kan <code>force_safety_limit</code> behöva höjas för att ta hänsyn till termiska förändringar.</p>
+<h4 id="lastcellsandstoppets-overvakningsuppgift">Lastcellsändstoppets övervakningsuppgift<a class="headerlink" href="#lastcellsandstoppets-overvakningsuppgift" title="Permanent link">&para;</a></h4>
+<p>Vid nollställning startar load_cell_endstop en uppgift på MCU:n som följer mätningar från sensorn. Om sensorn inte skickar mätningar under två samplingsperioder stänger övervakaren av skrivaren med felet <code>!! LoadCell Endstop timed out waiting on ADC data</code>.</p>
+<p>If this happens, the most likely cause is a fault from the ADC. Inadequate grounding of your printer can be the root cause. The frame, power supply case and print bed should all be connected to ground. You may need to ground the frame in multiple places. Anodized aluminum extrusions do not conduct electricity well. You might need to sand the area where the grounding wire is attached to make good electrical contact.</p>
+<h4 id="interpolering">Interpolering<a class="headerlink" href="#interpolering" title="Permanent link">&para;</a></h4>
+<p>För att öka sonderingsresultatets precision kan positionen för första kontakten mellan munstycke och bädd uppskattas genom att anpassa en styckvis funktion till mätdata. Ovanför bädden är kraften konstant vid tareringsvärdet; vid kontakt ökar kraften linjärt när Z-positionen minskar. Delningspunktens optimala Z-position fås genom att minimera kvadratfelet. Det ger en upplösning finare än avståndet mellan samplingspunkterna och mindre känslighet för brus.</p>
+<p>Av fysiska och tekniska skäl använder interpoleringen data från en extra uppåtgående rörelse efter den inledande nedåtgående rörelsen. De första 300 ms av data från uppåtrörelsen används för anpassningen, vilket minimerar påverkan av tareringsdrift. Det krävs minst tre sampel både under och över kontaktpunkten.</p>
+<p>En relativt hög utlösningskraft rekommenderas för att proben ska få en tillräckligt stark signal. Om det finns för få sampel under kontaktpunkten kan <code>trigger_force</code> höjas eller <code>lift_speed</code> sänkas. Om <code>lift_speed</code> är för låg blir det dock för få sampel ovanför kontaktpunkten på grund av fönstret på 300 ms.</p>
+<p>Avståndet för den uppåtgående rörelsen kan konfigureras med parametern <code>sample_retract_dist</code>.</p>
+<h2 id="konfigurera-lastcellsproben">Konfigurera lastcellsproben<a class="headerlink" href="#konfigurera-lastcellsproben" title="Permanent link">&para;</a></h2>
+<p>Det här avsnittet beskriver hur en lastcellsprob tas i drift.</p>
+<h3 id="kontrollera-lastcellen-forst">Kontrollera lastcellen först<a class="headerlink" href="#kontrollera-lastcellen-forst" title="Permanent link">&para;</a></h3>
+<p>En <code>[load_cell_probe]</code> är också en <code>[load_cell]</code>, och G-kodkommandon för <code>[load_cell]</code> fungerar med <code>[load_cell_probe]</code>. Innan du använder en lastcellsprob ska du följa anvisningarna för <a href="Load_Cell.html#calibrating-a-load-cell">kalibrering av lastcellen</a> med <code>CALIBRATE_LOAD_CELL</code> och kontrollera funktionen med <code>LOAD_CELL_DIAGNOSTIC</code>.</p>
+<h3 id="kontrollera-probfunktionen-med-load_cell_test_tap">Kontrollera probfunktionen med LOAD_CELL_TEST_TAP<a class="headerlink" href="#kontrollera-probfunktionen-med-load_cell_test_tap" title="Permanent link">&para;</a></h3>
+<p>Använd <code>LOAD_CELL_TEST_TAP</code> för att testa lastcellsproben innan du faktiskt sonderar med den. Kommandot upptäcker knackningar, precis som PROBE, men rör inte Z-axeln. Som standard lyssnar det efter tre knackningar före testets slut. Du har 30 sekunder för varje knackning; om inga upptäcks går kommandot ut.</p>
+<p>Om testet misslyckas ska du noggrant kontrollera konfigurationen och <code>LOAD_CELL_DIAGNOSTIC</code> efter problem.</p>
+<p>Lastcellsprober stöder inte <code>QUERY_ENDSTOPS</code> eller <code>QUERY_PROBE</code>. Använd <code>LOAD_CELL_TEST_TAP</code> för att testa funktionen före sondering.</p>
+<h3 id="rekommenderad-sonderingstemperatur">Rekommenderad sonderingstemperatur<a class="headerlink" href="#rekommenderad-sonderingstemperatur" title="Permanent link">&para;</a></h3>
+<p>Currently, we suggest keeping the nozzle temperature below the level that causes the filament to ooze while homing and probing. 140°C is a good starting point. This temperature is also low enough not to scar PEI build surfaces.</p>
+<p>Smuts på munstycke och bädd från utsipprande filament är den främsta källan till sonderingsfel med lastcellsproben. Klipper saknar ännu ett universellt sätt att upptäcka knackningar av låg kvalitet orsakade av filamentspill. Den befintliga koden kan bedöma en knackning som giltig trots låg kvalitet. Klassificering av sådana knackningar är ett aktivt forskningsområde.</p>
+<p>Klipper saknar också stöd för att flytta en sondpunkt om platsen har smutsats ned av utsipprande filament. Moduler som <code>quad_gantry_level</code> sonderar samma koordinater upprepade gånger även om en sondering tidigare misslyckades där.</p>
+<p>Given the above it is strongly suggested not to probe at printing temperatures.</p>
+<h3 id="skydd-mot-varmt-munstycke">Skydd mot varmt munstycke<a class="headerlink" href="#skydd-mot-varmt-munstycke" title="Permanent link">&para;</a></h3>
+<p>The Voron project has a great macro for protecting your print surface from the hot nozzle. See <a href="https://github.com/VoronDesign/Voron-Tap/blob/main/config/tap_klipper_instructions.md">Voron Tap's
+<code>activate_gcode</code></a></p>
+<p>Det rekommenderas starkt att lägga till något liknande i din konfiguration.</p>
+<h3 id="rengoring-av-munstycket">Rengöring av munstycket<a class="headerlink" href="#rengoring-av-munstycket" title="Permanent link">&para;</a></h3>
+<p>Munstycket ska vara rent före sondering. Det kan göras manuellt före varje utskrift eller automatiseras med en munstycksskrubb. Här är en rekommenderad följd:</p>
+<ol>
+<li>Vänta tills munstycket har värmts till sonderingstemperatur, till exempel <code>M109 S140</code></li>
+<li>Nollställ maskinen (<code>G28</code>)</li>
+<li>Skrubba munstycket mot en borste</li>
+<li>Värm upp bädden till termisk jämvikt</li>
+<li>Utför sonderingsuppgifter: QGL, bäddnät osv.</li>
+</ol>
+<h3 id="temperaturkompensation-for-munstyckets-utvidgning">Temperaturkompensation för munstyckets utvidgning<a class="headerlink" href="#temperaturkompensation-for-munstyckets-utvidgning" title="Permanent link">&para;</a></h3>
+<p>Om du sonderar vid en säker temperatur utvidgas munstycket efter uppvärmning till utskriftstemperatur. Munstycket blir längre och kommer närmare utskriftsytan. Detta kan kompenseras med <a href="Config_Reference.html#z_thermal_adjust">[z_thermal_adjust]</a>. Justeringen fungerar för utskriftstemperaturer från PLA till PC.</p>
+<h4 id="berakna-temp_coeff-for-z_thermal_adjust">Beräkna <code>temp_coeff</code> för <code>[z_thermal_adjust]</code><a class="headerlink" href="#berakna-temp_coeff-for-z_thermal_adjust" title="Permanent link">&para;</a></h4>
+<p>The easiest way to do this is to measure at 2 different temperatures. Ideally these should be the upper and lower limits of the printing temperature range. E.g. 180°C and 290°C. You can perform a <code>PROBE_ACCURACY</code> at both temperatures and then calculate the difference of the <code>average z</code> at both.</p>
+<p>Justeringsvärdet är ändringen i munstyckslängd dividerad med temperaturändringen, till exempel:</p>
+<div class="highlight"><pre><span></span><code>temp_coeff = -0.05 / (290 - 180) = -0.00045455
+</code></pre></div>
+
+<p>Det förväntade resultatet är ett negativt tal. Positiva <code>temp_coeff</code>-värden flyttar munstycket närmare bädden och negativa värden flyttar det längre bort. Munstycket behöver normalt flyttas längre bort när det blir längre av värmen.</p>
+<h4 id="konfigurera-z_thermal_adjust">Konfigurera <code>[z_thermal_adjust]</code><a class="headerlink" href="#konfigurera-z_thermal_adjust" title="Permanent link">&para;</a></h4>
+<p>Ställ in z_thermal_adjust så att <code>extruder</code> används som källa för temperaturdata, till exempel:</p>
+<div class="highlight"><pre><span></span><code>[z_thermal_adjust]
+temp_coeff=-0.00045455
+sensor_type: temperature_combined
+sensor_list: extruder
+combination_method: max
+maximum_deviation: 999
+min_temp: 0
+max_temp: 400
+max_z_adjustment: 0.1
+</code></pre></div>
+
+<h2 id="kontinuerliga-tareringsfilter-for-lastceller-i-verktygshuvudet">Kontinuerliga tareringsfilter för lastceller i verktygshuvudet<a class="headerlink" href="#kontinuerliga-tareringsfilter-for-lastceller-i-verktygshuvudet" title="Permanent link">&para;</a></h2>
+<p>Klipper implementerar ett konfigurerbart IIR-filter på MCU:n för kontinuerlig tarering av lastcellen under sondering. Kontinuerlig tarering innebär att nollvärdet följer drift som orsakas av externa faktorer som bowdenslangar och temperaturförändringar. Det är avsett för sensorer i verktygshuvudet och rörliga bäddar som påverkas av många yttre krafter under sondering.</p>
+<h3 id="installera-scipy">Installera SciPy<a class="headerlink" href="#installera-scipy" title="Permanent link">&para;</a></h3>
+<p>The filtering code uses the excellent <a href="https://scipy.org/">SciPy</a> library to compute the filter coefficients based on the values you enter into the config.</p>
+<p>Pre-compiled SciPi builds are available for Python 3 on 32-bit and 64-bit Raspberry Pi systems. 32-bit/64-bit + Python 3 is strongly recommended because it will streamline your installation experience. It does work with Python 2 but installation can take 30+ minutes and requires installing additional tools.</p>
+<div class="highlight"><pre><span></span><code>~/klippy-env/bin/pip<span class="w"> </span>install<span class="w"> </span>scipy
+</code></pre></div>
+
+<h3 id="filterarbetsbank">Filterarbetsbänk<a class="headerlink" href="#filterarbetsbank" title="Permanent link">&para;</a></h3>
+<p>Filterparametrarna bör väljas utifrån den drift som syns på skrivaren vid normal drift. En Jupyter-anteckningsbok, <a href="https://github.com/Klipper3d/klipper/blob/master/scripts/filter_workbench.ipynb">filter_workbench.ipynb</a>, finns i scripts för detaljerad analys med verkliga insamlade data och FFT:er.</p>
+<h3 id="filterforslag">Filterförslag<a class="headerlink" href="#filterforslag" title="Permanent link">&para;</a></h3>
+<p>För dig som bara försöker få ett filter att fungera följer här några förslag:</p>
+<ul>
+<li>Det enda nödvändiga alternativet är <code>drift_filter_cutoff_frequency</code>. Ett försiktigt startvärde är <code>0.5</code> Hz. Prusa levererade MK4 med <code>0.8</code> Hz och XL med <code>11.2</code> Hz, vilket sannolikt är ett säkert intervall att experimentera inom. Höj bara värdet tills normal drift från bowdenslangens kraft elimineras. Ett för högt värde ger långsam utlösning och överdriven kraft genom verktygshuvudet.</li>
+<li>Håll <code>trigger_force</code> låg. Standardvärdet är <code>75</code> g. Driftfiltret håller det interna gramvärdet nära 0, så en hög utlösningskraft behövs inte.</li>
+<li>Håll <code>force_safety_limit</code> på ett försiktigt värde. Standardvärdet är 2 kg och bör skydda verktygshuvudet under experiment. Om gränsen nås kan <code>drift_filter_cutoff_frequency</code> vara för hög.</li>
+</ul>
+<h2 id="forslag-for-verktygskort-med-lastcell">Förslag för verktygskort med lastcell<a class="headerlink" href="#forslag-for-verktygskort-med-lastcell" title="Permanent link">&para;</a></h2>
+<p>Det här avsnittet innehåller förslag för dem som utvecklar verktygshuvudkort med stöd för [load_cell_probe].</p>
+<h3 id="val-av-adc-sensor-och-rad-for-kortutveckling">Val av ADC-sensor och råd för kortutveckling<a class="headerlink" href="#val-av-adc-sensor-och-rad-for-kortutveckling" title="Permanent link">&para;</a></h3>
+<p>Idealt sett uppfyller en sensor dessa kriterier:</p>
+<ul>
+<li>Minst 24 bitar bred</li>
+<li>Använd SPI-kommunikation</li>
+<li>Har ett stift som kan indikera att ett sampel är klart utan SPI-kommunikation. Det kallas ofta stiftet "data ready" eller "DRDY". Att kontrollera ett stift är mycket snabbare än en SPI-fråga.</li>
+<li>Har en programmerbar förstärkningsinställning på 128 för förstärkaren. Detta bör eliminera behovet av en separat förstärkare.</li>
+<li>Indikerar via SPI om sensorn har återställts. Att upptäcka återställningar undviker tidsfel vid nollställning och brusiga data vid uppstart. Det kan också hjälpa användare att hitta kabel- och jordningsproblem.</li>
+<li>En valbar samplingsfrekvens mellan 350 Hz och 2 kHz. Mycket höga samplingsfrekvenser är inte fördelaktiga i 3D-skrivare eftersom de ger mycket brus vid snabba rörelser. Frekvenser under 250 Hz kräver långsammare sondering och ökar kraften på verktygshuvudet genom längre fördröjning mellan mätningar. En sensor på 500 Hz som rör sig med 5 mm/s har exempelvis samma säkerhetsfaktor som en sensor på 100 Hz som rör sig med endast 1 mm/s.</li>
+<li>Vid konstruktion för tillämpningar under bädden, där flera lastceller ska mätas, använd en krets som kan sampla alla ingångar samtidigt. Multiplexade ADC:er som kräver kanalbyte behöver flera sampel för stabilisering efter varje byte och passar därför inte för sondering.</li>
+</ul>
+<p>Att implementera stöd för ett nytt sensorkrets är inte särskilt svårt med Klippers infrastruktur <code>bulk_sensor</code> och <code>load_cell_endstop</code>.</p>
+<h3 id="filtrering-av-5-v-matning">Filtrering av 5 V-matning<a class="headerlink" href="#filtrering-av-5-v-matning" title="Permanent link">&para;</a></h3>
+<p>Det rekommenderas starkt att använda större kondensatorer än ADC-kretstillverkaren anger. ADC-kretsar är normalt avsedda för miljöer med lågt brus, som batteridrivna enheter. Sensortillverkarnas tillämpningsanvisningar förutsätter oftast en tyst matning; betrakta deras kondensatorvärden som minimivärden.</p>
+<p>3D-skrivare ger mycket brus på 5 V-bussen, vilket kan förstöra sensorns noggrannhet. Testa sensorn på kortet med ett typiskt 3D-skrivarnätaggregat och aktiva stegmotordrivare innan du väljer storlek på utjämningskondensatorer.</p>
+<h3 id="jordning-och-jordplan">Jordning och jordplan<a class="headerlink" href="#jordning-och-jordplan" title="Permanent link">&para;</a></h3>
+<p>Analoga ADC-kretsar innehåller komponenter som är mycket känsliga för brus och ESD. Ett stort jordplan på kortets första lager under kretsen kan hjälpa mot brus. Håll kretsen borta från kraftdelar och DC/DC-omvandlare. Kortet ska ha korrekt jordning tillbaka till likspänningsmatningen.</p>
+<h3 id="anmarkningar-om-hx711-och-hx717">Anmärkningar om HX711 och HX717<a class="headerlink" href="#anmarkningar-om-hx711-och-hx717" title="Permanent link">&para;</a></h3>
+<p>Sensorn är populär på grund av låg kostnad och god tillgänglighet i leveranskedjan. Den har dock vissa nackdelar:</p>
+<ul>
+<li>HX71x-sensorerna använder bit-bang-kommunikation som belastar MCU:n mycket. En sensor med SPI-kommunikation skulle spara resurser på verktygskortets CPU.</li>
+<li>HX71x saknar ett sätt att kommunicera återställningshändelser till MCU:n. Klipper upptäcker återställningar med en tidsheuristik, men det är inte idealiskt. Återställningar tyder på problem med kablage eller jordning.</li>
+<li>För sonderingsanvändning rekommenderas HX717 starkt på grund av högre samplingsfrekvens, 320 jämfört med 80. Sonderingshastigheten för HX711 bör begränsas till mindre än 2 mm/s.</li>
+<li>Samplingsfrekvensen för HX71x kan inte ställas in i Klippers konfiguration. Om du har sensorns 10 SPS-version, som är vanligt spridd, måste den kopplas om fysiskt för att köras vid 80 SPS.</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,15 +1,15 @@
-# brian park <gouache95@gmail.com>, 2021.
+# brian park <gouache95@gmail.com>, 2021, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2021-08-27 12:35+0000\n"
-"Last-Translator: brian park <gouache95@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:16+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/klipper/status_reference/ko/>\n"
 "Language: ko\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.8.1-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document is a reference of printer status information available in "
@@ -211,33 +211,6 @@ msgid ""
 " is always available):"
 msgstr "`gcode_move` 개체에서 다음 정보를 사용할 수 있습니다(이 개체는 항상 사용 가능):"
 
-msgid ""
-"`gcode_position`: The current position of the toolhead relative to the current"
-" G-Code origin. That is, positions that one might directly send to a `G1` "
-"command. It is possible to access the x, y, z, and e components of this "
-"position (eg, `gcode_position.x`)."
-msgstr ""
-"`gcode_position`: 현재 G-Code 원점을 기준으로 한 툴헤드의 현재 위치입니다. 즉, `G1` 명령에 직접 보낼 수 있는 "
-"위치입니다. 이 위치의 x, y, z, e 구성요소에 액세스하는 것이 가능합니다 (예: `gcode_position.x`)."
-
-msgid ""
-"`position`: The last commanded position of the toolhead using the coordinate "
-"system specified in the config file. It is possible to access the x, y, z, and"
-" e components of this position (eg, `position.x`)."
-msgstr ""
-"`position`: 구성 파일에 지정된 좌표계를 사용하여 도구 헤드의 마지막으로 명령된 위치입니다. 이 위치의 x, y, z 및 e "
-"구성요소에 액세스하는 것이 가능합니다(예: `position.x`)."
-
-msgid ""
-"`homing_origin`: The origin of the gcode coordinate system (relative to the "
-"coordinate system specified in the config file) to use after a `G28` command. "
-"The `SET_GCODE_OFFSET` command can alter this position. It is possible to "
-"access the x, y, and z components of this position (eg, `homing_origin.x`)."
-msgstr ""
-"`homing_origin`: `G28` 명령 이후에 사용할 gcode 좌표계(구성 파일에 지정된 좌표계에 상대적)의 원점입니다. "
-"`SET_GCODE_OFFSET` 명령은 이 위치를 변경할 수 있습니다. 이 위치의 x, y 및 z 구성요소(예: "
-"`homing_origin.x`)에 액세스할 수 있습니다."
-
 msgid "`speed`: The last speed set in a `G1` command (in mm/s)."
 msgstr "`speed`: `G1` 명령에서 마지막으로 설정한 속도(mm/s)입니다."
 
@@ -263,13 +236,6 @@ msgid ""
 msgstr ""
 "`absolute_coordinates`: 이것은 `G90` 절대 좌표 모드에 있으면 True를 반환하고 `G91` 상대 모드에 있으면 "
 "False를 반환합니다."
-
-msgid ""
-"`absolute_extrude`: This returns True if in `M82` absolute extrude mode or "
-"False if in `M83` relative mode."
-msgstr ""
-"`absolute_extrude`: 이것은 `M82` 절대 돌출 모드인 경우 True를 반환하고 `M83` 상대 모드인 경우 False를 "
-"반환합니다."
 
 msgid "hall_filament_width_sensor"
 msgstr "hall_filament_width_sensor"
@@ -407,12 +373,6 @@ msgstr "`last_stats.<statistics_name>`: 마이크로 컨트롤러 연결에 대�
 msgid "output_pin"
 msgstr "output_pin"
 
-msgid ""
-"The following information is available in [output_pin "
-"some_name](Config_Reference.md#output_pin) objects:"
-msgstr ""
-"다음 정보는 [output_pin some_name](Config_Reference.md#output_pin) 개체에서 사용할 수 있습니다:"
-
 msgid "`value`: The \"value\" of the pin, as set by a `SET_PIN` command."
 msgstr "`value`: `SET_PIN` 명령에 의해 설정된 핀의 \"값\"."
 
@@ -489,14 +449,6 @@ msgid ""
 msgstr ""
 "`last_query`: 마지막 QUERY_PROBE 명령 동안 프로브가 \"트리거된\" 것으로 보고된 경우 True를 반환합니다. 이것이 "
 "매크로에서 사용되는 경우 템플릿 확장 순서로 인해 QUERY_PROBE 명령이 이 참조를 포함하는 매크로보다 먼저 실행되어야 합니다."
-
-msgid ""
-"`last_z_result`: Returns the Z result value of the last PROBE command. Note, "
-"if this is used in a macro, due to the order of template expansion, the PROBE "
-"(or similar) command must be run prior to the macro containing this reference."
-msgstr ""
-"`last_z_result`: 마지막 PROBE 명령의 Z 결과 값을 반환합니다. 이것이 매크로에서 사용되는 경우 템플릿 확장 순서로 인해 "
-"PROBE(또는 유사한) 명령이 이 참조를 포함하는 매크로보다 먼저 실행되어야 합니다."
 
 msgid "quad_gantry_level"
 msgstr "quad_gantry_level"
@@ -608,14 +560,6 @@ msgid ""
 msgstr "`toolhead` 개체에서 다음 정보를 사용할 수 있습니다(이 개체는 항상 사용 가능):"
 
 msgid ""
-"`position`: The last commanded position of the toolhead relative to the "
-"coordinate system specified in the config file. It is possible to access the "
-"x, y, z, and e components of this position (eg, `position.x`)."
-msgstr ""
-"`position`: 구성 파일에 지정된 좌표계에 상대적인 toolhead의 마지막 명령 위치입니다. 이 위치의 x, y, z 및 e "
-"구성요소에 액세스하는 것이 가능합니다(예: `position.x`)."
-
-msgid ""
 "`extruder`: The name of the currently active extruder. For example, in a macro"
 " one could use `printer[printer.toolhead.extruder].target` to get the target "
 "temperature of the current extruder."
@@ -629,14 +573,6 @@ msgid ""
 msgstr ""
 "`homed_axes`: \"homed\" 상태에 있는 것으로 간주되는 현재 직교 축입니다. \"x\", \"y\", \"z\" 중 하나 "
 "이상을 포함하는 문자열입니다."
-
-msgid ""
-"`axis_minimum`, `axis_maximum`: The axis travel limits (mm) after homing. It "
-"is possible to access the x, y, z components of this limit value (eg, "
-"`axis_minimum.x`, `axis_maximum.z`)."
-msgstr ""
-"`axis_minimum`, `axis_maximum`: 원점 복귀 후 축 이동 한계(mm). 이 제한 값의 x, y, z 구성 요소에 "
-"액세스할 수 있습니다 (예: `axis_minimum.x`, `axis_maximum.z`)."
 
 msgid ""
 "`stalls`: The total number of times (since the last restart) that the printer "
@@ -726,12 +662,6 @@ msgstr ""
 
 #: docs/Status_Reference.md:block 51 (unordered list)
 msgid ""
-"`live_position`: The requested toolhead position interpolated to the current "
-"time."
-msgstr "`live_position`: 현재 시간으로 보간된 요청된 toolhead 위치입니다."
-
-#: docs/Status_Reference.md:block 51 (unordered list)
-msgid ""
 "`live_velocity`: The requested toolhead velocity (in mm/s) at the current "
 "time."
 msgstr "`live_velocity`: 현재 시간에 요청된 toolhead 속도(mm/s)입니다."
@@ -796,10 +726,6 @@ msgid "`hold_current`: The currently set hold current."
 msgstr ""
 
 #: docs/Status_Reference.md:block 36 (unordered list)
-msgid "`Diameter`: The last reading from the sensor in mm."
-msgstr ""
-
-#: docs/Status_Reference.md:block 36 (unordered list)
 msgid "`Raw`: The last raw ADC reading from the sensor."
 msgstr ""
 
@@ -836,16 +762,6 @@ msgid ""
 "The following information is available for each `[led led_name]`, `[neopixel "
 "led_name]`, `[dotstar led_name]`, `[pca9533 led_name]`, and `[pca9632 "
 "led_name]` config section defined in printer.cfg:"
-msgstr ""
-
-#: docs/Status_Reference.md:block 51 (unordered list)
-msgid ""
-"`color_data`: A list of color lists containing the RGBW values for a led in "
-"the chain. Each value is represented as a float from 0.0 to 1.0. Each color "
-"list contains 4 items (red, green, blue, white) even if the underyling LED "
-"supports fewer color channels. For example, the blue value (3rd item in color "
-"list) of the second neopixel in a chain could be accessed at "
-"`printer[\"neopixel <config_name>\"].color_data[1][2]`."
 msgstr ""
 
 #: docs/Status_Reference.md:block 12 (unordered list)
@@ -1153,18 +1069,6 @@ msgid ""
 " at run-time."
 msgstr ""
 
-#: docs/Status_Reference.md:block 113 (paragraph)
-msgid ""
-"[bme280 "
-"config_section_name](Config_Reference.md#bmp280bme280bme680-temperature-"
-"sensor), [htu21d config_section_name](Config_Reference.md#htu21d-sensor), "
-"[sht3x config_section_name](Config_Reference.md#sht31-sensor), [lm75 "
-"config_section_name](Config_Reference.md#lm75-temperature-sensor), "
-"[temperature_host config_section_name](Config_Reference.md#host-temperature-"
-"sensor) and [temperature_combined "
-"config_section_name](Config_Reference.md#combined-temperature-sensor) objects:"
-msgstr ""
-
 #: docs/Status_Reference.md:block 114 (unordered list)
 msgid ""
 "`humidity`, `pressure`, `gas`: The last read values from the sensor (only on "
@@ -1235,36 +1139,6 @@ msgstr ""
 msgid "The following information is available for each `[load_cell name]`:"
 msgstr ""
 
-#: docs/Status_Reference.md:block 72 (unordered list)
-msgid "'is_calibrated': True/False is the load cell calibrated"
-msgstr ""
-
-#: docs/Status_Reference.md:block 72 (unordered list)
-msgid ""
-"'counts_per_gram': The number of raw sensor counts that equals 1 gram of force"
-msgstr ""
-
-#: docs/Status_Reference.md:block 72 (unordered list)
-msgid ""
-"'reference_tare_counts': The reference number of raw sensor counts for 0 force"
-msgstr ""
-
-#: docs/Status_Reference.md:block 72 (unordered list)
-msgid "'tare_counts': The current number of raw sensor counts for 0 force"
-msgstr ""
-
-#: docs/Status_Reference.md:block 72 (unordered list)
-msgid "'force_g': The force in grams, averaged over the last polling period."
-msgstr ""
-
-#: docs/Status_Reference.md:block 72 (unordered list)
-msgid "'min_force_g': The minimum force in grams, over the last polling period."
-msgstr ""
-
-#: docs/Status_Reference.md:block 72 (unordered list)
-msgid "'max_force_g': The maximum force in grams, over the last polling period."
-msgstr ""
-
 #: docs/Status_Reference.md:block 112 (header)
 msgid "skew_correction.py"
 msgstr ""
@@ -1279,6 +1153,410 @@ msgstr ""
 msgid ""
 "`current_profile_name`: Returns the name of the currently loaded SKEW_PROFILE."
 msgstr ""
+
+#: docs/Status_Reference.md:block 73 (header)
+msgid "load_cell_probe"
+msgstr ""
+
+#: docs/Status_Reference.md:block 74 (paragraph)
+msgid "The following information is available for `[load_cell_probe]`:"
+msgstr ""
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid "all items from [load_cell](Status_Reference.md#load_cell)"
+msgstr ""
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid "all items from [probe](Status_Reference.md#probe)"
+msgstr ""
+
+#: docs/Status_Reference.md:block 143 (paragraph)
+msgid ""
+"On a `generic_cartesian` kinematic, the following information is available in "
+"`dual_carriage`:"
+msgstr ""
+
+#: docs/Status_Reference.md:block 144 (unordered list)
+msgid ""
+"`carriages[\"<carriage>\"]`: The mode of the carriage `<carriage>`. Possible "
+"values are \"INACTIVE\" and \"PRIMARY\" for the primary carriage and "
+"\"INACTIVE\", \"PRIMARY\", \"COPY\", and \"MIRROR\" for the dual carriage."
+msgstr ""
+
+#: docs/Status_Reference.md:block 46 (header)
+msgid "gcode"
+msgstr ""
+
+#: docs/Status_Reference.md:block 47 (paragraph)
+msgid "The following information is available in the `gcode` object:"
+msgstr ""
+
+#: docs/Status_Reference.md:block 48 (unordered list)
+msgid ""
+"`commands`: Returns a list of all currently available commands. For each "
+"command, if a help string is defined it will also be provided."
+msgstr ""
+
+#: docs/Status_Reference.md:block 57 (unordered list)
+msgid ""
+"`gcode_position`: The current position of the toolhead relative to the current"
+" G-Code origin. That is, positions that one might directly send to a `G1` "
+"command. This value is encoded as a [coordinate](#accessing-coordinates)."
+msgstr ""
+
+#: docs/Status_Reference.md:block 57 (unordered list)
+msgid ""
+"`position`: The last commanded position of the toolhead using the coordinate "
+"system specified in the config file. This value is encoded as a "
+"[coordinate](#accessing-coordinates)."
+msgstr ""
+
+#: docs/Status_Reference.md:block 57 (unordered list)
+msgid ""
+"`homing_origin`: The origin of the gcode coordinate system (relative to the "
+"coordinate system specified in the config file) to use after a `G28` command. "
+"The `SET_GCODE_OFFSET` command can alter this position. This value is encoded "
+"as a [coordinate](#accessing-coordinates)."
+msgstr ""
+
+#: docs/Status_Reference.md:block 57 (unordered list)
+msgid ""
+"`axis_map`: Provides a mechanism for finding the coordinate component for a "
+"given G-Code id that is used in `G1` commands. See the [Accessing "
+"Coordinates](#accessing-coordinates) section for details."
+msgstr ""
+
+#: docs/Status_Reference.md:block 60 (unordered list)
+msgid ""
+"`flow_compensation_enabled`: Returns True if flow compensation is enabled."
+msgstr ""
+
+#: docs/Status_Reference.md:block 60 (unordered list)
+msgid ""
+"`Diameter`: Returns the last width reading in mm if the sensor is active or "
+"the nominal filament diameter if it is not."
+msgstr ""
+
+#: docs/Status_Reference.md:block 69 (unordered list)
+msgid ""
+"`idle_timeout`: The current 'timeout' (in seconds) to wait for the gcode to be"
+" triggered. (as set by [SET_IDLE_TIMEOUT](G-Codes.md#set_idle_timeout))"
+msgstr ""
+
+#: docs/Status_Reference.md:block 72 (unordered list)
+msgid ""
+"`color_data`: A list of color lists containing the RGBW values for a led in "
+"the chain. Each value is represented as a float from 0.0 to 1.0. Each color "
+"list contains 4 items (red, green, blue, white) even if the underlying LED "
+"supports fewer color channels. For example, the blue value (3rd item in color "
+"list) of the second neopixel in a chain could be accessed at "
+"`printer[\"neopixel <config_name>\"].color_data[1][2]`."
+msgstr ""
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid "`is_calibrated`: True/False whether the load cell is calibrated."
+msgstr ""
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid ""
+"`counts_per_gram`: The number of raw sensor counts that equals 1 gram of "
+"force."
+msgstr ""
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid ""
+"`reference_tare_counts`: The reference number of raw sensor counts for 0 "
+"force."
+msgstr ""
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid "`tare_counts`: The current number of raw sensor counts for 0 force."
+msgstr ""
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid "`force_g`: The force in grams, averaged over the last polling period."
+msgstr ""
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid "`min_force_g`: The minimum force in grams, over the last polling period."
+msgstr ""
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid "`max_force_g`: The maximum force in grams, over the last polling period."
+msgstr ""
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid ""
+"`errors`: The number of sensor errors detected since the last start of "
+"measurements."
+msgstr ""
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid ""
+"`overflows`: The number of data buffer overflows detected since the last start"
+" of measurements."
+msgstr ""
+
+#: docs/Status_Reference.md:block 75 (unordered list)
+msgid "`sample_rate`: The sensor's sample rate in samples per second."
+msgstr ""
+
+#: docs/Status_Reference.md:block 78 (unordered list)
+msgid ""
+"`endstop_tare_counts`: The load cell probe keeps a tare value independent of "
+"the load cell. This is re-set at the start of each probe."
+msgstr ""
+
+#: docs/Status_Reference.md:block 78 (unordered list)
+msgid "`last_trigger_time`: Timestamp of the last homing trigger."
+msgstr ""
+
+#: docs/Status_Reference.md:block 78 (unordered list)
+msgid "`last_z_result`: The Z position result of the last tap."
+msgstr ""
+
+#: docs/Status_Reference.md:block 78 (unordered list)
+msgid "`is_last_tap_valid`: True if the last tap result is valid."
+msgstr ""
+
+#: docs/Status_Reference.md:block 87 (unordered list)
+msgid ""
+"`live_position`: The requested toolhead position interpolated to the current "
+"time. This value is encoded as a [coordinate](#accessing-coordinates)."
+msgstr ""
+
+#: docs/Status_Reference.md:block 89 (paragraph)
+msgid ""
+"The following information is available in [output_pin "
+"some_name](Config_Reference.md#output_pin) and [pwm_tool "
+"some_name](Config_Reference.md#pwm_tool) objects:"
+msgstr ""
+
+#: docs/Status_Reference.md:block 102 (unordered list)
+msgid ""
+"`last_probe_position`: The results of the last `PROBE` command. This value is "
+"encoded as a [coordinate](#accessing-coordinates). The probe hardware "
+"estimates that if one were to command the toolhead to XY position "
+"`last_probe_position.x`,`last_probe_position.y` and descend then the tip of "
+"the toolhead would first contact the bed at a Z height of "
+"`last_probe_position.z`. These coordinates are relative to the frame (that is,"
+" they use the coordinate system specified in the config file). Note, if this "
+"is used in a macro, due to the order of template expansion, the `PROBE` "
+"command must be run prior to the macro containing this reference."
+msgstr ""
+
+#: docs/Status_Reference.md:block 102 (unordered list)
+msgid ""
+"`last_z_result`: This value is deprecated; it will be removed in the near "
+"future."
+msgstr ""
+
+#: docs/Status_Reference.md:block 142 (unordered list)
+msgid ""
+"`position`: The last commanded position of the toolhead relative to the "
+"coordinate system specified in the config file. This value is encoded as a "
+"[coordinate](#accessing-coordinates)."
+msgstr ""
+
+#: docs/Status_Reference.md:block 142 (unordered list)
+msgid ""
+"`axis_minimum`, `axis_maximum`: The axis travel limits (mm) after homing. This"
+" value is encoded as a [coordinate](#accessing-coordinates)."
+msgstr ""
+
+#: docs/Status_Reference.md:block 142 (unordered list)
+msgid ""
+"`extra_axes`: Provides a mechanism for finding the coordinate component for "
+"extra axes available in standard `G1` type move commands. See the [Accessing "
+"Coordinates](#accessing-coordinates) section for details."
+msgstr ""
+
+#: docs/Status_Reference.md:block 160 (header)
+msgid "Accessing Coordinates"
+msgstr ""
+
+#: docs/Status_Reference.md:block 161 (paragraph)
+msgid ""
+"Some status fields provide a \"coordinate\". For macro users these fields may "
+"be accessed by component name (eg,`{printer.toolhead.position.x}`), where the "
+"component name may be \"x\", \"y\", or \"z\"."
+msgstr ""
+
+#: docs/Status_Reference.md:block 162 (paragraph)
+msgid ""
+"For developers using the Klipper API Server these fields are transmitted as a "
+"list - for example: `{\"toolhead\": {\"position\": [1.0, 2.0, 3.0, 7.3, "
+"19.2]}}` . The first three components of the list correspond with the x, y, "
+"and z axes."
+msgstr ""
+
+#: docs/Status_Reference.md:block 163 (paragraph)
+msgid ""
+"A coordinate will typically have at least 3 components (x, y, and z), however "
+"there may also be additional components. Care should be taken when accessing "
+"any of these additional components as the ordering and number of components "
+"may change at run-time."
+msgstr ""
+
+#: docs/Status_Reference.md:block 164 (paragraph)
+msgid ""
+"One may use `{printer.gcode_move.axis_map}` and/or "
+"`{printer.toolhead.extra_axes}` to determine the number of components and the "
+"ordering of components. For example, to access the \"E\" component one could "
+"use `{printer.toolhead.position[printer.gcode_move.axis_map.E]}`. Or, if one "
+"wanted to find the component associated with the \"extruder\" object, one "
+"could use `{printer.toolhead.position[printer.toolhead.extra_axes.extruder]}`."
+msgstr ""
+
+#: docs/Status_Reference.md:block 57 (unordered list)
+msgid ""
+"`absolute_extrude`: Returns True if absolute extrusions are permitted. An "
+"`M83` force relative extrusion mode command causes this value to return False."
+" An `M82` command returns this value to True."
+msgstr ""
+
+#: docs/Status_Reference.md:block 84 (unordered list)
+msgid ""
+"`mcu_kconfig`: The minimal build configuration (`savedefconfig` output) that "
+"the micro-controller firmware was compiled from, as reported by the micro-"
+"controller. `None` if the firmware predates this feature or does not provide "
+"it."
+msgstr ""
+
+#: docs/Status_Reference.md:block 129 (paragraph)
+msgid ""
+"[bme280 "
+"config_section_name](Config_Reference.md#bmp180bmp280bme280bmp388bme680-temperature-"
+"sensor), [htu21d config_section_name](Config_Reference.md#htu21d-sensor), "
+"[sht3x config_section_name](Config_Reference.md#sht3x-sensor), [lm75 "
+"config_section_name](Config_Reference.md#lm75-temperature-sensor), "
+"[temperature_host config_section_name](Config_Reference.md#host-temperature-"
+"sensor) and [temperature_combined "
+"config_section_name](Config_Reference.md#combined-temperature-sensor) objects:"
+msgstr ""
+
+#~ msgid ""
+#~ "`absolute_extrude`: This returns True if in `M82` absolute extrude mode or "
+#~ "False if in `M83` relative mode."
+#~ msgstr ""
+#~ "`absolute_extrude`: 이것은 `M82` 절대 돌출 모드인 경우 True를 반환하고 `M83` 상대 모드인 경우 False를 "
+#~ "반환합니다."
+
+#~ msgid ""
+#~ "[bme280 "
+#~ "config_section_name](Config_Reference.md#bmp280bme280bme680-temperature-"
+#~ "sensor), [htu21d config_section_name](Config_Reference.md#htu21d-sensor), "
+#~ "[sht3x config_section_name](Config_Reference.md#sht31-sensor), [lm75 "
+#~ "config_section_name](Config_Reference.md#lm75-temperature-sensor), "
+#~ "[temperature_host config_section_name](Config_Reference.md#host-temperature-"
+#~ "sensor) and [temperature_combined "
+#~ "config_section_name](Config_Reference.md#combined-temperature-sensor) objects:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`gcode_position`: The current position of the toolhead relative to the current"
+#~ " G-Code origin. That is, positions that one might directly send to a `G1` "
+#~ "command. It is possible to access the x, y, z, and e components of this "
+#~ "position (eg, `gcode_position.x`)."
+#~ msgstr ""
+#~ "`gcode_position`: 현재 G-Code 원점을 기준으로 한 툴헤드의 현재 위치입니다. 즉, `G1` 명령에 직접 보낼 수 있는 "
+#~ "위치입니다. 이 위치의 x, y, z, e 구성요소에 액세스하는 것이 가능합니다 (예: `gcode_position.x`)."
+
+#~ msgid ""
+#~ "`position`: The last commanded position of the toolhead using the coordinate "
+#~ "system specified in the config file. It is possible to access the x, y, z, and"
+#~ " e components of this position (eg, `position.x`)."
+#~ msgstr ""
+#~ "`position`: 구성 파일에 지정된 좌표계를 사용하여 도구 헤드의 마지막으로 명령된 위치입니다. 이 위치의 x, y, z 및 e "
+#~ "구성요소에 액세스하는 것이 가능합니다(예: `position.x`)."
+
+#~ msgid ""
+#~ "`homing_origin`: The origin of the gcode coordinate system (relative to the "
+#~ "coordinate system specified in the config file) to use after a `G28` command. "
+#~ "The `SET_GCODE_OFFSET` command can alter this position. It is possible to "
+#~ "access the x, y, and z components of this position (eg, `homing_origin.x`)."
+#~ msgstr ""
+#~ "`homing_origin`: `G28` 명령 이후에 사용할 gcode 좌표계(구성 파일에 지정된 좌표계에 상대적)의 원점입니다. "
+#~ "`SET_GCODE_OFFSET` 명령은 이 위치를 변경할 수 있습니다. 이 위치의 x, y 및 z 구성요소(예: "
+#~ "`homing_origin.x`)에 액세스할 수 있습니다."
+
+#~ msgid ""
+#~ "The following information is available in [output_pin "
+#~ "some_name](Config_Reference.md#output_pin) objects:"
+#~ msgstr ""
+#~ "다음 정보는 [output_pin some_name](Config_Reference.md#output_pin) 개체에서 사용할 수 있습니다:"
+
+#~ msgid ""
+#~ "`last_z_result`: Returns the Z result value of the last PROBE command. Note, "
+#~ "if this is used in a macro, due to the order of template expansion, the PROBE "
+#~ "(or similar) command must be run prior to the macro containing this reference."
+#~ msgstr ""
+#~ "`last_z_result`: 마지막 PROBE 명령의 Z 결과 값을 반환합니다. 이것이 매크로에서 사용되는 경우 템플릿 확장 순서로 인해 "
+#~ "PROBE(또는 유사한) 명령이 이 참조를 포함하는 매크로보다 먼저 실행되어야 합니다."
+
+#~ msgid ""
+#~ "`position`: The last commanded position of the toolhead relative to the "
+#~ "coordinate system specified in the config file. It is possible to access the "
+#~ "x, y, z, and e components of this position (eg, `position.x`)."
+#~ msgstr ""
+#~ "`position`: 구성 파일에 지정된 좌표계에 상대적인 toolhead의 마지막 명령 위치입니다. 이 위치의 x, y, z 및 e "
+#~ "구성요소에 액세스하는 것이 가능합니다(예: `position.x`)."
+
+#~ msgid ""
+#~ "`axis_minimum`, `axis_maximum`: The axis travel limits (mm) after homing. It "
+#~ "is possible to access the x, y, z components of this limit value (eg, "
+#~ "`axis_minimum.x`, `axis_maximum.z`)."
+#~ msgstr ""
+#~ "`axis_minimum`, `axis_maximum`: 원점 복귀 후 축 이동 한계(mm). 이 제한 값의 x, y, z 구성 요소에 "
+#~ "액세스할 수 있습니다 (예: `axis_minimum.x`, `axis_maximum.z`)."
+
+#~ msgid ""
+#~ "`live_position`: The requested toolhead position interpolated to the current "
+#~ "time."
+#~ msgstr "`live_position`: 현재 시간으로 보간된 요청된 toolhead 위치입니다."
+
+#~ msgid "`Diameter`: The last reading from the sensor in mm."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`color_data`: A list of color lists containing the RGBW values for a led in "
+#~ "the chain. Each value is represented as a float from 0.0 to 1.0. Each color "
+#~ "list contains 4 items (red, green, blue, white) even if the underyling LED "
+#~ "supports fewer color channels. For example, the blue value (3rd item in color "
+#~ "list) of the second neopixel in a chain could be accessed at "
+#~ "`printer[\"neopixel <config_name>\"].color_data[1][2]`."
+#~ msgstr ""
+
+#~ msgid "'is_calibrated': True/False is the load cell calibrated"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "'counts_per_gram': The number of raw sensor counts that equals 1 gram of force"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "'reference_tare_counts': The reference number of raw sensor counts for 0 force"
+#~ msgstr ""
+
+#~ msgid "'tare_counts': The current number of raw sensor counts for 0 force"
+#~ msgstr ""
+
+#~ msgid "'force_g': The force in grams, averaged over the last polling period."
+#~ msgstr ""
+
+#~ msgid "'min_force_g': The minimum force in grams, over the last polling period."
+#~ msgstr ""
+
+#~ msgid "'max_force_g': The maximum force in grams, over the last polling period."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "'endstop_tare_counts': the load cell probe keeps a tare value independent of "
+#~ "the load cell. This re-set at the start of each probe."
+#~ msgstr ""
+
+#~ msgid "'last_trigger_time': timestamp of the last homing trigger"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "The following information is available in the `Config_Reference.md#bed_screws`"

@@ -1,15 +1,15 @@
-# Nikolai Danov <nikolaidanov67@gmail.com>, 2022.
+# Nikolai Danov <nikolaidanov67@gmail.com>, 2022, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2022-08-26 16:03+0000\n"
+"PO-Revision-Date: 2025-07-22 08:43+0000\n"
 "Last-Translator: Nikolai Danov <nikolaidanov67@gmail.com>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/klipper/index/bg/>\n"
 "Language: bg\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: docs/index.md:block 1 (paragraph)
 msgid "hide:"
@@ -27,23 +27,20 @@ msgstr "![](img/klipper-logo.png){ .center-image }"
 msgid ""
 "The Klipper firmware controls 3d-Printers. It combines the power of a general "
 "purpose computer with one or more micro-controllers. See the [features "
-"document](https://www.klipper3d.org/Features.html) for more information on why"
-" you should use the Klipper software."
+"document](Features.md) for more information on why you should use the Klipper "
+"software."
 msgstr ""
 
 #: docs/index.md:block 5 (paragraph)
-msgid ""
-"Start by [installing Klipper "
-"software](https://www.klipper3d.org/Installation.html)."
+msgid "Start by [installing Klipper software](Installation.md)."
 msgstr ""
 
 #: docs/index.md:block 6 (paragraph)
 msgid ""
-"Klipper software is Free Software. Read the "
-"[documentation](https://www.klipper3d.org/Overview.html), see the "
-"[license](COPYING), or [download](https://github.com/Klipper3d/Klipper) the "
-"software. We depend on the generous support from our "
-"[sponsors](https://www.klipper3d.org/Sponsors.html)."
+"Klipper software is Free Software. Read the [documentation](Overview.md), see "
+"the [license](../COPYING), or [download](https://github.com/Klipper3d/Klipper)"
+" the software. We depend on the generous support from our "
+"[sponsors](Sponsors.md)."
 msgstr ""
 
 #~ msgid ""

@@ -3,14 +3,14 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2025-01-08 00:03+0000\n"
+"PO-Revision-Date: 2025-09-08 13:02+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/klipper/config_reference/ta/>\n"
 "Language: ta\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 msgid ""
 "This document is a reference for options available in the Klipper config file."
@@ -645,12 +645,6 @@ msgstr ""
 msgid "[dual_carriage]"
 msgstr "[dual_carriage]"
 
-msgid ""
-"See [sample-idex.cfg](../config/sample-idex.cfg) for an example configuration."
-msgstr ""
-"எடுத்துக்காட்டு உள்ளமைவுக்கு [salem-idex.cfg] (../ config/salem-idex.cfg) ஐப் "
-"பார்க்கவும்."
-
 msgid "[extruder_stepper]"
 msgstr "[எக்ச்ட்ரூடர் ச்டெப்பர்]"
 
@@ -802,15 +796,6 @@ msgstr "LM75 வெப்பநிலை சென்சார்"
 
 msgid "Builtin micro-controller temperature sensor"
 msgstr "மைக்ரோகண்ட்ரோலர் வெப்பநிலை சென்சாரில் கட்டப்பட்டுள்ளது"
-
-msgid ""
-"The atsam, atsamd, and stm32 micro-controllers contain an internal temperature"
-" sensor. One can use the \"temperature_mcu\" sensor to monitor these "
-"temperatures."
-msgstr ""
-"ATSAM, ATSAMD மற்றும் STM32 மைக்ரோ-கன்ட்ரோலர்கள் உள் வெப்பநிலை சென்சார் "
-"கொண்டிருக்கின்றன. இந்த வெப்பநிலையை கண்காணிக்க ஒருவர் \"வெப்பநிலை_ம்கு\" "
-"சென்சாரைப் பயன்படுத்தலாம்."
 
 msgid "Host temperature sensor"
 msgstr "புரவலன் வெப்பநிலை சென்சார்"
@@ -1052,14 +1037,6 @@ msgstr ""
 
 msgid "[mcp4018]"
 msgstr "[MCP4018]"
-
-msgid ""
-"Statically configured MCP4018 digipot connected via two gpio \"bit banging\" "
-"pins (one may define any number of sections with an \"mcp4018\" prefix)."
-msgstr ""
-"இரண்டு சி.பி.ஐ.ஓ \"பிட் பேங்கிங்\" ஊசிகளின் வழியாக இணைக்கப்பட்டுள்ள MCP4018 "
-"டிசிபோட் (ஒருவர் \"MCP4018\" முன்னொட்டுடன் எத்தனை பிரிவுகளையும் "
-"வரையறுக்கலாம்)."
 
 msgid "Display support"
 msgstr "ஆதரவைக் காண்பி"
@@ -1896,18 +1873,6 @@ msgstr ""
 "அச்சிடும் செயல்பாட்டின் போது தனிப்பட்ட பொருட்களை விலக்க அல்லது ரத்து செய்ய "
 "ஆதரவை இயக்குகிறது."
 
-#: docs/Config_Reference.md:block 154 (paragraph)
-msgid ""
-"See the [exclude objects guide](Exclude_Object.md) and [command "
-"reference](G-Codes.md#excludeobject) for additional information. See the "
-"[sample-macros.cfg](../config/sample-macros.cfg) file for a "
-"Marlin/RepRapFirmware compatible M486 G-Code macro."
-msgstr ""
-"கூடுதல் தகவலுக்கு [Objects வழிகாட்டியை விலக்கு] (விலக்கு_OBJECT.MD) மற்றும் "
-"[கட்டளை குறிப்பு] (g-codes.md#exctudeObject) ஐப் பார்க்கவும். "
-"மார்லின்/ரெப்ராஃபர்ம்வேர் இணக்கமான எம் 486 சி-கோட் மேக்ரோவுக்கான "
-"[மாதிரி-macros.cfg] (../ config/salem-macros.cfg) கோப்பைப் பார்க்கவும்."
-
 #: docs/Config_Reference.md:block 163 (header)
 msgid "[mpu9250]"
 msgstr "[MPU9250]"
@@ -2009,39 +1974,6 @@ msgstr "LIS2DW முடுக்கமானிகளுக்கான உத�
 msgid "[axis_twist_compensation]"
 msgstr "[AXIS_TWIST_COMPENSATION]"
 
-#: docs/Config_Reference.md:block 212 (paragraph)
-msgid ""
-"Support for cartesian and hybrid_corexy/z printers with dual carriages on a "
-"single axis. The carriage mode can be set via the SET_DUAL_CARRIAGE extended "
-"g-code command. For example, \"SET_DUAL_CARRIAGE CARRIAGE=1\" command will "
-"activate the carriage defined in this section (CARRIAGE=0 will return "
-"activation to the primary carriage). Dual carriage support is typically "
-"combined with extra extruders - the SET_DUAL_CARRIAGE command is often called "
-"at the same time as the ACTIVATE_EXTRUDER command. Be sure to park the "
-"carriages during deactivation. Note that during G28 homing, typically the "
-"primary carriage is homed first followed by the carriage defined in the "
-"`[dual_carriage]` config section. However, the `[dual_carriage]` carriage will"
-" be homed first if both carriages home in a positive direction and the "
-"[dual_carriage] carriage has a `position_endstop` greater than the primary "
-"carriage, or if both carriages home in a negative direction and the "
-"`[dual_carriage]` carriage has a `position_endstop` less than the primary "
-"carriage."
-msgstr ""
-"ஒற்றை அச்சில் இரட்டை வண்டிகளுடன் கார்ட்டீசியன் மற்றும் ஐப்ரிட்_கோரெக்சி/இசட் "
-"அச்சுப்பொறிகளுக்கான உதவி. வண்டி பயன்முறையை set_dual_carriage நீட்டிக்கப்பட்ட "
-"சி-குறியீடு கட்டளை வழியாக அமைக்கலாம். எடுத்துக்காட்டாக, \"set_dual_carriage "
-"வண்டி = 1\" கட்டளை இந்த பிரிவில் வரையறுக்கப்பட்ட வண்டியை செயல்படுத்தும் (வண்டி"
-" = 0 முதன்மை வண்டிக்கு செயல்படுத்தும்). இரட்டை வண்டி உதவி பொதுவாக கூடுதல் "
-"எக்ச்ட்ரூடர்களுடன் இணைக்கப்படுகிறது - Set_dual_carriage கட்டளை பெரும்பாலும் "
-"Activate_extruder கட்டளையின் அதே நேரத்தில் அழைக்கப்படுகிறது. செயலிழக்கும்போது "
-"வண்டிகளை நிறுத்த மறக்காதீர்கள். ஐயா 28 ஓமிங்கின் போது, பொதுவாக முதன்மை வண்டி "
-"முதலில் `[டூயல்_ காரேச்]` கட்டமைப்பு பிரிவில் வரையறுக்கப்பட்ட வண்டியைத் "
-"தொடர்ந்து உள்ளது என்பதை நினைவில் கொள்க. இருப்பினும், இரு நேர்மறையான திசையில் "
-"வீட்டிற்கு எடுத்துச் சென்றால் `[இரட்டை_ காரியேச்]` வண்டி முதலில் "
-"வைத்திருக்கும் மற்றும் [டூயல்_ காரேச்] வண்டியில் முதன்மை வண்டியை விட "
-"`நிலை_என்ட்ச்டாப்` அதிகமாக இருந்தால், அல்லது இருவரும் எதிர்மறையான திசையில் "
-"வீட்டிற்கு எடுத்துச் சென்றால் மற்றும்` ."
-
 #: docs/Config_Reference.md:block 213 (paragraph)
 msgid ""
 "Additionally, one could use \"SET_DUAL_CARRIAGE CARRIAGE=1 MODE=COPY\" or "
@@ -2068,21 +2000,6 @@ msgstr ""
 #: docs/Config_Reference.md:block 259 (header)
 msgid "AHT10/AHT20/AHT21 temperature sensor"
 msgstr "AHT10/AHT20/AHT21 வெப்பநிலை சென்சார்"
-
-#: docs/Config_Reference.md:block 260 (paragraph)
-msgid ""
-"AHT10/AHT20/AHT21 two wire interface (I2C) environmental sensors. Note that "
-"these sensors are not intended for use with extruders and heater beds, but "
-"rather for monitoring ambient temperature (C) and relative humidity. See "
-"[sample-macros.cfg](../config/sample-macros.cfg) for a gcode_macro that may be"
-" used to report humidity in addition to temperature."
-msgstr ""
-"AHT10/AHT20/AHT21 இரண்டு கம்பி இடைமுகம் (I2C) சுற்றுச்சூழல் சென்சார்கள். இந்த "
-"சென்சார்கள் எக்ச்ட்ரூடர்கள் மற்றும் ஈட்டர் படுக்கைகளுடன் பயன்படுத்த "
-"விரும்பவில்லை என்பதை நினைவில் கொள்க, மாறாக சுற்றுப்புற வெப்பநிலை (சி) மற்றும் "
-"ஈரப்பதத்தை கண்காணிக்க. ஒரு GCODE_MACRO க்கு [மாதிரி-macros.cfg] (../ "
-"config/shalm-macros.cfg) ஐப் பார்க்கவும், இது வெப்பநிலைக்கு கூடுதலாக "
-"ஈரப்பதத்தைப் புகாரளிக்கப் பயன்படலாம்."
 
 #: docs/Config_Reference.md:block 277 (header)
 msgid "Combined temperature sensor"
@@ -2263,7 +2180,7 @@ msgstr ""
 
 #: docs/Config_Reference.md:block 175 (paragraph)
 msgid "Support for LIS3DH accelerometers."
-msgstr ""
+msgstr "LIS3DH முடுக்கமானிகளுக்கான உதவி."
 
 #: docs/Config_Reference.md:block 207 (paragraph)
 msgid ""
@@ -2271,10 +2188,13 @@ msgid ""
 "gantry. See the [Axis Twist Compensation Guide](Axis_Twist_Compensation.md) "
 "for more detailed information regarding symptoms, configuration and setup."
 msgstr ""
+"ஃச் அல்லது ஒய் கேன்ட்ரியில் திருப்பம் காரணமாக தவறான ஆய்வு அளவீடுகளுக்கு "
+"ஈடுசெய்யும் கருவி. அறிகுறிகள், உள்ளமைவு மற்றும் அமைப்பு தொடர்பான விரிவான "
+"தகவல்களுக்கு [அச்சு திருப்ப இழப்பீட்டு வழிகாட்டி] (அச்சு_ட்விச்ட்_பென்சேசன்."
 
 #: docs/Config_Reference.md:block 391 (header)
 msgid "aip31068_spi display"
-msgstr ""
+msgstr "AIP31068 SPI காட்சி"
 
 #: docs/Config_Reference.md:block 392 (paragraph)
 msgid ""
@@ -2282,6 +2202,8 @@ msgid ""
 "hd44780_spi a 20x04 (20 symbols by 4 lines) display with slightly different "
 "internal protocol."
 msgstr ""
+"AIP31068_SPI டிச்ப்ளே கட்டமைப்பது பற்றிய தகவல்கள் - HD44780_SPI A 20x04 (4 "
+"வரிகளால் 20 சின்னங்கள்) சற்று மாறுபட்ட உள் நெறிமுறையுடன் காட்சி."
 
 #: docs/Config_Reference.md:block 446 (header)
 msgid "HX711"
@@ -2295,6 +2217,11 @@ msgid ""
 "analysis tool](Debugging.md#motion-analysis-and-data-logging). See the [G-Code"
 " reference](G-Codes.md#angle) for available commands."
 msgstr ""
+"A1333, AS5047D, MT6816, MT6826S, அல்லது TLE5012B SPI சில்லுகளைப் பயன்படுத்தி "
+"ச்டெப்பர் மின்னோடி கோண தண்டு அளவீடுகளைப் படிப்பதற்கான காந்த மண்டப கோண சென்சார்"
+" உதவி. அளவீடுகள் [API சேவையகம்] (API_SERVER.MD) மற்றும் [இயக்க பகுப்பாய்வு "
+"கருவி] (பிழைத்திருத்தம். கிடைக்கக்கூடிய கட்டளைகளுக்கு [சி-குறியீடு குறிப்பு] "
+"(சி-கோட்ச்.எம்டி#கோணம்) ஐப் பார்க்கவும்."
 
 #: docs/Config_Reference.md:block 487 (paragraph)
 msgid ""
@@ -2307,27 +2234,281 @@ msgid ""
 "support a rate of 400000 via the `i2c_speed` parameter. All other Klipper "
 "micro-controllers use a 100000 rate and ignore the `i2c_speed` parameter."
 msgstr ""
+"பெரும்பாலான கிளிப்பர் மைக்ரோ-கன்ட்ரோலர் செயலாக்கங்கள் 100000 (*நிலையான "
+"பயன்முறை*, 100kbit/s) `i2c_speed` ஐ மட்டுமே ஆதரிக்கின்றன. கிளிப்பர் "
+"\"லினக்ச்\" மைக்ரோ-கன்ட்ரோலர் 400000 வேகத்தை (*வேகமான பயன்முறை*, 400KBIT/S) "
+"ஆதரிக்கிறது, ஆனால் அது [இயக்க முறைமையில் அமைக்கப்பட வேண்டும்] "
+"(RPI_MICROCONTROLLER.MD#விருப்ப-ENABLEN-I2C) மற்றும் `I2C_SPEED` அளவுரு "
+"இல்லையெனில் நான் ஆக வேண்டும். கிளிப்பர் \"RP2040\" மைக்ரோ-கன்ட்ரோலர் மற்றும் "
+"ATMEGA AVR குடும்பம் மற்றும் சில STM32 (F0, G0, G4, L4, F7, H7) `I2C_SPEED` "
+"அளவுரு வழியாக 400000 விகிதத்தை ஆதரிக்கின்றன. மற்ற அனைத்து கிளிப்பர் "
+"மைக்ரோ-கன்ட்ரோலர்களும் 100000 வீதத்தைப் பயன்படுத்துகின்றன மற்றும் `i2c_speed` "
+"அளவுருவைப் புறக்கணிக்கின்றன."
 
-#: docs/Config_Reference.md:block 171 (header)
+#: docs/Config_Reference.md:block 69 (header)
+msgid "Generic Cartesian Kinematics"
+msgstr ""
+
+#: docs/Config_Reference.md:block 70 (paragraph)
+msgid ""
+"See [example-generic-cartesian.cfg](../config/example-generic-caretesian.cfg) "
+"for an example generic Cartesian kinematics config file."
+msgstr ""
+
+#: docs/Config_Reference.md:block 71 (paragraph)
+msgid ""
+"This printer kinematic class allows a user to define in a pretty flexible "
+"manner an arbitrary Cartesian-style kinematics. In principle, the regular "
+"cartesian, corexy, hybrid_corexy can be defined this way too. However, more "
+"importantly, various otherwise unsupported kinematics such as inverted "
+"hybrid_corexy or corexyuv can be defined using this kinematic."
+msgstr ""
+
+#: docs/Config_Reference.md:block 72 (paragraph)
+msgid ""
+"Notably, the definition of a generic Cartesian kinematic deviates "
+"significantly from the other kinematic types. It follows the following "
+"convention: a user defines a set of carriages with certain range of motion "
+"that can move independently from each other (they should move over the "
+"Cartesian axes X, Y, and Z, hence the name of the kinematic) and corresponding"
+" endstops that allow the firmware to determine the position of carriages "
+"during homing, as well as a set of steppers that move those carriages. The "
+"`[printer]` section must specify the kinematic and other printer-level "
+"settings same as the regular Cartesian kinematic:"
+msgstr ""
+
+#: docs/Config_Reference.md:block 74 (paragraph)
+msgid ""
+"Then a user must define three primary carriages for X, Y, and Z axes, e.g.:"
+msgstr ""
+
+#: docs/Config_Reference.md:block 76 (paragraph)
+msgid ""
+"Afterwards, a user specifies the stepper motors that move these carriages, for"
+" instance"
+msgstr ""
+
+#: docs/Config_Reference.md:block 78 (paragraph)
+msgid ""
+"See [stepper](#stepper) section for more information on the regular stepper "
+"parameters. The `carriages` parameter defines how the stepper affects the "
+"motion of the carriages. For example, `carriage_x+carriage_y` indicates that "
+"the motion of the stepper in the positive direction by the distance `d` moves "
+"the carriages `carriage_x` and `carriage_y` by the same distance `d` in the "
+"positive direction, while `carriage_x-0.5*carriage_y` means the motion of the "
+"stepper in the positive direction by the distance `d` moves the carriage "
+"`carriage_x` by the distance `d` in the positive direction, but the carriage "
+"`carriage_y` will travel distance `d/2` in the negative direction."
+msgstr ""
+
+#: docs/Config_Reference.md:block 79 (paragraph)
+msgid ""
+"More than a single stepper motor can be defined to drive the same axis or "
+"belt. For example, on a CoreXY AWD setups two motors driving the same belt can"
+" be defined as"
+msgstr ""
+
+#: docs/Config_Reference.md:block 81 (paragraph)
+msgid ""
+"with `a0` and `a1` steppers having their own control pins, but sharing the "
+"same `carriages` and corresponding endstops."
+msgstr ""
+
+#: docs/Config_Reference.md:block 82 (paragraph)
+msgid ""
+"There are situations when a user wants to have more than one endstop per axis."
+" Examples of such configurations include Y axis driven by two independent "
+"stepper motors with belts attached to both ends of the X gantry, with "
+"effectively two carriages on Y axis each having an independent endstop, and "
+"multi-stepper Z axis with each stepper having its own endstop (not to be "
+"confused with the configurations with multiple Z motors but only a single "
+"endstop). These configurations can be declared by specifying additional "
+"carriage(s) with their endstops:"
+msgstr ""
+
+#: docs/Config_Reference.md:block 84 (paragraph)
+msgid "and the corresponding stepper motors, for example:"
+msgstr ""
+
+#: docs/Config_Reference.md:block 86 (paragraph)
+msgid ""
+"Notably, an `[extra_carriage]` does not define parameters such as "
+"`position_min`, `position_max`, and `position_endstop`, but instead inherits "
+"them from the specified `primary_carriage`, thus sharing the same range of "
+"motion with the primary carriage."
+msgstr ""
+
+#: docs/Config_Reference.md:block 190 (header)
 msgid "[icm20948]"
 msgstr ""
 
-#: docs/Config_Reference.md:block 172 (paragraph)
+#: docs/Config_Reference.md:block 191 (paragraph)
 msgid "Support for icm20948 accelerometers."
 msgstr ""
 
-#: docs/Config_Reference.md:block 470 (header)
+#: docs/Config_Reference.md:block 199 (header)
+msgid "[bmi160]"
+msgstr ""
+
+#: docs/Config_Reference.md:block 200 (paragraph)
+msgid "BMI160 accelerometer. This sensor can be queried via I2C or SPI bus."
+msgstr ""
+
+#: docs/Config_Reference.md:block 202 (paragraph)
+msgid "**Important:** Many BMI160 modules use ambiguous pin labels. For SPI:"
+msgstr ""
+
+#: docs/Config_Reference.md:block 203 (unordered list)
+msgid "Use **SCL** for clock (not SCX)"
+msgstr ""
+
+#: docs/Config_Reference.md:block 203 (unordered list)
+msgid "Use **SDA** for MOSI (not SDX)"
+msgstr ""
+
+#: docs/Config_Reference.md:block 203 (unordered list)
+msgid "Use **SA0** for MISO"
+msgstr ""
+
+#: docs/Config_Reference.md:block 203 (unordered list)
+msgid "Use **CS** for chip select"
+msgstr ""
+
+#: docs/Config_Reference.md:block 204 (paragraph)
+msgid "The pins labeled SCX/SDX are for the auxiliary magnetometer bus."
+msgstr ""
+
+#: docs/Config_Reference.md:block 246 (paragraph)
+msgid ""
+"Support for cartesian, generic_cartesian and hybrid_corexy/z printers with "
+"dual carriages on a single axis. The carriage mode can be set via the "
+"SET_DUAL_CARRIAGE extended g-code command. For example, \"SET_DUAL_CARRIAGE "
+"CARRIAGE=1\" command will activate the carriage defined in this section "
+"(CARRIAGE=0 will return activation to the primary carriage). Dual carriage "
+"support is typically combined with extra extruders - the SET_DUAL_CARRIAGE "
+"command is often called at the same time as the ACTIVATE_EXTRUDER command. Be "
+"sure to park the carriages during deactivation. Note that during G28 homing, "
+"typically the primary carriage is homed first followed by the carriage defined"
+" in the `[dual_carriage]` config section. However, the `[dual_carriage]` "
+"carriage will be homed first if both carriages home in a positive direction "
+"and the [dual_carriage] carriage has a `position_endstop` greater than the "
+"primary carriage, or if both carriages home in a negative direction and the "
+"`[dual_carriage]` carriage has a `position_endstop` less than the primary "
+"carriage."
+msgstr ""
+
+#: docs/Config_Reference.md:block 248 (paragraph)
+msgid ""
+"See [sample-idex.cfg](../config/sample-idex.cfg) for an example configuration "
+"with a regular Cartesian kinematic."
+msgstr ""
+
+#: docs/Config_Reference.md:block 250 (paragraph)
+msgid ""
+"For an example of dual carriage configuration with `generic_cartesian` "
+"kinematic, see the following configuration [sample](../config/example-generic-"
+"caretesian.cfg). Please note that in this case the `[dual_carriage]` "
+"configuration deviates from the configuration described above:"
+msgstr ""
+
+#: docs/Config_Reference.md:block 253 (paragraph)
+msgid ""
+"Then a user must define one or more stepper motors moving the dual carriage "
+"(and other carriages as appropriate), for instance"
+msgstr ""
+
+#: docs/Config_Reference.md:block 255 (paragraph)
+msgid ""
+"`[dual_carriage]` requires special configuration for the input shaper. In "
+"general, it is necessary to run input shaper calibration twice - for the "
+"`dual_carriage` and its `primary_carriage` for the axis they share. Then the "
+"input shaper can be configured as follows, assuming the example above:"
+msgstr ""
+
+#: docs/Config_Reference.md:block 257 (paragraph)
+msgid ""
+"Note that `SHAPER_TYPE_Y` and `SHAPER_FREQ_Y` must be the same in both "
+"commands in this case, since the same motors drive Y axis when either of the "
+"`carriage_x` and `carriage_u` carriages are active."
+msgstr ""
+
+#: docs/Config_Reference.md:block 258 (paragraph)
+msgid ""
+"It is worth noting that `generic_cartesian` kinematic can support two dual "
+"carriages for X and Y axes. For reference, see for instance a "
+"[sample](../config/sample-corexyuv.cfg) of CoreXYUV configuration."
+msgstr ""
+
+#: docs/Config_Reference.md:block 306 (paragraph)
+msgid ""
+"AHT10/AHT15/AHT20/AHT21/AHT30 two wire interface (I2C) environmental sensors. "
+"Note that these sensors are not intended for use with extruders and heater "
+"beds, but rather for monitoring ambient temperature (C) and relative humidity."
+" See [sample-macros.cfg](../config/sample-macros.cfg) for a gcode_macro that "
+"may be used to report humidity in addition to temperature."
+msgstr ""
+
+#: docs/Config_Reference.md:block 318 (paragraph)
+msgid ""
+"The atsam, atsamd, stm32 and rp2040 micro-controllers contain an internal "
+"temperature sensor. One can use the \"temperature_mcu\" sensor to monitor "
+"these temperatures."
+msgstr ""
+
+#: docs/Config_Reference.md:block 373 (header)
+msgid "[static_pwm_clock]"
+msgstr ""
+
+#: docs/Config_Reference.md:block 374 (paragraph)
+msgid ""
+"Static configurable output pin (one may define any number of sections with an "
+"\"static_pwm_clock\" prefix). Pins configured here will be set up as clock "
+"output pins. Generally used to provide clock input to other hardware on the "
+"board."
+msgstr ""
+
+#: docs/Config_Reference.md:block 419 (paragraph)
+msgid ""
+"Statically configured MCP4018 digipot connected via i2c (one may define any "
+"number of sections with an \"mcp4018\" prefix)."
+msgstr ""
+
+#: docs/Config_Reference.md:block 495 (header)
+msgid "ADS131M0x"
+msgstr ""
+
+#: docs/Config_Reference.md:block 496 (paragraph)
+msgid ""
+"The ADS131M0x is a family of fast, 24-bit, delta-sigma ADCs. Two sensors are "
+"supported from this family: ADS131M02 with two simultaneously-sampling "
+"differential channels and ADS131M04 with four channels. They feature a "
+"programmable gain amplifier (PGA) with gains up to 128, configurable sampling "
+"rates up to 64000 samples per second, and require an external clock input (300"
+" kHz to 8.4 MHz, 8.192 MHz nominal)."
+msgstr ""
+
+#: docs/Config_Reference.md:block 498 (header)
+msgid "[load_cell_probe]"
+msgstr ""
+
+#: docs/Config_Reference.md:block 499 (paragraph)
+msgid ""
+"Load Cell Probe. This combines the functionality of a [probe] and a "
+"[load_cell]."
+msgstr ""
+
+#: docs/Config_Reference.md:block 513 (header)
 msgid "[ads1x1x]"
 msgstr ""
 
-#: docs/Config_Reference.md:block 471 (paragraph)
+#: docs/Config_Reference.md:block 514 (paragraph)
 msgid ""
 "ADS1013, ADS1014, ADS1015, ADS1113, ADS1114 and ADS1115 are I2C based Analog "
 "to Digital Converters that can be used for temperature sensors. They provide 4"
 " analog input pins either as single line or as differential input."
 msgstr ""
 
-#: docs/Config_Reference.md:block 472 (paragraph)
+#: docs/Config_Reference.md:block 515 (paragraph)
 msgid ""
 "Note: Use caution if using this sensor to control heaters. The heater min_temp"
 " and max_temp are only verified in the host and only if the host is running "
@@ -2336,11 +2517,11 @@ msgid ""
 " working connection to the host.)"
 msgstr ""
 
-#: docs/Config_Reference.md:block 474 (paragraph)
+#: docs/Config_Reference.md:block 517 (paragraph)
 msgid "The chip provides pins that can be used on other sensors."
 msgstr ""
 
-#: docs/Config_Reference.md:block 484 (paragraph)
+#: docs/Config_Reference.md:block 527 (paragraph)
 msgid ""
 "If you use Octoprint and stream gcode over the serial port instead of printing"
 " from virtual_sd, then remove **M1** and **M0** from *Pausing commands* in "
@@ -2348,6 +2529,99 @@ msgid ""
 "start print on the Palette 2 and unpausing in Octoprint for your print to "
 "begin."
 msgstr ""
+
+#: docs/Config_Reference.md:block 87 (paragraph)
+msgid ""
+"For the references on how to configure IDEX setups, see the [dual "
+"carriage](#dual_carriage) section."
+msgstr ""
+
+#: docs/Config_Reference.md:block 181 (paragraph)
+msgid ""
+"See the [exclude objects guide](Exclude_Object.md) and [command "
+"reference](G-Codes.md#exclude_object) for additional information. See the "
+"[sample-macros.cfg](../config/sample-macros.cfg) file for a "
+"Marlin/RepRapFirmware compatible M486 G-Code macro."
+msgstr ""
+
+#: docs/Config_Reference.md:block 252 (paragraph)
+msgid ""
+"Refer to [generic cartesian](#generic-cartesian-kinematics) section for more "
+"information on the regular `carriage` parameters."
+msgstr ""
+
+#: docs/Config_Reference.md:block 408 (header)
+msgid "[tmc5262]"
+msgstr ""
+
+#: docs/Config_Reference.md:block 409 (paragraph)
+msgid ""
+"Configure a TMC5262 stepper motor driver via SPI. Define a section with a "
+"\"tmc5262\" prefix followed by the name of the corresponding stepper (for "
+"example, \"[tmc5262 stepper_x]\")."
+msgstr ""
+
+#: docs/Config_Reference.md:block 410 (paragraph)
+msgid "This implementation supports SpreadCycle with a physical endstop."
+msgstr ""
+
+#: docs/Config_Reference.md:block 490 (header)
+msgid "CS1237"
+msgstr ""
+
+#: docs/Config_Reference.md:block 491 (paragraph)
+msgid ""
+"The CS1237 sensor backend supports both `[load_cell]` and `[load_cell_probe]`."
+msgstr ""
+
+#: docs/Config_Reference.md:block 493 (paragraph)
+msgid ""
+"Both pins must be on the same MCU. DOUT is bidirectional during configuration."
+msgstr ""
+
+#~ msgid ""
+#~ "See the [exclude objects guide](Exclude_Object.md) and [command "
+#~ "reference](G-Codes.md#excludeobject) for additional information. See the "
+#~ "[sample-macros.cfg](../config/sample-macros.cfg) file for a "
+#~ "Marlin/RepRapFirmware compatible M486 G-Code macro."
+#~ msgstr ""
+#~ "கூடுதல் தகவலுக்கு [Objects வழிகாட்டியை விலக்கு] (விலக்கு_OBJECT.MD) மற்றும் "
+#~ "[கட்டளை குறிப்பு] (g-codes.md#exctudeObject) ஐப் பார்க்கவும். "
+#~ "மார்லின்/ரெப்ராஃபர்ம்வேர் இணக்கமான எம் 486 சி-கோட் மேக்ரோவுக்கான "
+#~ "[மாதிரி-macros.cfg] (../ config/salem-macros.cfg) கோப்பைப் பார்க்கவும்."
+
+#~ msgid ""
+#~ "For the references on how to configure IDEX setups, see the [dual "
+#~ "carriage](#dual-carriage) section."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Refer to [generic cartesian](#generic-cartesian) section for more information "
+#~ "on the regular `carriage` parameters."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "See [sample-idex.cfg](../config/sample-idex.cfg) for an example configuration."
+#~ msgstr ""
+#~ "எடுத்துக்காட்டு உள்ளமைவுக்கு [salem-idex.cfg] (../ config/salem-idex.cfg) ஐப் "
+#~ "பார்க்கவும்."
+
+#~ msgid ""
+#~ "The atsam, atsamd, and stm32 micro-controllers contain an internal temperature"
+#~ " sensor. One can use the \"temperature_mcu\" sensor to monitor these "
+#~ "temperatures."
+#~ msgstr ""
+#~ "ATSAM, ATSAMD மற்றும் STM32 மைக்ரோ-கன்ட்ரோலர்கள் உள் வெப்பநிலை சென்சார் "
+#~ "கொண்டிருக்கின்றன. இந்த வெப்பநிலையை கண்காணிக்க ஒருவர் \"வெப்பநிலை_ம்கு\" "
+#~ "சென்சாரைப் பயன்படுத்தலாம்."
+
+#~ msgid ""
+#~ "Statically configured MCP4018 digipot connected via two gpio \"bit banging\" "
+#~ "pins (one may define any number of sections with an \"mcp4018\" prefix)."
+#~ msgstr ""
+#~ "இரண்டு சி.பி.ஐ.ஓ \"பிட் பேங்கிங்\" ஊசிகளின் வழியாக இணைக்கப்பட்டுள்ள MCP4018 "
+#~ "டிசிபோட் (ஒருவர் \"MCP4018\" முன்னொட்டுடன் எத்தனை பிரிவுகளையும் "
+#~ "வரையறுக்கலாம்)."
 
 #~ msgid ""
 #~ "If you use Octoprint and stream gcode over the serial port instead of printing"
@@ -2362,6 +2636,52 @@ msgstr ""
 #~ "நெறிமுறை*இல்*கட்டளைகளை*இடைநிறுத்துவதில் இருந்து ரெமோ ** எம் 1 ** மற்றும் ** "
 #~ "எம் 0 ** தட்டு 2 இல் அச்சிடத் தொடங்கவும், உங்கள் அச்சு தொடங்குவதற்கு "
 #~ "ஆக்டோப்ரின்ட்டில் நிறுத்தி வைக்கவும்."
+
+#~ msgid ""
+#~ "Support for cartesian and hybrid_corexy/z printers with dual carriages on a "
+#~ "single axis. The carriage mode can be set via the SET_DUAL_CARRIAGE extended "
+#~ "g-code command. For example, \"SET_DUAL_CARRIAGE CARRIAGE=1\" command will "
+#~ "activate the carriage defined in this section (CARRIAGE=0 will return "
+#~ "activation to the primary carriage). Dual carriage support is typically "
+#~ "combined with extra extruders - the SET_DUAL_CARRIAGE command is often called "
+#~ "at the same time as the ACTIVATE_EXTRUDER command. Be sure to park the "
+#~ "carriages during deactivation. Note that during G28 homing, typically the "
+#~ "primary carriage is homed first followed by the carriage defined in the "
+#~ "`[dual_carriage]` config section. However, the `[dual_carriage]` carriage will"
+#~ " be homed first if both carriages home in a positive direction and the "
+#~ "[dual_carriage] carriage has a `position_endstop` greater than the primary "
+#~ "carriage, or if both carriages home in a negative direction and the "
+#~ "`[dual_carriage]` carriage has a `position_endstop` less than the primary "
+#~ "carriage."
+#~ msgstr ""
+#~ "ஒற்றை அச்சில் இரட்டை வண்டிகளுடன் கார்ட்டீசியன் மற்றும் ஐப்ரிட்_கோரெக்சி/இசட் "
+#~ "அச்சுப்பொறிகளுக்கான உதவி. வண்டி பயன்முறையை set_dual_carriage நீட்டிக்கப்பட்ட "
+#~ "சி-குறியீடு கட்டளை வழியாக அமைக்கலாம். எடுத்துக்காட்டாக, \"set_dual_carriage "
+#~ "வண்டி = 1\" கட்டளை இந்த பிரிவில் வரையறுக்கப்பட்ட வண்டியை செயல்படுத்தும் (வண்டி"
+#~ " = 0 முதன்மை வண்டிக்கு செயல்படுத்தும்). இரட்டை வண்டி உதவி பொதுவாக கூடுதல் "
+#~ "எக்ச்ட்ரூடர்களுடன் இணைக்கப்படுகிறது - Set_dual_carriage கட்டளை பெரும்பாலும் "
+#~ "Activate_extruder கட்டளையின் அதே நேரத்தில் அழைக்கப்படுகிறது. செயலிழக்கும்போது "
+#~ "வண்டிகளை நிறுத்த மறக்காதீர்கள். ஐயா 28 ஓமிங்கின் போது, பொதுவாக முதன்மை வண்டி "
+#~ "முதலில் `[டூயல்_ காரேச்]` கட்டமைப்பு பிரிவில் வரையறுக்கப்பட்ட வண்டியைத் "
+#~ "தொடர்ந்து உள்ளது என்பதை நினைவில் கொள்க. இருப்பினும், இரு நேர்மறையான திசையில் "
+#~ "வீட்டிற்கு எடுத்துச் சென்றால் `[இரட்டை_ காரியேச்]` வண்டி முதலில் "
+#~ "வைத்திருக்கும் மற்றும் [டூயல்_ காரேச்] வண்டியில் முதன்மை வண்டியை விட "
+#~ "`நிலை_என்ட்ச்டாப்` அதிகமாக இருந்தால், அல்லது இருவரும் எதிர்மறையான திசையில் "
+#~ "வீட்டிற்கு எடுத்துச் சென்றால் மற்றும்` ."
+
+#~ msgid ""
+#~ "AHT10/AHT20/AHT21 two wire interface (I2C) environmental sensors. Note that "
+#~ "these sensors are not intended for use with extruders and heater beds, but "
+#~ "rather for monitoring ambient temperature (C) and relative humidity. See "
+#~ "[sample-macros.cfg](../config/sample-macros.cfg) for a gcode_macro that may be"
+#~ " used to report humidity in addition to temperature."
+#~ msgstr ""
+#~ "AHT10/AHT20/AHT21 இரண்டு கம்பி இடைமுகம் (I2C) சுற்றுச்சூழல் சென்சார்கள். இந்த "
+#~ "சென்சார்கள் எக்ச்ட்ரூடர்கள் மற்றும் ஈட்டர் படுக்கைகளுடன் பயன்படுத்த "
+#~ "விரும்பவில்லை என்பதை நினைவில் கொள்க, மாறாக சுற்றுப்புற வெப்பநிலை (சி) மற்றும் "
+#~ "ஈரப்பதத்தை கண்காணிக்க. ஒரு GCODE_MACRO க்கு [மாதிரி-macros.cfg] (../ "
+#~ "config/shalm-macros.cfg) ஐப் பார்க்கவும், இது வெப்பநிலைக்கு கூடுதலாக "
+#~ "ஈரப்பதத்தைப் புகாரளிக்கப் பயன்படலாம்."
 
 #~ msgid ""
 #~ "[mcu]\n"

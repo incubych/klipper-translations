@@ -1,16 +1,16 @@
-# Nikolai Danov <nikolaidanov67@gmail.com>, 2022.
-# Niolay Danov <nikdan@abv.bg>, 2024.
+# Nikolai Danov <nikolaidanov67@gmail.com>, 2022, 2025.
+# Niolay Danov <nikdan@abv.bg>, 2024, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-10-31 21:01+0000\n"
-"Last-Translator: Niolay Danov <nikdan@abv.bg>\n"
+"PO-Revision-Date: 2025-07-22 08:44+0000\n"
+"Last-Translator: Nikolai Danov <nikolaidanov67@gmail.com>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/klipper/slicers/bg/>\n"
 "Language: bg\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.2-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document provides some tips for configuring a \"slicer\" application for "
@@ -248,11 +248,16 @@ msgstr ""
 
 #: docs/Slicers.md:block 33 (paragraph)
 msgid ""
-"An example of a START_PRINT macro using these paramaters can be found in "
+"An example of a START_PRINT macro using these parameters can be found in "
 "config/sample-macros.cfg"
 msgstr ""
-"Пример за макрос START_PRINT, използващ тези параметри, можете да намерите в "
-"config/sample-macros.cfg"
+
+#~ msgid ""
+#~ "An example of a START_PRINT macro using these paramaters can be found in "
+#~ "config/sample-macros.cfg"
+#~ msgstr ""
+#~ "Пример за макрос START_PRINT, използващ тези параметри, можете да намерите в "
+#~ "config/sample-macros.cfg"
 
 #~ msgid ""
 #~ "START_PRINT BED_TEMP={material_bed_temperature_layer_0} "

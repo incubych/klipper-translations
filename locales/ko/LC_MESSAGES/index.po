@@ -1,16 +1,16 @@
-# brian park <gouache95@gmail.com>, 2021.
-# 이정희 <daemul72@gmail.com>, 2022.
+# brian park <gouache95@gmail.com>, 2021, 2025.
+# 이정희 <daemul72@gmail.com>, 2022, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2022-03-15 10:56+0000\n"
-"Last-Translator: 이정희 <daemul72@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:15+0000\n"
+"Last-Translator: brian park <gouache95@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/klipper/index/ko/>\n"
 "Language: ko\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.12-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: docs/index.md:block 1 (paragraph)
 msgid "hide:"
@@ -28,23 +28,20 @@ msgstr "![](img/klipper-logo.png){ .center-image }"
 msgid ""
 "The Klipper firmware controls 3d-Printers. It combines the power of a general "
 "purpose computer with one or more micro-controllers. See the [features "
-"document](https://www.klipper3d.org/Features.html) for more information on why"
-" you should use the Klipper software."
+"document](Features.md) for more information on why you should use the Klipper "
+"software."
 msgstr ""
 
 #: docs/index.md:block 5 (paragraph)
-msgid ""
-"Start by [installing Klipper "
-"software](https://www.klipper3d.org/Installation.html)."
+msgid "Start by [installing Klipper software](Installation.md)."
 msgstr ""
 
 #: docs/index.md:block 6 (paragraph)
 msgid ""
-"Klipper software is Free Software. Read the "
-"[documentation](https://www.klipper3d.org/Overview.html), see the "
-"[license](COPYING), or [download](https://github.com/Klipper3d/Klipper) the "
-"software. We depend on the generous support from our "
-"[sponsors](https://www.klipper3d.org/Sponsors.html)."
+"Klipper software is Free Software. Read the [documentation](Overview.md), see "
+"the [license](../COPYING), or [download](https://github.com/Klipper3d/Klipper)"
+" the software. We depend on the generous support from our "
+"[sponsors](Sponsors.md)."
 msgstr ""
 
 #~ msgid ""

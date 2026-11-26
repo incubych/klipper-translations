@@ -1,15 +1,15 @@
-# Fred Chan <fred2088@gmail.com>, 2022.
+# Fred Chan <fred2088@gmail.com>, 2022, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2022-02-24 08:58+0000\n"
-"Last-Translator: Fred Chan <fred2088@gmail.com>\n"
-"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/klipper/skew_correction/zh_Hant/>\n"
+"PO-Revision-Date: 2025-07-22 08:31+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/projects/klipper/skew_correction/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.11-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: docs/Skew_Correction.md:block 1 (header)
 msgid "Skew correction"
@@ -60,15 +60,6 @@ msgstr "![skew_lengths](img/skew_lengths.png)"
 #: docs/Skew_Correction.md:block 9 (header)
 msgid "Configure your skew"
 msgstr "配置偏斜"
-
-#: docs/Skew_Correction.md:block 10 (paragraph)
-msgid ""
-"Make sure `[skew_correction]` is in printer.cfg. You may now use the "
-"`SET_SKEW` gcode to configure skew_correcton. For example, if your measured "
-"lengths along XY are as follows:"
-msgstr ""
-"確保 `[skew_correction]` 已經在 printer.cfg 中。現在可以使用`SET_SKEW` G-Code 來配置 "
-"skew_correcton。例如，如果對 XY 平面測量的距離結果如下："
 
 #: docs/Skew_Correction.md:block 12 (paragraph)
 msgid "`SET_SKEW` can be used to configure skew correction for the XY plane."
@@ -157,6 +148,21 @@ msgid ""
 " Corner D, and the length from Corner A to Corner D. When measuring length AD "
 "do not include the flats on the corners that some test objects provide."
 msgstr ""
+
+#: docs/Skew_Correction.md:block 10 (paragraph)
+msgid ""
+"Make sure `[skew_correction]` is in printer.cfg. You may now use the "
+"`SET_SKEW` gcode to configure skew_correction. For example, if your measured "
+"lengths along XY are as follows:"
+msgstr ""
+
+#~ msgid ""
+#~ "Make sure `[skew_correction]` is in printer.cfg. You may now use the "
+#~ "`SET_SKEW` gcode to configure skew_correcton. For example, if your measured "
+#~ "lengths along XY are as follows:"
+#~ msgstr ""
+#~ "確保 `[skew_correction]` 已經在 printer.cfg 中。現在可以使用`SET_SKEW` G-Code 來配置 "
+#~ "skew_correcton。例如，如果對 XY 平面測量的距離結果如下："
 
 #~ msgid ""
 #~ "Length AC = 140.4\n"

@@ -1,19 +1,20 @@
-# pomowunk <accounts+gthb@felixir.de>, 2021.
-# Niklas Tecklenborg <niklas.tecklenborg@gmail.com>, 2024.
+# pomowunk <accounts+gthb@felixir.de>, 2021, 2025.
+# Niklas Tecklenborg <niklas.tecklenborg@gmail.com>, 2024, 2025.
+# Extrutex <w1indt@outlook.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
 "POT-Creation-Date: 2021-07-07 01:37+0200\n"
-"PO-Revision-Date: 2024-04-08 17:29+0000\n"
-"Last-Translator: Niklas Tecklenborg <niklas.tecklenborg@gmail.com>\n"
+"PO-Revision-Date: 2026-08-31 05:53+0000\n"
+"Last-Translator: Extrutex <w1indt@outlook.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/klipper/features/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 msgid "Klipper has several compelling features:"
 msgstr "Klipper hat viele überzeugende Funktionen:"
@@ -85,18 +86,6 @@ msgstr ""
 "erforderlich)."
 
 msgid ""
-"Portable code. Klipper works on ARM, AVR, and PRU based micro-controllers. "
-"Existing \"reprap\" style printers can run Klipper without hardware "
-"modification - just add a Raspberry Pi. Klipper's internal code layout makes "
-"it easier to support other micro-controller architectures as well."
-msgstr ""
-"Tragbarer Code. Klipper funktioniert auf ARM-, AVR- und PRU-basierten "
-"Mikrocontrollern. Bestehende Drucker im \"Reprap\"-Stil können Klipper ohne "
-"Hardware-Modifikation betreiben - fügen Sie einfach einen Raspberry Pi hinzu. "
-"Das interne Code-Layout von Klipper macht es einfacher, auch andere "
-"Mikrocontroller-Architekturen zu unterstützen."
-
-msgid ""
 "Simpler code. Klipper uses a very high level language (Python) for most code. "
 "The kinematics algorithms, the G-code parsing, the heating and thermistor "
 "algorithms, etc. are all written in Python. This makes it easier to develop "
@@ -146,6 +135,10 @@ msgid ""
 "height calibration as well as an enhanced X and Y dimension calibration. The "
 "calibration can be done with a Z height probe or via manual probing."
 msgstr ""
+"Unterstützung für die automatische Delta-Kalibrierung. Das Kalibrierwerkzeug "
+"kann sowohl eine grundlegende Höhenkalibrierung als auch eine erweiterte "
+"Kalibrierung der X- und Y-Dimension durchführen. Die Kalibrierung kann mit "
+"einer Z-Höhensonde oder durch manuelles Abtasten erfolgen."
 
 msgid "Basic thermal heater protection enabled by default."
 msgstr "Einfache Schutzfunktion für Heizelemente, standardmäßig aktiviert."
@@ -168,6 +161,13 @@ msgid ""
 "direction will be optimized to reduce print stalls and improve overall print "
 "time."
 msgstr ""
+"Unterstützung für konstante Beschleunigung und \"Look-ahead\". Alle "
+"Druckerbewegungen beschleunigen schrittweise aus dem Stillstand auf "
+"Reisegeschwindigkeit und bremsen anschließend wieder bis zum Stillstand ab. "
+"Der eingehende Strom von G-Code-Bewegungsbefehlen wird in eine Warteschlange "
+"eingereiht und analysiert - die Beschleunigung zwischen Bewegungen in "
+"ähnlicher Richtung wird optimiert, um Druckstockungen zu reduzieren und die "
+"Gesamtdruckzeit zu verbessern."
 
 msgid ""
 "Klipper implements a \"stepper phase endstop\" algorithm that can improve the "
@@ -248,6 +248,8 @@ msgid ""
 "Support for filament presence sensors, filament motion sensors, and filament "
 "width sensors."
 msgstr ""
+"Unterstützung für Filamentanwesenheitssensoren, Filamentbewegungssensoren und "
+"Filamentbreitensensoren."
 
 #: docs/Features.md:block 10 (table)
 msgid "1 stepper active"
@@ -453,6 +455,18 @@ msgid ""
 " physics of the machine kinematics. More precise stepper movement provides "
 "quieter and more stable printer operation."
 msgstr ""
+"Hochpräzise Schrittmotorbewegung. Klipper nutzt für die Berechnung der "
+"Druckerbewegungen einen Anwendungsprozessor (zum Beispiel einen "
+"kostengünstigen Raspberry Pi). Der Anwendungsprozessor bestimmt, wann jeder "
+"Schrittmotor einen Schritt ausführen soll, komprimiert diese Ereignisse, "
+"überträgt sie an den Mikrocontroller, und der Mikrocontroller führt "
+"anschließend jedes Ereignis zum angeforderten Zeitpunkt aus. Jedes "
+"Schrittereignis wird mit einer Genauigkeit von 25 Mikrosekunden oder besser "
+"eingeplant. Die Software verwendet keine kinematischen Schätzverfahren (wie "
+"den Bresenham-Algorithmus) - stattdessen berechnet sie exakte Schrittzeiten "
+"auf Basis der Physik der Beschleunigung und der Physik der Maschinenkinematik."
+" Eine präzisere Schrittmotorbewegung ermöglicht einen leiseren und stabileren "
+"Druckerbetrieb."
 
 #: docs/Features.md:block 3 (unordered list)
 msgid ""
@@ -463,6 +477,12 @@ msgid ""
 " makes it easier to use available hardware, to upgrade to new hardware, and to"
 " have confidence in the hardware."
 msgstr ""
+"Klipper ist hardwareunabhängig. Man sollte unabhängig von der Low-Level-"
+"Elektronik dasselbe präzise Timing erhalten. Der Klipper-Mikrocontroller-Code "
+"ist so ausgelegt, dass er dem von der Klipper-Host-Software vorgegebenen "
+"Zeitplan getreu folgt (oder den Benutzer deutlich darauf hinweist, wenn ihm "
+"das nicht möglich ist). Das erleichtert die Nutzung vorhandener Hardware, die "
+"Aufrüstung auf neue Hardware und das Vertrauen in die Hardware."
 
 #: docs/Features.md:block 6 (unordered list)
 msgid ""
@@ -488,14 +508,9 @@ msgid ""
 "Run-time \"exclude object\" support. When configured, this module may "
 "facilitate canceling of just one object in a multi-part print."
 msgstr ""
-
-#: docs/Features.md:block 6 (unordered list)
-msgid ""
-"Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
-"TMC2660, and TMC5160 stepper motor drivers. There is also support for current "
-"control of traditional stepper drivers via AD5206, DAC084S085, MCP4451, "
-"MCP4728, MCP4018, and PWM pins."
-msgstr ""
+"Unterstützung für \"exclude object\" zur Laufzeit. Nach entsprechender "
+"Konfiguration kann dieses Modul den Abbruch nur eines einzelnen Objekts "
+"innerhalb eines Mehrteiledrucks ermöglichen."
 
 #: docs/Features.md:block 3 (unordered list)
 msgid ""
@@ -506,6 +521,13 @@ msgid ""
 "higher print velocities. The stepper event timing remains precise even at high"
 " speeds which improves overall stability."
 msgstr ""
+"Erstklassige Leistung. Klipper erreicht sowohl auf neuen als auch auf älteren "
+"Mikrocontrollern hohe Schrittraten. Selbst alte 8-Bit-Mikrocontroller können "
+"Raten von über 175K Schritten pro Sekunde erreichen. Auf neueren "
+"Mikrocontrollern sind mehrere Millionen Schritte pro Sekunde möglich. Höhere "
+"Schrittraten ermöglichen höhere Druckgeschwindigkeiten. Das Timing der "
+"Schrittereignisse bleibt auch bei hohen Geschwindigkeiten präzise, was die "
+"Gesamtstabilität verbessert."
 
 #: docs/Features.md:block 10 (table)
 msgid "AR100"
@@ -521,26 +543,34 @@ msgstr "2507K"
 
 #: docs/Features.md:block 10 (table)
 msgid "RP2350"
-msgstr ""
+msgstr "RP2350"
 
 #: docs/Features.md:block 10 (table)
 msgid "4167K"
-msgstr ""
+msgstr "4167K"
 
 #: docs/Features.md:block 10 (table)
 msgid "2663K"
-msgstr ""
+msgstr "2663K"
 
 #: docs/Features.md:block 10 (table)
 msgid "SAME70"
-msgstr ""
+msgstr "SAME70"
 
 #: docs/Features.md:block 10 (table)
 msgid "6667K"
-msgstr ""
+msgstr "6667K"
 
 #: docs/Features.md:block 10 (table)
 msgid "4737K"
+msgstr "4737K"
+
+#: docs/Features.md:block 3 (unordered list)
+msgid ""
+"Portable code. Klipper works on ARM, AVR, PRU, and other micro-controllers. "
+"Existing \"reprap\" style printers can run Klipper without hardware "
+"modification - just add a Raspberry Pi. Klipper's internal code layout makes "
+"it easier to support other micro-controller architectures as well."
 msgstr ""
 
 #: docs/Features.md:block 6 (unordered list)
@@ -558,10 +588,10 @@ msgstr ""
 msgid ""
 "Support for common temperature sensors (eg, common thermistors, AD595, AD597, "
 "AD849x, PT100, PT1000, MAX6675, MAX31855, MAX31856, MAX31865, BME280, HTU21D, "
-"DS18B20, AHT10, SHT3x, and LM75). Custom thermistors and custom analog "
-"temperature sensors can also be configured. One can monitor the internal "
-"micro-controller temperature sensor and the internal temperature sensor of a "
-"Raspberry Pi."
+"DS18B20, AHT1X, AHT2X, AHT3X, SHT3x, and LM75). Custom thermistors and custom "
+"analog temperature sensors can also be configured. One can monitor the "
+"internal micro-controller temperature sensor and the internal temperature "
+"sensor of a Raspberry Pi."
 msgstr ""
 
 #: docs/Features.md:block 6 (unordered list)
@@ -576,6 +606,18 @@ msgstr ""
 msgid ""
 "Support for measuring and recording acceleration using adxl345, mpu9250, "
 "mpu6050, lis2dw12, lis3dh, and icm20948 accelerometers."
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "STM32G431"
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "3617K"
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "2452K"
 msgstr ""
 
 #: docs/Features.md:block 10 (table)
@@ -597,6 +639,33 @@ msgstr ""
 #: docs/Features.md:block 10 (table)
 msgid "8619K"
 msgstr ""
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
+"TMC2240, TMC2660, TMC5160, and TMC5262 stepper motor drivers. There is also "
+"support for current control of traditional stepper drivers via AD5206, "
+"DAC084S085, MCP4451, MCP4728, MCP4018, and PWM pins."
+msgstr ""
+
+#~ msgid ""
+#~ "Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
+#~ "TMC2240, TMC2660, and TMC5160 stepper motor drivers. There is also support for"
+#~ " current control of traditional stepper drivers via AD5206, DAC084S085, "
+#~ "MCP4451, MCP4728, MCP4018, and PWM pins."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Portable code. Klipper works on ARM, AVR, and PRU based micro-controllers. "
+#~ "Existing \"reprap\" style printers can run Klipper without hardware "
+#~ "modification - just add a Raspberry Pi. Klipper's internal code layout makes "
+#~ "it easier to support other micro-controller architectures as well."
+#~ msgstr ""
+#~ "Tragbarer Code. Klipper funktioniert auf ARM-, AVR- und PRU-basierten "
+#~ "Mikrocontrollern. Bestehende Drucker im \"Reprap\"-Stil können Klipper ohne "
+#~ "Hardware-Modifikation betreiben - fügen Sie einfach einen Raspberry Pi hinzu. "
+#~ "Das interne Code-Layout von Klipper macht es einfacher, auch andere "
+#~ "Mikrocontroller-Architekturen zu unterstützen."
 
 #~ msgid ""
 #~ "Automatic bed leveling support. Klipper can be configured for basic bed tilt "
@@ -643,6 +712,13 @@ msgstr ""
 
 #~ msgid "6061K"
 #~ msgstr "6061K"
+
+#~ msgid ""
+#~ "Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
+#~ "TMC2660, and TMC5160 stepper motor drivers. There is also support for current "
+#~ "control of traditional stepper drivers via AD5206, DAC084S085, MCP4451, "
+#~ "MCP4728, MCP4018, and PWM pins."
+#~ msgstr ""
 
 #~ msgid ""
 #~ "Support for measuring and recording acceleration using an adxl345, mpu9250, "

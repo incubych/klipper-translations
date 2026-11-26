@@ -1,17 +1,21 @@
-# Тихон Титовец <titovetstixon@gmail.com>, 2024.
-# Michael <miha.kokh@gmail.com>, 2024.
-# gfbdrgng <hnaofegnp@hldrive.com>, 2024.
+# Тихон Титовец <titovetstixon@gmail.com>, 2024, 2025.
+# Michael <miha.kokh@gmail.com>, 2024, 2025.
+# gfbdrgng <hnaofegnp@hldrive.com>, 2024, 2025.
+# gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>, 2025.
+# Andrei Stepanov <adem@users.noreply.hosted.weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-12-30 05:01+0000\n"
-"Last-Translator: gfbdrgng <hnaofegnp@hldrive.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/klipper/bootloader_entry/ru/>\n"
+"PO-Revision-Date: 2026-10-25 13:09+0000\n"
+"Last-Translator: Andrei Stepanov <adem@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/klipper/"
+"bootloader_entry/ru/>\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.11.dev0\n"
 
 #: docs/Bootloader_Entry.md:block 1 (header)
 msgid "Bootloader Entry"
@@ -66,7 +70,6 @@ msgstr ""
 " а об успехе будет свидетельствовать печать `Entering bootloader on <DEVICE>`."
 
 #: docs/Bootloader_Entry.md:block 11 (header)
-#, fuzzy
 msgid "Picocom"
 msgstr "Picocom"
 
@@ -81,16 +84,6 @@ msgstr ""
 #: docs/Bootloader_Entry.md:block 15 (header)
 msgid "Physical serial"
 msgstr "Физическая серия"
-
-#: docs/Bootloader_Entry.md:block 16 (paragraph)
-msgid ""
-"If a physical serial port is being used on the MCU (even if a USB serial "
-"adapter is being used to connect to it), sending the string "
-"`<SPACE><FS><SPACE>Request Serial Bootloader!!<SPACE>~`."
-msgstr ""
-"Если на MCU используется физический последовательный порт (даже если для "
-"подключения к нему используется последовательный USB-адаптер), отправьте "
-"строку `<SPACE><FS><SPACE>Запрос последовательного загрузчика!!<SPACE>~`."
 
 #: docs/Bootloader_Entry.md:block 17 (paragraph)
 msgid "`<SPACE>` is an ASCII literal space, 0x20."
@@ -122,7 +115,6 @@ msgstr ""
 "инструменты."
 
 #: docs/Bootloader_Entry.md:block 21 (header)
-#, fuzzy
 msgid "Shell"
 msgstr "Shell"
 
@@ -141,7 +133,6 @@ msgstr ""
 "`115200`."
 
 #: docs/Bootloader_Entry.md:block 25 (header)
-#, fuzzy
 msgid "CANBUS"
 msgstr "CANBUS"
 
@@ -166,9 +157,8 @@ msgstr ""
 "[CANBridge](CANBUS.md#usb-to-can-bus-bridge-mode)."
 
 #: docs/Bootloader_Entry.md:block 28 (header)
-#, fuzzy
 msgid "Katapult's flashtool.py"
-msgstr "Katapult's flashtool.py"
+msgstr "Вспышка Катапулта. py"
 
 #: docs/Bootloader_Entry.md:block 30 (paragraph)
 msgid ""
@@ -254,6 +244,27 @@ msgstr ""
 "питания нагревателя в режиме DFU). Рекомендуется отключать нагреватели и иным "
 "образом предотвращать нежелательные действия при использовании режима DFU. Для"
 " получения более подробной информации обратитесь к документации на вашу плату."
+
+#: docs/Bootloader_Entry.md:block 16 (paragraph)
+msgid ""
+"If a physical serial port is being used on the MCU (even if a USB serial "
+"adapter is being used to connect to it), sending the string "
+"`<SPACE><FS><SPACE>Request Serial Bootloader!!<SPACE>~` requests the "
+"bootloader."
+msgstr ""
+"Если на MCU используется физический последовательный порт (даже если для "
+"подключения к нему применяется USB-адаптер последовательного порта), "
+"отправка строки `<SPACE><FS><SPACE>Request Serial Bootloader!!<SPACE>~` "
+"запрашивает загрузчик."
+
+#~ msgid ""
+#~ "If a physical serial port is being used on the MCU (even if a USB serial "
+#~ "adapter is being used to connect to it), sending the string "
+#~ "`<SPACE><FS><SPACE>Request Serial Bootloader!!<SPACE>~`."
+#~ msgstr ""
+#~ "Если на MCU используется физический последовательный порт (даже если для "
+#~ "подключения к нему используется последовательный USB-адаптер), отправьте "
+#~ "строку `<SPACE><FS><SPACE>Запрос последовательного загрузчика!!<SPACE>~`."
 
 #~ msgid ""
 #~ "> cd klipper/scripts\n"

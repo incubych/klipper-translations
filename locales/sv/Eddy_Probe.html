@@ -1,0 +1,1745 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>Induktiv Eddy-strömsprob - Klipper documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../_klipper3d/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-VEN1PGNQL4"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-VEN1PGNQL4",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VEN1PGNQL4"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#induktiv-eddy-stromsprob" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Klipper documentation" class="md-header__button md-logo" aria-label="Klipper documentation" data-md-component="logo">
+      
+  <img src="../../img/klipper.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Klipper documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Induktiv Eddy-strömsprob
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2 0-.68.06-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.923 7.923 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8.008 8.008 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.65 15.65 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
+                    简体中文
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/zh-Hant/" hreflang="zh-Hant" class="md-select__link">
+                    繁體中文
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/hu/" hreflang="hu" class="md-select__link">
+                    Magyar
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/de/" hreflang="de" class="md-select__link">
+                    Deutsch
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/it/" hreflang="it" class="md-select__link">
+                    Italiano
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/fr/" hreflang="fr" class="md-select__link">
+                    Français
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Klipper3d/klipper/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Klipper3d/klipper
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Klipper documentation" class="md-nav__button md-logo" aria-label="Klipper documentation" data-md-component="logo">
+      
+  <img src="../../img/klipper.svg" alt="logo">
+
+    </a>
+    Klipper documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Klipper3d/klipper/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Klipper3d/klipper
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Overview.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Features.html" class="md-nav__link">
+        Features
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ.html" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Releases.html" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Config_Changes.html" class="md-nav__link">
+        Configuration Changes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contact.html" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Installation and Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation and Configuration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Installation and Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Installation.html" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OctoPrint.html" class="md-nav__link">
+        OctoPrint for Klipper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          Configuration Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Configuration Reference" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Config_Reference.html" class="md-nav__link">
+        Configuration reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rotation_Distance.html" class="md-nav__link">
+        Rotation distance
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Config_checks.html" class="md-nav__link">
+        Configuration checks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4" type="checkbox" id="__nav_7_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_4">
+          Bed Level
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bed Level" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_4">
+          <span class="md-nav__icon md-icon"></span>
+          Bed Level
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bed_Level.html" class="md-nav__link">
+        Bed leveling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Delta_Calibrate.html" class="md-nav__link">
+        Delta calibration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Probe_Calibrate.html" class="md-nav__link">
+        Probe calibration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLTouch.html" class="md-nav__link">
+        BL-Touch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manual_Level.html" class="md-nav__link">
+        Manual leveling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bed_Mesh.html" class="md-nav__link">
+        Bed Mesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Endstop_Phase.html" class="md-nav__link">
+        Endstop phase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Axis_Twist_Compensation.html" class="md-nav__link">
+        Axis Twist Compensation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_5" type="checkbox" id="__nav_7_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_5">
+          Resonance Compensation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resonance Compensation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          Resonance Compensation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Resonance_Compensation.html" class="md-nav__link">
+        Resonance Compensation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Measuring_Resonances.html" class="md-nav__link">
+        Measuring Resonances
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Pressure_Advance.html" class="md-nav__link">
+        Pressure advance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../G-Codes.html" class="md-nav__link">
+        G-Codes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_8" type="checkbox" id="__nav_7_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_8">
+          Command templates
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Command templates" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_8">
+          <span class="md-nav__icon md-icon"></span>
+          Command templates
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Command_Templates.html" class="md-nav__link">
+        Commands templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Status_Reference.html" class="md-nav__link">
+        Status reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TMC_Drivers.html" class="md-nav__link">
+        TMC drivers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Multi_MCU_Homing.html" class="md-nav__link">
+        Multiple Micro-controller Homing and Probing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Slicers.html" class="md-nav__link">
+        Slicers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Skew_Correction.html" class="md-nav__link">
+        Skew correction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Exclude_Object.html" class="md-nav__link">
+        Exclude Objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using_PWM_Tools.html" class="md-nav__link">
+        Using PWM tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Developer Documentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developer Documentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Code_Overview.html" class="md-nav__link">
+        Code overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Kinematics.html" class="md-nav__link">
+        Kinematics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Protocol.html" class="md-nav__link">
+        Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API_Server.html" class="md-nav__link">
+        API server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MCU_Commands.html" class="md-nav__link">
+        MCU commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CANBUS_protocol.html" class="md-nav__link">
+        CANBUS protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Debugging.html" class="md-nav__link">
+        Debugging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Benchmarks.html" class="md-nav__link">
+        Benchmarks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CONTRIBUTING.html" class="md-nav__link">
+        Contributing to Klipper
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Packaging.html" class="md-nav__link">
+        Packaging Klipper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Device Specific Documents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Device Specific Documents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Device Specific Documents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Example_Configs.html" class="md-nav__link">
+        Example configurations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SDCard_Updates.html" class="md-nav__link">
+        SDCard updates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RPi_microcontroller.html" class="md-nav__link">
+        RPi microcontroller
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Beaglebone.html" class="md-nav__link">
+        Beaglebone
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bootloaders.html" class="md-nav__link">
+        Bootloaders
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bootloader_Entry.html" class="md-nav__link">
+        Bootloader Entry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CANBUS.html" class="md-nav__link">
+        CANBUS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CANBUS_Troubleshooting.html" class="md-nav__link">
+        CANBUS Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TSL1401CL_Filament_Width_Sensor.html" class="md-nav__link">
+        TSL1401CL filament width sensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hall_Filament_Width_Sensor.html" class="md-nav__link">
+        Hall filament width sensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Eddy_Probe.html" class="md-nav__link">
+        Eddy Current Inductive probe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Load_Cell.html" class="md-nav__link">
+        Load Cells
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sponsors.html" class="md-nav__link">
+        Sponsors
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sonderingsmetoder" class="md-nav__link">
+    Sonderingsmetoder
+  </a>
+  
+    <nav class="md-nav" aria-label="Sonderingsmetoder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standardmetod-for-sondering" class="md-nav__link">
+    Standardmetod för sondering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sonderingsmetoden-scan" class="md-nav__link">
+    Sonderingsmetoden "scan"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sonderingsmetoden-rapid_scan" class="md-nav__link">
+    Sonderingsmetoden "rapid_scan"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sonderingsmetoden-tap" class="md-nav__link">
+    Sonderingsmetoden "tap"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#konfiguration" class="md-nav__link">
+    Konfiguration
+  </a>
+  
+    <nav class="md-nav" aria-label="Konfiguration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kalibrering-av-drivstrom" class="md-nav__link">
+    Kalibrering av drivström
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kalibrering-av-z-hojder" class="md-nav__link">
+    Kalibrering av Z-höjder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tap-kalibrering" class="md-nav__link">
+    Tap-kalibrering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utfora-forsta-kalibrering-vid-hemstallning-med-prob" class="md-nav__link">
+    Utföra första kalibrering vid hemställning med prob
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kalibrering-av-termisk-drift" class="md-nav__link">
+    Kalibrering av termisk drift
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#felbeskrivning" class="md-nav__link">
+    Felbeskrivning
+  </a>
+  
+    <nav class="md-nav" aria-label="Felbeskrivning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mojliga-hemstallningsfel-och-atgarder" class="md-nav__link">
+    Möjliga hemställningsfel och åtgärder:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#possible-tap-errors-and-actionables" class="md-nav__link">
+    Possible TAP errors and actionables:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/Klipper3d/klipper/blob/master/docs/locales/sv/Eddy_Probe.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="induktiv-eddy-stromsprob">Induktiv Eddy-strömsprob<a class="headerlink" href="#induktiv-eddy-stromsprob" title="Permanent link">&para;</a></h1>
+<p>Det här dokumentet beskriver Klippers stöd för induktiva <a href="https://en.wikipedia.org/wiki/Eddy_current">Eddy-strömsprober</a>.</p>
+<p>Proberna detekterar bädden genom att mäta den <a href="https://en.wikipedia.org/wiki/Resonance">resonanta frekvensen</a> hos en spole i sensorn. Ju närmare spolen är en metallbädd, desto högre blir spolens resonanta frekvens. Frekvensmätningarna kan därför användas för att uppskatta avståndet mellan sensor och bädd.</p>
+<h2 id="sonderingsmetoder">Sonderingsmetoder<a class="headerlink" href="#sonderingsmetoder" title="Permanent link">&para;</a></h2>
+<p>Till skillnad från traditionella bäddprober stöder en Eddy-strömssensor fyra olika sonderingsmetoder: standard, "scan", "rapid_scan" och "tap". Metoderna aktiveras genom att skicka parametern <code>METHOD=xxx</code> till sonderingskommandon (till exempel <code>PROBE METHOD=tap</code>). Varje metod har de fördelar och nackdelar som beskrivs nedan.</p>
+<h3 id="standardmetod-for-sondering">Standardmetod för sondering<a class="headerlink" href="#standardmetod-for-sondering" title="Permanent link">&para;</a></h3>
+<p>Standardmetoden för sondering fungerar mest som en traditionell bäddprob. Verktygshuvudet sänks mot bädden tills sensorn upptäcker att den är nära bädden. Därefter tas flera sensormätningar i det stoppade läget för att uppskatta avståndet mellan sensor och bädd. Mekanismen aktiveras genom att inte ange parametern <code>METHOD</code> i sonderingskommandon (till exempel ett ensamt <code>PROBE</code>-kommando).</p>
+<p>Fördelar:</p>
+<ul>
+<li>Detta är den mest allmänna sonderingsmetoden. Den ger god precision och god flexibilitet.</li>
+<li>Den kan användas från många startpositioner för verktygshuvudet. Kontrollera att verktygshuvudets XY-position placerar sensorn över metallbädden, men i övrigt kan den exakta starthöjden väljas fritt.</li>
+</ul>
+<p>Nackdelar:</p>
+<ul>
+<li>Probresultaten påverkas av termisk drift. Avstånden som proben rapporterar motsvarar avstånd som mättes under den första kalibreringen (med <code>PROBE_EDDY_CURRENT_CALIBRATE</code>) och resultatet kan påverkas om sonderingen görs vid en annan temperatur. Förändringar i temperaturen hos bädden, sensorns spole, sensorelektroniken eller metall nära sensorn kan alla påverka resultatet. Effekten är liten (mikrometer), men den godtagbara precisionen för en bäddprob är också liten (återigen mikrometer). För bästa resultat bör kalibreringen och efterföljande sonderingar göras vid en jämn temperatur.</li>
+</ul>
+<p>När den bör användas:</p>
+<p>Detta är standardmetoden för sondering och rekommenderas för de flesta sonderingsåtgärder. Den rekommenderas särskilt för bäddjusteringsverktyg som <code>QUAD_GANTRY_LEVEL</code>, <code>Z_TILT_ADJUST</code>, <code>SCREWS_TILT_CALCULATE</code>, <code>DELTA_CALIBRATE</code> och liknande.</p>
+<h3 id="sonderingsmetoden-scan">Sonderingsmetoden "scan"<a class="headerlink" href="#sonderingsmetoden-scan" title="Permanent link">&para;</a></h3>
+<p>Sonderingsmetoden "scan" liknar standardmetoden, men proben sänks inte mot bädden. I stället samlar proben sensormätningar vid den aktuella Z-positionen för att uppskatta avståndet mellan sensor och bädd. Den är användbar för <code>BED_MESH_CALIBRATE</code>, eftersom hela bädden kan avsökas med enbart horisontella rörelser.</p>
+<p>Fördelar:</p>
+<ul>
+<li>Z-positionen ändras inte under sonderingen, och risken är mindre att glapp i Z-stegmotorn (och liknande) påverkar mätningarna. Detta kan vara särskilt användbart när endast relativa Z-höjdmätningar önskas (till exempel med <code>zero_reference_position</code> tillsammans med <code>BED_MESH_CALIBRATE</code>).</li>
+<li>En fullständig bäddavsökning kan gå snabbare än standardmetoden.</li>
+</ul>
+<p>Nackdelar:</p>
+<ul>
+<li>Bädden måste vara nästan parallell med skrivarens XY-skenor och det får inte finnas några stora avvikelser i bäddhöjden. För godtagbara resultat måste bäddavsökningen köras med lågt <code>HORIZONTAL_MOVE_Z</code>, så att sensorn förblir nära bädden under hela avsökningen. (Ju mindre avstånd, desto noggrannare resultat.) I praktiken får avståndet mellan munstycke och bädd inte vara mer än ungefär en millimeter. Vid dessa avstånd kan märkbara bäddavvikelser orsaka en kollision mellan munstycke och bädd under horisontell rörelse.</li>
+<li>Metoden "scan" har samma nackdelar med termisk drift som beskrivs för standardmetoden. För bästa resultat bör kalibreringen och efterföljande sonderingar göras vid en jämn temperatur.</li>
+</ul>
+<p>När den bör användas:</p>
+<p>Metoden "scan" används vanligtvis vid kalibrering av bäddnät. Kontrollera alltid att bädden är parallell med skrivarens XY-skenor före en bäddavsökning. Beroende på skrivarens maskinvara kan ett automatiserat verktyg som använder standardmetoden kontrollera parallelliteten, till exempel: <code>QUAD_GANTRY_LEVEL RETRY_TOLERANCE=0.250</code>, <code>Z_TILT_ADJUST RETRY_TOLERANCE=0.250</code> eller <code>SCREWS_TILT_CALCULATION MAX_TOLERANCE=0.250</code>.</p>
+<p>Ett bäddnät kan sedan köras med exempelvis <code>BED_MESH_CALIBRATE METHOD=scan HORIZONTAL_MOVE_Z=1</code>.</p>
+<h3 id="sonderingsmetoden-rapid_scan">Sonderingsmetoden "rapid_scan"<a class="headerlink" href="#sonderingsmetoden-rapid_scan" title="Permanent link">&para;</a></h3>
+<p>Sonderingsmetoden "rapid_scan" liknar metoden "scan", men proben stannar inte vid varje mätpunkt. I stället används mätningar under den horisontella rörelsen nära varje sonderingspunkt för att uppskatta avståndet mellan sensor och bädd.</p>
+<p>Fördelar:</p>
+<ul>
+<li>En fullständig bäddavsökning med "rapid_scan" kan vara något snabbare än metoden "scan".</li>
+<li>I övrigt har den samma fördelar som metoden "scan".</li>
+</ul>
+<p>Nackdelar:</p>
+<ul>
+<li>Resultaten från "rapid_scan" kan vara mindre exakta än från metoden "scan".</li>
+<li>Samma nackdelar som prober med "scan" (bädden måste vara parallell och termisk drift förekommer).</li>
+</ul>
+<p>När den bör användas:</p>
+<p>"rapid_scan" kan vara användbar vid en stor, detaljerad bäddnätsavsökning för diagnostik. I den situationen kan den kortare avsökningstiden väga upp den möjliga försämringen av noggrannheten.</p>
+<p>För normal utskrift föredras i allmänhet ett bäddnät med den vanliga metoden "scan", för bästa noggrannhet och kortast extra sonderingstid.</p>
+<p>När bädden har kontrollerats vara parallell med XY-skenorna kan en snabb bäddnätsavsökning köras med exempelvis <code>BED_MESH_CALIBRATE METHOD=rapid_scan HORIZONTAL_MOVE_Z=1</code>.</p>
+<h3 id="sonderingsmetoden-tap">Sonderingsmetoden "tap"<a class="headerlink" href="#sonderingsmetoden-tap" title="Permanent link">&para;</a></h3>
+<p>Vid "tap"-sondering sänks verktygshuvudet tills munstycket får kontakt med bädden. Munstycket lyfts sedan från bädden och sensormätningar under lyftrörelsen analyseras för att bestämma den punkt där munstycket lämnar kontakten med bädden.</p>
+<p>Fördelar:</p>
+<ul>
+<li>Probresultaten bestäms av den faktiska kontaktpunkten mellan munstycke och bädd, i stället för indirekta mätningar mellan sensor och bädd. Det kan vara särskilt användbart om munstycken byts ofta, eftersom resultatet då tar hänsyn till det aktuella munstyckets geometri.</li>
+<li>En "tap"-prob har inte problemen med termisk drift som hör till de andra sonderingsmetoderna. Huvudkalibreringen används inte vid tap-sondering, och temperaturer behöver därför inte följas mellan första kalibreringen och efterföljande sondering.</li>
+<li>Axelns "twist"-fel är mindre problematiska vid tap-sondering, eftersom ingen XY-förskjutning för proben behöver kompenseras. Kontrollera ändå att verktygshuvudets XY-position placerar både munstycket och sensorn över bädden före tap-sondering.</li>
+</ul>
+<p>Nackdelar:</p>
+<ul>
+<li>Kontrollera att både munstycket och bädden är rena före tap-sondering. Filament på munstycket eller smuts på bädden kan kraftigt snedvrida probresultaten.</li>
+<li>Kontrollera att munstycket är ungefär 3–20 mm från bädden innan varje "tap"-sonderingsförsök. Om munstycket börjar för nära bädden kan kontakt missas, vilket kan orsaka en okontrollerad krasch mellan munstycke och bädd. Om munstycket börjar mycket långt från bädden blir sensormätningarna inte exakta och försöket kan misslyckas eller ge felaktigt resultat.</li>
+<li>Skrivarens maskinvara måste låta munstycket få full kontakt med bädden. Det får inte finnas ändlägesbrytare eller vagnstopp som får kontakt innan munstycket når bädden.</li>
+<li>Kontrollera att munstyckets temperatur inte är för hög för bädden. En för hög temperatur kan till exempel smälta PEI-beläggningen på vissa bäddar.</li>
+</ul>
+<p>När den bör användas:</p>
+<p>En "tap"-prob används ofta som ett steg i en flerstegsprocess för hemställning/nivellering, för att ta hänsyn till munstyckets aktuella geometri och minska fel från termisk drift. En makro kan exempelvis hemställa, köra <code>Z_TILT_ADJUST</code> med standardsondering, värma skrivaren till en mellanliggande temperatur, rengöra munstycket genom att upprepade gånger torka av det mot en borste, utföra en "tap"-sondering, använda <code>SET_KINEMATIC_POSITION</code> med resultatet, köra <code>BED_MESH_CALIBRATE</code> med <code>zero_reference_position</code> och därefter värma skrivaren till normal utskriftstemperatur. De faktiska stegen beror i hög grad på den specifika skrivarens maskinvara.</p>
+<p>En "tap"-sondering kan startas med exempelvis <code>PROBE METHOD=tap</code>.</p>
+<h2 id="konfiguration">Konfiguration<a class="headerlink" href="#konfiguration" title="Permanent link">&para;</a></h2>
+<p>För att konfigurera en Eddy-strömsprob börjar du med att ange ett <a href="Config_Reference.html#probe_eddy_current">konfigurationsavsnitt för probe_eddy_current</a> i filen printer.cfg. Vi rekommenderar <code>descend_z</code> satt till 0,5 mm. Sensorn behöver vanligtvis <code>x_offset</code> och <code>y_offset</code>. Om värdena inte är kända bör de uppskattas under den första kalibreringen.</p>
+<p>Starta sedan om skrivaren och fortsätt med följande kalibreringssteg.</p>
+<h3 id="kalibrering-av-drivstrom">Kalibrering av drivström<a class="headerlink" href="#kalibrering-av-drivstrom" title="Permanent link">&para;</a></h3>
+<p>Det första steget i kalibreringen är att fastställa lämpligt DRIVE_CURRENT för sensorn. Hemställ skrivaren och flytta verktygshuvudet så att sensorn är nära bäddens mitt och ungefär 20 mm ovanför bädden. Kör sedan kommandot <code>LDC_CALIBRATE_DRIVE_CURRENT CHIP=&lt;config_name&gt;</code>. Om konfigurationsavsnittet till exempel heter <code>[probe_eddy_current my_eddy_probe]</code> kör du <code>LDC_CALIBRATE_DRIVE_CURRENT CHIP=my_eddy_probe</code>. Kommandot bör bli klart inom några sekunder. Kör därefter <code>SAVE_CONFIG</code> för att spara resultatet i printer.cfg och starta om.</p>
+<h3 id="kalibrering-av-z-hojder">Kalibrering av Z-höjder<a class="headerlink" href="#kalibrering-av-z-hojder" title="Permanent link">&para;</a></h3>
+<p>Det andra kalibreringssteget är att koppla ihop sensoravläsningarna med motsvarande Z-höjder. Hemställ skrivaren och flytta verktygshuvudet så att munstycket är nära bäddens mitt. Kör sedan kommandot <code>PROBE_EDDY_CURRENT_CALIBRATE CHIP=my_eddy_probe</code>. När verktyget startar följer du stegen i <a href="Bed_Level.html#the-paper-test">"papperstestet"</a> för att bestämma det faktiska avståndet mellan munstycke och bädd på platsen. När stegen är klara kan positionen godtas med <code>ACCEPT</code>. Verktyget flyttar sedan verktygshuvudet så att sensorn hamnar ovanför punkten där munstycket stod och kör en serie rörelser för att koppla sensorn till Z-positioner. Detta tar några minuter. När verktyget är klart skrivs data om sensorns prestanda ut:</p>
+<div class="highlight"><pre><span></span><code>probe_eddy_current: noise 0.000642mm, MAD_Hz=11.314 in 2525 queries
+Total frequency range: 45000.012 Hz
+z: 0.250 # noise 0.000200mm, MAD_Hz=11.000
+z: 0.530 # noise 0.000300mm, MAD_Hz=12.000
+z: 1.010 # noise 0.000400mm, MAD_Hz=14.000
+z: 2.010 # noise 0.000600mm, MAD_Hz=12.000
+z: 3.010 # noise 0.000700mm, MAD_Hz=9.000
+</code></pre></div>
+
+<p>Kör <code>SAVE_CONFIG</code> för att spara resultatet i printer.cfg och starta om.</p>
+<p>Efter den första kalibreringen är det lämpligt att kontrollera att <code>x_offset</code> och <code>y_offset</code> är korrekta. Följ anvisningarna för att <a href="Probe_Calibrate.html#calibrating-probe-x-and-y-offsets">kalibrera probens X- och Y-förskjutningar</a>. Om <code>x_offset</code> eller <code>y_offset</code> ändras måste du köra kommandot <code>PROBE_EDDY_CURRENT_CALIBRATE</code> (enligt beskrivningen ovan) efter ändringen.</p>
+<p>Observera att Eddy-strömssensorer är känsliga för "termisk drift". Temperaturförändringar kan alltså ändra den rapporterade Z-höjden. Ändringar i temperaturen på antingen bäddytan eller sensorns maskinvara kan ändra resultatet. För bästa resultat ska kalibreringen här och den efterföljande sonderingen som använder kalibreringen göras vid samma temperatur.</p>
+<h3 id="tap-kalibrering">Tap-kalibrering<a class="headerlink" href="#tap-kalibrering" title="Permanent link">&para;</a></h3>
+<p>För att använda "tap"-sondering måste vissa parametrar konfigureras.</p>
+<p>Det måste gå att kommendera verktygshuvudet under bäddens nominella plan. Det görs normalt genom att ange <code>position_min: -1</code> i konfigurationsavsnittet <code>[stepper_z]</code> i printer.cfg (eller en liknande inställning, exempelvis <code>minimum_z_position</code>, beroende på kinematiken). Detta krävs för att munstycket ska kunna kommenderas att få fast kontakt med bädden och för att munstycket ska nå bädden innan rörelsen annars skulle börja bromsa.</p>
+<p>Parametern <code>tap_threshold</code> måste också konfigureras. Den avgör när nedåtgående rörelse av verktygshuvudet under en "tap"-sondering ska stoppas. Ett för stort värde kan göra att kontakt mellan munstycke och bädd inte upptäcks, vilket kan få munstycket att okontrollerat krascha in i bädden. Ett för litet värde kan i stället stoppa försöket innan munstycket rör bädden och ge sonderingsfel eller felaktiga resultat.</p>
+<p>Kommandot <code>PROBE_EDDY_CURRENT_TAP_CALIBRATE</code> kan användas för att konfigurera ett lämpligt värde för <code>tap_threshold</code>. Verktyget kan köras efter huvudkalibreringen <code>PROBE_EDDY_CURRENT_CALIBRATE</code>. Följ dessa steg för att kalibrera <code>tap_threshold</code>:</p>
+<ol>
+<li>Kontrollera att både munstycket och bädden är rena. Aktivera och hemställ skrivaren, flytta verktygshuvudet till en position nära bäddens mitt och kontrollera att munstycket är 3–10 millimeter från bädden.</li>
+<li>Nästa steg innebär att munstycket kommenderas att få kontakt med bädden. Processen innebär alltid viss risk, så var beredd att göra ett nödstopp (<code>M112</code>) om nedstigningen inte stannar efter kontakt med bädden. Kör när du är redo: <code>PROBE_EDDY_CURRENT_TAP_CALIBRATE TAP=guess</code>. Kommandot analyserar data från huvudkalibreringen för att göra en första grov uppskattning av <code>tap_threshold</code> och utför sedan motsvarande "tap"-sondering. Helst sänks proben tills den träffar bädden, lyfts från bädden och rapporterar ett giltigt sonderingsresultat. Se styckena i slutet av avsnittet om felsökning om detta inte lyckas. Om försöket lyckas fortsätter du till nästa steg.</li>
+<li>Nästa steg är att köra ytterligare en tap-sondering med ett "förfinat" tröskelvärde. Verktyget använder information från en tidigare lyckad tap-sondering för att fastställa det förbättrade värdet. Kontrollera att munstycket är nära bäddens mitt och 3–10 mm ovanför bädden, var beredd att göra ett nödstopp och kör sedan <code>PROBE_EDDY_CURRENT_TAP_CALIBRATE TAP=refine</code>. Även detta kommando bör lyckas; se styckena i slutet av avsnittet om felsökning om det inte gör det. Fortsätt annars till nästa steg.</li>
+<li>Om sonderingen med förfinat tröskelvärde lyckas ska nästa test kontrollera att det är stabilt vid flera sonderingsförsök. Kontrollera att munstycket är nära bäddens mitt och 3–10 mm ovanför bädden, var beredd att göra ett nödstopp och kör sedan <code>PROBE_EDDY_CURRENT_TAP_CALIBRATE TAP=verify</code>. Kommandot sonderar bädden fem gånger i följd. Kommandot bör lyckas; se styckena i slutet av avsnittet om felsökning om det inte gör det. Fortsätt annars till nästa steg.</li>
+<li>Om samtliga steg ovan lyckas kan <code>SAVE_CONFIG</code> köras för att spara parametern "tap_threshold" i printer.cfg. Kalibreringen bör nu vara klar.</li>
+</ol>
+<p>Om något av stegen ovan inte lyckades kan det vara nödvändigt att felsöka och fastställa ett lämpligt <code>tap_threshold</code> manuellt. Det görs genom att köra kommandon av formen <code>PROBE METHOD=tap TAP_THRESHOLD=&lt;value&gt;</code>, där <code>&lt;value&gt;</code> är ett tröskelvärde som ska testas.</p>
+<p>Om ett sonderingsförsök i allmänhet stannar innan kontakt med bädden betyder det att angivna <code>TAP_THRESHOLD</code> är för låg. Öka den med ungefär 10 % och försök igen. Om försöket däremot inte stannar efter kontakt med bädden är <code>TAP_THRESHOLD</code> för hög. Överväg att halvera värdet.</p>
+<p>Om det automatiska kalibreringsverktyget misslyckades i det första steget "guess" kan det <code>tap_threshold</code>-värde som verktyget rapporterar användas som startpunkt för manuella försök. När ett sonderingsförsök har lyckats kan huvudstegen ovan återupptas vid steget "refine".</p>
+<h3 id="utfora-forsta-kalibrering-vid-hemstallning-med-prob">Utföra första kalibrering vid hemställning med prob<a class="headerlink" href="#utfora-forsta-kalibrering-vid-hemstallning-med-prob" title="Permanent link">&para;</a></h3>
+<p>Det går att använda en Eddy-strömsprob för att hemställa en Z-axel. För att använda detta anger du <code>endstop_pin</code> i konfigurationsavsnittet <code>[stepper_z]</code> som <code>probe:z_virtual_endstop</code>.</p>
+<p>För att hemställa med en Eddy-prob måste proben först kalibreras med kommandot <code>PROBE_EDDY_CURRENT_CALIBRATE</code>. Det kommandot kräver dock att skrivaren först har hemställts.</p>
+<p>Följande steg kan användas för att undvika detta cirkelberoende vid den första kalibreringen:</p>
+<ol>
+<li>Definiera ett konfigurationsavsnitt <code>[probe_eddy_current]</code> i printer.cfg enligt <a href="#configuration">konfigurationsavsnittet</a>.</li>
+<li>Kontrollera att ett avsnitt för <a href="Config_Reference.html#force_move">tvingad rörelse</a> är definierat och att alternativet <code>enable_force_move</code> finns och är satt till true.</li>
+<li>Justera manuellt vagnarna så att verktygshuvudet är nära bäddens mitt och ungefär 20 mm från bädden. Kör kommandona <code>LDC_CALIBRATE_DRIVE_CURRENT CHIP=&lt;config_name&gt;</code> och <code>SAVE_CONFIG</code> enligt <a href="#calibrating-drive-current">avsnittet om kalibrering av drivström</a>.</li>
+<li>Flytta manuellt verktygshuvudet till ungefär 20 mm från bädden och hemställ skrivarens X- och Y-axel. Det görs normalt med <code>G28 X0 Y0</code>. Kommendera sedan verktygshuvudets X- och Y-position så att det hamnar ungefär över bäddens mitt, vanligen med ett kommando som <code>G1 X50 Y50</code> (med XY-värden som passar skrivaren).</li>
+<li>Justera manuellt bädden så att den är i huvudsak plan i förhållande till verktygshuvudets XY-vagnar (vid behov). Justera Z-vagnen manuellt så att munstycket är ungefär 20 mm från bädden och kör <code>SET_STEPPER_ENABLE STEPPER=stepper_z</code>. Kör sedan <code>SET_KINEMATIC_POSITION Z=25</code>, följt av <code>PROBE_EDDY_CURRENT_CALIBRATE CHIP=my_eddy_probe</code>. Viktigt: efter dessa kommandon kan skrivaren röra sig i Z-led, men den känner inte till den faktiska Z-positionen. Undvik rörelsekommandon som kan få verktygshuvudet att sänkas ned i bädden.</li>
+<li>Slutför Eddy-probkalibreringen enligt <a href="#calibrating-z-heights">avsnittet om kalibrering av Z-höjder</a>. Kör <code>SAVE_CONFIG</code> när den är klar.</li>
+</ol>
+<p>Dessa steg behövs endast för den första konfigurationen. Om <code>PROBE_EDDY_CURRENT_CALIBRATE</code> behöver köras på nytt i framtiden bör den vanliga mekanismen fungera när den första konfigurationen finns på plats.</p>
+<h2 id="kalibrering-av-termisk-drift">Kalibrering av termisk drift<a class="headerlink" href="#kalibrering-av-termisk-drift" title="Permanent link">&para;</a></h2>
+<p>Precis som alla induktiva prober påverkas Eddy-strömsprober av betydande termisk drift. Om Eddy-proben har en temperatursensor på spolen går det att konfigurera en <code>[temperature_probe]</code> som rapporterar spolens temperatur och aktiverar programvarukompensation för drift. För att koppla en temperaturprob till en Eddy-strömsprob måste avsnittet <code>[temperature_probe]</code> ha samma namn som avsnittet <code>[probe_eddy_current]</code>. Till exempel:</p>
+<div class="highlight"><pre><span></span><code>[probe_eddy_current my_probe]
+# eddy probe configuration...
+
+[temperature_probe my_probe]
+# temperature probe configuration...
+</code></pre></div>
+
+<p>Mer information om hur <code>temperature_probe</code> konfigureras finns i <a href="Config_Reference.html#temperature_probe">konfigurationsreferensen</a>. Det rekommenderas att konfigurera alternativen <code>calibration_position</code>, <code>calibration_extruder_temp</code>, <code>extruder_heating_z</code> och <code>calibration_bed_temp</code>, eftersom detta automatiserar några av stegen nedan. Om skrivaren som ska kalibreras är inbyggd rekommenderas starkt att ange <code>max_validation_temp</code> till ett värde mellan 100 och 120.</p>
+<p>Tillverkare av Eddy-prober kan erbjuda en standardkalibrering för drift som kan läggas till manuellt i alternativet <code>drift_calibration</code> i avsnittet <code>[probe_eddy_current]</code>. Om de inte gör det, eller om standardkalibreringen inte fungerar bra i systemet, erbjuder modulen <code>temperature_probe</code> en manuell kalibreringsprocedur via G-code-kommandot <code>TEMPERATURE_PROBE_CALIBRATE</code>.</p>
+<p>Innan kalibreringen görs bör användaren känna till den högsta temperatur som temperaturprobens spole kan uppnå. Denna temperatur ska användas för att ange parametern <code>TARGET</code> i kommandot <code>TEMPERATURE_PROBE_CALIBRATE</code>. Målet är att kalibrera över ett så brett temperaturintervall som möjligt; börja därför med kall skrivare och avsluta med spolen vid högsta möjliga temperatur.</p>
+<p>När en <code>[temperature_probe]</code> har konfigurerats kan följande steg användas för att kalibrera termisk drift:</p>
+<ul>
+<li>Proben måste kalibreras med <code>PROBE_EDDY_CURRENT_CALIBRATE</code> när en <code>[temperature_probe]</code> är konfigurerad och kopplad. Då registreras temperaturen under kalibreringen, vilket krävs för kompensation av termisk drift.</li>
+<li>Kontrollera att munstycket är fritt från smuts och filament.</li>
+<li>Bädden, munstycket och probspolen ska vara kalla före kalibreringen.</li>
+<li>Följande steg krävs om alternativen <code>calibration_position</code>, <code>calibration_extruder_temp</code> och <code>extruder_heating_z</code> i <code>[temperature_probe]</code> <strong>INTE</strong> är konfigurerade:<ul>
+<li>Flytta verktygshuvudet till bäddens mitt. Z ska vara minst 30 mm ovanför bädden.</li>
+<li>Värm extrudern till en temperatur över bäddens högsta säkra temperatur. 150–170 °C bör räcka för de flesta konfigurationer. Extrudern värms för att undvika att munstycket expanderar under kalibreringen.</li>
+<li>När extruderns temperatur har stabiliserats flyttar du ned Z-axeln till ungefär 1 mm ovanför bädden.</li>
+</ul>
+</li>
+<li>Starta driftkalibreringen. Om proben heter <code>my_probe</code> och den högsta uppnåeliga probtemperaturen är 80 °C är lämpligt G-code-kommando <code>TEMPERATURE_PROBE_CALIBRATE PROBE=my_probe TARGET=80</code>. Om den är konfigurerad flyttas verktygshuvudet till X,Y-koordinaten som anges av <code>calibration_position</code> och till Z-värdet som anges av <code>extruder_heating_z</code>. Efter att extrudern har värmts till den angivna temperaturen flyttas verktygshuvudet till Z-värdet som anges av <code>calibration_position</code>.</li>
+<li>Proceduren begär en manuell sondering. Utför den manuella sonderingen med papperstestet och <code>ACCEPT</code>. Kalibreringsproceduren tar den första uppsättningen prover med proben och parkerar sedan proben i uppvärmningspositionen.</li>
+<li>Om <code>calibration_bed_temp</code> <strong>INTE</strong> är konfigurerad ska bäddvärmen slås på till högsta säkra temperatur. Annars utförs steget automatiskt.</li>
+<li>Som standard begär kalibreringsproceduren en manuell sondering för varje 2 °C mellan prover tills <code>TARGET</code> nås. Temperaturskillnaden mellan prover kan anpassas med parametern <code>STEP</code> i <code>TEMPERATURE_PROBE_CALIBRATE</code>. Var försiktig med ett eget <code>STEP</code>-värde: ett för högt värde kan ge för få prover och därmed en dålig kalibrering.</li>
+<li>Följande ytterligare G-code-kommandon kan användas under driftkalibreringen:<ul>
+<li><code>TEMPERATURE_PROBE_NEXT</code> kan användas för att tvinga fram ett nytt prov innan stegskillnaden har nåtts.</li>
+<li><code>TEMPERATURE_PROBE_COMPLETE</code> kan användas för att slutföra kalibreringen innan <code>TARGET</code> har nåtts.</li>
+<li><code>ABORT</code> kan användas för att avbryta kalibreringen och förkasta resultatet.</li>
+</ul>
+</li>
+<li>När kalibreringen är klar använder du <code>SAVE_CONFIG</code> för att spara driftkalibreringen.</li>
+</ul>
+<p>Som framgår är kalibreringsprocessen ovan svårare och mer tidskrävande än de flesta andra procedurer. Den kan kräva övning och flera försök för att uppnå optimal kalibrering.</p>
+<h2 id="felbeskrivning">Felbeskrivning<a class="headerlink" href="#felbeskrivning" title="Permanent link">&para;</a></h2>
+<h3 id="mojliga-hemstallningsfel-och-atgarder">Möjliga hemställningsfel och åtgärder:<a class="headerlink" href="#mojliga-hemstallningsfel-och-atgarder" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sensorfel<ul>
+<li>Kontrollera loggarna för detaljerat fel</li>
+</ul>
+</li>
+<li>Eddy I2C STATUS/DATA-fel.<ul>
+<li>Kontrollera lösa kablar.</li>
+<li>Prova programvaru-I2C/minska I2C-hastigheten</li>
+</ul>
+</li>
+<li>Ogiltiga läsdata<ul>
+<li>Samma som för I2C</li>
+</ul>
+</li>
+</ul>
+<p>Möjliga sensorfel och åtgärder:</p>
+<ul>
+<li>Frekvens utanför giltigt hårt intervall<ul>
+<li>Kontrollera frekvenskonfigurationen</li>
+<li>Maskinvarufel</li>
+</ul>
+</li>
+<li>Frekvens utanför giltigt mjukt intervall<ul>
+<li>Kontrollera frekvenskonfigurationen</li>
+</ul>
+</li>
+<li>Tidsgräns för konverteringsvakthund<ul>
+<li>Maskinvarufel</li>
+</ul>
+</li>
+</ul>
+<p>Varningsmeddelanden om låg/hög amplitud kan betyda:</p>
+<ul>
+<li>Sensorn är nära bädden</li>
+<li>Sensorn är långt från bädden</li>
+<li>Högre temperatur än vid den aktuella kalibreringen</li>
+<li>Kondensator saknas</li>
+</ul>
+<p>På vissa sensorer går det inte att helt undvika amplitudvarningsindikatorn.</p>
+<p>Du kan försöka göra om kalibreringen <code>LDC_CALIBRATE_DRIVE_CURRENT</code> vid drifttemperatur eller öka <code>reg_drive_current</code> med 1–2 från det kalibrerade värdet.</p>
+<p>I allmänhet fungerar den som en motorvarningslampa. Den kan indikera ett problem.</p>
+<h3 id="possible-tap-errors-and-actionables">Possible TAP errors and actionables:<a class="headerlink" href="#possible-tap-errors-and-actionables" title="Permanent link">&para;</a></h3>
+<ul>
+<li>insufficient lift (A vs B) - too small Z window received by the code<ul>
+<li>LIFT_SPEED/printer.max_z_velocity too low - must be at least 2.5 Recommended &gt;0.5 RPS. For motor cogging reasons.</li>
+<li>printer.max_z_accel too low - must be larger 35 mm/s^2. Recommended 300 mm/s^2.</li>
+<li>SAMPLE_RETRACT_DIST too low Recommended &gt;2 mm.</li>
+</ul>
+</li>
+<li>no contact found at z=Z (slope delta A vs B) - retraction analysis outputs not expected data. Often toolhead has stopped in mid-air because of the measurement noise.<ul>
+<li>Too high printer.max_z_accel - Z resonances, consider Z input shaper</li>
+<li>Mechanical vibrations - ex. toolhead fan</li>
+<li>Sensor noise (elevated chamber/bed temperature)</li>
+<li>Increase of tap_threshold normally allows to alleviate symptoms</li>
+</ul>
+</li>
+<li>invalid depress distance (Z vs A:B)<ul>
+<li>if Z &lt; A
+    - tap_threshold too low
+    - PROBE_SPEED too low
+    - printer.max_z_accel too low</li>
+<li>if Z &gt; B
+    - Large toolhead tilt (mechanical/installation issue)
+    - PROBE_SPEED too high
+    - tap_threshold too high</li>
+</ul>
+</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>

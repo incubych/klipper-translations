@@ -1,15 +1,15 @@
-# Spravko <spravko@azet.sk>, 2023.
+# Spravko <spravko@azet.sk>, 2023, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2023-11-13 02:45+0000\n"
+"PO-Revision-Date: 2025-07-22 09:02+0000\n"
 "Last-Translator: Spravko <spravko@azet.sk>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/klipper/config_checks/sk/>\n"
 "Language: sk\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 5.2-dev\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document provides a list of steps to help confirm the pin settings in the"
@@ -279,16 +279,6 @@ msgstr ""
 "spustite príkaz QUERY_ENDSTOPS, pričom koncovú zarážku spúšťajte manuálne. "
 "Príkaz QUERY_ENDSTOPS by mal hlásiť koncovú zarážku ako „TRIGGERED“."
 
-#: docs/Config_checks.md:block 15 (paragraph)
-msgid ""
-"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
-"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
-"^PA2\"), or remove the \"!\" if there is already one present."
-msgstr ""
-"Ak sa koncový doraz javí ako invertovaný (pri spustení hlási \"otvorený\" a "
-"naopak), pridajte \"!\" na definíciu pinu (napríklad \"endstop_pin: ^PA2\") "
-"alebo odstráňte znak \"!\" ak je už jeden prítomný."
-
 #: docs/Config_checks.md:block 18 (paragraph)
 msgid ""
 "Use the STEPPER_BUZZ command to verify the connectivity of each stepper motor."
@@ -334,6 +324,22 @@ msgid ""
 msgstr ""
 "Ak chcete kalibrovať extrudér, prejdite do príkazovej konzoly a spustite "
 "príkaz PID_CALIBRATE. Napríklad: `PID_CALIBRATE HEATER=extruder TARGET=170`"
+
+#: docs/Config_checks.md:block 15 (paragraph)
+msgid ""
+"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+"^!PA2\"), or remove the \"!\" if there is already one present."
+msgstr ""
+
+#~ msgid ""
+#~ "If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+#~ "versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+#~ "^PA2\"), or remove the \"!\" if there is already one present."
+#~ msgstr ""
+#~ "Ak sa koncový doraz javí ako invertovaný (pri spustení hlási \"otvorený\" a "
+#~ "naopak), pridajte \"!\" na definíciu pinu (napríklad \"endstop_pin: ^PA2\") "
+#~ "alebo odstráňte znak \"!\" ak je už jeden prítomný."
 
 #~ msgid ""
 #~ "Start by verifying that temperatures are being properly reported. Navigate to "

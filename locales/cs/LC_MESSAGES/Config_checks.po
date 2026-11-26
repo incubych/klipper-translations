@@ -1,18 +1,18 @@
 # Pepa Mochr Vladik <pvladik@centrum.cz>, 2022.
-# Vojtech Horvath <wojtas@email.cz>, 2022.
-# Vojtěch Hrubý <vvojtech1564@gmail.com>, 2023.
-# Miloslav Kos <kos.m@post.cz>, 2024.
+# Vojtech Horvath <wojtas@email.cz>, 2022, 2025.
+# Vojtěch Hrubý <vvojtech1564@gmail.com>, 2023, 2025.
+# Miloslav Kos <kos.m@post.cz>, 2024, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-05-11 06:00+0000\n"
-"Last-Translator: Miloslav Kos <kos.m@post.cz>\n"
+"PO-Revision-Date: 2025-07-22 08:28+0000\n"
+"Last-Translator: Vojtěch Hrubý <vvojtech1564@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/klipper/config_checks/cs/>\n"
 "Language: cs\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 5.5.4\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document provides a list of steps to help confirm the pin settings in the"
@@ -280,16 +280,6 @@ msgstr ""
 "uzávěr znovu spusťte příkaz QUERY_ENDSTOPS a zároveň ručně spusťte koncový "
 "uzávěr. Příkaz QUERY_ENDSTOPS by měl hlásit koncovou zarážku jako „TRIGGERED“."
 
-#: docs/Config_checks.md:block 15 (paragraph)
-msgid ""
-"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
-"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
-"^PA2\"), or remove the \"!\" if there is already one present."
-msgstr ""
-"Pokud se endstop jeví jako invertovaný (při spuštění hlásí „open“ a naopak), "
-"přidejte do definice pinu znak „!“ (například „endstop_pin: ^PA2“) nebo "
-"odstraňte znak „!“, pokud je již přítomen."
-
 #: docs/Config_checks.md:block 18 (paragraph)
 msgid ""
 "Use the STEPPER_BUZZ command to verify the connectivity of each stepper motor."
@@ -335,6 +325,22 @@ msgid ""
 msgstr ""
 "Chcete-li kalibrovat extrudér, přejděte do příkazové konzoly a spusťte příkaz "
 "PID_CALIBRATE. Například: `PID_CALIBRATE HEATER=extruder TARGET=170`"
+
+#: docs/Config_checks.md:block 15 (paragraph)
+msgid ""
+"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+"^!PA2\"), or remove the \"!\" if there is already one present."
+msgstr ""
+
+#~ msgid ""
+#~ "If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+#~ "versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+#~ "^PA2\"), or remove the \"!\" if there is already one present."
+#~ msgstr ""
+#~ "Pokud se endstop jeví jako invertovaný (při spuštění hlásí „open“ a naopak), "
+#~ "přidejte do definice pinu znak „!“ (například „endstop_pin: ^PA2“) nebo "
+#~ "odstraňte znak „!“, pokud je již přítomen."
 
 #~ msgid ""
 #~ "Start by verifying that temperatures are being properly reported. Navigate to "

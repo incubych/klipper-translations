@@ -1,24 +1,27 @@
-# Ярослав <tok1shus@gmail.com>, 2022.
-# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022.
+# Ярослав <tok1shus@gmail.com>, 2022, 2025.
+# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022, 2025.
 # Vik <xasertop@gmail.com>, 2022.
-# Mari Japaridze <mari.mari.japaridze@mail.ru>, 2022.
+# Mari Japaridze <mari.mari.japaridze@mail.ru>, 2022, 2025.
 # Evgeniy Khramov <thejenjagamertjg@gmail.com>, 2022.
-# Kirill Plotnikov <ponfertato@gmail.com>, 2023.
-# xXx <xxx_xxx_xxxxxxxxx@mail.ru>, 2023.
-# Saveliy <jitropolit@gmail.com>, 2024.
-# Mika <akimivanov43@gmail.com>, 2024.
-# Arseniy <arseniy@neburalis.space>, 2024.
+# Kirill Plotnikov <ponfertato@gmail.com>, 2023, 2025.
+# xXx <xxx_xxx_xxxxxxxxx@mail.ru>, 2023, 2025.
+# Saveliy <jitropolit@gmail.com>, 2024, 2025.
+# Mika <akimivanov43@gmail.com>, 2024, 2025.
+# Arseniy <arseniy@neburalis.space>, 2024, 2025.
+# Evgeniy Khramov <65224669+thejenja@users.noreply.github.com>, 2025.
+# Vin <k3kelm4vw@mozmail.com>, 2025.
+# gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-12-08 11:43+0000\n"
-"Last-Translator: Arseniy <arseniy@neburalis.space>\n"
+"PO-Revision-Date: 2025-09-10 09:02+0000\n"
+"Last-Translator: gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/klipper/overview/ru/>\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.9-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 msgid ""
 "Welcome to the Klipper documentation. If new to Klipper, start with the "
@@ -334,7 +337,7 @@ msgstr "[Eddy Current Inductive probe](Eddy_Probe.md)"
 
 #: docs/Overview.md:block 10 (unordered list)
 msgid "[Load Cells](Load_Cell.md)"
-msgstr ""
+msgstr "[Load Cells](Load_Cell.md)"
 
 #~ msgid ""
 #~ "[Exclude Object](Exclude_Object.md): The guide to the Exclude Objecs "

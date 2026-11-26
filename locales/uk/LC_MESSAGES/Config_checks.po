@@ -2,17 +2,18 @@
 # Petro S. <911us@duck.com>, 2023.
 # Artem Filkovskyi <avfilkovsky@gmail.com>, 2023.
 # Максим Горпиніч <mgorpinic2005@gmail.com>, 2024.
+# Deleted User <mgorpinic2005@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-10-20 12:16+0000\n"
-"Last-Translator: Максим Горпиніч <mgorpinic2005@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:40+0000\n"
+"Last-Translator: Deleted User <mgorpinic2005@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/klipper/config_checks/uk/>\n"
 "Language: uk\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.8-rc\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document provides a list of steps to help confirm the pin settings in the"
@@ -288,16 +289,6 @@ msgstr ""
 " запустіть команду QUERY_ENDSTOPS, запускаючи кінцеву зупинку вручну. Команда "
 "QUERY_ENDSTOPS має повідомити кінцеву зупинку як \"TRIGGERED\"."
 
-#: docs/Config_checks.md:block 15 (paragraph)
-msgid ""
-"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
-"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
-"^PA2\"), or remove the \"!\" if there is already one present."
-msgstr ""
-"Якщо кінцевий упор виглядає перевернутим (він повідомляє \"відкрито\" під час "
-"спрацьовування та навпаки), додайте \"!\" до визначення контакту (наприклад, "
-"\"endstop_pin: ^PA2\") або видаліть \"!\" якщо вже є."
-
 #: docs/Config_checks.md:block 18 (paragraph)
 msgid ""
 "Use the STEPPER_BUZZ command to verify the connectivity of each stepper motor."
@@ -343,6 +334,22 @@ msgid ""
 msgstr ""
 "Щоб відкалібрувати екструдер, перейдіть до командної консолі та запустіть "
 "команду PID_CALIBRATE. Наприклад: `PID_CALIBRATE HEATER=extruder TARGET=170`"
+
+#: docs/Config_checks.md:block 15 (paragraph)
+msgid ""
+"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+"^!PA2\"), or remove the \"!\" if there is already one present."
+msgstr ""
+
+#~ msgid ""
+#~ "If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+#~ "versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+#~ "^PA2\"), or remove the \"!\" if there is already one present."
+#~ msgstr ""
+#~ "Якщо кінцевий упор виглядає перевернутим (він повідомляє \"відкрито\" під час "
+#~ "спрацьовування та навпаки), додайте \"!\" до визначення контакту (наприклад, "
+#~ "\"endstop_pin: ^PA2\") або видаліть \"!\" якщо вже є."
 
 #~ msgid ""
 #~ "Start by verifying that temperatures are being properly reported. Navigate to "

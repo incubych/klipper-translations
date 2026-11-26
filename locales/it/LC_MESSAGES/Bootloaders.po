@@ -1,16 +1,16 @@
-# Dex94 <Dasvaresu@dr.com>, 2022.
-# Ale Ale <ale.99.ale@gmail.com>, 2022, 2023.
+# Dex94 <Dasvaresu@dr.com>, 2022, 2025.
+# Ale Ale <ale.99.ale@gmail.com>, 2022, 2023, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2023-09-14 18:54+0000\n"
-"Last-Translator: Ale Ale <ale.99.ale@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:17+0000\n"
+"Last-Translator: Dex94 <Dasvaresu@dr.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/klipper/bootloaders/it/>\n"
 "Language: it\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.1-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document provides information on common bootloaders found on micro-"
@@ -739,17 +739,6 @@ msgstr ""
 "possibile entrare nel bootloader premendo due volte di seguito il pulsante di "
 "reset."
 
-#: docs/Bootloaders.md:block 116 (paragraph)
-msgid ""
-"The `flash_can.py` utility supplied in the `lib/canboot` folder may be used to"
-" upload Klipper firmware. The device UUID is necessary to flash. If you do not"
-" have a UUID it is possible to query nodes currently running the bootloader:"
-msgstr ""
-"L'utilità `flash_can.py` fornita nella cartella `lib/canboot` può essere "
-"utilizzata per caricare il firmware di Klipper. E' necessario l'UUID del "
-"dispositivo per eseguire il flashing. Se non si dispone di un UUID è possibile"
-" interrogare i nodi che attualmente eseguono il bootloader:"
-
 #: docs/Bootloaders.md:block 118 (paragraph)
 msgid ""
 "This will return UUIDs for all connected nodes not currently assigned a UUID. "
@@ -883,14 +872,6 @@ msgid ""
 " a [Raspberry Pi with OpenOCD](#running-openocd-on-the-raspberry-pi)."
 msgstr ""
 
-#: docs/Bootloaders.md:block 53 (paragraph)
-msgid ""
-"When using OpenOCD with the SAMC21, extra steps must be taken to first put the"
-" chip into Cold Plugging mode if the board makes use of the SWD pins for other"
-" purposes. If using OpenOCD on a Rasberry Pi, this can be done by running the "
-"following commands before invoking OpenOCD."
-msgstr ""
-
 #: docs/Bootloaders.md:block 55 (paragraph)
 msgid "To flash a program with OpenOCD use the following chip config:"
 msgstr ""
@@ -907,6 +888,39 @@ msgid ""
 "OpenOCD. It should display something like:After which you can release the "
 "reset button."
 msgstr ""
+
+#: docs/Bootloaders.md:block 53 (paragraph)
+msgid ""
+"When using OpenOCD with the SAMC21, extra steps must be taken to first put the"
+" chip into Cold Plugging mode if the board makes use of the SWD pins for other"
+" purposes. If using OpenOCD on a Raspberry Pi, this can be done by running the"
+" following commands before invoking OpenOCD."
+msgstr ""
+
+#: docs/Bootloaders.md:block 124 (paragraph)
+msgid ""
+"The `flashtool.py` utility supplied in the `lib/katapult` folder may be used "
+"to upload Klipper firmware. The device UUID is necessary to flash. If you do "
+"not have a UUID it is possible to query nodes currently running the "
+"bootloader:"
+msgstr ""
+
+#~ msgid ""
+#~ "The `flash_can.py` utility supplied in the `lib/canboot` folder may be used to"
+#~ " upload Klipper firmware. The device UUID is necessary to flash. If you do not"
+#~ " have a UUID it is possible to query nodes currently running the bootloader:"
+#~ msgstr ""
+#~ "L'utilità `flash_can.py` fornita nella cartella `lib/canboot` può essere "
+#~ "utilizzata per caricare il firmware di Klipper. E' necessario l'UUID del "
+#~ "dispositivo per eseguire il flashing. Se non si dispone di un UUID è possibile"
+#~ " interrogare i nodi che attualmente eseguono il bootloader:"
+
+#~ msgid ""
+#~ "When using OpenOCD with the SAMC21, extra steps must be taken to first put the"
+#~ " chip into Cold Plugging mode if the board makes use of the SWD pins for other"
+#~ " purposes. If using OpenOCD on a Rasberry Pi, this can be done by running the "
+#~ "following commands before invoking OpenOCD."
+#~ msgstr ""
 
 #~ msgid ""
 #~ "wget 'https://github.com/arduino/Arduino/raw/1.8.5/hardware/arduino/avr/bootloaders/stk500v2/stk500boot_v2_mega2560.hex'\n"

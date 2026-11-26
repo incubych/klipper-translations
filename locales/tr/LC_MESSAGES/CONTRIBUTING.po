@@ -1,15 +1,16 @@
-# zafer yazkili <yazkili@hotmail.com>, 2023.
+# zafer yazkili <yazkili@hotmail.com>, 2023, 2025.
+# DeltaXLR <h3r0xlr@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2023-03-20 06:39+0000\n"
-"Last-Translator: zafer yazkili <yazkili@hotmail.com>\n"
+"PO-Revision-Date: 2026-03-16 04:50+0000\n"
+"Last-Translator: DeltaXLR <h3r0xlr@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/klipper/contributing/tr/>\n"
 "Language: tr\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.2-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "Contributing to Klipper"
 msgstr "Klipper'a Katkıda Bulunmak"
@@ -23,11 +24,11 @@ msgstr ""
 
 #: docs/CONTRIBUTING.md:block 9 (header)
 msgid "Contributing to Klipper Translations"
-msgstr ""
+msgstr "Klipper'ın Tercümesine Katkıda Bulunmak"
 
 #: docs/CONTRIBUTING.md:block 11 (unordered list)
 msgid "75% Total coverage"
-msgstr ""
+msgstr "%75 Toplam kapsam"
 
 #: docs/CONTRIBUTING.md:block 11 (unordered list)
 msgid "An updated navigation hierarchy PR in klipper-translations."
@@ -54,6 +55,8 @@ msgid ""
 "Thank you for contributing to Klipper! This document describes the process for"
 " contributing changes to Klipper."
 msgstr ""
+"Klipper'a katkıda bulunduğunuz için teşekkürler! Bu döküman Klipper'a katkıda "
+"bulunan değişikliklerin işlenmesini anlatmaktadır."
 
 #: docs/CONTRIBUTING.md:block 3 (paragraph)
 msgid ""
@@ -519,13 +522,6 @@ msgstr ""
 
 #: docs/CONTRIBUTING.md:block 38 (ordered list)
 msgid ""
-"update klipper-tranlations repository "
-"[active_translations](https://github.com/Klipper3d/klipper-"
-"translations/blob/translations/active_translations)"
-msgstr ""
-
-#: docs/CONTRIBUTING.md:block 38 (ordered list)
-msgid ""
 "Optional: add a manual-index.md file in klipper-translations repository's "
 "`docs\\locals\\<lang>` folder to replace the language specific index.md "
 "(generated index.md does not render correctly)."
@@ -579,6 +575,19 @@ msgstr ""
 #: docs/CONTRIBUTING.md:block 23 (table)
 msgid "Configuration files"
 msgstr ""
+
+#: docs/CONTRIBUTING.md:block 38 (ordered list)
+msgid ""
+"update klipper-translations repository "
+"[active_translations](https://github.com/Klipper3d/klipper-"
+"translations/blob/translations/active_translations)"
+msgstr ""
+
+#~ msgid ""
+#~ "update klipper-tranlations repository "
+#~ "[active_translations](https://github.com/Klipper3d/klipper-"
+#~ "translations/blob/translations/active_translations)"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "module: Capitalized, short (50 chars or less) summary\n"

@@ -1,18 +1,22 @@
 # Comocen <Comoc_en@mail.ru>, 2022.
-# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022.
-# VICTOR <subfyn@gmail.com>, 2023.
-# gfbdrgng <hnaofegnp@hldrive.com>, 2024.
+# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022, 2025.
+# VICTOR <subfyn@gmail.com>, 2023, 2025.
+# gfbdrgng <hnaofegnp@hldrive.com>, 2024, 2025.
+# gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>, 2025.
+# Andrei Stepanov <adem@users.noreply.hosted.weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-12-31 11:20+0000\n"
-"Last-Translator: gfbdrgng <hnaofegnp@hldrive.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/klipper/bed_mesh/ru/>\n"
+"PO-Revision-Date: 2026-10-25 13:09+0000\n"
+"Last-Translator: Andrei Stepanov <adem@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/klipper/bed_mesh/"
+"ru/>\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.10-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.11.dev0\n"
 
 msgid "Basic Configuration"
 msgstr "Основные настройки"
@@ -54,9 +58,8 @@ msgstr ""
 "находится в точке `mesh_min`, сопло будет находиться в точке (11, 1), а когда "
 "зонд находится в точке `mesh_max`, сопло будет находиться в точке (206, 193)."
 
-#, fuzzy
 msgid "![bedmesh_rect_basic](img/bedmesh_rect_basic.svg)"
-msgstr "![bedmesh_rect_basic](img/bedmesh_rect_basic.svg)"
+msgstr "![кровать_прямая_базовая](img/bedmesh_rect_basic.svg)"
 
 msgid "Round beds"
 msgstr "Круглые лежаки"
@@ -94,9 +97,8 @@ msgstr ""
 "сетки. Это значение должно быть нечетным, так как требуется, чтобы центр сетки"
 " был прозондирован."
 
-#, fuzzy
 msgid "![bedmesh_round_basic](img/bedmesh_round_basic.svg)"
-msgstr "![bedmesh_round_basic](img/bedmesh_round_basic.svg)"
+msgstr "![кровать_круглая_базовая](img/bedmesh_round_basic.svg)"
 
 msgid "Advanced Configuration"
 msgstr "Расширенная конфигурация"
@@ -151,7 +153,6 @@ msgstr ""
 "На рисунке ниже показано, как перечисленные выше параметры используются для "
 "создания интерполированной сетки."
 
-#, fuzzy
 msgid "![bedmesh_interpolated](img/bedmesh_interpolated.svg)"
 msgstr "![bedmesh_interpolated](img/bedmesh_interpolated.svg)"
 
@@ -301,7 +302,6 @@ msgstr ""
 "соответствуют областям в приведенном выше примере конфигурации. Точки замены и"
 " их координаты выделены зеленым цветом."
 
-#, fuzzy
 msgid "![bedmesh_interpolated](img/bedmesh_faulty_regions.svg)"
 msgstr "![bedmesh_interpolated](img/bedmesh_faulty_regions.svg)"
 
@@ -321,30 +321,24 @@ msgstr ""
 msgid "Rectangular beds (cartesian):"
 msgstr "Прямоугольные кровати (картезианские):"
 
-#, fuzzy
 msgid "`MESH_MIN`"
 msgstr "`MESH_MIN`"
 
-#, fuzzy
 msgid "`MESH_MAX`"
 msgstr "`MESH_MAX`"
 
-#, fuzzy
 msgid "`PROBE_COUNT`"
 msgstr "`PROBE_COUNT`"
 
 msgid "Round beds (delta):"
 msgstr "Круглые кровати (дельта):"
 
-#, fuzzy
 msgid "`MESH_RADIUS`"
 msgstr "`MESH_RADIUS`"
 
-#, fuzzy
 msgid "`MESH_ORIGIN`"
 msgstr "`MESH_ORIGIN`"
 
-#, fuzzy
 msgid "`ROUND_PROBE_COUNT`"
 msgstr "`ROUND_PROBE_COUNT`"
 
@@ -367,7 +361,6 @@ msgstr ""
 msgid "Output"
 msgstr "Выход"
 
-#, fuzzy
 msgid "`BED_MESH_OUTPUT PGP=[0 | 1]`"
 msgstr "`BED_MESH_OUTPUT PGP=[0 | 1]`"
 
@@ -398,7 +391,6 @@ msgstr ""
 msgid "Clear Mesh State"
 msgstr "Очистить состояние сетки"
 
-#, fuzzy
 msgid "`BED_MESH_CLEAR`"
 msgstr "`BED_MESH_CLEAR`"
 
@@ -453,7 +445,6 @@ msgstr ""
 "в документации по конфигурации выше."
 
 #: docs/Bed_Mesh.md:block 55 (paragraph)
-#, fuzzy
 msgid "`BED_MESH_PROFILE SAVE=<name> LOAD=<name> REMOVE=<name>`"
 msgstr "`BED_MESH_PROFILE SAVE=<name> LOAD=<name> REMOVE=<name>`"
 
@@ -514,31 +505,6 @@ msgstr ""
 " координата находится относительно местоположения зонда. Хотя по умолчанию "
 "используется значение 0, 0, может оказаться полезным изменить начало "
 "координат, чтобы прозондировать большую часть кровати. См. иллюстрацию ниже."
-
-#: docs/Bed_Mesh.md:block 22 (unordered list)
-msgid ""
-"`mesh_pps: 2, 3` *Default Value: 2, 2* The `mesh_pps` option is shorthand for "
-"Mesh Points Per Segment. This option specifies how many points to interpolate "
-"for each segment along the X and Y axes. Consider a 'segment' to be the space "
-"between each probed point. Like `probe_count`, `mesh_pps` is specified as an "
-"X, Y integer pair, and also may be specified a single integer that is applied "
-"to both axes. In this example there are 4 segments along the X axis and 2 "
-"segments along the Y axis. This evaluates to 8 interpolated points along X, 6 "
-"interpolated points along Y, which results in a 13x8 mesh. Note that if "
-"mesh_pps is set to 0 then mesh interpolation is disabled and the probed matrix"
-" will be sampled directly."
-msgstr ""
-"`mesh_pps: 2, 3` *Значение по умолчанию: 2, 2* Параметр `mesh_pps` - это "
-"сокращение от Mesh Points Per Segment. Эта опция указывает, сколько точек "
-"интерполировать для каждого сегмента по осям X и Y. Считайте, что \"сегмент\" "
-"- это пространство между каждой точкой зондирования. Как и `probe_count`, "
-"`mesh_pps` задается как пара целых чисел X, Y, а также может быть задано одно "
-"целое число, которое применяется к обеим осям. В данном примере имеется 4 "
-"сегмента по оси X и 2 сегмента по оси Y. В результате получается 8 "
-"интерполированных точек по оси X, 6 интерполированных точек по оси Y, что дает"
-" сетку 13x8. Обратите внимание, что если значение mesh_pps равно 0, то "
-"интерполяция сетки отключается и матрица зондирования будет сэмплироваться "
-"напрямую."
 
 #: docs/Bed_Mesh.md:block 61 (header)
 msgid "Loading the default profile"
@@ -688,42 +654,6 @@ msgstr ""
 "Обратите внимание, что эта координата НЕ должна находиться в месте, указанном "
 "как `faulty_region`, если необходимо выполнить зондирование."
 
-#: docs/Bed_Mesh.md:block 38 (header)
-msgid "The deprecated relative_reference_index"
-msgstr "Устаревший индекс relative_reference_index"
-
-#: docs/Bed_Mesh.md:block 39 (paragraph)
-msgid ""
-"Existing configurations using the `relative_reference_index` option must be "
-"updated to use the `zero_reference_position`. The response to the "
-"[BED_MESH_OUTPUT PGP=1](#output) gcode command will include the (X, Y) "
-"coordinate associated with the index; this position may be used as the value "
-"for the `zero_reference_position`. The output will look similar to the "
-"following:"
-msgstr ""
-"Существующие конфигурации, использующие опцию `relative_reference_index`, "
-"должны быть обновлены для использования `zero_reference_position`. Ответ на "
-"команду [BED_MESH_OUTPUT PGP=1](#output) gcode будет включать координату (X, "
-"Y), связанную с индексом; эта позиция может быть использована в качестве "
-"значения для `нулевой позиции_ссылки`. Вывод будет выглядеть следующим "
-"образом:"
-
-#: docs/Bed_Mesh.md:block 41 (paragraph)
-msgid ""
-"*Note: The above output is also printed in `klippy.log` during "
-"initialization.*"
-msgstr ""
-"*Примечание: Вышеприведенный вывод также выводится в `klippy.log` во время "
-"инициализации.*"
-
-#: docs/Bed_Mesh.md:block 42 (paragraph)
-msgid ""
-"Using the example above we see that the `relative_reference_index` is printed "
-"along with its coordinate. Thus the `zero_reference_position` is `131.5, 108`."
-msgstr ""
-"На примере выше мы видим, что `относительный_индекс_ссылки` выводится вместе с"
-" его координатой. Таким образом, `нулевая_позиция_ссылки` равна `131.5, 108`."
-
 #: docs/Bed_Mesh.md:block 50 (header)
 msgid "Adaptive Meshes"
 msgstr "Адаптивные сетки"
@@ -778,7 +708,6 @@ msgstr ""
 "0.5 с округлением вверх)."
 
 #: docs/Bed_Mesh.md:block 55 (paragraph)
-#, fuzzy
 msgid "![adaptive_bedmesh](img/adaptive_bed_mesh.svg)"
 msgstr "![adaptive_bedmesh](img/adaptive_bed_mesh.svg)"
 
@@ -798,7 +727,6 @@ msgstr ""
 "цветом) плюс определенная маржа."
 
 #: docs/Bed_Mesh.md:block 57 (unordered list)
-#, fuzzy
 msgid "![adaptive_bedmesh_margin](img/adaptive_bed_mesh_margin.svg)"
 msgstr "![adaptive_bedmesh_margin](img/adaptive_bed_mesh_margin.svg)"
 
@@ -841,7 +769,6 @@ msgid "`ADAPTIVE`"
 msgstr "`АДАПТИВНОСТЬ`"
 
 #: docs/Bed_Mesh.md:block 66 (unordered list)
-#, fuzzy
 msgid "`ADAPTIVE_MARGIN`"
 msgstr "`ADAPTIVE_MARGIN`"
 
@@ -1034,16 +961,6 @@ msgstr ""
 "если обнаружен зонд, иначе ручной* * Адаптивный по умолчанию: 0* * Адаптивный "
 "маржа по умолчанию: 0*"
 
-#: docs/Bed_Mesh.md:block 77 (paragraph)
-msgid ""
-"The mesh will be saved into a profile specified by the `PROFILE` parameter, or"
-" `default` if unspecified. The `METHOD` parameter takes one of the following "
-"values:"
-msgstr ""
-"Сетка будет сохранена в профиль, указанный параметром `ПРОФИЛЬ`, или `по "
-"умолчанию`, если он не указан. Параметр `МЕТОД` принимает одно из следующих "
-"значений:"
-
 #: docs/Bed_Mesh.md:block 78 (unordered list)
 msgid ""
 "`METHOD=manual`: enables manual probing using the nozzle and the paper test"
@@ -1078,7 +995,6 @@ msgstr ""
 "выбран метод зондирования, отличный от `ручного`."
 
 #: docs/Bed_Mesh.md:block 81 (unordered list)
-#, fuzzy
 msgid "`MESH_PPS`"
 msgstr "`MESH_PPS`"
 
@@ -1098,17 +1014,8 @@ msgstr "`{\" идентификатор\": 123, \"метод\": \"bed_mesh/dump_
 msgid ""
 "Dumps the configuration and state for the current mesh and all saved profiles."
 msgstr ""
-
-#: docs/Bed_Mesh.md:block 111 (paragraph)
-msgid ""
-"The `dump_mesh` endpoint takes one optional parameter, `mesh_args`. This "
-"parameter must be an object, where the keys and values are parameters "
-"available to [BED_MESH_CALIBRATE](#bed_mesh_calibrate). This will update the "
-"mesh configuration and probe points using the supplied parameters prior to "
-"returning the result. It is recommended to omit mesh parameters unless it is "
-"desired to visualize the probe points and/or travel path before performing "
-"`BED_MESH_CALIBRATE`."
-msgstr ""
+"Сбрасывает конфигурацию и состояние для текущей сетки и всех сохраненных "
+"профилей."
 
 #: docs/Bed_Mesh.md:block 112 (header)
 msgid "Visualization and analysis"
@@ -1417,9 +1324,52 @@ msgstr ""
 "рабочем каталоге с именем в следующем формате:"
 
 #: docs/Bed_Mesh.md:block 142 (paragraph)
-#, fuzzy
 msgid "`klipper-bedmesh-{year}{month}{day}{hour}{minute}{second}.json`"
-msgstr "`klipper-bedmesh-{year}{month}{day}{hour}{minute}{second}.json`"
+msgstr "`klipper-bedmesh-{год}{месяц}{день}{час}{минута}{секунда}.json`"
+
+#: docs/Bed_Mesh.md:block 77 (paragraph)
+msgid ""
+"The mesh will be immediately ready to use when the command completes and saved"
+" into a profile specified by the `PROFILE` parameter, or `default` if "
+"unspecified. The `METHOD` parameter takes one of the following values:"
+msgstr ""
+"Сетка будет немедленно готова к использованию, когда команда завершится и "
+"будет сохранена в профиле, указанном параметром [X11X]PROFILE `, или `default "
+"`, если не указано. `METHOD` имеет одно из следующих значений:"
+
+#: docs/Bed_Mesh.md:block 92 (paragraph)
+msgid ""
+"Note that this is not required if a new mesh is generated with "
+"`BED_MESH_CALIBRATE` in the `START_PRINT` macro or the slicer's \"Start "
+"G-Code\" and may produce unexpected results, especially with adaptive meshing."
+msgstr ""
+"Обратите внимание, что это не требуется, если новая сетка генерируется с "
+"помощью `BED_MESH_CALIBRATE ` в `START_PRINT ` макрос или «Start G-Code» и "
+"может привести к неожиданным результатам, особенно при адаптивном стирке."
+
+#: docs/Bed_Mesh.md:block 22 (unordered list)
+msgid ""
+"`mesh_pps: 2, 3` *Default Value: 2, 2* The `mesh_pps` option is shorthand for "
+"Mesh Points Per Segment. This option specifies how many points to interpolate "
+"for each segment along the X and Y axes. Consider a 'segment' to be the space "
+"between each probed point. Like `probe_count`, `mesh_pps` is specified as an "
+"X, Y integer pair, and also may be specified a single integer that is applied "
+"to both axes. In this example there are 4 segments along the X axis and 2 "
+"segments along the Y axis. This evaluates to 8 interpolated points along X, 6 "
+"interpolated points along Y, which results in a 13x9 mesh. Note that if "
+"mesh_pps is set to 0 then mesh interpolation is disabled and the probed matrix"
+" will be sampled directly."
+msgstr ""
+"`mesh_pps: 2, 3` *Значение по умолчанию: 2, 2*. Опция `mesh_pps` — это "
+"сокращение от Mesh Points Per Segment (точек сетки на сегмент). Эта опция "
+"задаёт, сколько точек интерполировать для каждого сегмента вдоль осей X и Y. "
+"«Сегмент» — это пространство между каждой измеренной точкой. Как и "
+"`probe_count`, `mesh_pps` задаётся как пара целых чисел X, Y, а также может "
+"быть задано одним целым числом, применяемым к обеим осям. В этом примере по "
+"оси X 4 сегмента, а по оси Y — 2 сегмента. Это даёт 8 интерполированных "
+"точек по X и 6 интерполированных точек по Y, что в результате даёт сетку "
+"13x9. Учтите, что если `mesh_pps` равно 0, то интерполяция сетки отключена, "
+"и измеренная матрица используется напрямую."
 
 #: docs/Bed_Mesh.md:block 35 (paragraph)
 msgid ""
@@ -1428,12 +1378,145 @@ msgid ""
 "z-offset challenging, particularly at different bed temperatures. As such, "
 "some printers use an endstop for homing the Z axis and a probe for calibrating"
 " the mesh. In this configuration it is possible offset the mesh so that the "
-"(X, Y) `reference position` applies zero adjustment. The `reference postion` "
+"(X, Y) `reference position` applies zero adjustment. The `reference position` "
 "should be the location on the bed where a "
 "[Z_ENDSTOP_CALIBRATE](./Manual_Level.md#calibrating-a-z-endstop) paper test is"
 " performed. The bed_mesh module provides the `zero_reference_position` option "
 "for specifying this coordinate:"
 msgstr ""
+"Многие датчики подвержены «дрейфу», то есть неточностям измерения, вызванным "
+"нагревом или помехами. Это может усложнить вычисление z-смещения датчика, "
+"особенно при разных температурах стола. Поэтому некоторые принтеры "
+"используют концевой выключатель для парковки оси Z и датчик для калибровки "
+"сетки. В этой конфигурации можно сместить сетку так, чтобы к (X, Y) "
+"`reference position` применялась нулевая поправка. `reference position` "
+"должна быть точкой на столе, где выполняется бумажный тест "
+"[Z_ENDSTOP_CALIBRATE](./Manual_Level.md#calibrating-a-z-endstop). Модуль "
+"bed_mesh предоставляет опцию `zero_reference_position` для задания этой "
+"координаты:"
+
+#: docs/Bed_Mesh.md:block 107 (paragraph)
+msgid ""
+"The `dump_mesh` endpoint takes one optional parameter, `mesh_args`. This "
+"parameter must be an object, where the keys and values are parameters "
+"available to [BED_MESH_CALIBRATE](G-Codes.md#bed_mesh_calibrate). This will "
+"update the mesh configuration and probe points using the supplied parameters "
+"prior to returning the result. It is recommended to omit mesh parameters "
+"unless it is desired to visualize the probe points and/or travel path before "
+"performing `BED_MESH_CALIBRATE`."
+msgstr ""
+"Конечная точка `dump_mesh` принимает один необязательный параметр — "
+"`mesh_args`. Этот параметр должен быть объектом, где ключи и значения — это "
+"параметры, доступные для [BED_MESH_CALIBRATE](G-Codes.md#bed_mesh_calibrate)"
+". Это обновит конфигурацию сетки и точки измерения с использованием "
+"переданных параметров перед возвратом результата. Рекомендуется опускать "
+"параметры сетки, если только не требуется визуализировать точки измерения и/"
+"или траекторию перемещения перед выполнением `BED_MESH_CALIBRATE`."
+
+#~ msgid ""
+#~ "The `dump_mesh` endpoint takes one optional parameter, `mesh_args`. This "
+#~ "parameter must be an object, where the keys and values are parameters "
+#~ "available to [BED_MESH_CALIBRATE](#bed_mesh_calibrate). This will update the "
+#~ "mesh configuration and probe points using the supplied parameters prior to "
+#~ "returning the result. It is recommended to omit mesh parameters unless it is "
+#~ "desired to visualize the probe points and/or travel path before performing "
+#~ "`BED_MESH_CALIBRATE`."
+#~ msgstr ""
+#~ "Конечная точка `dump_mesh` принимает один необязательный параметр, "
+#~ "`mesh_args`. Этот параметр должен быть объектом, где ключами и значениями "
+#~ "являются параметры, доступные для [BED_MESH_CALIBRATE](#bed_mesh_calibrate). "
+#~ "Перед возвратом результата будет обновлена конфигурация сетки и точки "
+#~ "зондирования с использованием предоставленных параметров. Рекомендуется "
+#~ "опустить параметры сетки, если не требуется визуализировать точки зондирования"
+#~ " и/или траекторию движения перед выполнением `BED_MESH_CALIBRATE`."
+
+#~ msgid ""
+#~ "`mesh_pps: 2, 3` *Default Value: 2, 2* The `mesh_pps` option is shorthand for "
+#~ "Mesh Points Per Segment. This option specifies how many points to interpolate "
+#~ "for each segment along the X and Y axes. Consider a 'segment' to be the space "
+#~ "between each probed point. Like `probe_count`, `mesh_pps` is specified as an "
+#~ "X, Y integer pair, and also may be specified a single integer that is applied "
+#~ "to both axes. In this example there are 4 segments along the X axis and 2 "
+#~ "segments along the Y axis. This evaluates to 8 interpolated points along X, 6 "
+#~ "interpolated points along Y, which results in a 13x8 mesh. Note that if "
+#~ "mesh_pps is set to 0 then mesh interpolation is disabled and the probed matrix"
+#~ " will be sampled directly."
+#~ msgstr ""
+#~ "`mesh_pps: 2, 3` *Значение по умолчанию: 2, 2* Параметр `mesh_pps` - это "
+#~ "сокращение от Mesh Points Per Segment. Эта опция указывает, сколько точек "
+#~ "интерполировать для каждого сегмента по осям X и Y. Считайте, что \"сегмент\" "
+#~ "- это пространство между каждой точкой зондирования. Как и `probe_count`, "
+#~ "`mesh_pps` задается как пара целых чисел X, Y, а также может быть задано одно "
+#~ "целое число, которое применяется к обеим осям. В данном примере имеется 4 "
+#~ "сегмента по оси X и 2 сегмента по оси Y. В результате получается 8 "
+#~ "интерполированных точек по оси X, 6 интерполированных точек по оси Y, что дает"
+#~ " сетку 13x8. Обратите внимание, что если значение mesh_pps равно 0, то "
+#~ "интерполяция сетки отключается и матрица зондирования будет сэмплироваться "
+#~ "напрямую."
+
+#~ msgid "The deprecated relative_reference_index"
+#~ msgstr "Устаревший индекс relative_reference_index"
+
+#~ msgid ""
+#~ "Existing configurations using the `relative_reference_index` option must be "
+#~ "updated to use the `zero_reference_position`. The response to the "
+#~ "[BED_MESH_OUTPUT PGP=1](#output) gcode command will include the (X, Y) "
+#~ "coordinate associated with the index; this position may be used as the value "
+#~ "for the `zero_reference_position`. The output will look similar to the "
+#~ "following:"
+#~ msgstr ""
+#~ "Существующие конфигурации, использующие опцию `relative_reference_index`, "
+#~ "должны быть обновлены для использования `zero_reference_position`. Ответ на "
+#~ "команду [BED_MESH_OUTPUT PGP=1](#output) gcode будет включать координату (X, "
+#~ "Y), связанную с индексом; эта позиция может быть использована в качестве "
+#~ "значения для `нулевой позиции_ссылки`. Вывод будет выглядеть следующим "
+#~ "образом:"
+
+#~ msgid ""
+#~ "*Note: The above output is also printed in `klippy.log` during "
+#~ "initialization.*"
+#~ msgstr ""
+#~ "*Примечание: Вышеприведенный вывод также выводится в `klippy.log` во время "
+#~ "инициализации.*"
+
+#~ msgid ""
+#~ "Using the example above we see that the `relative_reference_index` is printed "
+#~ "along with its coordinate. Thus the `zero_reference_position` is `131.5, 108`."
+#~ msgstr ""
+#~ "На примере выше мы видим, что `относительный_индекс_ссылки` выводится вместе с"
+#~ " его координатой. Таким образом, `нулевая_позиция_ссылки` равна `131.5, 108`."
+
+#~ msgid ""
+#~ "Many probes are susceptible to \"drift\", ie: inaccuracies in probing "
+#~ "introduced by heat or interference. This can make calculating the probe's "
+#~ "z-offset challenging, particularly at different bed temperatures. As such, "
+#~ "some printers use an endstop for homing the Z axis and a probe for calibrating"
+#~ " the mesh. In this configuration it is possible offset the mesh so that the "
+#~ "(X, Y) `reference position` applies zero adjustment. The `reference postion` "
+#~ "should be the location on the bed where a "
+#~ "[Z_ENDSTOP_CALIBRATE](./Manual_Level.md#calibrating-a-z-endstop) paper test is"
+#~ " performed. The bed_mesh module provides the `zero_reference_position` option "
+#~ "for specifying this coordinate:"
+#~ msgstr ""
+#~ "Многие датчики подвержены \"дрейфу\", т. е. неточностям в измерениях, "
+#~ "вызванным нагревом или помехами. Это может затруднить расчет смещения датчика "
+#~ "по оси Z, особенно при различных температурах станины. Поэтому в некоторых "
+#~ "принтерах используется концевой упор для наведения оси Z и датчик для "
+#~ "калибровки сетки. При такой конфигурации можно сместить сетку так, чтобы в "
+#~ "`опорном положении` (X, Y) применялась нулевая корректировка. В качестве "
+#~ "`опорного положения` должно выступать место на станине, где выполняется тест "
+#~ "бумаги [Z_ENDSTOP_CALIBRATE](./Manual_Level#calibrating-a-z-endstop). Модуль "
+#~ "bed_mesh предоставляет опцию `zero_reference_position` для указания этой "
+#~ "координаты:"
+
+#~ msgid ""
+#~ "The mesh will be saved into a profile specified by the `PROFILE` parameter, or"
+#~ " `default` if unspecified. The `METHOD` parameter takes one of the following "
+#~ "values:"
+#~ msgstr ""
+#~ "Сетка будет сохранена в профиль, указанный параметром `ПРОФИЛЬ`, или `по "
+#~ "умолчанию`, если он не указан. Параметр `МЕТОД` принимает одно из следующих "
+#~ "значений:"
 
 #~ msgid ""
 #~ "// bed_mesh: generated points\n"

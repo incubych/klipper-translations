@@ -1,15 +1,16 @@
 # Максим Горпиніч <mgorpinic2005@gmail.com>, 2024.
+# Deleted User <mgorpinic2005@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-11-05 21:00+0000\n"
-"Last-Translator: Максим Горпиніч <mgorpinic2005@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 09:01+0000\n"
+"Last-Translator: Deleted User <mgorpinic2005@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/klipper/bootloader_entry/uk/>\n"
 "Language: uk\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.8.2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: docs/Bootloader_Entry.md:block 1 (header)
 msgid "Bootloader Entry"
@@ -78,16 +79,6 @@ msgstr ""
 #: docs/Bootloader_Entry.md:block 15 (header)
 msgid "Physical serial"
 msgstr "Фізична послідовність"
-
-#: docs/Bootloader_Entry.md:block 16 (paragraph)
-msgid ""
-"If a physical serial port is being used on the MCU (even if a USB serial "
-"adapter is being used to connect to it), sending the string "
-"`<SPACE><FS><SPACE>Request Serial Bootloader!!<SPACE>~`."
-msgstr ""
-"Якщо на MCU використовується фізичний серійний порт (навіть, якщо USB серійний"
-" адаптер використовується для підключення до нього), відправивши рядок "
-"`<SPACE><FS><SPACE><SPACE>Запит серійного завантаження!<SPACE>~`."
 
 #: docs/Bootloader_Entry.md:block 17 (paragraph)
 msgid "`<SPACE>` is an ASCII literal space, 0x20."
@@ -245,6 +236,23 @@ msgstr ""
 "Рекомендується відключати нагрівачі, а іншим чином запобігти небажаним "
 "операціям при використанні режиму DFU. Консультування документації для "
 "отримання більш детальної інформації."
+
+#: docs/Bootloader_Entry.md:block 16 (paragraph)
+msgid ""
+"If a physical serial port is being used on the MCU (even if a USB serial "
+"adapter is being used to connect to it), sending the string "
+"`<SPACE><FS><SPACE>Request Serial Bootloader!!<SPACE>~` requests the "
+"bootloader."
+msgstr ""
+
+#~ msgid ""
+#~ "If a physical serial port is being used on the MCU (even if a USB serial "
+#~ "adapter is being used to connect to it), sending the string "
+#~ "`<SPACE><FS><SPACE>Request Serial Bootloader!!<SPACE>~`."
+#~ msgstr ""
+#~ "Якщо на MCU використовується фізичний серійний порт (навіть, якщо USB серійний"
+#~ " адаптер використовується для підключення до нього), відправивши рядок "
+#~ "`<SPACE><FS><SPACE><SPACE>Запит серійного завантаження!<SPACE>~`."
 
 #~ msgid ""
 #~ "> cd klipper/scripts\n"

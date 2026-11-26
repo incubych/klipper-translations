@@ -1,17 +1,17 @@
-# Fred Chan <fred2088@gmail.com>, 2022.
-# Yifei Ding <dingyifeiair@gmail.com>, 2022.
-# Kayz C <kayzed.x@gmail.com>, 2024.
+# Fred Chan <fred2088@gmail.com>, 2022, 2025.
+# Yifei Ding <dingyifeiair@gmail.com>, 2022, 2025.
+# Kayz C <kayzed.x@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-11-18 20:13+0000\n"
-"Last-Translator: Kayz C <kayzed.x@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:32+0000\n"
+"Last-Translator: Yifei Ding <dingyifeiair@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/projects/klipper/features/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.9-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid "Klipper has several compelling features:"
 msgstr "Klipper 有幾個引人注目的功能："
@@ -62,15 +62,6 @@ msgid ""
 msgstr ""
 "Klipper "
 "使用「迭代求解器」從簡單的運動學方程中計算精準的步進時間。這降低了移植Klipper到新的機械結構的難度並保證了精確的步進計時（而不需要「線段化」）。"
-
-msgid ""
-"Portable code. Klipper works on ARM, AVR, and PRU based micro-controllers. "
-"Existing \"reprap\" style printers can run Klipper without hardware "
-"modification - just add a Raspberry Pi. Klipper's internal code layout makes "
-"it easier to support other micro-controller architectures as well."
-msgstr ""
-"易移植的程式碼。Klipper 可以在 ARM、AVR，和PRU架構的微控制器上執行。現有的「reprap」類印表機不需要改動任何硬體就可以執行 "
-"Klipper，只需要加一個樹莓派。Klipper 的內部程式碼結構使它能夠被簡單的移植到其他架構。"
 
 msgid ""
 "Simpler code. Klipper uses a very high level language (Python) for most code. "
@@ -433,16 +424,6 @@ msgid ""
 "facilitate canceling of just one object in a multi-part print."
 msgstr "列印時支援“排除物件”。當啟用此模組時，可在多件列印中僅取消指定的單一物件。"
 
-#: docs/Features.md:block 6 (unordered list)
-msgid ""
-"Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
-"TMC2660, and TMC5160 stepper motor drivers. There is also support for current "
-"control of traditional stepper drivers via AD5206, DAC084S085, MCP4451, "
-"MCP4728, MCP4018, and PWM pins."
-msgstr ""
-"支援運行時配置 TMC2130、TMC2208/TMC2224、TMC2209、TMC2660 和 TMC5160 步進馬達驅動器。此外，也支援透過 "
-"AD5206、DAC084S085、MCP4451、MCP4728、MCP4018 和 PWM 腳位對傳統步進驅動器進行電流控制。"
-
 #: docs/Features.md:block 3 (unordered list)
 msgid ""
 "Best in class performance. Klipper is able to achieve high stepping rates on "
@@ -491,6 +472,14 @@ msgstr ""
 msgid "4737K"
 msgstr ""
 
+#: docs/Features.md:block 3 (unordered list)
+msgid ""
+"Portable code. Klipper works on ARM, AVR, PRU, and other micro-controllers. "
+"Existing \"reprap\" style printers can run Klipper without hardware "
+"modification - just add a Raspberry Pi. Klipper's internal code layout makes "
+"it easier to support other micro-controller architectures as well."
+msgstr ""
+
 #: docs/Features.md:block 6 (unordered list)
 msgid ""
 "Automatic bed leveling support. Klipper can be configured for basic bed tilt "
@@ -506,10 +495,10 @@ msgstr ""
 msgid ""
 "Support for common temperature sensors (eg, common thermistors, AD595, AD597, "
 "AD849x, PT100, PT1000, MAX6675, MAX31855, MAX31856, MAX31865, BME280, HTU21D, "
-"DS18B20, AHT10, SHT3x, and LM75). Custom thermistors and custom analog "
-"temperature sensors can also be configured. One can monitor the internal "
-"micro-controller temperature sensor and the internal temperature sensor of a "
-"Raspberry Pi."
+"DS18B20, AHT1X, AHT2X, AHT3X, SHT3x, and LM75). Custom thermistors and custom "
+"analog temperature sensors can also be configured. One can monitor the "
+"internal micro-controller temperature sensor and the internal temperature "
+"sensor of a Raspberry Pi."
 msgstr ""
 
 #: docs/Features.md:block 6 (unordered list)
@@ -524,6 +513,18 @@ msgstr ""
 msgid ""
 "Support for measuring and recording acceleration using adxl345, mpu9250, "
 "mpu6050, lis2dw12, lis3dh, and icm20948 accelerometers."
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "STM32G431"
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "3617K"
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "2452K"
 msgstr ""
 
 #: docs/Features.md:block 10 (table)
@@ -545,6 +546,30 @@ msgstr ""
 #: docs/Features.md:block 10 (table)
 msgid "8619K"
 msgstr ""
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
+"TMC2240, TMC2660, TMC5160, and TMC5262 stepper motor drivers. There is also "
+"support for current control of traditional stepper drivers via AD5206, "
+"DAC084S085, MCP4451, MCP4728, MCP4018, and PWM pins."
+msgstr ""
+
+#~ msgid ""
+#~ "Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
+#~ "TMC2240, TMC2660, and TMC5160 stepper motor drivers. There is also support for"
+#~ " current control of traditional stepper drivers via AD5206, DAC084S085, "
+#~ "MCP4451, MCP4728, MCP4018, and PWM pins."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Portable code. Klipper works on ARM, AVR, and PRU based micro-controllers. "
+#~ "Existing \"reprap\" style printers can run Klipper without hardware "
+#~ "modification - just add a Raspberry Pi. Klipper's internal code layout makes "
+#~ "it easier to support other micro-controller architectures as well."
+#~ msgstr ""
+#~ "易移植的程式碼。Klipper 可以在 ARM、AVR，和PRU架構的微控制器上執行。現有的「reprap」類印表機不需要改動任何硬體就可以執行 "
+#~ "Klipper，只需要加一個樹莓派。Klipper 的內部程式碼結構使它能夠被簡單的移植到其他架構。"
 
 #~ msgid ""
 #~ "Automatic bed leveling support. Klipper can be configured for basic bed tilt "
@@ -586,6 +611,15 @@ msgstr ""
 
 #~ msgid "6061K"
 #~ msgstr ""
+
+#~ msgid ""
+#~ "Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
+#~ "TMC2660, and TMC5160 stepper motor drivers. There is also support for current "
+#~ "control of traditional stepper drivers via AD5206, DAC084S085, MCP4451, "
+#~ "MCP4728, MCP4018, and PWM pins."
+#~ msgstr ""
+#~ "支援運行時配置 TMC2130、TMC2208/TMC2224、TMC2209、TMC2660 和 TMC5160 步進馬達驅動器。此外，也支援透過 "
+#~ "AD5206、DAC084S085、MCP4451、MCP4728、MCP4018 和 PWM 腳位對傳統步進驅動器進行電流控制。"
 
 #~ msgid ""
 #~ "Support for measuring and recording acceleration using an adxl345, mpu9250, "

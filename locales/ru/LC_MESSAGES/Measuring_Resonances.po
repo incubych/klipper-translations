@@ -1,19 +1,24 @@
-# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022.
+# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022, 2025.
 # Evgeniy Khramov <thejenjagamertjg@gmail.com>, 2022.
-# VICTOR <subfyn@gmail.com>, 2023.
-# xXx <xxx_xxx_xxxxxxxxx@mail.ru>, 2023.
-# gfbdrgng <hnaofegnp@hldrive.com>, 2024.
+# VICTOR <subfyn@gmail.com>, 2023, 2025.
+# xXx <xxx_xxx_xxxxxxxxx@mail.ru>, 2023, 2025.
+# gfbdrgng <hnaofegnp@hldrive.com>, 2024, 2025.
+# Evgeniy Khramov <65224669+thejenja@users.noreply.github.com>, 2025.
+# gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>, 2025.
+# Andrei Stepanov <adem@users.noreply.hosted.weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-12-31 11:20+0000\n"
-"Last-Translator: gfbdrgng <hnaofegnp@hldrive.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/klipper/measuring_resonances/ru/>\n"
+"PO-Revision-Date: 2026-10-25 10:42+0000\n"
+"Last-Translator: Andrei Stepanov <adem@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/klipper/"
+"measuring_resonances/ru/>\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.10-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.11.dev0\n"
 
 msgid "Measuring Resonances"
 msgstr "Изменения Резонансов"
@@ -46,7 +51,6 @@ msgstr "Название выводов RPi"
 msgid "3V3 (or VCC)"
 msgstr "3V3 (или VCC)"
 
-#, fuzzy
 msgid "01"
 msgstr "01"
 
@@ -56,7 +60,6 @@ msgstr "Питание 3,3 В постоянного тока"
 msgid "GND"
 msgstr "GND"
 
-#, fuzzy
 msgid "06"
 msgstr "06"
 
@@ -66,54 +69,42 @@ msgstr "Земля"
 msgid "CS"
 msgstr "CS"
 
-#, fuzzy
 msgid "24"
 msgstr "24"
 
-#, fuzzy
 msgid "GPIO08 (SPI0_CE0_N)"
 msgstr "GPIO08 (SPI0_CE0_N)"
 
-#, fuzzy
 msgid "SDO"
 msgstr "SDO"
 
-#, fuzzy
 msgid "21"
 msgstr "21"
 
-#, fuzzy
 msgid "GPIO09 (SPI0_MISO)"
 msgstr "GPIO09 (SPI0_MISO)"
 
-#, fuzzy
 msgid "SDA"
 msgstr "SDA"
 
-#, fuzzy
 msgid "19"
 msgstr "19"
 
-#, fuzzy
 msgid "GPIO10 (SPI0_MOSI)"
 msgstr "GPIO10 (SPI0_MOSI)"
 
-#, fuzzy
 msgid "SCL"
 msgstr "SCL"
 
-#, fuzzy
 msgid "23"
 msgstr "23"
 
-#, fuzzy
 msgid "GPIO11 (SPI0_SCLK)"
 msgstr "GPIO11 (SPI0_SCLK)"
 
 msgid "Fritzing wiring diagrams for some of the ADXL345 boards:"
 msgstr "Схемы подключения некоторых плат ADXL345:"
 
-#, fuzzy
 msgid "![ADXL345-Rpi](img/adxl345-fritzing.png)"
 msgstr "![ADXL345-Rpi](img/adxl345-fritzing.png)"
 
@@ -138,7 +129,6 @@ msgstr ""
 msgid "An example of mounting ADXL345 on the SmartEffector:"
 msgstr "Пример установки ADXL345 на SmartEffector:"
 
-#, fuzzy
 msgid "![ADXL345 on SmartEffector](img/adxl345-mount.jpg)"
 msgstr "![ADXL345 on SmartEffector](img/adxl345-mount.jpg)"
 
@@ -276,7 +266,6 @@ msgstr ""
 " предлагаемые частоты для каждого входного формирователя, а также то, какой "
 "входной формирователь рекомендуется для вашей установки. Например:"
 
-#, fuzzy
 msgid "![Resonances](img/calibrate-y.png)"
 msgstr "![Resonances](img/calibrate-y.png)"
 
@@ -342,27 +331,8 @@ msgstr ""
 msgid "Let's consider the following results from the automatic tuning:"
 msgstr "Рассмотрим следующие результаты автоматической настройки:"
 
-#, fuzzy
 msgid "![Resonances](img/calibrate-x.png)"
 msgstr "![Resonances](img/calibrate-x.png)"
-
-msgid ""
-"Note that the reported `smoothing` values are some abstract projected values. "
-"These values can be used to compare different configurations: the higher the "
-"value, the more smoothing a shaper will create. However, these smoothing "
-"scores do not represent any real measure of smoothing, because the actual "
-"smoothing depends on [`max_accel`](#selecting-max-accel) and "
-"`square_corner_velocity` parameters. Therefore, you should print some test "
-"prints to see how much smoothing exactly a chosen configuration creates."
-msgstr ""
-"Обратите внимание, что указанные значения `сглаживания` - это некие "
-"абстрактные прогнозируемые значения. Эти значения можно использовать для "
-"сравнения различных конфигураций: чем выше значение, тем больше сглаживания "
-"создаст шейпер. Однако эти показатели сглаживания не являются реальной мерой "
-"сглаживания, поскольку фактическое сглаживание зависит от параметров "
-"[`max_accel`](#selecting-max-accel) и `square_corner_velocity`. Поэтому вам "
-"следует напечатать несколько тестовых отпечатков, чтобы узнать, сколько "
-"сглаживания создает выбранная конфигурация."
 
 msgid ""
 "In the example above the suggested shaper parameters are not bad, but what if "
@@ -379,7 +349,6 @@ msgstr ""
 "что ограничивает сглаживание до 0,2 балла. Теперь вы можете получить следующий"
 " результат:"
 
-#, fuzzy
 msgid "![Resonances](img/calibrate-x-max-smoothing.png)"
 msgstr "![Resonances](img/calibrate-x-max-smoothing.png)"
 
@@ -434,7 +403,7 @@ msgstr ""
 "он будет использовать сохраненное значение `max_smoothing` в качестве эталона."
 
 msgid "Selecting max_accel"
-msgstr ""
+msgstr "Выбор max_accel"
 
 msgid ""
 "Since the input shaper can create some smoothing in parts, especially at high "
@@ -759,14 +728,6 @@ msgstr ""
 msgid "which will generate `/tmp/resonances.png` comparing the resonances."
 msgstr "который создаст файл `/tmp/resonances.png`, сравнивающий резонансы."
 
-#: docs/Measuring_Resonances.md:block 87 (paragraph)
-msgid ""
-"For Delta printers with the default tower placement (tower A ~= 210 degrees, B"
-" ~= 330 degrees, and C ~= 90 degrees), execute"
-msgstr ""
-"Для принтеров Delta с размещением башни по умолчанию (башня A ~= 210 градусов,"
-" B ~= 330 градусов и C ~= 90 градусов) выполните команду"
-
 #: docs/Measuring_Resonances.md:block 89 (paragraph)
 msgid "and then use the same command"
 msgstr "а затем выполните ту же команду"
@@ -788,32 +749,26 @@ msgstr ""
 "подробную информацию см. в [G-Codes](G-Codes.md#adxl345)."
 
 #: docs/Measuring_Resonances.md:block 9 (table)
-#, fuzzy
 msgid "MPU-9250 pin"
 msgstr "MPU-9250 pin"
 
 #: docs/Measuring_Resonances.md:block 9 (table)
-#, fuzzy
 msgid "09"
 msgstr "09"
 
 #: docs/Measuring_Resonances.md:block 9 (table)
-#, fuzzy
 msgid "03"
 msgstr "03"
 
 #: docs/Measuring_Resonances.md:block 9 (table)
-#, fuzzy
 msgid "GPIO02 (SDA1)"
 msgstr "GPIO02 (SDA1)"
 
 #: docs/Measuring_Resonances.md:block 9 (table)
-#, fuzzy
 msgid "05"
 msgstr "05"
 
 #: docs/Measuring_Resonances.md:block 9 (table)
-#, fuzzy
 msgid "GPIO03 (SCL1)"
 msgstr "GPIO03 (SCL1)"
 
@@ -845,7 +800,6 @@ msgid "SPI Accelerometers"
 msgstr "Акселерометры SPI"
 
 #: docs/Measuring_Resonances.md:block 12 (header)
-#, fuzzy
 msgid "ADXL345"
 msgstr "ADXL345"
 
@@ -858,42 +812,34 @@ msgid "Recommended connection scheme for I2C on the Raspberry Pi:"
 msgstr "Рекомендуемая схема подключения I2C на Raspberry Pi:"
 
 #: docs/Measuring_Resonances.md:block 24 (table)
-#, fuzzy
 msgid "VCC"
 msgstr "VCC"
 
 #: docs/Measuring_Resonances.md:block 27 (table)
-#, fuzzy
 msgid "RP2040 pin"
 msgstr "RP2040 pin"
 
 #: docs/Measuring_Resonances.md:block 27 (table)
-#, fuzzy
 msgid "39"
 msgstr "39"
 
 #: docs/Measuring_Resonances.md:block 27 (table)
-#, fuzzy
 msgid "3v3"
 msgstr "3v3"
 
 #: docs/Measuring_Resonances.md:block 27 (table)
-#, fuzzy
 msgid "38"
 msgstr "38"
 
 #: docs/Measuring_Resonances.md:block 27 (table)
-#, fuzzy
 msgid "GP0 (I2C0 SDA)"
 msgstr "GP0 (I2C0 SDA)"
 
 #: docs/Measuring_Resonances.md:block 27 (table)
-#, fuzzy
 msgid "02"
 msgstr "02"
 
 #: docs/Measuring_Resonances.md:block 27 (table)
-#, fuzzy
 msgid "GP1 (I2C0 SCL)"
 msgstr "GP1 (I2C0 SCL)"
 
@@ -958,7 +904,6 @@ msgstr ""
 "что сделает 5 В опасным для вашей RPi."
 
 #: docs/Measuring_Resonances.md:block 22 (table)
-#, fuzzy
 msgid "Pico pin"
 msgstr "Pico pin"
 
@@ -967,7 +912,6 @@ msgid "Pico pin name"
 msgstr "Название вывода Pico"
 
 #: docs/Measuring_Resonances.md:block 22 (table)
-#, fuzzy
 msgid "36"
 msgstr "36"
 
@@ -976,7 +920,6 @@ msgid "2"
 msgstr "2"
 
 #: docs/Measuring_Resonances.md:block 22 (table)
-#, fuzzy
 msgid "GP1 (SPI0_CSn)"
 msgstr "GP1 (SPI0_CSn)"
 
@@ -985,7 +928,6 @@ msgid "1"
 msgstr "1"
 
 #: docs/Measuring_Resonances.md:block 22 (table)
-#, fuzzy
 msgid "GP0 (SPI0_RX)"
 msgstr "GP0 (SPI0_RX)"
 
@@ -994,7 +936,6 @@ msgid "5"
 msgstr "5"
 
 #: docs/Measuring_Resonances.md:block 22 (table)
-#, fuzzy
 msgid "GP3 (SPI0_TX)"
 msgstr "GP3 (SPI0_TX)"
 
@@ -1003,7 +944,6 @@ msgid "4"
 msgstr "4"
 
 #: docs/Measuring_Resonances.md:block 22 (table)
-#, fuzzy
 msgid "GP2 (SPI0_SCK)"
 msgstr "GP2 (SPI0_SCK)"
 
@@ -1012,7 +952,6 @@ msgid "Wiring diagrams for some of the ADXL345 boards:"
 msgstr "Схемы подключения некоторых плат ADXL345:"
 
 #: docs/Measuring_Resonances.md:block 24 (paragraph)
-#, fuzzy
 msgid "![ADXL345-Pico](img/adxl345-pico.png)"
 msgstr "![ADXL345-Pico](img/adxl345-pico.png)"
 
@@ -1029,7 +968,6 @@ msgid "On your Raspberry Pi, compile the firmware for the Pico."
 msgstr "На вашем Raspberry Pi скомпилируйте прошивку для Pico."
 
 #: docs/Measuring_Resonances.md:block 58 (paragraph)
-#, fuzzy
 msgid "![Pico menuconfig](img/klipper_pico_menuconfig.png)"
 msgstr "![Pico menuconfig](img/klipper_pico_menuconfig.png)"
 
@@ -1152,32 +1090,26 @@ msgid "MCU(s) with Support"
 msgstr "MCU с поддержкой"
 
 #: docs/Measuring_Resonances.md:block 7 (table)
-#, fuzzy
 msgid "Raspberry Pi"
 msgstr "Raspberry Pi"
 
 #: docs/Measuring_Resonances.md:block 7 (table)
-#, fuzzy
 msgid "3B+, Pico"
 msgstr "3B+, Pico"
 
 #: docs/Measuring_Resonances.md:block 7 (table)
-#, fuzzy
 msgid "3A, 3A+, 3B, 4"
 msgstr "3A, 3A+, 3B, 4"
 
 #: docs/Measuring_Resonances.md:block 7 (table)
-#, fuzzy
 msgid "AVR ATmega"
 msgstr "AVR ATmega"
 
 #: docs/Measuring_Resonances.md:block 7 (table)
-#, fuzzy
 msgid "ATmega328p"
 msgstr "ATmega328p"
 
 #: docs/Measuring_Resonances.md:block 7 (table)
-#, fuzzy
 msgid ""
 "ATmega32u4, ATmega128, ATmega168, ATmega328, ATmega644p, ATmega1280, "
 "ATmega1284, ATmega2560"
@@ -1186,17 +1118,14 @@ msgstr ""
 "ATmega1284, ATmega2560"
 
 #: docs/Measuring_Resonances.md:block 7 (table)
-#, fuzzy
 msgid "AVR AT90"
 msgstr "AVR AT90"
 
 #: docs/Measuring_Resonances.md:block 7 (table)
-#, fuzzy
 msgid "-"
 msgstr "-"
 
 #: docs/Measuring_Resonances.md:block 7 (table)
-#, fuzzy
 msgid "AT90usb646, AT90usb1286"
 msgstr "AT90usb646, AT90usb1286"
 
@@ -1301,10 +1230,6 @@ msgstr ""
 "слишком велики - 10K, и их необходимо заменить или дополнить меньшими "
 "параллельными резисторами."
 
-#: docs/Measuring_Resonances.md:block 41 (paragraph)
-msgid "The RPi has buit-in 1.8K pull-ups on both SCL and SDA."
-msgstr "RPi имеет встроенные подтяжки 1,8K на SCL и SDA."
-
 #: docs/Measuring_Resonances.md:block 42 (paragraph)
 msgid "![MPU-9250 connected to Pi](img/mpu9250-PI-fritzing.png)"
 msgstr "![MPU-9250 подключен к Pi](img/mpu9250-PI-fritzing.png)"
@@ -1332,7 +1257,6 @@ msgstr ""
 "Рекомендуемая схема подключения I2C(TWI) на AVR ATmega328P Arduino Nano:"
 
 #: docs/Measuring_Resonances.md:block 48 (table)
-#, fuzzy
 msgid "Atmega328P TQFP32 pin"
 msgstr "Atmega328P TQFP32 pin"
 
@@ -1341,27 +1265,22 @@ msgid "Atmega328P pin name"
 msgstr "Название выводов Atmega328P"
 
 #: docs/Measuring_Resonances.md:block 48 (table)
-#, fuzzy
 msgid "Arduino Nano pin"
 msgstr "Arduino Nano pin"
 
 #: docs/Measuring_Resonances.md:block 48 (table)
-#, fuzzy
 msgid "27"
 msgstr "27"
 
 #: docs/Measuring_Resonances.md:block 48 (table)
-#, fuzzy
 msgid "A4"
 msgstr "A4"
 
 #: docs/Measuring_Resonances.md:block 48 (table)
-#, fuzzy
 msgid "28"
 msgstr "28"
 
 #: docs/Measuring_Resonances.md:block 48 (table)
-#, fuzzy
 msgid "A5"
 msgstr "A5"
 
@@ -1505,26 +1424,40 @@ msgid ""
 "400kbit/s *fast mode* in Klipper. The LIS2DW and LIS3DH can be connected to "
 "either SPI or I2C with the same considerations as above."
 msgstr ""
+"Klipper имеет встроенную поддержку ADXL345, MPU-9250, LIS2DW и LIS3DH "
+"совместимых акселерометров, которые могут быть использованы для измерения "
+"резонансных частот принтера для различных осей, и авто-тюн [образующих "
+"элементов](Resonance_Compensation.md) для компенсации резонансов. Обратите "
+"внимание, что использование акселерометров требует некоторого пайки и "
+"обжимания. ADXL345 может быть подключен к SPI-интерфейсу Raspberry Pi или MCU-"
+"доски (это должно быть достаточно быстро). Семейство MPU может быть подключено"
+" к I2C-интерфейсу Raspberry Pi непосредственно, или к I2C-интерфейсу MCU-"
+"панель, который поддерживает 400kbit/s *быстрый режим * в Klipper. LIS2DW и "
+"LIS3DH могут быть связаны с SPI или I2C с теми же соображениями, что и выше."
 
 #: docs/Measuring_Resonances.md:block 4 (paragraph)
 msgid ""
 "For ADXL345s, make sure that the board supports SPI mode (a small number of "
 "boards appear to be hard-configured for I2C by pulling SDO to GND)."
 msgstr ""
+"Для ADXL345s убедитесь, что доска поддерживает режим SPI (небольшое количество"
+" досок, по-видимому, жестко настроено для I2C, притягивая SDO к GND)."
 
 #: docs/Measuring_Resonances.md:block 7 (table)
 msgid "SAMD"
-msgstr ""
+msgstr "SAMD"
 
 #: docs/Measuring_Resonances.md:block 7 (table)
 msgid "SAMC21G18"
-msgstr ""
+msgstr "SAMC21G18"
 
 #: docs/Measuring_Resonances.md:block 7 (table)
 msgid ""
 "SAMC21G18, SAMD21G18, SAMD21E18, SAMD21J18, SAMD21E15, SAMD51G19, SAMD51J19, "
 "SAMD51N19, SAMD51P20, SAME51J19, SAME51N19, SAME54P20"
 msgstr ""
+"SAMC21G18, SAMD21G18, SAMD21E18, SAMD21J18, SAMD21E15, SAMD51G19, SAMD51J19, "
+"SAMD51N19, SAMD51P20, SAME51J19, SAME51N19, SAME54P20"
 
 #: docs/Measuring_Resonances.md:block 61 (paragraph)
 msgid ""
@@ -1535,22 +1468,31 @@ msgid ""
 "version, due to newer versions of NumPY having requirements that may not be "
 "satisfied in some klipper python environments."
 msgstr ""
+"Обратите внимание, что, в зависимости от производительности процессора, это "
+"может *занять * много времени, до 10-20 минут. Будьте терпеливы и ждите "
+"завершения установки. В некоторых случаях, если доска имеет слишком мало RAM, "
+"установка может потерпеть неудачу, и вам нужно будет включить обмен. Также "
+"обратите внимание на принудительную версию, из-за более новых версий NumPY, "
+"имеющих требования, которые могут не быть удовлетворены в некоторых средах "
+"клиппера python."
 
 #: docs/Measuring_Resonances.md:block 62 (paragraph)
 msgid "Once installed please check that no errors show from the command:"
 msgstr ""
+"После установки, пожалуйста, проверьте, что никаких ошибок не видно из "
+"команды:"
 
 #: docs/Measuring_Resonances.md:block 64 (paragraph)
 msgid "The correct output should simply be a new line."
-msgstr ""
+msgstr "Правильный вывод должен быть просто новой линией."
 
 #: docs/Measuring_Resonances.md:block 85 (header)
 msgid "Configure LIS2DW series over SPI"
-msgstr ""
+msgstr "Настройка серии LIS2DW над SPI"
 
 #: docs/Measuring_Resonances.md:block 155 (header)
 msgid "Unreliable measurements of resonance frequencies"
-msgstr ""
+msgstr "Ненадежные измерения резонансных частот"
 
 #: docs/Measuring_Resonances.md:block 156 (paragraph)
 msgid ""
@@ -1569,6 +1511,21 @@ msgid ""
 " If none of that helps, a user may try the other shapers from the produced "
 "list besides the one recommended by default."
 msgstr ""
+"Иногда резонансные измерения могут давать фиктивные результаты, что приводит к"
+" неправильным предложениям для входных форматоров. Это может быть вызвано "
+"различными причинами, включая запуск вентиляторов на головке инструмента, "
+"неправильное положение или нежесткую установку акселерометра или механические "
+"проблемы, такие как рыхлые ремни или связывающая или шишка. Имейте в виду, что"
+" все вентиляторы должны быть отключены для резонансного тестирования, особенно"
+" шумных, и что акселерометр должен быть жестко установлен на соответствующей "
+"подвижной части (например, на самой кровати для стропе кровати, или на "
+"экструдере самого принтера, а не на карете, и некоторые люди получают лучшие "
+"результаты, установив акселерометр на самом сопло. Что касается механических "
+"проблем, то пользователь должен проверить, есть ли какая-либо неисправность, "
+"которая может быть исправлена с помощью движущейся оси (например, линейные "
+"направляющие рельсы очищены и смазаны, а напряжение V-слота скорректировано "
+"правильно). Если это не помогает, пользователь может попробовать другие "
+"форматоры из списка, кроме рекомендованного по умолчанию."
 
 #: docs/Measuring_Resonances.md:block 5 (paragraph)
 msgid ""
@@ -1576,16 +1533,216 @@ msgid ""
 "there are also a variety of board designs and clones with different I2C pull-"
 "up resistors which will need supplementing."
 msgstr ""
+"Для MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500/ICM20948s и LIS2DW/LIS3DH "
+"существуют также различные конструкции и клоны с различными резистентами I2C, "
+"которые будут нуждаться в дополнении."
 
 #: docs/Measuring_Resonances.md:block 37 (header)
 msgid "MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500/ICM20948"
-msgstr ""
+msgstr "MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500/ICM20948"
 
 #: docs/Measuring_Resonances.md:block 90 (paragraph)
 msgid ""
 "If you are using the ICM20948, replace instances of \"mpu9250\" with "
 "\"icm20948\"."
 msgstr ""
+"Если вы используете ICM20948, замените экземпляры «mpu9250» на «icm20948»."
+
+#: docs/Measuring_Resonances.md:block 41 (paragraph)
+msgid "The RPi has built-in 1.8K pull-ups on both SCL and SDA."
+msgstr ""
+"У RPi есть встроенные подтягивающие резисторы 1,8 кОм на линиях SCL и SDA."
+
+#: docs/Measuring_Resonances.md:block 158 (header)
+msgid "Measuring the resonances of Z axis"
+msgstr "Измерение резонансов оси Z"
+
+#: docs/Measuring_Resonances.md:block 159 (paragraph)
+msgid ""
+"Measuring the resonances of Z axis is similar in many aspects to measuring "
+"resonances of X and Y axes, with some subtle differences. Similarly to other "
+"axes measurements, you will need to have an accelerometer mounted on the "
+"moving parts of Z axis - either the bed itself (if the bed moves over Z axis),"
+" or the toolhead (if the toolhead/gantry moves over Z). You will need to add "
+"the appropriate chip configuration to `printer.cfg` and also add it to "
+"`[resonance_tester]` section, e.g."
+msgstr ""
+"Измерение резонансов оси Z во многом похоже на измерение резонансов осей X и "
+"Y, но имеет некоторые тонкие отличия. Как и при измерениях других осей, вам "
+"потребуется закрепить акселерометр на движущихся частях оси Z — либо на "
+"самом столе (если стол движется по оси Z), либо на инструментальной головке "
+"(если инструментальная головка/портал движется по Z). Вам потребуется "
+"добавить соответствующую конфигурацию чипа в `printer.cfg`, а также добавить "
+"его в раздел `[resonance_tester]`, например:"
+
+#: docs/Measuring_Resonances.md:block 161 (paragraph)
+msgid ""
+"Also make sure that `probe_points` configured in `[resonance_tester]` allow "
+"sufficient clearance for Z axis movements (20 mm above bed surface should "
+"provide enough clearance with the default test parameters)."
+msgstr ""
+"Также убедитесь, что `probe_points`, настроенные в `[resonance_tester]`, "
+"обеспечивают достаточный зазор для перемещений по оси Z (20 мм над "
+"поверхностью стола должны дать достаточный зазор при параметрах теста по "
+"умолчанию)."
+
+#: docs/Measuring_Resonances.md:block 162 (paragraph)
+msgid ""
+"The next consideration is that Z axis can typically reach lower maximum speeds"
+" and accelerations that X and Y axes. Default parameters of the test take that"
+" into consideration and are much less agressive, but it may still be necessary"
+" to increase `max_z_accel` and `max_z_velocity`. If you have them configured "
+"in `[printer]` section, make sure to set them to at least"
+msgstr ""
+"Следующее соображение: ось Z обычно может достигать меньших максимальных "
+"скоростей и ускорений, чем оси X и Y. Параметры теста по умолчанию учитывают "
+"это и гораздо менее агрессивны, но всё же может потребоваться увеличить "
+"`max_z_accel` и `max_z_velocity`. Если они настроены в разделе `[printer]`, "
+"обязательно установите их как минимум в"
+
+#: docs/Measuring_Resonances.md:block 164 (paragraph)
+msgid ""
+"but only for the duration of the test, afterwards you can revert them back to "
+"their original values if necessary. And if you use custom test parameters for "
+"Z axis, `TEST_RESONANCES` and `SHAPER_CALIBRATE` will provide the minimum "
+"required limits if necessary for your specific case."
+msgstr ""
+"но только на время теста; после этого при необходимости можно вернуть "
+"исходные значения. А если вы используете собственные параметры теста для оси "
+"Z, `TEST_RESONANCES` и `SHAPER_CALIBRATE` при необходимости сообщат "
+"минимально требуемые значения для вашего конкретного случая."
+
+#: docs/Measuring_Resonances.md:block 165 (paragraph)
+msgid ""
+"After all changes to `printer.cfg` have been made, restart Klipper and run "
+"either"
+msgstr ""
+"После внесения всех изменений в `printer.cfg` перезапустите Klipper и "
+"выполните одну из команд:"
+
+#: docs/Measuring_Resonances.md:block 167 (paragraph)
+msgid "or"
+msgstr "или"
+
+#: docs/Measuring_Resonances.md:block 169 (paragraph)
+msgid ""
+"and proceed from there accordingly how you would for other axes. For example, "
+"after `TEST_RESONANCES` command you can run `calibrate_shaper.py` script and "
+"get shaper recommendations and the chart of resonance response:"
+msgstr ""
+"и далее действуйте так же, как для других осей. Например, после команды "
+"`TEST_RESONANCES` можно запустить скрипт `calibrate_shaper.py` и получить "
+"рекомендации по шейперу и график амплитудно-частотной характеристики:"
+
+#: docs/Measuring_Resonances.md:block 170 (paragraph)
+msgid "![Resonances](img/calibrate-z.png)"
+msgstr "![Резонансы](img/calibrate-z.png)"
+
+#: docs/Measuring_Resonances.md:block 171 (paragraph)
+msgid ""
+"After the calibration, the shaper parameters can be stored in the "
+"`printer.cfg`, e.g. from the example above:"
+msgstr ""
+"После калибровки параметры шейпера можно сохранить в `printer.cfg`, "
+"например, из приведённого выше примера:"
+
+#: docs/Measuring_Resonances.md:block 173 (paragraph)
+msgid ""
+"Also, given the movements of Z axis are slow, you can easily consider more "
+"aggressive input shapers, e.g."
+msgstr ""
+"Кроме того, учитывая, что перемещения по оси Z медленные, можно легко "
+"рассмотреть более агрессивные input shaper, например:"
+
+#: docs/Measuring_Resonances.md:block 175 (paragraph)
+msgid ""
+"If the test produces bogus results, you may try to increase `accel_per_hz_z` "
+"parameter in `[resonance_tester]` from its default value 15 to a larger value "
+"in the range of 20-30, e.g."
+msgstr ""
+"Если тест даёт некорректные результаты, можно попробовать увеличить параметр "
+"`accel_per_hz_z` в `[resonance_tester]` с его значения по умолчанию 15 до "
+"большего значения в диапазоне 20–30, например:"
+
+#: docs/Measuring_Resonances.md:block 177 (paragraph)
+msgid ""
+"and repeat the test. Increasing this value will likely require increasing "
+"`max_z_accel` and `max_z_velocity` parameters as well. You can run "
+"`TEST_RESONANCES AXIS=Z` command to get the required minimum values."
+msgstr ""
+"и повторить тест. Увеличение этого значения, вероятно, потребует также "
+"увеличения параметров `max_z_accel` и `max_z_velocity`. Вы можете выполнить "
+"команду `TEST_RESONANCES AXIS=Z`, чтобы получить требуемые минимальные "
+"значения."
+
+#: docs/Measuring_Resonances.md:block 178 (paragraph)
+msgid ""
+"However, if you are unable to measure the resonances of Z axis, you can "
+"consider just using"
+msgstr ""
+"Однако если измерить резонансы оси Z не удаётся, можно рассмотреть просто "
+"использование"
+
+#: docs/Measuring_Resonances.md:block 180 (paragraph)
+msgid ""
+"as an acceptable all-round choice, given that the smoothing of Z axis "
+"movements is not of particular concerns."
+msgstr ""
+"в качестве приемлемого универсального варианта, учитывая, что сглаживание "
+"перемещений по оси Z не вызывает особых опасений."
+
+#: docs/Measuring_Resonances.md:block 190 (paragraph)
+msgid ""
+"For Delta printers with the default tower placement (tower A ~= 210 degrees, B"
+" ~= 330 degrees, and C ~= 90 degrees), execute"
+msgstr ""
+"Для принтеров Delta с размещением башни по умолчанию (башня A ~= 210 градусов,"
+" B ~= 330 градусов и C ~= 90 градусов) выполните команду"
+
+#: docs/Measuring_Resonances.md:block 139 (paragraph)
+msgid ""
+"Note that the reported `smoothing` values are some abstract projected values. "
+"These values can be used to compare different configurations: the higher the "
+"value, the more smoothing a shaper will create. However, these smoothing "
+"scores do not represent any real measure of smoothing, because the actual "
+"smoothing depends on [`max_accel`](#selecting-max_accel) and "
+"`square_corner_velocity` parameters. Therefore, you should print some test "
+"prints to see how much smoothing exactly a chosen configuration creates."
+msgstr ""
+"Учтите, что сообщаемые значения `smoothing` — это некоторые абстрактные "
+"расчётные величины. Эти значения можно использовать для сравнения различных "
+"конфигураций: чем выше значение, тем больше сглаживания создаст шейпер. "
+"Однако эти показатели сглаживания не отражают какой-либо реальной меры "
+"сглаживания, поскольку фактическое сглаживание зависит от параметров "
+"[`max_accel`](#selecting-max_accel) и `square_corner_velocity`. Поэтому "
+"следует выполнить несколько тестовых печатей, чтобы увидеть, сколько "
+"сглаживания на самом деле создаёт выбранная конфигурация."
+
+#~ msgid ""
+#~ "Note that the reported `smoothing` values are some abstract projected values. "
+#~ "These values can be used to compare different configurations: the higher the "
+#~ "value, the more smoothing a shaper will create. However, these smoothing "
+#~ "scores do not represent any real measure of smoothing, because the actual "
+#~ "smoothing depends on [`max_accel`](#selecting-max-accel) and "
+#~ "`square_corner_velocity` parameters. Therefore, you should print some test "
+#~ "prints to see how much smoothing exactly a chosen configuration creates."
+#~ msgstr ""
+#~ "Обратите внимание, что указанные значения `сглаживания` - это некие "
+#~ "абстрактные прогнозируемые значения. Эти значения можно использовать для "
+#~ "сравнения различных конфигураций: чем выше значение, тем больше сглаживания "
+#~ "создаст шейпер. Однако эти показатели сглаживания не являются реальной мерой "
+#~ "сглаживания, поскольку фактическое сглаживание зависит от параметров "
+#~ "[`max_accel`](#selecting-max-accel) и `square_corner_velocity`. Поэтому вам "
+#~ "следует напечатать несколько тестовых отпечатков, чтобы узнать, сколько "
+#~ "сглаживания создает выбранная конфигурация."
+
+#~ msgid ""
+#~ "For Delta printers with the default tower placement (tower A ~~= 210 degrees, "
+#~ "B ~~= 330 degrees, and C ~= 90 degrees), execute"
+#~ msgstr ""
+
+#~ msgid "The RPi has buit-in 1.8K pull-ups on both SCL and SDA."
+#~ msgstr "RPi имеет встроенные подтяжки 1,8K на SCL и SDA."
 
 #, fuzzy
 #~ msgid "MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500"

@@ -1,20 +1,22 @@
 # Neko.vecter <Vecterfang@icloud.com>, 2021.
-# Yifei Ding <dingyifeiair@gmail.com>, 2021, 2022, 2023.
-# 红豆蛋黄派 <zgpride87@outlook.com>, 2022.
+# Yifei Ding <dingyifeiair@gmail.com>, 2021, 2022, 2023, 2025.
+# 红豆蛋黄派 <zgpride87@outlook.com>, 2022, 2025.
+# "Neko.vecter" <Vecterfang@icloud.com>, 2025.
+# Eagle Jin <eaglejin0@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
 "POT-Creation-Date: 2021-07-15 06:32+0200\n"
-"PO-Revision-Date: 2023-04-07 22:49+0000\n"
-"Last-Translator: Yifei Ding <dingyifeiair@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/klipper/features/zh_Hans/>\n"
+"PO-Revision-Date: 2025-09-17 11:01+0000\n"
+"Last-Translator: Eagle Jin <eaglejin0@gmail.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/klipper/features/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.17-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #: docs/Features.md:block 1 (paragraph)
 msgid "Klipper has several compelling features:"
@@ -71,16 +73,6 @@ msgid ""
 msgstr ""
 "Klipper "
 "使用“迭代求解器”从简单的运动学方程中计算精准的步进时间。这降低了移植Klipper到新的机械结构的难度并保证了精确的步进计时（而不需要“线段化”）。"
-
-#: docs/Features.md:block 2 (unordered list)
-msgid ""
-"Portable code. Klipper works on ARM, AVR, and PRU based micro-controllers. "
-"Existing \"reprap\" style printers can run Klipper without hardware "
-"modification - just add a Raspberry Pi. Klipper's internal code layout makes "
-"it easier to support other micro-controller architectures as well."
-msgstr ""
-"易移植的代码。Klipper 可以在 ARM，AVR，和PRU架构的微控制器上运行。现有的“reprap”类打印机不需要改动任何硬件就可以运行 "
-"Klipper，只需要加一个树莓派。Klipper 的内部代码结构使它能够被简单的移植到其他架构。"
 
 #: docs/Features.md:block 2 (unordered list)
 msgid ""
@@ -460,15 +452,6 @@ msgid ""
 "facilitate canceling of just one object in a multi-part print."
 msgstr "支持打印时“排除对象”。配置后，此模块可以取消多零件打印中的一个对象。"
 
-#: docs/Features.md:block 6 (unordered list)
-msgid ""
-"Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
-"TMC2660, and TMC5160 stepper motor drivers. There is also support for current "
-"control of traditional stepper drivers via AD5206, DAC084S085, MCP4451, "
-"MCP4728, MCP4018, and PWM pins."
-msgstr ""
-"支持TMC2130、TMC2208/TMC2224、TMC2209、TMC2660和TMC5160步进电机驱动器的运行时配置。还支持通过AD5206、DAC084S085、MCP4451、MCP4728、MCP4018和PWM引脚对传统步进驱动器进行电流控制。"
-
 #: docs/Features.md:block 3 (unordered list)
 msgid ""
 "Best in class performance. Klipper is able to achieve high stepping rates on "
@@ -495,7 +478,7 @@ msgstr "2507K"
 
 #: docs/Features.md:block 10 (table)
 msgid "RP2350"
-msgstr ""
+msgstr "RP2350"
 
 #: docs/Features.md:block 10 (table)
 msgid "4167K"
@@ -517,6 +500,14 @@ msgstr ""
 msgid "4737K"
 msgstr ""
 
+#: docs/Features.md:block 3 (unordered list)
+msgid ""
+"Portable code. Klipper works on ARM, AVR, PRU, and other micro-controllers. "
+"Existing \"reprap\" style printers can run Klipper without hardware "
+"modification - just add a Raspberry Pi. Klipper's internal code layout makes "
+"it easier to support other micro-controller architectures as well."
+msgstr ""
+
 #: docs/Features.md:block 6 (unordered list)
 msgid ""
 "Automatic bed leveling support. Klipper can be configured for basic bed tilt "
@@ -532,10 +523,10 @@ msgstr ""
 msgid ""
 "Support for common temperature sensors (eg, common thermistors, AD595, AD597, "
 "AD849x, PT100, PT1000, MAX6675, MAX31855, MAX31856, MAX31865, BME280, HTU21D, "
-"DS18B20, AHT10, SHT3x, and LM75). Custom thermistors and custom analog "
-"temperature sensors can also be configured. One can monitor the internal "
-"micro-controller temperature sensor and the internal temperature sensor of a "
-"Raspberry Pi."
+"DS18B20, AHT1X, AHT2X, AHT3X, SHT3x, and LM75). Custom thermistors and custom "
+"analog temperature sensors can also be configured. One can monitor the "
+"internal micro-controller temperature sensor and the internal temperature "
+"sensor of a Raspberry Pi."
 msgstr ""
 
 #: docs/Features.md:block 6 (unordered list)
@@ -550,6 +541,18 @@ msgstr ""
 msgid ""
 "Support for measuring and recording acceleration using adxl345, mpu9250, "
 "mpu6050, lis2dw12, lis3dh, and icm20948 accelerometers."
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "STM32G431"
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "3617K"
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "2452K"
 msgstr ""
 
 #: docs/Features.md:block 10 (table)
@@ -571,6 +574,30 @@ msgstr ""
 #: docs/Features.md:block 10 (table)
 msgid "8619K"
 msgstr ""
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
+"TMC2240, TMC2660, TMC5160, and TMC5262 stepper motor drivers. There is also "
+"support for current control of traditional stepper drivers via AD5206, "
+"DAC084S085, MCP4451, MCP4728, MCP4018, and PWM pins."
+msgstr ""
+
+#~ msgid ""
+#~ "Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
+#~ "TMC2240, TMC2660, and TMC5160 stepper motor drivers. There is also support for"
+#~ " current control of traditional stepper drivers via AD5206, DAC084S085, "
+#~ "MCP4451, MCP4728, MCP4018, and PWM pins."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Portable code. Klipper works on ARM, AVR, and PRU based micro-controllers. "
+#~ "Existing \"reprap\" style printers can run Klipper without hardware "
+#~ "modification - just add a Raspberry Pi. Klipper's internal code layout makes "
+#~ "it easier to support other micro-controller architectures as well."
+#~ msgstr ""
+#~ "易移植的代码。Klipper 可以在 ARM，AVR，和PRU架构的微控制器上运行。现有的“reprap”类打印机不需要改动任何硬件就可以运行 "
+#~ "Klipper，只需要加一个树莓派。Klipper 的内部代码结构使它能够被简单的移植到其他架构。"
 
 #~ msgid ""
 #~ "Automatic bed leveling support. Klipper can be configured for basic bed tilt "
@@ -612,6 +639,14 @@ msgstr ""
 
 #~ msgid "6061K"
 #~ msgstr "6061K"
+
+#~ msgid ""
+#~ "Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
+#~ "TMC2660, and TMC5160 stepper motor drivers. There is also support for current "
+#~ "control of traditional stepper drivers via AD5206, DAC084S085, MCP4451, "
+#~ "MCP4728, MCP4018, and PWM pins."
+#~ msgstr ""
+#~ "支持TMC2130、TMC2208/TMC2224、TMC2209、TMC2660和TMC5160步进电机驱动器的运行时配置。还支持通过AD5206、DAC084S085、MCP4451、MCP4728、MCP4018和PWM引脚对传统步进驱动器进行电流控制。"
 
 #~ msgid ""
 #~ "Support for measuring and recording acceleration using an adxl345, mpu9250, "

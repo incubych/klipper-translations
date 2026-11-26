@@ -1,23 +1,23 @@
 # dfosantos <santosdiogo97@gmail.com>, 2022.
 # MOISÉS RODRIGUES ALVES <MOISESINHO_RA@hotmail.com>, 2022.
 # KrulesExGamer <pedro.hvn.2018@gmail.com>, 2022.
-# fanylouise <gandra.fany@gmail.com>, 2022.
+# fanylouise <gandra.fany@gmail.com>, 2022, 2025.
 # djudju12 <jonathan.willian321@gmail.com>, 2022.
-# gbonaspetti <gbonaspetti@hotmail.com>, 2022.
-# ssantos <ssantos@web.de>, 2023, 2024.
-# Luciano Moda <desenvolvimento@gtmax.com.br>, 2023.
-# Andre Costa <andrecaeu@gmail.com>, 2024.
+# gbonaspetti <gbonaspetti@hotmail.com>, 2022, 2025.
+# ssantos <ssantos@web.de>, 2023, 2024, 2025.
+# Luciano Moda <desenvolvimento@gtmax.com.br>, 2023, 2025.
+# Andre Costa <andrecaeu@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-03-28 01:37+0000\n"
-"Last-Translator: ssantos <ssantos@web.de>\n"
+"PO-Revision-Date: 2025-07-22 08:27+0000\n"
+"Last-Translator: gbonaspetti <gbonaspetti@hotmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/klipper/config_checks/pt/>\n"
 "Language: pt\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document provides a list of steps to help confirm the pin settings in the"
@@ -299,16 +299,6 @@ msgstr ""
 "QUERY_ENDSTOPS enquanto acciona manualmente a paragem final. O comando "
 "QUERY_ENDSTOPS deve reportar o fim de curso como \"TRIGGERED\"."
 
-#: docs/Config_checks.md:block 15 (paragraph)
-msgid ""
-"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
-"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
-"^PA2\"), or remove the \"!\" if there is already one present."
-msgstr ""
-"Se o fim de curso aparecer invertido (reporta \"aberto\" quando acionado e "
-"vice-versa), adicione um \"!\" à definição do pino (por exemplo, "
-"\"endstop_pin: ^PA2\"), ou remova o \"!\" se já existir um."
-
 #: docs/Config_checks.md:block 18 (paragraph)
 msgid ""
 "Use the STEPPER_BUZZ command to verify the connectivity of each stepper motor."
@@ -356,6 +346,22 @@ msgid ""
 msgstr ""
 "Para calibrar a extrusora, navegar para a consola de comandos e executar o "
 "comando PID_CALIBRATE. Por exemplo: `PID_CALIBRATE HEATER=extruder TARGET=170`"
+
+#: docs/Config_checks.md:block 15 (paragraph)
+msgid ""
+"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+"^!PA2\"), or remove the \"!\" if there is already one present."
+msgstr ""
+
+#~ msgid ""
+#~ "If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+#~ "versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+#~ "^PA2\"), or remove the \"!\" if there is already one present."
+#~ msgstr ""
+#~ "Se o fim de curso aparecer invertido (reporta \"aberto\" quando acionado e "
+#~ "vice-versa), adicione um \"!\" à definição do pino (por exemplo, "
+#~ "\"endstop_pin: ^PA2\"), ou remova o \"!\" se já existir um."
 
 #~ msgid ""
 #~ "Start by verifying that temperatures are being properly reported. Navigate to "

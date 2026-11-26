@@ -1,20 +1,21 @@
 # Zs.Antal <zsikaiantal@gmail.com>, 2022.
 # "Zs.Antal" <zsikaiantal@gmail.com>, 2023.
 # "Zs.Antal" <zsikaiantal@icloud.com>, 2024.
+# "Zs.Antal" <antonio092130@icloud.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-03-15 16:02+0000\n"
-"Last-Translator: \"Zs.Antal\" <zsikaiantal@icloud.com>\n"
+"PO-Revision-Date: 2025-07-22 08:34+0000\n"
+"Last-Translator: \"Zs.Antal\" <antonio092130@icloud.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/klipper/rpi_microcontroller/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document describes the process of running Klipper on a RPi and use the "
@@ -233,17 +234,6 @@ msgstr ""
 " raspi-config` futtatásával és az SPI engedélyezésével az \"Interfacing "
 "options\" menüben."
 
-#: docs/RPi_microcontroller.md:block 30 (paragraph)
-msgid ""
-"The chosen pin can thus be used within the configuration as "
-"`gpiochip<n>/gpio<o>` where **n** is the chip number as seen by the "
-"`gpiodetect` command and **o** is the line number seen by the`gpioinfo` "
-"command."
-msgstr ""
-"A kiválasztott tű így a konfiguráción belül `gpiochip<n>/gpio<o> néven "
-"használható;` ahol **n** a `gpiodetect` által látott chipszám parancs által "
-"látott sorszám, és **o** a`gpioinfo` parancs által látott sorszám."
-
 #: docs/RPi_microcontroller.md:block 23 (paragraph)
 msgid ""
 "On Raspberry Pi and on many clones the pins exposed on the GPIO belong to the "
@@ -323,6 +313,24 @@ msgstr ""
 "Ez hozzáadja a hardveres PWM vezérlést a gpio12 és gpio13-hoz a Pi-n (mivel az"
 " overlay úgy volt konfigurálva, hogy a pwm0-t a pin=12-re és a pwm1-et a "
 "pin=13-ra irányítsa)."
+
+#: docs/RPi_microcontroller.md:block 32 (paragraph)
+msgid ""
+"The chosen pin can thus be used within the configuration as "
+"`gpiochip<n>/gpio<o>` where **n** is the chip number as seen by the "
+"`gpiodetect` command and **o** is the line number seen by the`gpioinfo` "
+"command."
+msgstr ""
+"A kiválasztott tű így a konfiguráción belül `gpiochip<n>/gpio<o> néven "
+"használható;` ahol **n** a `gpiodetect` által látott chipszám parancs által "
+"látott sorszám, és **o** a`gpioinfo` parancs által látott sorszám."
+
+#~ msgid ""
+#~ "The chosen pin can thus be used within the configuration as "
+#~ "`gpiochip<n>/gpio<o>` where **n** is the chip number as seen by the "
+#~ "`gpiodetect` command and **o** is the line number seen by the` gpioinfo` "
+#~ "command."
+#~ msgstr ""
 
 #~ msgid ""
 #~ "cd ~/klipper/\n"

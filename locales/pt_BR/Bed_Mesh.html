@@ -1408,19 +1408,6 @@
     Configurando a posição de referência zero
   </a>
   
-    <nav class="md-nav" aria-label="Configurando a posição de referência zero">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#obsoleto-relative_reference_index" class="md-nav__link">
-    Obsoleto relative_reference_index
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1664,7 +1651,7 @@ bicubic_tension: 0.2
 </code></pre></div>
 
 <ul>
-<li><code>mesh_pps: 2, 3</code> <em>Valor padrão: 2, 2</em> A opção <code>mesh_pps</code> é uma abreviação para "Mesh Points Per Segment" (Pontos de Malha por Segmento). Essa opção especifica quantos pontos serão interpolados para cada segmento ao longo dos eixos X e Y. Um 'segmento' é o espaço entre cada ponto sondado. Assim como <code>probe_count</code>, <code>mesh_pps</code> é especificado como um par de números inteiros X, Y, e também pode ser especificado como um único número inteiro que se aplica a ambos os eixos.</li>
+<li><code>mesh_pps: 2, 3</code> <em>Default Value: 2, 2</em> The <code>mesh_pps</code> option is shorthand for Mesh Points Per Segment. This option specifies how many points to interpolate for each segment along the X and Y axes. Consider a 'segment' to be the space between each probed point. Like <code>probe_count</code>, <code>mesh_pps</code> is specified as an X, Y integer pair, and also may be specified a single integer that is applied to both axes. In this example there are 4 segments along the X axis and 2 segments along the Y axis. This evaluates to 8 interpolated points along X, 6 interpolated points along Y, which results in a 13x9 mesh. Note that if mesh_pps is set to 0 then mesh interpolation is disabled and the probed matrix will be sampled directly.</li>
 <li><code>algorithm: lagrange</code> <em>Valor padrão: lagrange</em> O algoritmo usado para interpolar a malha. Pode ser <code>lagrange</code> ou <code>bicubic</code>. A interpolação de Lagrange é limitada a 6 pontos sondados, pois a oscilação tende a ocorrer com um número maior de amostras. A interpolação bicúbica requer um mínimo de 4 pontos sondados ao longo de cada eixo; se menos de 4 pontos forem especificados, a amostragem de Lagrange será forçada. Se mesh_pps estiver definido como 0, este valor será ignorado, pois nenhuma interpolação de malha será realizada.</li>
 <li><code>bicubic_tension: 0.2</code> <em>Valor padrão: 0.2</em> Se a opção <code>algorithm</code> for definida como bicubic, é possível especificar o valor de tensão (tension). Quanto maior a tensão, mais inclinação é interpolada. Tome cuidado ao ajustar esse valor, pois valores mais altos também criam mais overshoot (sobressinal), o que resultará em valores interpolados mais altos ou mais baixos do que seus pontos sondados.</li>
 </ul>
@@ -1706,7 +1693,7 @@ fade_target: 0
 <li><code>fade_target: 0</code> <em>Valor padrão: O valor médio da coordenada Z da malha</em> O <code>fade_target</code> pode ser considerado como um deslocamento Z adicional aplicado em toda a cama após a conclusão do fade. Geralmente, gostaríamos que esse valor fosse 0, no entanto, há circunstâncias em que não deve ser. Por exemplo, suponha que sua posição de homing (inicial) na cama seja uma exceção, ou seja, ela está 0,2 mm abaixo da altura média sondada da cama. Se o <code>fade_target</code> for 0, o fade reduzirá a impressão em uma média de 0,2 mm em toda a cama. Ao definir o <code>fade_target</code> para 0,2, a área de homing se expandirá em 0,2 mm, mas o restante da cama será dimensionado com precisão. Geralmente, é uma boa ideia deixar o <code>fade_target</code> fora da configuração para que a altura média da malha seja usada; no entanto, pode ser desejável ajustar manualmente o <code>fade_target</code> se você desejar imprimir em uma parte específica da cama.</li>
 </ul>
 <h3 id="configurando-a-posicao-de-referencia-zero">Configurando a posição de referência zero<a class="headerlink" href="#configurando-a-posicao-de-referencia-zero" title="Permanent link">&para;</a></h3>
-<p>Many probes are susceptible to "drift", ie: inaccuracies in probing introduced by heat or interference. This can make calculating the probe's z-offset challenging, particularly at different bed temperatures. As such, some printers use an endstop for homing the Z axis and a probe for calibrating the mesh. In this configuration it is possible offset the mesh so that the (X, Y) <code>reference position</code> applies zero adjustment. The <code>reference postion</code> should be the location on the bed where a <a href="Manual_Level.html#calibrating-a-z-endstop">Z_ENDSTOP_CALIBRATE</a> paper test is performed. The bed_mesh module provides the <code>zero_reference_position</code> option for specifying this coordinate:</p>
+<p>Many probes are susceptible to "drift", ie: inaccuracies in probing introduced by heat or interference. This can make calculating the probe's z-offset challenging, particularly at different bed temperatures. As such, some printers use an endstop for homing the Z axis and a probe for calibrating the mesh. In this configuration it is possible offset the mesh so that the (X, Y) <code>reference position</code> applies zero adjustment. The <code>reference position</code> should be the location on the bed where a <a href="Manual_Level.html#calibrating-a-z-endstop">Z_ENDSTOP_CALIBRATE</a> paper test is performed. The bed_mesh module provides the <code>zero_reference_position</code> option for specifying this coordinate:</p>
 <div class="highlight"><pre><span></span><code>[bed_mesh]
 speed: 120
 horizontal_move_z: 5
@@ -1719,20 +1706,6 @@ probe_count: 5, 3
 <ul>
 <li><code>zero_reference_position:</code> <em>Valor padrão: Nenhum (desabilitado)</em> A <code>zero_reference_position</code> espera uma coordenada (X, Y) correspondente à <code>reference position</code> descrita acima. Se a coordenada estiver dentro da malha, então a malha será deslocada para que a posição de referência aplique ajuste zero. Se a coordenada estiver fora da malha, então a coordenada será sondada após a calibração, com o z-value resultante usado como z-offset. Observe que esta coordenada NÃO deve estar em um local especificado como <code>faulty_region</code> se uma sonda for necessária.</li>
 </ul>
-<h4 id="obsoleto-relative_reference_index">Obsoleto relative_reference_index<a class="headerlink" href="#obsoleto-relative_reference_index" title="Permanent link">&para;</a></h4>
-<p>As configurações existentes que usam a opção <code>relative_reference_index</code> devem ser atualizadas para usar a <code>zero_reference_position</code>. A resposta ao comando gcode <a href="#output">BED_MESH_OUTPUT PGP=1</a> incluirá a coordenada (X, Y) associada ao índice; esta posição pode ser usada como o valor para <code>zero_reference_position</code>. A saída será semelhante à seguinte:</p>
-<div class="highlight"><pre><span></span><code>// bed_mesh: generated points
-// Index | Tool Adjusted | Probe
-// 0 | (1.0, 1.0) | (24.0, 6.0)
-// 1 | (36.7, 1.0) | (59.7, 6.0)
-// 2 | (72.3, 1.0) | (95.3, 6.0)
-// 3 | (108.0, 1.0) | (131.0, 6.0)
-... (additional generated points)
-// bed_mesh: relative_reference_index 24 is (131.5, 108.0)
-</code></pre></div>
-
-<p><em>Nota: A saída acima também é impressa em <code>klippy.log</code> durante a inicialização.</em></p>
-<p>Usando o exemplo acima, vemos que o <code>relative_reference_index</code> é impresso junto com sua coordenada. Portanto, a <code>zero_reference_position</code> é <code>131,5, 108</code>.</p>
 <h3 id="regioes-defeituosas">Regiões defeituosas<a class="headerlink" href="#regioes-defeituosas" title="Permanent link">&para;</a></h3>
 <p>É possível que algumas áreas da cama relatem resultados imprecisos durante a sondagem devido a uma "falha" em locais específicos. O melhor exemplo disso são camas com séries de ímãs integrados usados para manter folhas de aço removíveis. O campo magnético nos arredores desses ímãs pode fazer com que uma sonda indutiva seja acionada a uma distância maior ou menor do que o normal, resultando em uma malha que não representa com precisão a superfície nessas áreas. <strong>Observação: Isso não deve ser confundido com o viés de localização da sonda, que produz resultados imprecisos em toda a cama.</strong></p>
 <p>As opções <code>faulty_region</code> podem ser configuradas para compensar esse efeito. Se um ponto gerado estiver localizado dentro de uma região com falha, a malha da cama tentará sondar até 4 pontos nas bordas dessa região. Esses valores sondados serão calculados em uma média e inseridos na malha como o valor Z na coordenada gerada (X, Y).</p>
@@ -1807,7 +1780,7 @@ scan_overshoot: 8
 <h3 id="calibracao">Calibração<a class="headerlink" href="#calibracao" title="Permanent link">&para;</a></h3>
 <p><code>BED_MESH_CALIBRATE PROFILE=&lt;name&gt; METHOD=[manual | automatic | scan | rapid_scan] \ [&lt;probe_parameter&gt;=&lt;value&gt;] [&lt;mesh_parameter&gt;=&lt;value&gt;] [ADAPTIVE=[0|1] \ [ADAPTIVE_MARGIN=&lt;value&gt;]</code> <em>Default Profile: default</em> <em>Default Method: automatic if a probe is detected, otherwise manual</em>  <em>Default Adaptive: 0</em>  <em>Default Adaptive Margin: 0</em></p>
 <p>Inicia o procedimento de sondagem para a Calibração da Malha da Cama (Bed Mesh Calibration).</p>
-<p>The mesh will be saved into a profile specified by the <code>PROFILE</code> parameter, or <code>default</code> if unspecified. The <code>METHOD</code> parameter takes one of the following values:</p>
+<p>The mesh will be immediately ready to use when the command completes and saved into a profile specified by the <code>PROFILE</code> parameter, or <code>default</code> if unspecified. The <code>METHOD</code> parameter takes one of the following values:</p>
 <ul>
 <li><code>METHOD=manual</code>: enables manual probing using the nozzle and the paper test</li>
 <li><code>METHOD=automatic</code>: Automatic (standard) probing. This is the default.</li>
@@ -1847,6 +1820,7 @@ scan_overshoot: 8
 <p>Qualquer outro perfil salvo pode ser removido da mesma maneira, substituindo <em>default</em> pelo nome do perfil que você deseja remover.</p>
 <h4 id="carregando-o-perfil-padrao">Carregando o perfil padrão<a class="headerlink" href="#carregando-o-perfil-padrao" title="Permanent link">&para;</a></h4>
 <p>Versões anteriores do <code>bed_mesh</code> sempre carregavam o perfil chamado <em>default</em> na inicialização, caso estivesse presente. Esse comportamento foi removido para permitir que o usuário determine quando um perfil é carregado. Se o usuário desejar carregar o perfil <code>default</code>, é recomendado adicionar <code>BED_MESH_PROFILE LOAD=default</code> no macro <code>START_PRINT</code> ou na configuração de "Start G-Code" do slicer, dependendo do que for aplicável.</p>
+<p>Note that this is not required if a new mesh is generated with <code>BED_MESH_CALIBRATE</code> in the <code>START_PRINT</code> macro or the slicer's "Start G-Code" and may produce unexpected results, especially with adaptive meshing.</p>
 <p>Alternativamente, o antigo comportamento de carregar um perfil na inicialização pode ser restaurado com <code>[delayed_gcode]</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="k">[delayed_gcode bed_mesh_init]</span>
 <span class="na">initial_duration</span><span class="o">:</span><span class="w"> </span><span class="s">.01</span>
@@ -1889,7 +1863,7 @@ scan_overshoot: 8
 <h3 id="dumping-mesh-data">Dumping mesh data<a class="headerlink" href="#dumping-mesh-data" title="Permanent link">&para;</a></h3>
 <p><code>{"id": 123, "method": "bed_mesh/dump_mesh"}</code></p>
 <p>Dumps the configuration and state for the current mesh and all saved profiles.</p>
-<p>The <code>dump_mesh</code> endpoint takes one optional parameter, <code>mesh_args</code>. This parameter must be an object, where the keys and values are parameters available to <a href="#bed_mesh_calibrate">BED_MESH_CALIBRATE</a>. This will update the mesh configuration and probe points using the supplied parameters prior to returning the result. It is recommended to omit mesh parameters unless it is desired to visualize the probe points and/or travel path before performing <code>BED_MESH_CALIBRATE</code>.</p>
+<p>The <code>dump_mesh</code> endpoint takes one optional parameter, <code>mesh_args</code>. This parameter must be an object, where the keys and values are parameters available to <a href="G-Codes.html#bed_mesh_calibrate">BED_MESH_CALIBRATE</a>. This will update the mesh configuration and probe points using the supplied parameters prior to returning the result. It is recommended to omit mesh parameters unless it is desired to visualize the probe points and/or travel path before performing <code>BED_MESH_CALIBRATE</code>.</p>
 <h2 id="visualization-and-analysis">Visualization and analysis<a class="headerlink" href="#visualization-and-analysis" title="Permanent link">&para;</a></h2>
 <p>Most users will likely find that the visualizers included with applications such as Mainsail, Fluidd, and Octoprint are sufficient for basic analysis. However, Klipper's <code>scripts</code> folder contains the <code>graph_mesh.py</code> script that may be used to perform additional visualizations and more detailed analysis, particularly useful for debugging hardware or the results produced by <code>bed_mesh</code>:</p>
 <div class="highlight"><pre><span></span><code>usage: graph_mesh.py [-h] {list,plot,analyze,dump} ...

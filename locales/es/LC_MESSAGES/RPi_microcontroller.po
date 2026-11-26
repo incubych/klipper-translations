@@ -1,16 +1,17 @@
 # Pepe <ec288eb6-6bd6-473b-93a5-5c8fb60ceb16@simplelogin.fr>, 2023.
-# Francisco Serrador <fserrador@gmail.com>, 2024.
+# Francisco Serrador <fserrador@gmail.com>, 2024, 2025.
+# Pepe <bungeeranked@users.noreply.hosted.weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-10-16 22:36+0000\n"
-"Last-Translator: Francisco Serrador <fserrador@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:02+0000\n"
+"Last-Translator: Pepe <bungeeranked@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/klipper/rpi_microcontroller/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8-rc\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document describes the process of running Klipper on a RPi and use the "
@@ -215,14 +216,6 @@ msgid ""
 "enabling SPI under the \"Interfacing options\" menu."
 msgstr ""
 
-#: docs/RPi_microcontroller.md:block 30 (paragraph)
-msgid ""
-"The chosen pin can thus be used within the configuration as "
-"`gpiochip<n>/gpio<o>` where **n** is the chip number as seen by the "
-"`gpiodetect` command and **o** is the line number seen by the`gpioinfo` "
-"command."
-msgstr ""
-
 #: docs/RPi_microcontroller.md:block 23 (paragraph)
 msgid ""
 "On Raspberry Pi and on many clones the pins exposed on the GPIO belong to the "
@@ -277,6 +270,21 @@ msgid ""
 "This will add hardware pwm control to gpio12 and gpio13 on the Pi (because the"
 " overlay was configured to route pwm0 to pin=12 and pwm1 to pin=13)."
 msgstr ""
+
+#: docs/RPi_microcontroller.md:block 32 (paragraph)
+msgid ""
+"The chosen pin can thus be used within the configuration as "
+"`gpiochip<n>/gpio<o>` where **n** is the chip number as seen by the "
+"`gpiodetect` command and **o** is the line number seen by the`gpioinfo` "
+"command."
+msgstr ""
+
+#~ msgid ""
+#~ "The chosen pin can thus be used within the configuration as "
+#~ "`gpiochip<n>/gpio<o>` where **n** is the chip number as seen by the "
+#~ "`gpiodetect` command and **o** is the line number seen by the` gpioinfo` "
+#~ "command."
+#~ msgstr ""
 
 #~ msgid ""
 #~ "cd ~/klipper/\n"
@@ -471,13 +479,6 @@ msgstr ""
 #~ "OrangePi models or if a Port Expander is used. In these cases it is useful to "
 #~ "use the commands to access the *Linux GPIO character device* to verify the "
 #~ "configuration."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The chosen pin can thus be used within the configuration as "
-#~ "`gpiochip<n>/gpio<o>` where **n** is the chip number as seen by the "
-#~ "`gpiodetect` command and **o** is the line number seen by the` gpioinfo` "
-#~ "command."
 #~ msgstr ""
 
 #~ msgid "Enabling SPI"

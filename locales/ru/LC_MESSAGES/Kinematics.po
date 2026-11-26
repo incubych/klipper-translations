@@ -1,18 +1,19 @@
-# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022.
-# VICTOR <subfyn@gmail.com>, 2023.
-# Saveliy <jitropolit@gmail.com>, 2024.
-# gfbdrgng <hnaofegnp@hldrive.com>, 2024.
+# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022, 2025.
+# VICTOR <subfyn@gmail.com>, 2023, 2025.
+# Saveliy <jitropolit@gmail.com>, 2024, 2025.
+# gfbdrgng <hnaofegnp@hldrive.com>, 2024, 2025.
+# gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-12-21 18:58+0000\n"
-"Last-Translator: gfbdrgng <hnaofegnp@hldrive.com>\n"
+"PO-Revision-Date: 2025-09-10 09:02+0000\n"
+"Last-Translator: gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/klipper/kinematics/ru/>\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 msgid ""
 "This document provides an overview of how Klipper implements robot motion (its"
@@ -195,11 +196,9 @@ msgstr ""
 "В Klipper также реализован механизм сглаживания движений при коротких "
 "\"зигзагообразных\" перемещениях. Рассмотрим следующие ходы:"
 
-#, fuzzy
 msgid "![zigzag](img/zigzag.svg.png)"
 msgstr "![zigzag](img/zigzag.svg.png)"
 
-#, fuzzy
 msgid "![smoothed](img/smoothed.svg.png)"
 msgstr "![smoothed](img/smoothed.svg.png)"
 
@@ -377,7 +376,6 @@ msgstr ""
 " мало филамента, а после окончания экструзии выдавливается избыток филамента. "
 "Это часто называют \"сочиться\"."
 
-#, fuzzy
 msgid "![ooze](img/ooze.svg.png)"
 msgstr "![ooze](img/ooze.svg.png)"
 
@@ -420,7 +418,6 @@ msgstr ""
 "скорости двигателя экструдера. Чтобы избежать этого, в Klipper реализовано "
 "\"сглаживание\" движения экструдера."
 
-#, fuzzy
 msgid "![pressure-advance](img/pressure-velocity.png)"
 msgstr "![pressure-advance](img/pressure-velocity.png)"
 

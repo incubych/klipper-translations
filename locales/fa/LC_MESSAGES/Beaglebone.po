@@ -1,9 +1,15 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2025.
 msgid ""
 msgstr ""
+"Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
+"PO-Revision-Date: 2025-07-22 09:21+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Persian <https://hosted.weblate.org/projects/klipper/beaglebone/fa/>\n"
 "Language: fa\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: docs/Beaglebone.md:block 1 (header)
 msgid "Beaglebone"
@@ -239,13 +245,6 @@ msgid ""
 " can't use them for stepper control."
 msgstr ""
 
-#: docs/Beaglebone.md:block 53 (paragraph)
-msgid ""
-"Complete the installation by configuring Klipper following the instructions in"
-" the main [Installation](Installation.md#configuring-octoprint-to-use-klipper)"
-" document."
-msgstr ""
-
 #: docs/Beaglebone.md:block 55 (paragraph)
 msgid ""
 "Unfortunately, the Beaglebone processor can sometimes struggle to run "
@@ -392,6 +391,18 @@ msgid ""
 "UART2(RX,TX): BB-UART2-00A0.dtbo UART3(RX,TX): BB-UART3-00A0.dtbo "
 "UART4(RS-485): BB-UART4-RS485-00A0.dtbo UART5(RX,TX): BB-UART5-00A0.dtbo"
 msgstr ""
+
+#: docs/Beaglebone.md:block 53 (paragraph)
+msgid ""
+"Complete the installation by configuring Klipper following the instructions in"
+" the main [Installation](Installation.md#configuring-klipper) document."
+msgstr ""
+
+#~ msgid ""
+#~ "Complete the installation by configuring Klipper following the instructions in"
+#~ " the main [Installation](Installation.md#configuring-octoprint-to-use-klipper)"
+#~ " document."
+#~ msgstr ""
 
 #~ msgid ""
 #~ "git clone https://github.com/foosel/OctoPrint.git\n"

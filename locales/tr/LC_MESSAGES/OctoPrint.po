@@ -1,10 +1,19 @@
-#
+# Ege <egetokatli2012@gmail.com>, 2026.
 msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
+msgstr ""
+"Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
+"PO-Revision-Date: 2026-01-12 21:01+0000\n"
+"Last-Translator: Ege <egetokatli2012@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/klipper/octoprint/tr/>\n"
+"Language: tr\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2-dev\n"
 
 #: docs/OctoPrint.md:block 1 (header)
 msgid "OctoPrint for Klipper"
-msgstr ""
+msgstr "Klipper için OctoPrint"
 
 #: docs/OctoPrint.md:block 2 (paragraph)
 msgid ""
@@ -15,7 +24,7 @@ msgstr ""
 
 #: docs/OctoPrint.md:block 3 (header)
 msgid "Install with OctoPi"
-msgstr ""
+msgstr "OctoPi ile yükle"
 
 #: docs/OctoPrint.md:block 4 (paragraph)
 msgid ""

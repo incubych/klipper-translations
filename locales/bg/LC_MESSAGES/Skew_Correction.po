@@ -1,15 +1,15 @@
-# Niolay Danov <nikdan@abv.bg>, 2024.
+# Niolay Danov <nikdan@abv.bg>, 2024, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-10-31 21:00+0000\n"
+"PO-Revision-Date: 2025-07-22 08:44+0000\n"
 "Last-Translator: Niolay Danov <nikdan@abv.bg>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/klipper/skew_correction/bg/>\n"
 "Language: bg\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.2-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: docs/Skew_Correction.md:block 1 (header)
 msgid "Skew correction"
@@ -71,16 +71,6 @@ msgstr "![skew_lengths](img/skew_lengths.png)"
 #: docs/Skew_Correction.md:block 9 (header)
 msgid "Configure your skew"
 msgstr "Конфигуриране на изкривяването"
-
-#: docs/Skew_Correction.md:block 10 (paragraph)
-msgid ""
-"Make sure `[skew_correction]` is in printer.cfg. You may now use the "
-"`SET_SKEW` gcode to configure skew_correcton. For example, if your measured "
-"lengths along XY are as follows:"
-msgstr ""
-"Уверете се, че `[skew_correction]` е в printer.cfg. Сега можете да използвате "
-"gcode `SET_SKEW`, за да конфигурирате skew_correcton. Например, ако измерените"
-" дължини по XY са следните:"
 
 #: docs/Skew_Correction.md:block 12 (paragraph)
 msgid "`SET_SKEW` can be used to configure skew correction for the XY plane."
@@ -187,6 +177,22 @@ msgstr ""
 "искате да коригирате; дължината от ъгъл A до ъгъл C, дължината от ъгъл B до "
 "ъгъл D и дължината от ъгъл A до ъгъл D. Когато измервате дължината, AD не "
 "включва плоските ъгли, които някои тестови обекти предоставят."
+
+#: docs/Skew_Correction.md:block 10 (paragraph)
+msgid ""
+"Make sure `[skew_correction]` is in printer.cfg. You may now use the "
+"`SET_SKEW` gcode to configure skew_correction. For example, if your measured "
+"lengths along XY are as follows:"
+msgstr ""
+
+#~ msgid ""
+#~ "Make sure `[skew_correction]` is in printer.cfg. You may now use the "
+#~ "`SET_SKEW` gcode to configure skew_correcton. For example, if your measured "
+#~ "lengths along XY are as follows:"
+#~ msgstr ""
+#~ "Уверете се, че `[skew_correction]` е в printer.cfg. Сега можете да използвате "
+#~ "gcode `SET_SKEW`, за да конфигурирате skew_correcton. Например, ако измерените"
+#~ " дължини по XY са следните:"
 
 #~ msgid ""
 #~ "Length AC = 140.4\n"

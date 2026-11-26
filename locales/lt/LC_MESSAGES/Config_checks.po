@@ -1,17 +1,17 @@
 # Matas Lauzadis <matas.lauzadis@gmail.com>, 2024.
 # Gintaras Kučinskas <sharanchius@gmail.com>, 2024.
-# Arvaidas Rekis <arvrekis@gmail.com>, 2024.
+# Arvaidas Rekis <arvrekis@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-10-04 14:37+0000\n"
+"PO-Revision-Date: 2025-07-22 09:11+0000\n"
 "Last-Translator: Arvaidas Rekis <arvrekis@gmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/klipper/config_checks/lt/>\n"
 "Language: lt\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.8-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document provides a list of steps to help confirm the pin settings in the"
@@ -287,16 +287,6 @@ msgstr ""
 "aktyvuodami galinį jungiklį. QUERY_ENDSTOPS komanda turėtų pranešti apie "
 "galinį jungiklį kaip \"SUVEIKĘS\"."
 
-#: docs/Config_checks.md:block 15 (paragraph)
-msgid ""
-"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
-"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
-"^PA2\"), or remove the \"!\" if there is already one present."
-msgstr ""
-"Jei galinis jungiklis atrodo invertuotas (jis praneša \"atvirą\", kai "
-"suveikia, ir atvirkščiai), pridėkite \"!\" prie kaiščio apibrėžimo "
-"(pavyzdžiui, \"endstop_pin: ^PA2\") arba pašalinkite \"!\", jei jis jau yra."
-
 #: docs/Config_checks.md:block 18 (paragraph)
 msgid ""
 "Use the STEPPER_BUZZ command to verify the connectivity of each stepper motor."
@@ -344,6 +334,22 @@ msgid ""
 msgstr ""
 "Norėdami kalibruoti ekstruzerį, eikite į komandų konsolę ir paleiskite "
 "PID_CALIBRATE komandą. Pavyzdžiui: `PID_CALIBRATE HEATER=extruder TARGET=170`"
+
+#: docs/Config_checks.md:block 15 (paragraph)
+msgid ""
+"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+"^!PA2\"), or remove the \"!\" if there is already one present."
+msgstr ""
+
+#~ msgid ""
+#~ "If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+#~ "versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+#~ "^PA2\"), or remove the \"!\" if there is already one present."
+#~ msgstr ""
+#~ "Jei galinis jungiklis atrodo invertuotas (jis praneša \"atvirą\", kai "
+#~ "suveikia, ir atvirkščiai), pridėkite \"!\" prie kaiščio apibrėžimo "
+#~ "(pavyzdžiui, \"endstop_pin: ^PA2\") arba pašalinkite \"!\", jei jis jau yra."
 
 #~ msgid ""
 #~ "Start by verifying that temperatures are being properly reported. Navigate to "

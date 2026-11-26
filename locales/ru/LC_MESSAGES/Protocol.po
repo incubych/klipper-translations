@@ -1,20 +1,23 @@
-# Comocen <Comoc_en@mail.ru>, 2022.
-# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022.
+# Comocen <Comoc_en@mail.ru>, 2022, 2025.
+# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022, 2025.
 # Vik <xasertop@gmail.com>, 2022.
 # Evgeniy Khramov <thejenjagamertjg@gmail.com>, 2022.
-# VICTOR <subfyn@gmail.com>, 2023.
-# gfbdrgng <hnaofegnp@hldrive.com>, 2024.
+# VICTOR <subfyn@gmail.com>, 2023, 2025.
+# gfbdrgng <hnaofegnp@hldrive.com>, 2024, 2025.
+# Evgeniy Khramov <65224669+thejenja@users.noreply.github.com>, 2025.
+# Vin <k3kelm4vw@mozmail.com>, 2025.
+# gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-12-30 05:00+0000\n"
-"Last-Translator: gfbdrgng <hnaofegnp@hldrive.com>\n"
+"PO-Revision-Date: 2025-09-10 09:02+0000\n"
+"Last-Translator: gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/klipper/protocol/ru/>\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 msgid ""
 "The Klipper messaging protocol is used for low-level communication between the"
@@ -390,35 +393,30 @@ msgstr "Целое число"
 msgid "Encoded size"
 msgstr "Размер в кодировке"
 
-#, fuzzy
 msgid "-32 .. 95"
 msgstr "-32 .. 95"
 
 msgid "1"
 msgstr "1"
 
-#, fuzzy
 msgid "-4096 .. 12287"
 msgstr "-4096 .. 12287"
 
 msgid "2"
 msgstr "2"
 
-#, fuzzy
 msgid "-524288 .. 1572863"
 msgstr "-524288 .. 1572863"
 
 msgid "3"
 msgstr "3"
 
-#, fuzzy
 msgid "-67108864 .. 201326591"
 msgstr "-67108864 .. 201326591"
 
 msgid "4"
 msgstr "4"
 
-#, fuzzy
 msgid "-2147483648 .. 4294967295"
 msgstr "-2147483648 .. 4294967295"
 

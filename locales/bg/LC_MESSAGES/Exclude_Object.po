@@ -1,34 +1,19 @@
-# Niolay Danov <nikdan@abv.bg>, 2024.
+# Niolay Danov <nikdan@abv.bg>, 2024, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-10-31 21:00+0000\n"
+"PO-Revision-Date: 2025-07-22 08:43+0000\n"
 "Last-Translator: Niolay Danov <nikdan@abv.bg>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/klipper/exclude_object/bg/>\n"
 "Language: bg\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.2-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: docs/Exclude_Object.md:block 1 (header)
 msgid "Exclude Objects"
 msgstr "Изключване на обекти"
-
-#: docs/Exclude_Object.md:block 2 (paragraph)
-msgid ""
-"The `[exclude_object]` module allows Klipper to exclude objects while a print "
-"is in progress. To enable this feature include an [exclude_object config "
-"section](Config_Reference.md#exclude_object) (also see the [command "
-"reference](G-Codes.md#exclude-object) and [sample-"
-"macros.cfg](../config/sample-macros.cfg) file for a Marlin/RepRapFirmware "
-"compatible M486 G-Code macro.)"
-msgstr ""
-"Модулът `[exclude_object]` позволява на Klipper да изключва обекти, докато "
-"тече отпечатването. За да активирате тази функция, включете [exclude_object "
-"config section](Config_Reference.md#exclude_object) (вижте също [command "
-"reference](G-Codes.md#exclude-object) и [sample-macros.cfg](../config/sample-"
-"macros.cfg) файл за съвместим с Marlin/RepRapFirmware M486 G-Code макрос)."
 
 #: docs/Exclude_Object.md:block 3 (paragraph)
 msgid ""
@@ -209,14 +194,6 @@ msgstr ""
 "`EXCLUDE_OBJECT_DEFINE NAME=calibration_pyramid CENTER=50,50 "
 "POLYGON=[[40,40],[50,60],[60,40]]`"
 
-#: docs/Exclude_Object.md:block 13 (paragraph)
-msgid ""
-"All available G-Code commands are documented in the [G-Code "
-"Reference](./G-Codes.md#excludeobject)"
-msgstr ""
-"Всички налични команди на G-Code са документирани в [G-Code "
-"Reference](./G-Codes.md#excludeobject)"
-
 #: docs/Exclude_Object.md:block 14 (header)
 msgid "Status Information"
 msgstr "Информация за състоянието"
@@ -292,3 +269,40 @@ msgstr ""
 "предоставя в масива `exclude_object.excluded_objects`. Тъй като Klipper гледа "
 "напред, за да обработи предстоящия gcode, може да има забавяне между момента "
 "на издаване на командата и момента на актуализиране на състоянието."
+
+#: docs/Exclude_Object.md:block 2 (paragraph)
+msgid ""
+"The `[exclude_object]` module allows Klipper to exclude objects while a print "
+"is in progress. To enable this feature include an [exclude_object config "
+"section](Config_Reference.md#exclude_object) (also see the [command "
+"reference](G-Codes.md#exclude_object) and [sample-"
+"macros.cfg](../config/sample-macros.cfg) file for a Marlin/RepRapFirmware "
+"compatible M486 G-Code macro.)"
+msgstr ""
+
+#: docs/Exclude_Object.md:block 13 (paragraph)
+msgid ""
+"All available G-Code commands are documented in the [G-Code "
+"Reference](./G-Codes.md#exclude_object)"
+msgstr ""
+
+#~ msgid ""
+#~ "The `[exclude_object]` module allows Klipper to exclude objects while a print "
+#~ "is in progress. To enable this feature include an [exclude_object config "
+#~ "section](Config_Reference.md#exclude_object) (also see the [command "
+#~ "reference](G-Codes.md#exclude-object) and [sample-"
+#~ "macros.cfg](../config/sample-macros.cfg) file for a Marlin/RepRapFirmware "
+#~ "compatible M486 G-Code macro.)"
+#~ msgstr ""
+#~ "Модулът `[exclude_object]` позволява на Klipper да изключва обекти, докато "
+#~ "тече отпечатването. За да активирате тази функция, включете [exclude_object "
+#~ "config section](Config_Reference.md#exclude_object) (вижте също [command "
+#~ "reference](G-Codes.md#exclude-object) и [sample-macros.cfg](../config/sample-"
+#~ "macros.cfg) файл за съвместим с Marlin/RepRapFirmware M486 G-Code макрос)."
+
+#~ msgid ""
+#~ "All available G-Code commands are documented in the [G-Code "
+#~ "Reference](./G-Codes.md#excludeobject)"
+#~ msgstr ""
+#~ "Всички налични команди на G-Code са документирани в [G-Code "
+#~ "Reference](./G-Codes.md#excludeobject)"

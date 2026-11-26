@@ -1,30 +1,36 @@
-# Comocen <Comoc_en@mail.ru>, 2022.
-# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022.
+# Comocen <Comoc_en@mail.ru>, 2022, 2025.
+# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022, 2025.
 # Evgeniy Khramov <thejenjagamertjg@gmail.com>, 2022.
-# VICTOR <subfyn@gmail.com>, 2023.
-# xXx <xxx_xxx_xxxxxxxxx@mail.ru>, 2023.
+# VICTOR <subfyn@gmail.com>, 2023, 2025.
+# xXx <xxx_xxx_xxxxxxxxx@mail.ru>, 2023, 2025.
 # Dr_Perry_Coke <dr.perrycoke@gmail.com>, 2023.
 # Michail Fedorov <fedorovmichail50@gmail.com>, 2024.
-# V R <hardorzz@gmail.com>, 2024.
-# Тихон Титовец <titovetstixon@gmail.com>, 2024.
+# V R <hardorzz@gmail.com>, 2024, 2025.
+# Тихон Титовец <titovetstixon@gmail.com>, 2024, 2025.
 # gfbdrgng <hnaofegnp@hldrive.com>, 2024, 2025.
+# Evgeniy Khramov <65224669+thejenja@users.noreply.github.com>, 2025.
+# gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>, 2025.
+# Vugar Rasulov <rasuloffvgr@gmail.com>, 2025.
+# Andrei Stepanov <adem@users.noreply.hosted.weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2025-01-03 04:00+0000\n"
-"Last-Translator: gfbdrgng <hnaofegnp@hldrive.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/klipper/config_reference/ru/>\n"
+"PO-Revision-Date: 2026-10-25 10:42+0000\n"
+"Last-Translator: Andrei Stepanov <adem@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/klipper/"
+"config_reference/ru/>\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.10-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.11.dev0\n"
 
 msgid ""
 "This document is a reference for options available in the Klipper config file."
 msgstr ""
-"Этот документ является справочником по опциям, доступным в файле конфигурации "
-"Klipper."
+"Этот документ является справочником по опциям, доступным в файле "
+"конфигурации Klipper."
 
 msgid ""
 "The descriptions in this document are formatted so that it is possible to cut-"
@@ -84,7 +90,6 @@ msgstr "[mcu]"
 msgid "Configuration of the primary micro-controller."
 msgstr "Конфигурация основного микроконтроллера."
 
-#, fuzzy
 msgid "[mcu my_extra_mcu]"
 msgstr "[mcu my_extra_mcu]"
 
@@ -373,7 +378,6 @@ msgstr ""
 "секцию конфигурации [bed_screws], чтобы включить команду g-кода "
 "BED_SCREWS_ADJUST."
 
-#, fuzzy
 msgid "[screws_tilt_adjust]"
 msgstr "[screws_tilt_adjust]"
 
@@ -386,11 +390,9 @@ msgstr ""
 "определить секцию конфигурации screws_tilt_adjust, чтобы включить команду "
 "g-кода SCREWS_TILT_CALCULATE."
 
-#, fuzzy
 msgid "[z_tilt]"
 msgstr "[z_tilt]"
 
-#, fuzzy
 msgid "[quad_gantry_level]"
 msgstr "[quad_gantry_level]"
 
@@ -409,18 +411,15 @@ msgstr ""
 "доступной расширенная команда G-кода QUAD_GANTRY_LEVEL. Эта процедура "
 "предполагает следующую конфигурацию двигателя Z:"
 
-#, fuzzy
 msgid "[skew_correction]"
 msgstr "[skew_correction]"
 
 msgid "Customized homing"
 msgstr "Индивидуальная наводка"
 
-#, fuzzy
 msgid "[safe_z_home]"
 msgstr "[safe_z_home]"
 
-#, fuzzy
 msgid "[homing_override]"
 msgstr "[homing_override]"
 
@@ -434,7 +433,6 @@ msgstr ""
 "быть полезно для принтеров, которые требуют специальной процедуры для "
 "установки машины в исходное положение."
 
-#, fuzzy
 msgid "[endstop_phase]"
 msgstr "[endstop_phase]"
 
@@ -455,7 +453,6 @@ msgstr ""
 msgid "G-Code macros and events"
 msgstr "Макросы и события G-кода"
 
-#, fuzzy
 msgid "[gcode_macro]"
 msgstr "[gcode_macro]"
 
@@ -468,15 +465,12 @@ msgstr ""
 "\"gcode_macro\"). Дополнительную информацию см. в руководстве [Шаблоны команд]"
 " (Command_Templates.md)."
 
-#, fuzzy
 msgid "[delayed_gcode]"
 msgstr "[delayed_gcode]"
 
-#, fuzzy
 msgid "[save_variables]"
 msgstr "[save_variables]"
 
-#, fuzzy
 msgid "[idle_timeout]"
 msgstr "[idle_timeout]"
 
@@ -488,9 +482,8 @@ msgstr ""
 "секцию конфигурации idle_timeout, чтобы изменить настройки по умолчанию."
 
 msgid "Optional G-Code features"
-msgstr ""
+msgstr "Дополнительные функции G-кода"
 
-#, fuzzy
 msgid "[virtual_sdcard]"
 msgstr "[virtual_sdcard]"
 
@@ -505,7 +498,6 @@ msgstr ""
 "печатать файлы gcode, хранящиеся в каталоге на хосте, используя стандартные "
 "команды sdcard G-Code (например, M24)."
 
-#, fuzzy
 msgid "[sdcard_loop]"
 msgstr "[sdcard_loop]"
 
@@ -521,40 +513,33 @@ msgstr ""
 "повторения участка детали для создания цепочки или другого повторяющегося "
 "узора)."
 
-#, fuzzy
 msgid "[force_move]"
 msgstr "[force_move]"
 
-#, fuzzy
 msgid "[pause_resume]"
 msgstr "[pause_resume]"
 
-#, fuzzy
 msgid "[firmware_retraction]"
 msgstr "[firmware_retraction]"
 
-#, fuzzy
 msgid "[gcode_arcs]"
 msgstr "[gcode_arcs]"
 
 msgid "Support for gcode arc (G2/G3) commands."
 msgstr "Поддержка команд gcode arc (G2/G3)."
 
-#, fuzzy
 msgid "[respond]"
-msgstr "[respond]"
+msgstr "[ответ]"
 
 msgid "Resonance compensation"
 msgstr "Компенсация резонанса"
 
-#, fuzzy
 msgid "[input_shaper]"
 msgstr "[input_shaper]"
 
 msgid "[adxl345]"
 msgstr "[adxl345]"
 
-#, fuzzy
 msgid "[resonance_tester]"
 msgstr "[resonance_tester]"
 
@@ -587,7 +572,7 @@ msgid "Bed probing hardware"
 msgstr "Оборудование для зондирования кровати"
 
 msgid "[probe]"
-msgstr "[зонд]"
+msgstr "[probe]"
 
 msgid ""
 "Z height probe. One may define this section to enable Z height probing "
@@ -629,7 +614,6 @@ msgstr ""
 msgid "Additional stepper motors and extruders"
 msgstr "Дополнительные шаговые двигатели и экструдеры"
 
-#, fuzzy
 msgid "[stepper_z1]"
 msgstr "[stepper_z1]"
 
@@ -667,16 +651,9 @@ msgstr ""
 "Пример конфигурации смотрите в [sample-multi-extruder.cfg](../config/sample-"
 "multi-extruder.cfg)."
 
-#, fuzzy
 msgid "[dual_carriage]"
 msgstr "[dual_carriage]"
 
-msgid ""
-"See [sample-idex.cfg](../config/sample-idex.cfg) for an example configuration."
-msgstr ""
-"Пример конфигурации смотрите в [sample-idex.cfg](../config/sample-idex.cfg)."
-
-#, fuzzy
 msgid "[extruder_stepper]"
 msgstr "[extruder_stepper]"
 
@@ -687,14 +664,12 @@ msgstr ""
 "Поддержка дополнительных степперов, синхронизированных с движением экструдера "
 "(можно определить любое количество секций с префиксом \"extruder_stepper\")."
 
-#, fuzzy
 msgid "[manual_stepper]"
 msgstr "[manual_stepper]"
 
 msgid "Custom heaters and sensors"
 msgstr "Индивидуальные нагреватели и датчики"
 
-#, fuzzy
 msgid "[verify_heater]"
 msgstr "[verify_heater]"
 
@@ -707,7 +682,6 @@ msgstr ""
 " включается для каждого нагревателя, настроенного на принтере. Используйте "
 "секции verify_heater, чтобы изменить настройки по умолчанию."
 
-#, fuzzy
 msgid "[homing_heaters]"
 msgstr "[homing_heaters]"
 
@@ -734,7 +708,6 @@ msgstr ""
 "термистора в конфигурационный файл выше ее первого использования в секции "
 "нагревателя."
 
-#, fuzzy
 msgid "[adc_temperature]"
 msgstr "[adc_temperature]"
 
@@ -761,11 +734,9 @@ msgstr ""
 "поместите секцию датчика в конфигурационный файл выше ее первого использования"
 " в секции нагревателя."
 
-#, fuzzy
 msgid "[heater_generic]"
 msgstr "[heater_generic]"
 
-#, fuzzy
 msgid "[temperature_sensor]"
 msgstr "[temperature_sensor]"
 
@@ -844,15 +815,6 @@ msgstr "Датчик температуры LM75"
 msgid "Builtin micro-controller temperature sensor"
 msgstr "Встроенный микроконтроллерный датчик температуры"
 
-msgid ""
-"The atsam, atsamd, and stm32 micro-controllers contain an internal temperature"
-" sensor. One can use the \"temperature_mcu\" sensor to monitor these "
-"temperatures."
-msgstr ""
-"Микроконтроллеры atsam, atsamd и stm32 содержат внутренний датчик температуры."
-" Для мониторинга этих температур можно использовать датчик "
-"\"temperature_mcu\"."
-
 msgid "Host temperature sensor"
 msgstr "Датчик температуры хоста"
 
@@ -892,7 +854,6 @@ msgstr "[вентилятор]"
 msgid "Print cooling fan."
 msgstr "Вентилятор охлаждения печати."
 
-#, fuzzy
 msgid "[heater_fan]"
 msgstr "[heater_fan]"
 
@@ -907,11 +868,9 @@ msgstr ""
 " будет включен каждый раз, когда соответствующий ему нагреватель активен. По "
 "умолчанию вентилятор_нагревателя имеет скорость выключения, равную max_power."
 
-#, fuzzy
 msgid "[controller_fan]"
 msgstr "[controller_fan]"
 
-#, fuzzy
 msgid "[temperature_fan]"
 msgstr "[temperature_fan]"
 
@@ -927,17 +886,15 @@ msgstr ""
 "соответствующего датчика будет выше заданной. По умолчанию у вентилятора "
 "temperature_fan скорость выключения равна max_power."
 
-#, fuzzy
 msgid "[fan_generic]"
 msgstr "[fan_generic]"
 
 msgid "[servo]"
-msgstr "[сервопривод]"
+msgstr "[servo]"
 
 msgid "[neopixel]"
 msgstr "[неопиксель]"
 
-#, fuzzy
 msgid "[dotstar]"
 msgstr "[dotstar]"
 
@@ -945,7 +902,6 @@ msgid "PCA9533 LED support. The PCA9533 is used on the mightyboard."
 msgstr ""
 "Поддержка светодиодов PCA9533. PCA9533 используется на плате mightyboard."
 
-#, fuzzy
 msgid "[gcode_button]"
 msgstr "[gcode_button]"
 
@@ -958,11 +914,9 @@ msgstr ""
 "состояния пина). Вы можете проверить состояние кнопки, используя `QUERY_BUTTON"
 " button=my_gcode_button`."
 
-#, fuzzy
 msgid "[output_pin]"
 msgstr "[output_pin]"
 
-#, fuzzy
 msgid "[static_digital_output]"
 msgstr "[static_digital_output]"
 
@@ -977,7 +931,6 @@ msgstr ""
 "здесь выводы будут установлены как выводы GPIO во время конфигурирования MCU. "
 "Они не могут быть изменены во время выполнения программы."
 
-#, fuzzy
 msgid "[multi_pin]"
 msgstr "[multi_pin]"
 
@@ -1001,7 +954,6 @@ msgstr ""
 msgid "TMC stepper driver configuration"
 msgstr "Конфигурация шагового драйвера TMC"
 
-#, fuzzy
 msgid "[tmc2130]"
 msgstr "[tmc2130]"
 
@@ -1015,7 +967,6 @@ msgstr ""
 "\"tmc2130\", за которым следует имя соответствующей секции конфигурации "
 "шагового двигателя (например, \"[tmc2130 stepper_x]\")."
 
-#, fuzzy
 msgid "[tmc2208]"
 msgstr "[tmc2208]"
 
@@ -1030,7 +981,6 @@ msgstr ""
 "конфигурации с префиксом \"tmc2208\", за которым следует имя соответствующей "
 "секции конфигурации шагового двигателя (например, \"[tmc2208 stepper_x]\")."
 
-#, fuzzy
 msgid "[tmc2209]"
 msgstr "[tmc2209]"
 
@@ -1045,7 +995,6 @@ msgstr ""
 "\"tmc2209\", за которым следует имя соответствующей секции конфигурации "
 "шагового двигателя (например, \"[tmc2209 stepper_x]\")."
 
-#, fuzzy
 msgid "[tmc2660]"
 msgstr "[tmc2660]"
 
@@ -1059,7 +1008,6 @@ msgstr ""
 "за которым следует имя соответствующей секции конфигурации шагового двигателя "
 "(например, \"[tmc2660 stepper_x]\")."
 
-#, fuzzy
 msgid "[tmc5160]"
 msgstr "[tmc5160]"
 
@@ -1086,7 +1034,6 @@ msgstr ""
 "Статически сконфигурированные дигипоты AD5206, подключенные через шину SPI "
 "(можно задать любое количество секций с префиксом \"ad5206\")."
 
-#, fuzzy
 msgid "[mcp4451]"
 msgstr "[mcp4451]"
 
@@ -1097,7 +1044,6 @@ msgstr ""
 "Статически сконфигурированный дигипот MCP4451, подключенный по шине I2C (можно"
 " задать любое количество секций с префиксом \"mcp4451\")."
 
-#, fuzzy
 msgid "[mcp4728]"
 msgstr "[mcp4728]"
 
@@ -1109,23 +1055,14 @@ msgstr ""
 "подключенный по шине I2C (можно задать любое количество секций с префиксом "
 "\"mcp4728\")."
 
-#, fuzzy
 msgid "[mcp4018]"
 msgstr "[mcp4018]"
-
-msgid ""
-"Statically configured MCP4018 digipot connected via two gpio \"bit banging\" "
-"pins (one may define any number of sections with an \"mcp4018\" prefix)."
-msgstr ""
-"Статически сконфигурированный дигипот MCP4018, подключенный через два gpio "
-"\"bit banging\" пина (можно задать любое количество секций с префиксом "
-"\"mcp4018\")."
 
 msgid "Display support"
 msgstr "Поддержка дисплея"
 
 msgid "[display]"
-msgstr ""
+msgstr "[display]"
 
 msgid "Support for a display attached to the micro-controller."
 msgstr "Поддержка дисплея, подключенного к микроконтроллеру."
@@ -1140,7 +1077,6 @@ msgstr ""
 "Информация о настройке дисплеев hd44780 (используется в дисплеях типа "
 "\"RepRapDiscount 2004 Smart Controller\")."
 
-#, fuzzy
 msgid "hd44780_spi display"
 msgstr "hd44780_spi display"
 
@@ -1163,7 +1099,6 @@ msgstr ""
 "Информация о настройке дисплеев st7920 (используется в дисплеях типа "
 "\"RepRapDiscount 12864 Full Graphic Smart Controller\")."
 
-#, fuzzy
 msgid "emulated_st7920 display"
 msgstr "emulated_st7920 display"
 
@@ -1190,7 +1125,6 @@ msgstr "ssd1306 и sh1106 дисплеи"
 msgid "Information on configuring ssd1306 and sh1106 displays."
 msgstr "Информация о настройке дисплеев ssd1306 и sh1106."
 
-#, fuzzy
 msgid "[display_data]"
 msgstr "[display_data]"
 
@@ -1216,11 +1150,9 @@ msgstr ""
 "расширить эти элементы display_data, переопределив значения по умолчанию в "
 "основном файле конфигурации printer.cfg."
 
-#, fuzzy
 msgid "[display_template]"
 msgstr "[display_template]"
 
-#, fuzzy
 msgid "[display_glyph]"
 msgstr "[display_glyph]"
 
@@ -1238,7 +1170,6 @@ msgstr ""
 msgid "See [sample-glyphs.cfg](../config/sample-glyphs.cfg) for some examples."
 msgstr "Примеры смотрите в [sample-glyphs.cfg](../config/sample-glyphs.cfg)."
 
-#, fuzzy
 msgid "[display my_extra_display]"
 msgstr "[display my_extra_display]"
 
@@ -1280,7 +1211,7 @@ msgid "Filament sensors"
 msgstr "Датчики нити"
 
 msgid "[filament_switch_sensor]"
-msgstr ""
+msgstr "[filament_switch_sensor]"
 
 msgid ""
 "Filament Switch Sensor. Support for filament insert and runout detection using"
@@ -1289,7 +1220,6 @@ msgstr ""
 "Датчик переключения нити. Поддержка обнаружения вставки и выбега нити с "
 "помощью датчика-переключателя, например, концевого выключателя."
 
-#, fuzzy
 msgid "[filament_motion_sensor]"
 msgstr "[filament_motion_sensor]"
 
@@ -1302,7 +1232,6 @@ msgstr ""
 "энкодера, который переключает выходной контакт во время движения нити через "
 "датчик."
 
-#, fuzzy
 msgid "[tsl1401cl_filament_width_sensor]"
 msgstr "[tsl1401cl_filament_width_sensor]"
 
@@ -1319,7 +1248,6 @@ msgstr ""
 msgid "Board specific hardware support"
 msgstr "Поддержка аппаратного обеспечения для конкретной платы"
 
-#, fuzzy
 msgid "[sx1509]"
 msgstr "[sx1509]"
 
@@ -1349,11 +1277,9 @@ msgstr ""
 "Пример смотрите в файле [generic-duet2-duex.cfg](../config/generic-"
 "duet2-duex.cfg)."
 
-#, fuzzy
 msgid "[samd_sercom]"
 msgstr "[samd_sercom]"
 
-#, fuzzy
 msgid "[adc_scaled]"
 msgstr "[adc_scaled]"
 
@@ -1385,7 +1311,7 @@ msgid "Other Custom Modules"
 msgstr "Другие пользовательские модули"
 
 msgid "[palette2]"
-msgstr "[палитра2]"
+msgstr "[palette2]"
 
 msgid ""
 "Palette 2 multimaterial support - provides a tighter integration supporting "
@@ -1429,7 +1355,6 @@ msgid ""
 msgstr ""
 "Следующие параметры обычно доступны для устройств, использующих шину I2C."
 
-#, fuzzy
 msgid "[duplicate_pin_override]"
 msgstr "[duplicate_pin_override]"
 
@@ -1845,7 +1770,6 @@ msgstr ""
 "Поддержка светодиодов PCA9632. PCA9632 используется в FlashForge Dreamer."
 
 #: docs/Config_Reference.md:block 266 (header)
-#, fuzzy
 msgid "LEDs"
 msgstr "LEDs"
 
@@ -1884,12 +1808,10 @@ msgstr ""
 "команд](G-Codes.md#led)."
 
 #: docs/Config_Reference.md:block 277 (header)
-#, fuzzy
 msgid "[pca9533]"
 msgstr "[pca9533]"
 
 #: docs/Config_Reference.md:block 280 (header)
-#, fuzzy
 msgid "[pca9632]"
 msgstr "[pca9632]"
 
@@ -1931,11 +1853,11 @@ msgstr ""
 
 #: docs/Config_Reference.md:block 409 (header)
 msgid "[angle]"
-msgstr ""
+msgstr "[угл]"
 
 #: docs/Config_Reference.md:block 179 (header)
 msgid "[smart_effector]"
-msgstr ""
+msgstr "[smart_effector]"
 
 #: docs/Config_Reference.md:block 180 (paragraph)
 msgid ""
@@ -1966,7 +1888,7 @@ msgstr ""
 
 #: docs/Config_Reference.md:block 152 (header)
 msgid "[exclude_object]"
-msgstr ""
+msgstr "[exclude_object]"
 
 #: docs/Config_Reference.md:block 153 (paragraph)
 msgid ""
@@ -1975,20 +1897,7 @@ msgid ""
 msgstr ""
 "Включает поддержку исключения или отмены отдельных объектов в процессе печати."
 
-#: docs/Config_Reference.md:block 154 (paragraph)
-msgid ""
-"See the [exclude objects guide](Exclude_Object.md) and [command "
-"reference](G-Codes.md#excludeobject) for additional information. See the "
-"[sample-macros.cfg](../config/sample-macros.cfg) file for a "
-"Marlin/RepRapFirmware compatible M486 G-Code macro."
-msgstr ""
-"Дополнительную информацию см. в руководстве [exclude objects "
-"guide](Exclude_Object.md) и [command reference](G-Codes.md#excludeobject). "
-"Смотрите файл [sample-macros.cfg](../config/sample-macros.cfg) для макроса "
-"G-кода M486, совместимого с Marlin/RepRapFirmware."
-
 #: docs/Config_Reference.md:block 163 (header)
-#, fuzzy
 msgid "[mpu9250]"
 msgstr "[mpu9250]"
 
@@ -2026,7 +1935,7 @@ msgstr ""
 
 #: docs/Config_Reference.md:block 109 (header)
 msgid "[z_thermal_adjust]"
-msgstr ""
+msgstr "[z_thermal_adjust]"
 
 #: docs/Config_Reference.md:block 110 (paragraph)
 msgid ""
@@ -2055,7 +1964,6 @@ msgstr ""
 "(можно задать любое количество секций с префиксом \"mpu9250\")."
 
 #: docs/Config_Reference.md:block 331 (header)
-#, fuzzy
 msgid "[tmc2240]"
 msgstr "[tmc2240]"
 
@@ -2076,7 +1984,6 @@ msgstr ""
 "которые находятся на той же печатной плате, что и микроконтроллер."
 
 #: docs/Config_Reference.md:block 171 (header)
-#, fuzzy
 msgid "[lis2dw]"
 msgstr "[lis2dw]"
 
@@ -2087,39 +1994,6 @@ msgstr "Поддержка акселерометров LIS2DW."
 #: docs/Config_Reference.md:block 200 (header)
 msgid "[axis_twist_compensation]"
 msgstr ""
-
-#: docs/Config_Reference.md:block 212 (paragraph)
-msgid ""
-"Support for cartesian and hybrid_corexy/z printers with dual carriages on a "
-"single axis. The carriage mode can be set via the SET_DUAL_CARRIAGE extended "
-"g-code command. For example, \"SET_DUAL_CARRIAGE CARRIAGE=1\" command will "
-"activate the carriage defined in this section (CARRIAGE=0 will return "
-"activation to the primary carriage). Dual carriage support is typically "
-"combined with extra extruders - the SET_DUAL_CARRIAGE command is often called "
-"at the same time as the ACTIVATE_EXTRUDER command. Be sure to park the "
-"carriages during deactivation. Note that during G28 homing, typically the "
-"primary carriage is homed first followed by the carriage defined in the "
-"`[dual_carriage]` config section. However, the `[dual_carriage]` carriage will"
-" be homed first if both carriages home in a positive direction and the "
-"[dual_carriage] carriage has a `position_endstop` greater than the primary "
-"carriage, or if both carriages home in a negative direction and the "
-"`[dual_carriage]` carriage has a `position_endstop` less than the primary "
-"carriage."
-msgstr ""
-"Поддержка картезианских и гибридных_corexy/z принтеров с двумя каретками на "
-"одной оси. Режим каретки может быть установлен с помощью расширенной команды "
-"g-кода SET_DUAL_CARRIAGE. Например, команда \"SET_DUAL_CARRIAGE CARRIAGE=1\" "
-"активирует каретку, определенную в этом разделе (CARRIAGE=0 возвращает "
-"активацию к основной каретке). Поддержка двойной каретки обычно сочетается с "
-"дополнительными экструдерами - команда SET_DUAL_CARRIAGE часто вызывается "
-"одновременно с командой ACTIVATE_EXTRUDER. Не забудьте припарковать каретки во"
-" время деактивации. Обратите внимание, что при наведении G28 обычно сначала "
-"наводится основная каретка, а затем каретка, определенная в разделе "
-"конфигурации `[dual_carriage]`. Однако каретка `[dual_carriage]` будет "
-"направлена первой, если обе каретки возвращаются в положительном направлении и"
-" каретка [dual_carriage] имеет `позицию_endstop` больше, чем основная каретка,"
-" или если обе каретки возвращаются в отрицательном направлении и каретка "
-"`[dual_carriage]` имеет `позицию_endstop` меньше, чем основная каретка."
 
 #: docs/Config_Reference.md:block 213 (paragraph)
 msgid ""
@@ -2148,21 +2022,6 @@ msgstr ""
 msgid "AHT10/AHT20/AHT21 temperature sensor"
 msgstr "Датчик температуры AHT10/AHT20/AHT21"
 
-#: docs/Config_Reference.md:block 260 (paragraph)
-msgid ""
-"AHT10/AHT20/AHT21 two wire interface (I2C) environmental sensors. Note that "
-"these sensors are not intended for use with extruders and heater beds, but "
-"rather for monitoring ambient temperature (C) and relative humidity. See "
-"[sample-macros.cfg](../config/sample-macros.cfg) for a gcode_macro that may be"
-" used to report humidity in addition to temperature."
-msgstr ""
-"Датчики окружающей среды AHT10/AHT20/AHT21 с двухпроводным интерфейсом (I2C). "
-"Обратите внимание, что эти датчики не предназначены для использования с "
-"экструдерами и нагревателями, а скорее для мониторинга температуры окружающей "
-"среды (C) и относительной влажности. Смотрите [sample-"
-"macros.cfg](../config/sample-macros.cfg) для макроса gcode_macro, который "
-"можно использовать для сообщения о влажности в дополнение к температуре."
-
 #: docs/Config_Reference.md:block 277 (header)
 msgid "Combined temperature sensor"
 msgstr "Комбинированный датчик температуры"
@@ -2190,7 +2049,6 @@ msgstr ""
 "шагового двигателя (например, \"[tmc2240 stepper_x]\")."
 
 #: docs/Config_Reference.md:block 324 (header)
-#, fuzzy
 msgid "[pwm_tool]"
 msgstr "[pwm_tool]"
 
@@ -2230,7 +2088,7 @@ msgstr ""
 
 #: docs/Config_Reference.md:block 200 (header)
 msgid "[probe_eddy_current]"
-msgstr ""
+msgstr "[probe_eddy_current]"
 
 #: docs/Config_Reference.md:block 201 (paragraph)
 msgid ""
@@ -2244,7 +2102,7 @@ msgstr ""
 
 #: docs/Config_Reference.md:block 245 (header)
 msgid "[temperature_probe]"
-msgstr ""
+msgstr "[temperature_probe]"
 
 #: docs/Config_Reference.md:block 246 (paragraph)
 msgid ""
@@ -2298,7 +2156,6 @@ msgid "Load Cells"
 msgstr "Датчики нагрузки"
 
 #: docs/Config_Reference.md:block 437 (header)
-#, fuzzy
 msgid "[load_cell]"
 msgstr "[load_cell]"
 
@@ -2319,7 +2176,6 @@ msgstr ""
 "банг\" обмен данными. Он подходит для нитевидных весов."
 
 #: docs/Config_Reference.md:block 443 (header)
-#, fuzzy
 msgid "HX717"
 msgstr "HX717"
 
@@ -2331,7 +2187,6 @@ msgstr ""
 " измерений."
 
 #: docs/Config_Reference.md:block 446 (header)
-#, fuzzy
 msgid "ADS1220"
 msgstr "ADS1220"
 
@@ -2349,7 +2204,7 @@ msgstr ""
 
 #: docs/Config_Reference.md:block 175 (paragraph)
 msgid "Support for LIS3DH accelerometers."
-msgstr ""
+msgstr "Поддержка акселерометров LIS3DH."
 
 #: docs/Config_Reference.md:block 207 (paragraph)
 msgid ""
@@ -2357,10 +2212,13 @@ msgid ""
 "gantry. See the [Axis Twist Compensation Guide](Axis_Twist_Compensation.md) "
 "for more detailed information regarding symptoms, configuration and setup."
 msgstr ""
+"Инструмент для компенсации неточных показаний зонда из-за поворота в X или Y. "
+"См. [Axis Twist Compensation Guide] (Axis_Twist_Compensation.md) для более "
+"подробной информации о симптомах, конфигурации и настройке."
 
 #: docs/Config_Reference.md:block 391 (header)
 msgid "aip31068_spi display"
-msgstr ""
+msgstr "aip31068_spi display"
 
 #: docs/Config_Reference.md:block 392 (paragraph)
 msgid ""
@@ -2368,6 +2226,8 @@ msgid ""
 "hd44780_spi a 20x04 (20 symbols by 4 lines) display with slightly different "
 "internal protocol."
 msgstr ""
+"Информация о настройке дисплея aip31068_spi - очень похожая на hd44780_spi "
+"20x04 (20 символов на 4 строки) с немного другим внутренним протоколом."
 
 #: docs/Config_Reference.md:block 446 (header)
 msgid "HX711"
@@ -2381,6 +2241,11 @@ msgid ""
 "analysis tool](Debugging.md#motion-analysis-and-data-logging). See the [G-Code"
 " reference](G-Codes.md#angle) for available commands."
 msgstr ""
+"Магнитный угловой датчик поддержки для чтения степенных измерений угла "
+"поворота двигателя с помощью чипов SPI 1333, 1337d, mt6816, mt6826 или "
+"tle5012b. Измерения доступны через [API Server] (API_Server.md) и [инструмент "
+"анализа эмоций](Debugging.md#motion-analysis-and-data-logging). [G-Code "
+"reference](G-Codes.md#angle) для доступных команд."
 
 #: docs/Config_Reference.md:block 487 (paragraph)
 msgid ""
@@ -2393,27 +2258,393 @@ msgid ""
 "support a rate of 400000 via the `i2c_speed` parameter. All other Klipper "
 "micro-controllers use a 100000 rate and ignore the `i2c_speed` parameter."
 msgstr ""
+"Большинство микроконтроллеров Klipper поддерживают только `i2c_speed` 10000 (*"
+" стандартный режим*, 100kbit/s). Микроконтроллер Klipper «Linux» поддерживает "
+"скорость 40000 (*быстрый режим *, 400кбит/с), но он должен быть [установлен в "
+"операционной системе](RPi_microcontroller.md# Опционно-поддерживающий i2c) и "
+"параметр `i2c_speed` в противном случае игнорируется. Микроконтроллер Klipper "
+"«RP2040» и семейство ATmega AVR и некоторые STM32 (F0, G0, G4, L4, F7, H7) "
+"поддерживают скорость 40000 через параметр `i2c_speed`. Все остальные "
+"микроконтроллеры Klipper используют скорость 100000 и игнорируют параметр "
+"`i2c_speed`."
 
-#: docs/Config_Reference.md:block 171 (header)
+#: docs/Config_Reference.md:block 69 (header)
+msgid "Generic Cartesian Kinematics"
+msgstr "Обобщённая декартова кинематика"
+
+#: docs/Config_Reference.md:block 70 (paragraph)
+msgid ""
+"See [example-generic-cartesian.cfg](../config/example-generic-caretesian.cfg) "
+"for an example generic Cartesian kinematics config file."
+msgstr ""
+"См. [example-generic-cartesian.cfg](../config/example-generic-"
+"caretesian.cfg) — пример файла конфигурации обобщённой декартовой кинематики."
+
+#: docs/Config_Reference.md:block 71 (paragraph)
+msgid ""
+"This printer kinematic class allows a user to define in a pretty flexible "
+"manner an arbitrary Cartesian-style kinematics. In principle, the regular "
+"cartesian, corexy, hybrid_corexy can be defined this way too. However, more "
+"importantly, various otherwise unsupported kinematics such as inverted "
+"hybrid_corexy or corexyuv can be defined using this kinematic."
+msgstr ""
+"Этот класс кинематики принтера позволяет пользователю достаточно гибко "
+"задать произвольную кинематику декартова типа. В принципе, обычные "
+"cartesian, corexy и hybrid_corexy также можно определить этим способом. "
+"Однако, что важнее, с помощью этой кинематики можно определить различные "
+"иначе неподдерживаемые кинематики, такие как инвертированная hybrid_corexy "
+"или corexyuv."
+
+#: docs/Config_Reference.md:block 72 (paragraph)
+msgid ""
+"Notably, the definition of a generic Cartesian kinematic deviates "
+"significantly from the other kinematic types. It follows the following "
+"convention: a user defines a set of carriages with certain range of motion "
+"that can move independently from each other (they should move over the "
+"Cartesian axes X, Y, and Z, hence the name of the kinematic) and corresponding"
+" endstops that allow the firmware to determine the position of carriages "
+"during homing, as well as a set of steppers that move those carriages. The "
+"`[printer]` section must specify the kinematic and other printer-level "
+"settings same as the regular Cartesian kinematic:"
+msgstr ""
+"Примечательно, что определение обобщённой декартовой кинематики значительно "
+"отличается от других типов кинематики. Оно следует следующему соглашению: "
+"пользователь определяет набор кареток с определённым диапазоном движения, "
+"которые могут двигаться независимо друг от друга (они должны двигаться по "
+"декартовым осям X, Y и Z — отсюда и название кинематики), и соответствующие "
+"концевые выключатели, позволяющие прошивке определять положение кареток при "
+"парковке, а также набор шаговых двигателей, которые перемещают эти каретки. "
+"Раздел `[printer]` должен задавать кинематику и другие настройки уровня "
+"принтера так же, как и для обычной декартовой кинематики:"
+
+#: docs/Config_Reference.md:block 74 (paragraph)
+msgid ""
+"Then a user must define three primary carriages for X, Y, and Z axes, e.g.:"
+msgstr ""
+"Затем пользователь должен определить три первичные каретки для осей X, Y и "
+"Z, например:"
+
+#: docs/Config_Reference.md:block 76 (paragraph)
+msgid ""
+"Afterwards, a user specifies the stepper motors that move these carriages, for"
+" instance"
+msgstr ""
+"После этого пользователь указывает шаговые двигатели, которые перемещают эти "
+"каретки, например"
+
+#: docs/Config_Reference.md:block 78 (paragraph)
+msgid ""
+"See [stepper](#stepper) section for more information on the regular stepper "
+"parameters. The `carriages` parameter defines how the stepper affects the "
+"motion of the carriages. For example, `carriage_x+carriage_y` indicates that "
+"the motion of the stepper in the positive direction by the distance `d` moves "
+"the carriages `carriage_x` and `carriage_y` by the same distance `d` in the "
+"positive direction, while `carriage_x-0.5*carriage_y` means the motion of the "
+"stepper in the positive direction by the distance `d` moves the carriage "
+"`carriage_x` by the distance `d` in the positive direction, but the carriage "
+"`carriage_y` will travel distance `d/2` in the negative direction."
+msgstr ""
+"См. раздел [stepper](#stepper) для получения дополнительной информации об "
+"обычных параметрах шагового двигателя. Параметр `carriages` определяет, как "
+"шаговый двигатель влияет на движение кареток. Например, "
+"`carriage_x+carriage_y` означает, что движение шагового двигателя в "
+"положительном направлении на расстояние `d` перемещает каретки `carriage_x` "
+"и `carriage_y` на то же расстояние `d` в положительном направлении, а "
+"`carriage_x-0.5*carriage_y` означает, что движение шагового двигателя в "
+"положительном направлении на расстояние `d` перемещает каретку `carriage_x` "
+"на расстояние `d` в положительном направлении, но каретка `carriage_y` "
+"пройдёт расстояние `d/2` в отрицательном направлении."
+
+#: docs/Config_Reference.md:block 79 (paragraph)
+msgid ""
+"More than a single stepper motor can be defined to drive the same axis or "
+"belt. For example, on a CoreXY AWD setups two motors driving the same belt can"
+" be defined as"
+msgstr ""
+"Можно определить более одного шагового двигателя для привода одной и той же "
+"оси или ремня. Например, в конфигурации CoreXY AWD два двигателя, приводящие "
+"один и тот же ремень, можно определить так:"
+
+#: docs/Config_Reference.md:block 81 (paragraph)
+msgid ""
+"with `a0` and `a1` steppers having their own control pins, but sharing the "
+"same `carriages` and corresponding endstops."
+msgstr ""
+"при этом шаговые двигатели `a0` и `a1` имеют собственные управляющие пины, "
+"но используют общие `carriages` и соответствующие концевые выключатели."
+
+#: docs/Config_Reference.md:block 82 (paragraph)
+msgid ""
+"There are situations when a user wants to have more than one endstop per axis."
+" Examples of such configurations include Y axis driven by two independent "
+"stepper motors with belts attached to both ends of the X gantry, with "
+"effectively two carriages on Y axis each having an independent endstop, and "
+"multi-stepper Z axis with each stepper having its own endstop (not to be "
+"confused with the configurations with multiple Z motors but only a single "
+"endstop). These configurations can be declared by specifying additional "
+"carriage(s) with their endstops:"
+msgstr ""
+"Бывают ситуации, когда пользователь хочет иметь более одного концевого "
+"выключателя на ось. Примеры таких конфигураций включают ось Y, приводимую "
+"двумя независимыми шаговыми двигателями с ремнями, прикреплёнными к обоим "
+"концам портала X, фактически с двумя каретками на оси Y, каждая со своим "
+"независимым концевым выключателем, и ось Z с несколькими шаговыми "
+"двигателями, у каждого из которых свой концевой выключатель (не путать с "
+"конфигурациями с несколькими двигателями Z, но только одним концевым "
+"выключателем). Такие конфигурации можно объявить, указав дополнительные "
+"каретки с их концевыми выключателями:"
+
+#: docs/Config_Reference.md:block 84 (paragraph)
+msgid "and the corresponding stepper motors, for example:"
+msgstr "и соответствующие шаговые двигатели, например:"
+
+#: docs/Config_Reference.md:block 86 (paragraph)
+msgid ""
+"Notably, an `[extra_carriage]` does not define parameters such as "
+"`position_min`, `position_max`, and `position_endstop`, but instead inherits "
+"them from the specified `primary_carriage`, thus sharing the same range of "
+"motion with the primary carriage."
+msgstr ""
+"Примечательно, что `[extra_carriage]` не задаёт такие параметры, как "
+"`position_min`, `position_max` и `position_endstop`, а наследует их от "
+"указанной `primary_carriage`, тем самым разделяя один и тот же диапазон "
+"движения с первичной кареткой."
+
+#: docs/Config_Reference.md:block 190 (header)
 msgid "[icm20948]"
-msgstr ""
+msgstr "[icm20948]"
 
-#: docs/Config_Reference.md:block 172 (paragraph)
+#: docs/Config_Reference.md:block 191 (paragraph)
 msgid "Support for icm20948 accelerometers."
-msgstr ""
+msgstr "Поддержка акселерометров icm20948."
 
-#: docs/Config_Reference.md:block 470 (header)
+#: docs/Config_Reference.md:block 199 (header)
+msgid "[bmi160]"
+msgstr "[bmi160]"
+
+#: docs/Config_Reference.md:block 200 (paragraph)
+msgid "BMI160 accelerometer. This sensor can be queried via I2C or SPI bus."
+msgstr ""
+"Акселерометр BMI160. Этот датчик можно опрашивать через шину I2C или SPI."
+
+#: docs/Config_Reference.md:block 202 (paragraph)
+msgid "**Important:** Many BMI160 modules use ambiguous pin labels. For SPI:"
+msgstr ""
+"**Важно:** Многие модули BMI160 используют неоднозначные обозначения "
+"контактов. Для SPI:"
+
+#: docs/Config_Reference.md:block 203 (unordered list)
+msgid "Use **SCL** for clock (not SCX)"
+msgstr "Используйте **SCL** для тактирования (не SCX)"
+
+#: docs/Config_Reference.md:block 203 (unordered list)
+msgid "Use **SDA** for MOSI (not SDX)"
+msgstr "Используйте **SDA** для MOSI (не SDX)"
+
+#: docs/Config_Reference.md:block 203 (unordered list)
+msgid "Use **SA0** for MISO"
+msgstr "Используйте **SA0** для MISO"
+
+#: docs/Config_Reference.md:block 203 (unordered list)
+msgid "Use **CS** for chip select"
+msgstr "Используйте **CS** для выбора чипа"
+
+#: docs/Config_Reference.md:block 204 (paragraph)
+msgid "The pins labeled SCX/SDX are for the auxiliary magnetometer bus."
+msgstr ""
+"Контакты с маркировкой SCX/SDX предназначены для вспомогательной шины "
+"магнитометра."
+
+#: docs/Config_Reference.md:block 246 (paragraph)
+msgid ""
+"Support for cartesian, generic_cartesian and hybrid_corexy/z printers with "
+"dual carriages on a single axis. The carriage mode can be set via the "
+"SET_DUAL_CARRIAGE extended g-code command. For example, \"SET_DUAL_CARRIAGE "
+"CARRIAGE=1\" command will activate the carriage defined in this section "
+"(CARRIAGE=0 will return activation to the primary carriage). Dual carriage "
+"support is typically combined with extra extruders - the SET_DUAL_CARRIAGE "
+"command is often called at the same time as the ACTIVATE_EXTRUDER command. Be "
+"sure to park the carriages during deactivation. Note that during G28 homing, "
+"typically the primary carriage is homed first followed by the carriage defined"
+" in the `[dual_carriage]` config section. However, the `[dual_carriage]` "
+"carriage will be homed first if both carriages home in a positive direction "
+"and the [dual_carriage] carriage has a `position_endstop` greater than the "
+"primary carriage, or if both carriages home in a negative direction and the "
+"`[dual_carriage]` carriage has a `position_endstop` less than the primary "
+"carriage."
+msgstr ""
+"Поддержка принтеров cartesian, generic_cartesian и hybrid_corexy/z с двумя "
+"каретками на одной оси. Режим каретки можно задать расширенной g-code-"
+"командой SET_DUAL_CARRIAGE. Например, команда \"SET_DUAL_CARRIAGE "
+"CARRIAGE=1\" активирует каретку, определённую в этом разделе (CARRIAGE=0 "
+"вернёт активацию первичной каретке). Поддержка двух кареток обычно "
+"сочетается с дополнительными экструдерами — команду SET_DUAL_CARRIAGE часто "
+"вызывают одновременно с командой ACTIVATE_EXTRUDER. Обязательно паркуйте "
+"каретки при деактивации. Учтите, что при парковке G28 обычно сначала "
+"паркуется первичная каретка, а затем каретка, определённая в разделе "
+"конфигурации `[dual_carriage]`. Однако каретка `[dual_carriage]` будет "
+"запаркована первой, если обе каретки паркуются в положительном направлении и "
+"у каретки `[dual_carriage]` значение `position_endstop` больше, чем у "
+"первичной каретки, или если обе каретки паркуются в отрицательном "
+"направлении и у каретки `[dual_carriage]` значение `position_endstop` "
+"меньше, чем у первичной каретки."
+
+#: docs/Config_Reference.md:block 248 (paragraph)
+msgid ""
+"See [sample-idex.cfg](../config/sample-idex.cfg) for an example configuration "
+"with a regular Cartesian kinematic."
+msgstr ""
+"См. [sample-idex.cfg](../config/sample-idex.cfg) — пример конфигурации с "
+"обычной декартовой кинематикой."
+
+#: docs/Config_Reference.md:block 250 (paragraph)
+msgid ""
+"For an example of dual carriage configuration with `generic_cartesian` "
+"kinematic, see the following configuration [sample](../config/example-generic-"
+"caretesian.cfg). Please note that in this case the `[dual_carriage]` "
+"configuration deviates from the configuration described above:"
+msgstr ""
+"Пример конфигурации с двумя каретками для кинематики `generic_cartesian` см. "
+"в следующем [примере](../config/example-generic-caretesian.cfg). Обратите "
+"внимание, что в этом случае конфигурация `[dual_carriage]` отличается от "
+"описанной выше:"
+
+#: docs/Config_Reference.md:block 253 (paragraph)
+msgid ""
+"Then a user must define one or more stepper motors moving the dual carriage "
+"(and other carriages as appropriate), for instance"
+msgstr ""
+"Затем пользователь должен определить один или несколько шаговых двигателей, "
+"перемещающих двойную каретку (и другие каретки, если нужно), например"
+
+#: docs/Config_Reference.md:block 255 (paragraph)
+msgid ""
+"`[dual_carriage]` requires special configuration for the input shaper. In "
+"general, it is necessary to run input shaper calibration twice - for the "
+"`dual_carriage` and its `primary_carriage` for the axis they share. Then the "
+"input shaper can be configured as follows, assuming the example above:"
+msgstr ""
+"`[dual_carriage]` требует особой настройки для input shaper. Как правило, "
+"необходимо выполнить калибровку input shaper дважды — для `dual_carriage` и "
+"её `primary_carriage` по общей для них оси. Затем input shaper можно "
+"настроить следующим образом, исходя из приведённого выше примера:"
+
+#: docs/Config_Reference.md:block 257 (paragraph)
+msgid ""
+"Note that `SHAPER_TYPE_Y` and `SHAPER_FREQ_Y` must be the same in both "
+"commands in this case, since the same motors drive Y axis when either of the "
+"`carriage_x` and `carriage_u` carriages are active."
+msgstr ""
+"Учтите, что в этом случае `SHAPER_TYPE_Y` и `SHAPER_FREQ_Y` должны быть "
+"одинаковыми в обеих командах, так как одни и те же двигатели приводят ось Y, "
+"когда активна любая из кареток `carriage_x` и `carriage_u`."
+
+#: docs/Config_Reference.md:block 258 (paragraph)
+msgid ""
+"It is worth noting that `generic_cartesian` kinematic can support two dual "
+"carriages for X and Y axes. For reference, see for instance a "
+"[sample](../config/sample-corexyuv.cfg) of CoreXYUV configuration."
+msgstr ""
+"Стоит отметить, что кинематика `generic_cartesian` может поддерживать две "
+"двойные каретки для осей X и Y. Для справки см., например, [пример](../"
+"config/sample-corexyuv.cfg) конфигурации CoreXYUV."
+
+#: docs/Config_Reference.md:block 306 (paragraph)
+msgid ""
+"AHT10/AHT15/AHT20/AHT21/AHT30 two wire interface (I2C) environmental sensors. "
+"Note that these sensors are not intended for use with extruders and heater "
+"beds, but rather for monitoring ambient temperature (C) and relative humidity."
+" See [sample-macros.cfg](../config/sample-macros.cfg) for a gcode_macro that "
+"may be used to report humidity in addition to temperature."
+msgstr ""
+"Датчики окружающей среды AHT10/AHT15/AHT20/AHT21/AHT30 с интерфейсом двух "
+"проводов (I2C). Учтите, что эти датчики не предназначены для использования с "
+"экструдерами и столами с подогревом, а служат для контроля температуры "
+"окружающей среды (°C) и относительной влажности. См. [sample-macros.cfg](../"
+"config/sample-macros.cfg) — gcode_macro, который можно использовать для "
+"вывода влажности в дополнение к температуре."
+
+#: docs/Config_Reference.md:block 318 (paragraph)
+msgid ""
+"The atsam, atsamd, stm32 and rp2040 micro-controllers contain an internal "
+"temperature sensor. One can use the \"temperature_mcu\" sensor to monitor "
+"these temperatures."
+msgstr ""
+"Микроконтроллеры atsam, atsamd, stm32 и rp2040 содержат внутренний датчик "
+"температуры. Для контроля этих температур можно использовать датчик "
+"\"temperature_mcu\"."
+
+#: docs/Config_Reference.md:block 373 (header)
+msgid "[static_pwm_clock]"
+msgstr "[static_pwm_clock]"
+
+#: docs/Config_Reference.md:block 374 (paragraph)
+msgid ""
+"Static configurable output pin (one may define any number of sections with an "
+"\"static_pwm_clock\" prefix). Pins configured here will be set up as clock "
+"output pins. Generally used to provide clock input to other hardware on the "
+"board."
+msgstr ""
+"Статически настраиваемый выходной пин (можно определить любое количество "
+"разделов с префиксом \"static_pwm_clock\"). Настроенные здесь пины будут "
+"настроены как выходные пины тактирования. Обычно используется для подачи "
+"тактового сигнала на другое оборудование на плате."
+
+#: docs/Config_Reference.md:block 419 (paragraph)
+msgid ""
+"Statically configured MCP4018 digipot connected via i2c (one may define any "
+"number of sections with an \"mcp4018\" prefix)."
+msgstr ""
+"Статически настроенный цифровой потенциометр MCP4018, подключённый через I2C "
+"(можно определить любое количество разделов с префиксом \"mcp4018\")."
+
+#: docs/Config_Reference.md:block 495 (header)
+msgid "ADS131M0x"
+msgstr "ADS131M0x"
+
+#: docs/Config_Reference.md:block 496 (paragraph)
+msgid ""
+"The ADS131M0x is a family of fast, 24-bit, delta-sigma ADCs. Two sensors are "
+"supported from this family: ADS131M02 with two simultaneously-sampling "
+"differential channels and ADS131M04 with four channels. They feature a "
+"programmable gain amplifier (PGA) with gains up to 128, configurable sampling "
+"rates up to 64000 samples per second, and require an external clock input (300"
+" kHz to 8.4 MHz, 8.192 MHz nominal)."
+msgstr ""
+"ADS131M0x — семейство быстрых 24-битных сигма-дельта АЦП. Из этого семейства "
+"поддерживаются два датчика: ADS131M02 с двумя одновременно опрашиваемыми "
+"дифференциальными каналами и ADS131M04 с четырьмя каналами. Они имеют "
+"программируемый усилитель (PGA) с усилением до 128, настраиваемую частоту "
+"дискретизации до 64000 отсчётов в секунду и требуют внешнего тактового входа "
+"(от 300 кГц до 8,4 МГц, номинал 8,192 МГц)."
+
+#: docs/Config_Reference.md:block 498 (header)
+msgid "[load_cell_probe]"
+msgstr "[load_cell_probe]"
+
+#: docs/Config_Reference.md:block 499 (paragraph)
+msgid ""
+"Load Cell Probe. This combines the functionality of a [probe] and a "
+"[load_cell]."
+msgstr ""
+"Датчик на тензодатчике. Объединяет функциональность [probe] и [load_cell]."
+
+#: docs/Config_Reference.md:block 513 (header)
 msgid "[ads1x1x]"
-msgstr ""
+msgstr "[ads1x1x]"
 
-#: docs/Config_Reference.md:block 471 (paragraph)
+#: docs/Config_Reference.md:block 514 (paragraph)
 msgid ""
 "ADS1013, ADS1014, ADS1015, ADS1113, ADS1114 and ADS1115 are I2C based Analog "
 "to Digital Converters that can be used for temperature sensors. They provide 4"
 " analog input pins either as single line or as differential input."
 msgstr ""
+"ADS1013, ADS1014, ADS1015, ADS1113, ADS1114 и ADS1115 — это аналого-цифровые "
+"преобразователи на основе I2C, которые можно использовать для датчиков "
+"температуры. Они предоставляют 4 аналоговых входных пина в виде "
+"однополярного или дифференциального входа."
 
-#: docs/Config_Reference.md:block 472 (paragraph)
+#: docs/Config_Reference.md:block 515 (paragraph)
 msgid ""
 "Note: Use caution if using this sensor to control heaters. The heater min_temp"
 " and max_temp are only verified in the host and only if the host is running "
@@ -2421,12 +2652,19 @@ msgid ""
 " verify min_temp and max_temp within the micro-controller and do not require a"
 " working connection to the host.)"
 msgstr ""
+"Примечание: будьте осторожны, если используете этот датчик для управления "
+"нагревателями. min_temp и max_temp нагревателя проверяются только на хосте и "
+"только если хост работает и функционирует нормально. (Входы АЦП, напрямую "
+"подключённые к микроконтроллеру, проверяют min_temp и max_temp внутри "
+"микроконтроллера и не требуют рабочего соединения с хостом.)"
 
-#: docs/Config_Reference.md:block 474 (paragraph)
+#: docs/Config_Reference.md:block 517 (paragraph)
 msgid "The chip provides pins that can be used on other sensors."
 msgstr ""
+"Микросхема предоставляет пины, которые можно использовать для других "
+"датчиков."
 
-#: docs/Config_Reference.md:block 484 (paragraph)
+#: docs/Config_Reference.md:block 527 (paragraph)
 msgid ""
 "If you use Octoprint and stream gcode over the serial port instead of printing"
 " from virtual_sd, then remove **M1** and **M0** from *Pausing commands* in "
@@ -2434,6 +2672,120 @@ msgid ""
 "start print on the Palette 2 and unpausing in Octoprint for your print to "
 "begin."
 msgstr ""
+"Если вы используете Octoprint и передаёте gcode через последовательный порт "
+"вместо печати из virtual_sd, то удаление **M1** и **M0** из *Команд паузы* в "
+"*Настройки > Последовательное соединение > Прошивка и протокол* избавит от "
+"необходимости запускать печать на Palette 2 и снимать паузу в Octoprint, "
+"чтобы печать началась."
+
+#: docs/Config_Reference.md:block 87 (paragraph)
+msgid ""
+"For the references on how to configure IDEX setups, see the [dual "
+"carriage](#dual_carriage) section."
+msgstr ""
+"Справочную информацию о настройке конфигураций IDEX см. в разделе [двойная "
+"каретка](#dual_carriage)."
+
+#: docs/Config_Reference.md:block 181 (paragraph)
+msgid ""
+"See the [exclude objects guide](Exclude_Object.md) and [command "
+"reference](G-Codes.md#exclude_object) for additional information. See the "
+"[sample-macros.cfg](../config/sample-macros.cfg) file for a "
+"Marlin/RepRapFirmware compatible M486 G-Code macro."
+msgstr ""
+"Дополнительную информацию см. в [руководстве по исключению объектов]"
+"(Exclude_Object.md) и [справочнике команд](G-Codes.md#exclude_object). "
+"Совместимый с Marlin/RepRapFirmware макрос G-кода M486 см. в файле [sample-"
+"macros.cfg](../config/sample-macros.cfg)."
+
+#: docs/Config_Reference.md:block 252 (paragraph)
+msgid ""
+"Refer to [generic cartesian](#generic-cartesian-kinematics) section for more "
+"information on the regular `carriage` parameters."
+msgstr ""
+"Дополнительную информацию об обычных параметрах `carriage` см. в разделе "
+"[обобщённая декартова кинематика](#generic-cartesian-kinematics)."
+
+#: docs/Config_Reference.md:block 408 (header)
+msgid "[tmc5262]"
+msgstr "[tmc5262]"
+
+#: docs/Config_Reference.md:block 409 (paragraph)
+msgid ""
+"Configure a TMC5262 stepper motor driver via SPI. Define a section with a "
+"\"tmc5262\" prefix followed by the name of the corresponding stepper (for "
+"example, \"[tmc5262 stepper_x]\")."
+msgstr ""
+"Настройка драйвера шагового двигателя TMC5262 через SPI. Определите раздел с "
+"префиксом \"tmc5262\", за которым следует имя соответствующего шагового "
+"двигателя (например, \"[tmc5262 stepper_x]\")."
+
+#: docs/Config_Reference.md:block 410 (paragraph)
+msgid "This implementation supports SpreadCycle with a physical endstop."
+msgstr ""
+"Эта реализация поддерживает режим SpreadCycle с физическим концевым "
+"выключателем."
+
+#: docs/Config_Reference.md:block 490 (header)
+msgid "CS1237"
+msgstr "CS1237"
+
+#: docs/Config_Reference.md:block 491 (paragraph)
+msgid ""
+"The CS1237 sensor backend supports both `[load_cell]` and `[load_cell_probe]`."
+msgstr ""
+"Серверная часть датчика CS1237 поддерживает и `[load_cell]`, и "
+"`[load_cell_probe]`."
+
+#: docs/Config_Reference.md:block 493 (paragraph)
+msgid ""
+"Both pins must be on the same MCU. DOUT is bidirectional during configuration."
+msgstr ""
+"Оба пина должны находиться на одном и том же микроконтроллере. DOUT является "
+"двунаправленным во время настройки."
+
+#~ msgid ""
+#~ "See the [exclude objects guide](Exclude_Object.md) and [command "
+#~ "reference](G-Codes.md#excludeobject) for additional information. See the "
+#~ "[sample-macros.cfg](../config/sample-macros.cfg) file for a "
+#~ "Marlin/RepRapFirmware compatible M486 G-Code macro."
+#~ msgstr ""
+#~ "Дополнительную информацию см. в руководстве [exclude objects "
+#~ "guide](Exclude_Object.md) и [command reference](G-Codes.md#excludeobject). "
+#~ "Смотрите файл [sample-macros.cfg](../config/sample-macros.cfg) для макроса "
+#~ "G-кода M486, совместимого с Marlin/RepRapFirmware."
+
+#~ msgid ""
+#~ "For the references on how to configure IDEX setups, see the [dual "
+#~ "carriage](#dual-carriage) section."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Refer to [generic cartesian](#generic-cartesian) section for more information "
+#~ "on the regular `carriage` parameters."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "See [sample-idex.cfg](../config/sample-idex.cfg) for an example configuration."
+#~ msgstr ""
+#~ "Пример конфигурации смотрите в [sample-idex.cfg](../config/sample-idex.cfg)."
+
+#~ msgid ""
+#~ "The atsam, atsamd, and stm32 micro-controllers contain an internal temperature"
+#~ " sensor. One can use the \"temperature_mcu\" sensor to monitor these "
+#~ "temperatures."
+#~ msgstr ""
+#~ "Микроконтроллеры atsam, atsamd и stm32 содержат внутренний датчик температуры."
+#~ " Для мониторинга этих температур можно использовать датчик "
+#~ "\"temperature_mcu\"."
+
+#~ msgid ""
+#~ "Statically configured MCP4018 digipot connected via two gpio \"bit banging\" "
+#~ "pins (one may define any number of sections with an \"mcp4018\" prefix)."
+#~ msgstr ""
+#~ "Статически сконфигурированный дигипот MCP4018, подключенный через два gpio "
+#~ "\"bit banging\" пина (можно задать любое количество секций с префиксом "
+#~ "\"mcp4018\")."
 
 #~ msgid ""
 #~ "If you use Octoprint and stream gcode over the serial port instead of printing"
@@ -2447,6 +2799,52 @@ msgstr ""
 #~ "в *Settings > Serial Connection > Firmware & protocol*, чтобы избежать "
 #~ "необходимости запуска печати на Palette 2 и снятия паузы в Octoprint для "
 #~ "начала печати."
+
+#~ msgid ""
+#~ "Support for cartesian and hybrid_corexy/z printers with dual carriages on a "
+#~ "single axis. The carriage mode can be set via the SET_DUAL_CARRIAGE extended "
+#~ "g-code command. For example, \"SET_DUAL_CARRIAGE CARRIAGE=1\" command will "
+#~ "activate the carriage defined in this section (CARRIAGE=0 will return "
+#~ "activation to the primary carriage). Dual carriage support is typically "
+#~ "combined with extra extruders - the SET_DUAL_CARRIAGE command is often called "
+#~ "at the same time as the ACTIVATE_EXTRUDER command. Be sure to park the "
+#~ "carriages during deactivation. Note that during G28 homing, typically the "
+#~ "primary carriage is homed first followed by the carriage defined in the "
+#~ "`[dual_carriage]` config section. However, the `[dual_carriage]` carriage will"
+#~ " be homed first if both carriages home in a positive direction and the "
+#~ "[dual_carriage] carriage has a `position_endstop` greater than the primary "
+#~ "carriage, or if both carriages home in a negative direction and the "
+#~ "`[dual_carriage]` carriage has a `position_endstop` less than the primary "
+#~ "carriage."
+#~ msgstr ""
+#~ "Поддержка картезианских и гибридных_corexy/z принтеров с двумя каретками на "
+#~ "одной оси. Режим каретки может быть установлен с помощью расширенной команды "
+#~ "g-кода SET_DUAL_CARRIAGE. Например, команда \"SET_DUAL_CARRIAGE CARRIAGE=1\" "
+#~ "активирует каретку, определенную в этом разделе (CARRIAGE=0 возвращает "
+#~ "активацию к основной каретке). Поддержка двойной каретки обычно сочетается с "
+#~ "дополнительными экструдерами - команда SET_DUAL_CARRIAGE часто вызывается "
+#~ "одновременно с командой ACTIVATE_EXTRUDER. Не забудьте припарковать каретки во"
+#~ " время деактивации. Обратите внимание, что при наведении G28 обычно сначала "
+#~ "наводится основная каретка, а затем каретка, определенная в разделе "
+#~ "конфигурации `[dual_carriage]`. Однако каретка `[dual_carriage]` будет "
+#~ "направлена первой, если обе каретки возвращаются в положительном направлении и"
+#~ " каретка [dual_carriage] имеет `позицию_endstop` больше, чем основная каретка,"
+#~ " или если обе каретки возвращаются в отрицательном направлении и каретка "
+#~ "`[dual_carriage]` имеет `позицию_endstop` меньше, чем основная каретка."
+
+#~ msgid ""
+#~ "AHT10/AHT20/AHT21 two wire interface (I2C) environmental sensors. Note that "
+#~ "these sensors are not intended for use with extruders and heater beds, but "
+#~ "rather for monitoring ambient temperature (C) and relative humidity. See "
+#~ "[sample-macros.cfg](../config/sample-macros.cfg) for a gcode_macro that may be"
+#~ " used to report humidity in addition to temperature."
+#~ msgstr ""
+#~ "Датчики окружающей среды AHT10/AHT20/AHT21 с двухпроводным интерфейсом (I2C). "
+#~ "Обратите внимание, что эти датчики не предназначены для использования с "
+#~ "экструдерами и нагревателями, а скорее для мониторинга температуры окружающей "
+#~ "среды (C) и относительной влажности. Смотрите [sample-"
+#~ "macros.cfg](../config/sample-macros.cfg) для макроса gcode_macro, который "
+#~ "можно использовать для сообщения о влажности в дополнение к температуре."
 
 #~ msgid ""
 #~ "[mcu]\n"

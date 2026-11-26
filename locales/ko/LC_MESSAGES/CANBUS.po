@@ -1,17 +1,17 @@
-# system3rdb <system3rd@gmail.com>, 2021.
-# brian park <gouache95@gmail.com>, 2021.
-# 이정희 <daemul72@gmail.com>, 2022.
+# system3rdb <system3rd@gmail.com>, 2021, 2025.
+# brian park <gouache95@gmail.com>, 2021, 2025.
+# 이정희 <daemul72@gmail.com>, 2022, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2022-02-28 15:55+0000\n"
+"PO-Revision-Date: 2025-07-22 08:16+0000\n"
 "Last-Translator: 이정희 <daemul72@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/klipper/canbus/ko/>\n"
 "Language: ko\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.11.1-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid "This document describes Klipper's CAN bus support."
 msgstr "이 문서는 Klipper의 CAN bus 지원에 대해 설명합니다."
@@ -183,13 +183,6 @@ msgstr ""
 
 #: docs/CANBUS.md:block 30 (unordered list)
 msgid ""
-"Even at a CAN bus frequency of 1000000, there may not be sufficient bandwidth "
-"to run a `SHAPER_CALIBRATE` test if both the XY steppers and the accelerometer"
-" all communicate via a single \"USB to CAN bus\" interface."
-msgstr ""
-
-#: docs/CANBUS.md:block 30 (unordered list)
-msgid ""
 "A USB to CAN bridge board will not appear as a USB serial device, it will not "
 "show up when running `ls /dev/serial/by-id`, and it can not be configured in "
 "Klipper's printer.cfg file with a `serial:` parameter. The bridge board "
@@ -214,6 +207,12 @@ msgid ""
 "functioning CAN bus (including terminating resistors and an additional node) "
 "may result in sporadic errors even when communicating with the bridge node."
 msgstr ""
+
+#~ msgid ""
+#~ "Even at a CAN bus frequency of 1000000, there may not be sufficient bandwidth "
+#~ "to run a `SHAPER_CALIBRATE` test if both the XY steppers and the accelerometer"
+#~ " all communicate via a single \"USB to CAN bus\" interface."
+#~ msgstr ""
 
 #~ msgid "~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0\n"
 #~ msgstr "~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0\n"

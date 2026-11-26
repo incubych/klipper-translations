@@ -1,43 +1,20 @@
 # SK Customs <kunze.steve@bluewin.ch>, 2025.
+# Extrutex <w1indt@outlook.com>, 2026.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2025-03-12 10:06+0000\n"
-"Last-Translator: SK Customs <kunze.steve@bluewin.ch>\n"
+"PO-Revision-Date: 2026-08-29 18:46+0000\n"
+"Last-Translator: Extrutex <w1indt@outlook.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/klipper/eddy_probe/de/>\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.3-dev\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 #: docs/Eddy_Probe.md:block 1 (header)
 msgid "Eddy Current Inductive probe"
 msgstr "Induktive Wirbelstromsonde"
-
-#: docs/Eddy_Probe.md:block 2 (paragraph)
-msgid ""
-"This document describes how to use an [eddy "
-"current](https://en.wikipedia.org/wiki/Eddy_current) inductive probe in "
-"Klipper."
-msgstr ""
-"Dieses Dokument beschreibt die Verwendung einer induktiven "
-"[Wirbelstrom](https://en.wikipedia.org/wiki/Eddy_current) Sonde in Klipper."
-
-#: docs/Eddy_Probe.md:block 3 (paragraph)
-msgid ""
-"Currently, an eddy current probe can not be used for Z homing. The sensor can "
-"only be used for Z probing."
-msgstr ""
-
-#: docs/Eddy_Probe.md:block 4 (paragraph)
-msgid ""
-"Start by declaring a [probe_eddy_current config "
-"section](Config_Reference.md#probe_eddy_current) in the printer.cfg file. It "
-"is recommended to set the `z_offset` to 0.5mm. It is typical for the sensor to"
-" require an `x_offset` and `y_offset`. If these values are not known, one "
-"should estimate the values during initial calibration."
-msgstr ""
 
 #: docs/Eddy_Probe.md:block 5 (paragraph)
 msgid ""
@@ -50,22 +27,16 @@ msgid ""
 "complete in a few seconds. After it completes, issue a `SAVE_CONFIG` command "
 "to save the results to the printer.cfg and restart."
 msgstr ""
-
-#: docs/Eddy_Probe.md:block 6 (paragraph)
-msgid ""
-"The second step in calibration is to correlate the sensor readings to the "
-"corresponding Z heights. Home the printer and navigate the toolhead so that "
-"the nozzle is near the center of the bed. Then run an "
-"`PROBE_EDDY_CURRENT_CALIBRATE CHIP=my_eddy_probe` command. Once the tool "
-"starts, follow the steps described at [\"the paper test\"](Bed_Level.md#the-"
-"paper-test) to determine the actual distance between the nozzle and bed at the"
-" given location. Once those steps are complete one can `ACCEPT` the position. "
-"The tool will then move the the toolhead so that the sensor is above the point"
-" where the nozzle used to be and run a series of movements to correlate the "
-"sensor to Z positions. This will take a couple of minutes. After the tool "
-"completes, issue a `SAVE_CONFIG` command to save the results to the "
-"printer.cfg and restart."
-msgstr ""
+"Der erste Schritt der Kalibrierung besteht darin, den passenden DRIVE_CURRENT "
+"für den Sensor zu ermitteln. Führen Sie ein Homing des Druckers durch und "
+"verfahren Sie den Druckkopf so, dass sich der Sensor nahe der Bettmitte und "
+"etwa 20 mm über dem Bett befindet. Setzen Sie dann den Befehl "
+"`LDC_CALIBRATE_DRIVE_CURRENT CHIP=<config_name>` ab. Wenn der "
+"Konfigurationsabschnitt beispielsweise `[probe_eddy_current my_eddy_probe]` "
+"heißt, würde man `LDC_CALIBRATE_DRIVE_CURRENT CHIP=my_eddy_probe` ausführen. "
+"Dieser Befehl sollte in wenigen Sekunden abgeschlossen sein. Setzen Sie danach"
+" einen `SAVE_CONFIG`-Befehl ab, um die Ergebnisse in der printer.cfg zu "
+"speichern und neu zu starten."
 
 #: docs/Eddy_Probe.md:block 7 (paragraph)
 msgid ""
@@ -76,26 +47,16 @@ msgid ""
 "`PROBE_EDDY_CURRENT_CALIBRATE` command (as described above) after making the "
 "change."
 msgstr ""
-
-#: docs/Eddy_Probe.md:block 8 (paragraph)
-msgid ""
-"Once calibration is complete, one may use all the standard Klipper tools that "
-"use a Z probe."
-msgstr ""
-
-#: docs/Eddy_Probe.md:block 9 (paragraph)
-msgid ""
-"Note that eddy current sensors (and inductive probes in general) are "
-"susceptible to \"thermal drift\". That is, changes in temperature can result "
-"in changes in reported Z height. Changes in either the bed surface temperature"
-" or sensor hardware temperature can skew the results. It is important that "
-"calibration and probing is only done when the printer is at a stable "
-"temperature."
-msgstr ""
+"Nach der ersten Kalibrierung ist es ratsam zu überprüfen, ob `x_offset` und "
+"`y_offset` korrekt sind. Folgen Sie dazu den Schritten zum [Kalibrieren der X-"
+" und Y-Offsets der Sonde](Probe_Calibrate.md#calibrating-probe-x-and-y-"
+"offsets). Wenn `x_offset` oder `y_offset` geändert werden, führen Sie "
+"anschließend unbedingt den Befehl `PROBE_EDDY_CURRENT_CALIBRATE` (wie oben "
+"beschrieben) aus."
 
 #: docs/Eddy_Probe.md:block 10 (header)
 msgid "Thermal Drift Calibration"
-msgstr ""
+msgstr "Kalibrierung der thermischen Drift"
 
 #: docs/Eddy_Probe.md:block 11 (paragraph)
 msgid ""
@@ -106,6 +67,13 @@ msgid ""
 "current probe the `[temperature_probe]` section must share a name with the "
 "`[probe_eddy_current]` section. For example:"
 msgstr ""
+"Wie alle induktiven Sonden unterliegen Wirbelstromsonden einer erheblichen "
+"thermischen Drift. Wenn die Wirbelstromsonde über einen Temperatursensor an "
+"der Spule verfügt, kann ein `[temperature_probe]` konfiguriert werden, um die "
+"Spulentemperatur zu melden und die softwareseitige Driftkompensation zu "
+"aktivieren. Um eine Temperatursonde mit einer Wirbelstromsonde zu verknüpfen, "
+"muss der Abschnitt `[temperature_probe]` denselben Namen wie der Abschnitt "
+"`[probe_eddy_current]` tragen. Zum Beispiel:"
 
 #: docs/Eddy_Probe.md:block 14 (paragraph)
 msgid ""
@@ -115,6 +83,12 @@ msgid ""
 "your system, the `temperature_probe` module offers a manual calibration "
 "procedure via the `TEMPERATURE_PROBE_CALIBRATE` gcode command."
 msgstr ""
+"Hersteller von Wirbelstromsonden bieten unter Umständen eine werkseitige "
+"Driftkalibrierung an, die manuell in die Option `drift_calibration` des "
+"Abschnitts `[probe_eddy_current]` eingetragen werden kann. Ist dies nicht der "
+"Fall oder liefert die werkseitige Kalibrierung auf Ihrem System keine guten "
+"Ergebnisse, bietet das Modul `temperature_probe` über den G-Code-Befehl "
+"`TEMPERATURE_PROBE_CALIBRATE` ein manuelles Kalibrierverfahren an."
 
 #: docs/Eddy_Probe.md:block 15 (paragraph)
 msgid ""
@@ -125,12 +99,21 @@ msgid ""
 "widest temperature range possible, thus its desirable to start with the "
 "printer cold and finish with the coil at the maximum temperature it can reach."
 msgstr ""
+"Vor der Durchführung der Kalibrierung sollte der Benutzer eine Vorstellung "
+"davon haben, welche maximale Spulentemperatur die Temperatursonde erreichen "
+"kann. Diese Temperatur sollte für den Parameter `TARGET` des Befehls "
+"`TEMPERATURE_PROBE_CALIBRATE` verwendet werden. Ziel ist es, über den "
+"größtmöglichen Temperaturbereich zu kalibrieren; daher ist es wünschenswert, "
+"mit kaltem Drucker zu beginnen und mit der Spule bei ihrer maximal "
+"erreichbaren Temperatur abzuschließen."
 
 #: docs/Eddy_Probe.md:block 16 (paragraph)
 msgid ""
 "Once a `[temperature_probe]` is configured, the following steps may be taken "
 "to perform thermal drift calibration:"
 msgstr ""
+"Sobald ein `[temperature_probe]` konfiguriert ist, können die folgenden "
+"Schritte zur Kalibrierung der thermischen Drift ausgeführt werden:"
 
 #: docs/Eddy_Probe.md:block 17 (unordered list)
 msgid ""
@@ -138,14 +121,19 @@ msgid ""
 "`[temperature_probe]` is configured and linked. This captures the temperature "
 "during calibration which is necessary to perform thermal drift compensation."
 msgstr ""
+"Die Sonde muss mit `PROBE_EDDY_CURRENT_CALIBRATE` kalibriert werden, wenn ein "
+"`[temperature_probe]` konfiguriert und verknüpft ist. Dabei wird die "
+"Temperatur während der Kalibrierung erfasst, was für die Kompensation der "
+"thermischen Drift erforderlich ist."
 
 #: docs/Eddy_Probe.md:block 17 (unordered list)
 msgid "Make sure the nozzle is free of debris and filament."
 msgstr ""
+"Stellen Sie sicher, dass die Düse frei von Rückständen und Filament ist."
 
 #: docs/Eddy_Probe.md:block 17 (unordered list)
 msgid "The bed, nozzle, and probe coil should be cold prior to calibration."
-msgstr ""
+msgstr "Bett, Düse und Sondenspule sollten vor der Kalibrierung kalt sein."
 
 #: docs/Eddy_Probe.md:block 17 (unordered list)
 msgid ""
@@ -153,10 +141,15 @@ msgid ""
 "`calibration_extruder_temp`, and `extruder_heating_z` options in "
 "`[temperature_probe]` are **NOT** configured:"
 msgstr ""
+"Die folgenden Schritte sind erforderlich, wenn die Optionen "
+"`calibration_position`, `calibration_extruder_temp` und `extruder_heating_z` "
+"in `[temperature_probe]` **NICHT** konfiguriert sind:"
 
 #: docs/Eddy_Probe.md:block 17 (unordered list)
 msgid "Move the tool to the center of the bed. Z should be 30mm+ above the bed."
 msgstr ""
+"Verfahren Sie das Werkzeug in die Mitte des Betts. Z sollte 30 mm oder mehr "
+"über dem Bett liegen."
 
 #: docs/Eddy_Probe.md:block 17 (unordered list)
 msgid ""
@@ -164,12 +157,18 @@ msgid ""
 "150-170C should be sufficient for most configurations. The purpose of heating "
 "the extruder is to avoid nozzle expansion during calibration."
 msgstr ""
+"Heizen Sie den Extruder auf eine Temperatur oberhalb der maximal sicheren "
+"Betttemperatur auf. 150–170 °C sollten für die meisten Konfigurationen "
+"ausreichen. Das Aufheizen des Extruders dient dazu, eine Ausdehnung der Düse "
+"während der Kalibrierung zu vermeiden."
 
 #: docs/Eddy_Probe.md:block 17 (unordered list)
 msgid ""
 "When the extruder temperature has settled, move the Z axis down to about 1mm "
 "above the bed."
 msgstr ""
+"Wenn sich die Extrudertemperatur stabilisiert hat, fahren Sie die Z-Achse auf "
+"etwa 1 mm über dem Bett herunter."
 
 #: docs/Eddy_Probe.md:block 17 (unordered list)
 msgid ""
@@ -181,6 +180,13 @@ msgid ""
 "to the specified temperature the tool will move to the Z value specified by "
 "the`calibration_position`."
 msgstr ""
+"Starten Sie die Driftkalibrierung. Wenn die Sonde `my_probe` heißt und die "
+"maximal erreichbare Sondentemperatur 80 °C beträgt, lautet der passende "
+"G-Code-Befehl `TEMPERATURE_PROBE_CALIBRATE PROBE=my_probe TARGET=80`. Sofern "
+"konfiguriert, fährt das Werkzeug zu den durch `calibration_position` "
+"angegebenen X/Y-Koordinaten und zu dem durch `extruder_heating_z` angegebenen "
+"Z-Wert. Nach dem Aufheizen des Extruders auf die angegebene Temperatur fährt "
+"das Werkzeug zu dem in `calibration_position` angegebenen Z-Wert."
 
 #: docs/Eddy_Probe.md:block 17 (unordered list)
 msgid ""
@@ -188,6 +194,10 @@ msgid ""
 "paper test and `ACCEPT`. The calibration procedure will take the first set of "
 "samples with the probe then park the probe in the heating position."
 msgstr ""
+"Das Verfahren fordert eine manuelle Messung an. Führen Sie die manuelle "
+"Messung mit dem Papiertest durch und bestätigen Sie mit `ACCEPT`. Die "
+"Kalibrierung nimmt die erste Messreihe mit der Sonde auf und parkt die Sonde "
+"anschließend in der Aufheizposition."
 
 #: docs/Eddy_Probe.md:block 17 (unordered list)
 msgid ""
@@ -195,6 +205,9 @@ msgid ""
 "the maximum safe temperature. Otherwise this step will be performed "
 "automatically."
 msgstr ""
+"Wenn `calibration_bed_temp` **NICHT** konfiguriert ist, heizen Sie das Bett "
+"auf die maximal sichere Temperatur auf. Andernfalls wird dieser Schritt "
+"automatisch ausgeführt."
 
 #: docs/Eddy_Probe.md:block 17 (unordered list)
 msgid ""
@@ -205,33 +218,48 @@ msgid ""
 "`STEP` value, a value too high may request too few samples resulting in a poor"
 " calibration."
 msgstr ""
+"Standardmäßig fordert das Kalibrierverfahren alle 2 °C eine manuelle Messung "
+"an, bis `TARGET` erreicht ist. Die Temperaturdifferenz zwischen den Messungen "
+"lässt sich über den Parameter `STEP` in `TEMPERATURE_PROBE_CALIBRATE` "
+"anpassen. Beim Festlegen eines eigenen `STEP`-Werts ist Vorsicht geboten: Ein "
+"zu hoher Wert führt zu einer zu geringen Anzahl an Messungen und damit zu "
+"einer schlechten Kalibrierung."
 
 #: docs/Eddy_Probe.md:block 17 (unordered list)
 msgid ""
 "The following additional gcode commands are available during drift "
 "calibration:"
 msgstr ""
+"Während der Driftkalibrierung stehen die folgenden zusätzlichen G-Code-Befehle"
+" zur Verfügung:"
 
 #: docs/Eddy_Probe.md:block 17 (unordered list)
 msgid ""
 "`TEMPERATURE_PROBE_NEXT` may be used to force a new sample before the step "
 "delta has been reached."
 msgstr ""
+"Mit `TEMPERATURE_PROBE_NEXT` kann eine neue Messung erzwungen werden, bevor "
+"die Schrittdifferenz erreicht ist."
 
 #: docs/Eddy_Probe.md:block 17 (unordered list)
 msgid ""
 "`TEMPERATURE_PROBE_COMPLETE` may be used to complete calibration before the "
 "`TARGET` has been reached."
 msgstr ""
+"Mit `TEMPERATURE_PROBE_COMPLETE` kann die Kalibrierung abgeschlossen werden, "
+"bevor `TARGET` erreicht ist."
 
 #: docs/Eddy_Probe.md:block 17 (unordered list)
 msgid "`ABORT` may be used to end calibration and discard results."
 msgstr ""
+"Mit `ABORT` kann die Kalibrierung beendet und die Ergebnisse verworfen werden."
 
 #: docs/Eddy_Probe.md:block 17 (unordered list)
 msgid ""
 "When calibration is finished use `SAVE_CONFIG` to store the drift calibration."
 msgstr ""
+"Wenn die Kalibrierung abgeschlossen ist, speichern Sie die Driftkalibrierung "
+"mit `SAVE_CONFIG`."
 
 #: docs/Eddy_Probe.md:block 18 (paragraph)
 msgid ""
@@ -239,6 +267,10 @@ msgid ""
 "challenging and time consuming than most other procedures. It may require "
 "practice and several attempts to achieve an optimal calibration."
 msgstr ""
+"Wie man erkennen kann, ist das oben beschriebene Kalibrierverfahren "
+"anspruchsvoller und zeitaufwendiger als die meisten anderen Verfahren. Es kann"
+" Übung und mehrere Anläufe erfordern, um eine optimale Kalibrierung zu "
+"erreichen."
 
 #: docs/Eddy_Probe.md:block 13 (paragraph)
 msgid ""
@@ -250,6 +282,1073 @@ msgid ""
 "enclosed, it is strongly recommended to set the `max_validation_temp` option "
 "to a value between 100 and 120."
 msgstr ""
+"Weitere Einzelheiten zur Konfiguration eines `temperature_probe` finden Sie in"
+" der [Konfigurationsreferenz](Config_Reference.md#temperature_probe). Es "
+"empfiehlt sich, die Optionen `calibration_position`, "
+"`calibration_extruder_temp`, `extruder_heating_z` und `calibration_bed_temp` "
+"zu konfigurieren, da dadurch einige der unten beschriebenen Schritte "
+"automatisiert werden. Wenn der zu kalibrierende Drucker eingehaust ist, wird "
+"dringend empfohlen, die Option `max_validation_temp` auf einen Wert zwischen "
+"100 und 120 zu setzen."
+
+#: docs/Eddy_Probe.md:block 2 (paragraph)
+msgid ""
+"This document describes the support for [eddy "
+"current](https://en.wikipedia.org/wiki/Eddy_current) inductive probes in "
+"Klipper."
+msgstr ""
+"Dieses Dokument beschreibt die Unterstützung induktiver [Wirbelstrom-"
+"Sonden](https://en.wikipedia.org/wiki/Eddy_current) in Klipper."
+
+#: docs/Eddy_Probe.md:block 3 (paragraph)
+msgid ""
+"These probes detect the bed by measuring the [resonant "
+"frequency](https://en.wikipedia.org/wiki/Resonance) of a coil within the "
+"sensor. The closer that coil is to a metal bed the higher the coil's resonant "
+"frequency. The frequency measurements can thus be used to estimate the "
+"distance between sensor and bed."
+msgstr ""
+"Diese Sonden erkennen das Bett, indem sie die "
+"[Resonanzfrequenz](https://en.wikipedia.org/wiki/Resonance) einer Spule im "
+"Sensor messen. Je näher sich diese Spule an einem Metallbett befindet, desto "
+"höher ist die Resonanzfrequenz der Spule. Die Frequenzmessungen lassen sich "
+"somit nutzen, um den Abstand zwischen Sensor und Bett abzuschätzen."
+
+#: docs/Eddy_Probe.md:block 4 (header)
+msgid "Probing mechanisms"
+msgstr "Messverfahren"
+
+#: docs/Eddy_Probe.md:block 5 (paragraph)
+msgid ""
+"Unlike traditional bed probes an eddy current sensor supports four different "
+"methods of probing: default, \"scan\", \"rapid_scan\", and \"tap\". The "
+"different probing methods are activated by passing a `METHOD=xxx` parameter to"
+" probe commands (for example, `PROBE METHOD=tap`). Each probing method has "
+"advantages and disadvantages as described below."
+msgstr ""
+"Anders als herkömmliche Bettsonden unterstützt ein Wirbelstromsensor vier "
+"verschiedene Messverfahren: Standard, \"scan\", \"rapid_scan\" und \"tap\". "
+"Die verschiedenen Verfahren werden aktiviert, indem den Sondenbefehlen ein "
+"Parameter `METHOD=xxx` übergeben wird (zum Beispiel `PROBE METHOD=tap`). Jedes"
+" Verfahren hat Vor- und Nachteile, die im Folgenden beschrieben werden."
+
+#: docs/Eddy_Probe.md:block 6 (header)
+msgid "Default probing method"
+msgstr "Standard-Messverfahren"
+
+#: docs/Eddy_Probe.md:block 7 (paragraph)
+msgid ""
+"The default probing method behaves most like a traditional bed probe. The "
+"toolhead descends toward the bed until the sensor detects that it is near the "
+"bed and then several sensor measurements are taken at the halted position to "
+"estimate the distance between sensor and bed. This probing mechanism is "
+"activated by not specifying a `METHOD` parameter on probe type commands (eg, a"
+" bare `PROBE` command)."
+msgstr ""
+"Das Standard-Messverfahren verhält sich am ehesten wie eine herkömmliche "
+"Bettsonde. Der Druckkopf fährt zum Bett hinab, bis der Sensor erkennt, dass er"
+" sich nahe am Bett befindet; anschließend werden an der angehaltenen Position "
+"mehrere Sensormessungen vorgenommen, um den Abstand zwischen Sensor und Bett "
+"abzuschätzen. Dieses Messverfahren wird aktiviert, indem bei Sondenbefehlen "
+"kein `METHOD`-Parameter angegeben wird (z. B. ein einfacher `PROBE`-Befehl)."
+
+#: docs/Eddy_Probe.md:block 8 (paragraph)
+msgid "Advantages:"
+msgstr "Vorteile:"
+
+#: docs/Eddy_Probe.md:block 9 (unordered list)
+msgid ""
+"It is the most general purpose probing method. It provides good precision with"
+" good flexibility."
+msgstr ""
+"Es ist das vielseitigste Messverfahren. Es bietet eine gute Präzision bei "
+"hoher Flexibilität."
+
+#: docs/Eddy_Probe.md:block 9 (unordered list)
+msgid ""
+"Can be used in many starting toolhead positions. It is necessary to ensure "
+"that the toolhead XY position places the sensor over the metal bed, but "
+"otherwise there is flexibility in the exact starting height."
+msgstr ""
+"Es kann aus vielen Ausgangspositionen des Druckkopfs verwendet werden. Es muss"
+" sichergestellt sein, dass die XY-Position des Druckkopfs den Sensor über dem "
+"Metallbett positioniert; ansonsten besteht Flexibilität hinsichtlich der "
+"genauen Starthöhe."
+
+#: docs/Eddy_Probe.md:block 10 (paragraph)
+msgid "Disadvantages:"
+msgstr "Nachteile:"
+
+#: docs/Eddy_Probe.md:block 11 (unordered list)
+msgid ""
+"The probe results are subject to thermal drift. Distances reported by the "
+"probe correlate to distances measured during initial calibration (via "
+"`PROBE_EDDY_CURRENT_CALIBRATE`) and the results may be impacted if probing is "
+"run at a different temperature. Changes to the temperature of the bed, sensor "
+"coil, sensor electronics, or any metal near the sensor can all impact the "
+"results. The impact is small (think microns), but the acceptable precision for"
+" a bed probe is also small (again think microns). For best results, it is "
+"recommended to run the calibration and subsequent probes at a consistent "
+"temperature."
+msgstr ""
+"Die Messergebnisse unterliegen thermischer Drift. Die von der Sonde gemeldeten"
+" Abstände beziehen sich auf die während der ersten Kalibrierung (mittels "
+"`PROBE_EDDY_CURRENT_CALIBRATE`) gemessenen Abstände, und die Ergebnisse können"
+" beeinträchtigt werden, wenn die Messung bei einer anderen Temperatur erfolgt."
+" Änderungen der Temperatur des Betts, der Sensorspule, der Sensorelektronik "
+"oder von Metall in der Nähe des Sensors können sich jeweils auf die Ergebnisse"
+" auswirken. Der Einfluss ist gering (im Mikrometerbereich), aber die "
+"geforderte Genauigkeit einer Bettsonde ist ebenfalls gering (ebenfalls im "
+"Mikrometerbereich). Für beste Ergebnisse wird empfohlen, die Kalibrierung und "
+"die anschließenden Messungen bei gleichbleibender Temperatur durchzuführen."
+
+#: docs/Eddy_Probe.md:block 12 (paragraph)
+msgid "When to use:"
+msgstr "Wann zu verwenden:"
+
+#: docs/Eddy_Probe.md:block 13 (paragraph)
+msgid ""
+"This is the default probing method, and it is recommended for most probing "
+"actions. In particular, it is the recommended probe type for bed alignment "
+"tools such as `QUAD_GANTRY_LEVEL`, `Z_TILT_ADJUST`, `SCREWS_TILT_CALCULATE`, "
+"`DELTA_CALIBRATE`, and similar."
+msgstr ""
+"Dies ist das Standard-Messverfahren und wird für die meisten Messvorgänge "
+"empfohlen. Insbesondere ist es das empfohlene Verfahren für Werkzeuge zur "
+"Bettausrichtung wie `QUAD_GANTRY_LEVEL`, `Z_TILT_ADJUST`, "
+"`SCREWS_TILT_CALCULATE`, `DELTA_CALIBRATE` und ähnliche."
+
+#: docs/Eddy_Probe.md:block 14 (header)
+msgid "\"scan\" probing method"
+msgstr "Messverfahren \"scan\""
+
+#: docs/Eddy_Probe.md:block 15 (paragraph)
+msgid ""
+"The \"scan\" probing method is similar to the default method, except the probe"
+" does not descend towards the bed. Instead, the probe gathers sensor "
+"measurements at the current Z position to estimate the distance between sensor"
+" and bed. It is useful for `BED_MESH_CALIBRATE` as the entire bed can be "
+"scanned with only horizontal movements."
+msgstr ""
+"Das Messverfahren \"scan\" ähnelt dem Standardverfahren, allerdings fährt die "
+"Sonde nicht zum Bett hinab. Stattdessen erfasst die Sonde Messwerte an der "
+"aktuellen Z-Position, um den Abstand zwischen Sensor und Bett abzuschätzen. Es"
+" ist nützlich für `BED_MESH_CALIBRATE`, da das gesamte Bett allein mit "
+"horizontalen Bewegungen abgetastet werden kann."
+
+#: docs/Eddy_Probe.md:block 17 (unordered list)
+msgid ""
+"The Z position does not change during probing and there is less chance for Z "
+"stepper backlash (and similar) to impact measurements. This can be "
+"particularly useful when only relative Z height measurements are desired (eg, "
+"when using `zero_reference_position` with `BED_MESH_CALIBRATE`)."
+msgstr ""
+"Die Z-Position ändert sich während der Messung nicht, und die "
+"Wahrscheinlichkeit, dass Spiel der Z-Schrittmotoren (und Ähnliches) die "
+"Messungen beeinflusst, ist geringer. Das kann besonders nützlich sein, wenn "
+"nur relative Z-Höhenmessungen gewünscht sind (z. B. bei Verwendung von "
+"`zero_reference_position` mit `BED_MESH_CALIBRATE`)."
+
+#: docs/Eddy_Probe.md:block 17 (unordered list)
+msgid "A full bed scan may take less time than the default method."
+msgstr ""
+"Ein vollständiger Bettscan kann weniger Zeit in Anspruch nehmen als das "
+"Standardverfahren."
+
+#: docs/Eddy_Probe.md:block 19 (unordered list)
+msgid ""
+"The bed must be nearly parallel to the printer XY rails and there must not be "
+"any large deviations in bed height. For acceptable results the bed scanning "
+"must be run with a low `HORIZONTAL_MOVE_Z` so that the sensor remains close to"
+" the bed during the entire bed scan. (The smaller the distance the more "
+"accurate the results.) In practice, this requires that the distance between "
+"nozzle and bed be no more than about a millimeter, and at these distances any "
+"notable bed deviations could result in a nozzle/bed collision during "
+"horizontal movement."
+msgstr ""
+"Das Bett muss nahezu parallel zu den XY-Achsen des Druckers verlaufen, und es "
+"dürfen keine großen Abweichungen der Betthöhe vorliegen. Für brauchbare "
+"Ergebnisse muss der Bettscan mit einem niedrigen `HORIZONTAL_MOVE_Z` "
+"ausgeführt werden, damit der Sensor während des gesamten Scans nahe am Bett "
+"bleibt. (Je geringer der Abstand, desto genauer die Ergebnisse.) In der Praxis"
+" erfordert das, dass der Abstand zwischen Düse und Bett nicht mehr als etwa "
+"einen Millimeter beträgt; bei diesen Abständen können nennenswerte "
+"Bettabweichungen zu einer Kollision von Düse und Bett während der horizontalen"
+" Bewegung führen."
+
+#: docs/Eddy_Probe.md:block 19 (unordered list)
+msgid ""
+"The \"scan\" method has the same thermal drift disadvantages described for the"
+" default method. For best results, it is recommended to run the calibration "
+"and subsequent probes at a consistent temperature."
+msgstr ""
+"Das Verfahren \"scan\" weist dieselben Nachteile hinsichtlich thermischer "
+"Drift auf wie das Standardverfahren. Für beste Ergebnisse wird empfohlen, die "
+"Kalibrierung und die anschließenden Messungen bei gleichbleibender Temperatur "
+"durchzuführen."
+
+#: docs/Eddy_Probe.md:block 21 (paragraph)
+msgid ""
+"The \"scan\" method is typically used during bed mesh calibration. It is "
+"recommended to always verify the bed is parallel to the printer XY rails prior"
+" to performing a bed scan. Depending on the printer hardware, one may use an "
+"automated tool utilizing the default probing method to verify the bed is "
+"parallel - for example: `QUAD_GANTRY_LEVEL RETRY_TOLERANCE=0.250`, "
+"`Z_TILT_ADJUST RETRY_TOLERANCE=0.250`, or `SCREWS_TILT_CALCULATION "
+"MAX_TOLERANCE=0.250`."
+msgstr ""
+"Das Verfahren \"scan\" wird typischerweise bei der Kalibrierung des Bett-"
+"Meshes verwendet. Es wird empfohlen, vor einem Bettscan stets zu überprüfen, "
+"ob das Bett parallel zu den XY-Achsen des Druckers verläuft. Je nach "
+"Druckerhardware kann dazu ein automatisiertes Werkzeug mit dem Standard-"
+"Messverfahren genutzt werden, zum Beispiel: `QUAD_GANTRY_LEVEL "
+"RETRY_TOLERANCE=0.250`, `Z_TILT_ADJUST RETRY_TOLERANCE=0.250` oder "
+"`SCREWS_TILT_CALCULATION MAX_TOLERANCE=0.250`."
+
+#: docs/Eddy_Probe.md:block 22 (paragraph)
+msgid ""
+"A bed mesh can then be run with something similar to `BED_MESH_CALIBRATE "
+"METHOD=scan HORIZONTAL_MOVE_Z=1`."
+msgstr ""
+"Ein Bett-Mesh kann anschließend etwa mit `BED_MESH_CALIBRATE METHOD=scan "
+"HORIZONTAL_MOVE_Z=1` erstellt werden."
+
+#: docs/Eddy_Probe.md:block 23 (header)
+msgid "\"rapid_scan\" probing method"
+msgstr "Messverfahren \"rapid_scan\""
+
+#: docs/Eddy_Probe.md:block 24 (paragraph)
+msgid ""
+"The \"rapid_scan\" probing method is very similar to the \"scan\" method, "
+"except the probe does not pause at each point to be measured. Instead, "
+"measurements taken during horizontal movement near each probing point are used"
+" to estimate the distance between sensor and bed."
+msgstr ""
+"Das Messverfahren \"rapid_scan\" ähnelt stark dem Verfahren \"scan\", "
+"allerdings hält die Sonde an den einzelnen Messpunkten nicht an. Stattdessen "
+"werden Messwerte, die während der horizontalen Bewegung nahe jedem Messpunkt "
+"erfasst werden, zur Abschätzung des Abstands zwischen Sensor und Bett "
+"verwendet."
+
+#: docs/Eddy_Probe.md:block 26 (unordered list)
+msgid "A \"rapid_scan\" full bed scan may be slightly faster than the \"scan\" method."
+msgstr ""
+"Ein vollständiger Bett-Scan mit \"rapid_scan\" kann etwas schneller sein als "
+"die Methode \"scan\"."
+
+#: docs/Eddy_Probe.md:block 26 (unordered list)
+msgid "Otherwise, it has the same advantages as the \"scan\" method."
+msgstr "Ansonsten hat es dieselben Vorteile wie die Methode \"scan\"."
+
+#: docs/Eddy_Probe.md:block 28 (unordered list)
+msgid "The results of a \"rapid_scan\" may be less accurate than the \"scan\" method."
+msgstr ""
+"Die Ergebnisse eines \"rapid_scan\" können weniger genau sein als die der "
+"Methode \"scan\"."
+
+#: docs/Eddy_Probe.md:block 28 (unordered list)
+msgid ""
+"Same disadvantages as \"scan\" probes (bed must be parallel and thermal "
+"drift)."
+msgstr ""
+"Dieselben Nachteile wie bei \"scan\"-Sonden (Bett muss parallel sein, "
+"thermische Drift)."
+
+#: docs/Eddy_Probe.md:block 30 (paragraph)
+msgid ""
+"A \"rapid_scan\" may be useful when performing a large detailed bed mesh scan "
+"for diagnostic purposes. In this situation, the reduced scanning time may "
+"outweigh the possible loss of accuracy."
+msgstr ""
+"Ein \"rapid_scan\" kann nützlich sein, wenn ein großer, detaillierter Bed-"
+"Mesh-Scan zu Diagnosezwecken durchgeführt wird. In diesem Fall kann die "
+"verkürzte Scan-Zeit den möglichen Genauigkeitsverlust aufwiegen."
+
+#: docs/Eddy_Probe.md:block 31 (paragraph)
+msgid ""
+"For normal printing, a bed mesh using the regular \"scan\" method is generally"
+" preferred for best accuracy and minimal additional probing time."
+msgstr ""
+"Für den normalen Druckbetrieb wird für beste Genauigkeit und minimale "
+"zusätzliche Sondierungszeit im Allgemeinen ein Bed Mesh mit der regulären "
+"Methode \"scan\" bevorzugt."
+
+#: docs/Eddy_Probe.md:block 32 (paragraph)
+msgid ""
+"Once the bed is verified to be parallel to the XY rails then one can run a "
+"rapid bed mesh scan with something similar to `BED_MESH_CALIBRATE "
+"METHOD=rapid_scan HORIZONTAL_MOVE_Z=1`."
+msgstr ""
+"Sobald sichergestellt ist, dass das Bett parallel zu den XY-Schienen "
+"ausgerichtet ist, kann ein schneller Bed-Mesh-Scan mit etwas wie "
+"`BED_MESH_CALIBRATE METHOD=rapid_scan HORIZONTAL_MOVE_Z=1` durchgeführt "
+"werden."
+
+#: docs/Eddy_Probe.md:block 33 (header)
+msgid "\"tap\" probing method"
+msgstr "Sondierungsmethode \"tap\""
+
+#: docs/Eddy_Probe.md:block 34 (paragraph)
+msgid ""
+"During \"tap\" probing, the toolhead descends until the nozzle makes contact "
+"with the bed, the nozzle is then lifted away from the bed, and sensor "
+"measurements during the lifting movement are analyzed to determine the "
+"location where the nozzle breaks contact with the bed."
+msgstr ""
+"Bei der Sondierung mit \"tap\" senkt sich der Werkzeugkopf ab, bis die Düse "
+"das Bett berührt. Anschließend wird die Düse wieder vom Bett abgehoben, und "
+"die Sensormesswerte während der Hebebewegung werden analysiert, um den Punkt "
+"zu bestimmen, an dem sich die Düse vom Bett löst."
+
+#: docs/Eddy_Probe.md:block 36 (unordered list)
+msgid ""
+"The probe results are determined by the actual point of contact between nozzle"
+" and bed instead of indirect measurements between sensor and bed. This can be "
+"particularly useful if one changes nozzles frequently, as the results will "
+"take into account the geometry of the current nozzle."
+msgstr ""
+"Die Sondierungsergebnisse werden durch den tatsächlichen Kontaktpunkt zwischen"
+" Düse und Bett bestimmt, statt durch indirekte Messungen zwischen Sensor und "
+"Bett. Dies kann besonders nützlich sein, wenn häufig Düsen gewechselt werden, "
+"da die Ergebnisse die Geometrie der aktuellen Düse berücksichtigen."
+
+#: docs/Eddy_Probe.md:block 36 (unordered list)
+msgid ""
+"A \"tap\" probe does not have the thermal drift issues associated with the "
+"other probing methods. The main probe calibration is not utilized during tap "
+"probes, and thus one does not need to track temperatures between initial "
+"calibration and subsequent probing."
+msgstr ""
+"Eine \"tap\"-Sondierung hat nicht die thermischen Driftprobleme der anderen "
+"Sondierungsmethoden. Die Hauptsonden-Kalibrierung wird bei Tap-Sondierungen "
+"nicht verwendet, sodass die Temperaturen zwischen der ursprünglichen "
+"Kalibrierung und späterer Sondierung nicht nachverfolgt werden müssen."
+
+#: docs/Eddy_Probe.md:block 36 (unordered list)
+msgid ""
+"Axis \"twist\" inaccuracies are less of an issue during tap probes as there is"
+" no XY probe offset to compensate for. However, one must still ensure the "
+"toolhead XY position places both the nozzle and sensor above the bed prior to "
+"tap probing."
+msgstr ""
+"Ungenauigkeiten durch \"Achsverdrehung\" (Twist) spielen bei Tap-Sondierungen "
+"eine geringere Rolle, da es keinen XY-Sondenversatz gibt, der ausgeglichen "
+"werden müsste. Dennoch muss sichergestellt werden, dass die XY-Position des "
+"Werkzeugkopfs vor der Tap-Sondierung sowohl Düse als auch Sensor über dem Bett"
+" platziert."
+
+#: docs/Eddy_Probe.md:block 38 (unordered list)
+msgid ""
+"One must ensure both the nozzle and bed are clean prior to tap probing. Any "
+"filament on the nozzle or debris on the bed may significantly skew the probe "
+"results."
+msgstr ""
+"Vor der Tap-Sondierung müssen sowohl Düse als auch Bett sauber sein. "
+"Filamentreste an der Düse oder Verunreinigungen auf dem Bett können die "
+"Sondierungsergebnisse erheblich verfälschen."
+
+#: docs/Eddy_Probe.md:block 38 (unordered list)
+msgid ""
+"One must ensure that the nozzle is around 3-20mm away from the bed prior to "
+"starting each \"tap\" probe attempt. If the nozzle starts too close to the bed"
+" then contact may not be detected which could result in an uncontrolled "
+"nozzle/bed crash. If the nozzle starts very far from the bed then sensor "
+"measurements are not accurate and a tap attempt may fail or provide inaccurate"
+" results."
+msgstr ""
+"Vor Beginn jedes \"tap\"-Sondierungsversuchs muss sichergestellt werden, dass "
+"die Düse etwa 3-20 mm vom Bett entfernt ist. Startet die Düse zu nahe am Bett,"
+" wird der Kontakt möglicherweise nicht erkannt, was zu einer unkontrollierten "
+"Kollision zwischen Düse und Bett führen kann. Startet die Düse zu weit vom "
+"Bett entfernt, sind die Sensormesswerte ungenau, und ein Tap-Versuch kann "
+"fehlschlagen oder ungenaue Ergebnisse liefern."
+
+#: docs/Eddy_Probe.md:block 38 (unordered list)
+msgid ""
+"The printer hardware must allow the nozzle to fully make contact with the bed."
+" There must not be any limit switches or carriage stops that make contact "
+"prior to the nozzle contacting the bed."
+msgstr ""
+"Die Druckerhardware muss es der Düse ermöglichen, das Bett vollständig zu "
+"berühren. Es dürfen keine Endschalter oder Schlittenanschläge vorhanden sein, "
+"die vor der Düse mit dem Bett in Kontakt kommen."
+
+#: docs/Eddy_Probe.md:block 38 (unordered list)
+msgid ""
+"One must ensure that the nozzle temperature is not too high for the bed. A too"
+" high temperature could melt the PEI coatings on some beds, for example."
+msgstr ""
+"Es muss sichergestellt werden, dass die Düsentemperatur für das Bett nicht zu "
+"hoch ist. Eine zu hohe Temperatur könnte beispielsweise die PEI-Beschichtung "
+"mancher Betten zum Schmelzen bringen."
+
+#: docs/Eddy_Probe.md:block 40 (paragraph)
+msgid ""
+"A \"tap\" probe is often used as one step during a multi-step homing/leveling "
+"process to account for the current nozzle geometry and to reduce errors "
+"associated with thermal drift. For example, one might deploy a macro that "
+"homes, calls `Z_TILT_ADJUST` with default probe method, heats the printer to "
+"an intermediate temperature, cleans the nozzle by repeatedly wiping it over a "
+"brush, performs a \"tap\" probe, uses `SET_KINEMATIC_POSITION` with the tap "
+"results, runs `BED_MESH_CALIBRATE` while utilizing a "
+"`zero_reference_position`, and then brings the printer to normal printing "
+"temperature. The actual steps to utilize a \"tap\" probe depend heavily on the"
+" specific printer hardware."
+msgstr ""
+"Eine \"tap\"-Sondierung wird oft als ein Schritt innerhalb eines mehrstufigen "
+"Homing-/Nivellierungsprozesses verwendet, um die aktuelle Düsengeometrie zu "
+"berücksichtigen und Fehler durch thermische Drift zu reduzieren. So könnte man"
+" beispielsweise ein Makro einsetzen, das homt, `Z_TILT_ADJUST` mit der "
+"Standard-Sondierungsmethode aufruft, den Drucker auf eine mittlere Temperatur "
+"aufheizt, die Düse durch wiederholtes Abwischen an einer Bürste reinigt, eine "
+"\"tap\"-Sondierung durchführt, die Tap-Ergebnisse mit `SET_KINEMATIC_POSITION`"
+" übernimmt, `BED_MESH_CALIBRATE` unter Verwendung einer "
+"`zero_reference_position` ausführt und den Drucker anschließend auf normale "
+"Drucktemperatur bringt. Die konkreten Schritte zur Nutzung einer "
+"\"tap\"-Sondierung hängen stark von der jeweiligen Druckerhardware ab."
+
+#: docs/Eddy_Probe.md:block 41 (paragraph)
+msgid "A \"tap\" probe may be initiated with something like `PROBE METHOD=tap`."
+msgstr ""
+"Eine \"tap\"-Sondierung kann mit etwas wie `PROBE METHOD=tap` gestartet "
+"werden."
+
+#: docs/Eddy_Probe.md:block 42 (header)
+msgid "Configuration"
+msgstr "Konfiguration"
+
+#: docs/Eddy_Probe.md:block 43 (paragraph)
+msgid ""
+"To configure an eddy current probe, start by declaring a [probe_eddy_current "
+"config section](Config_Reference.md#probe_eddy_current) in the printer.cfg "
+"file. It is recommended to set `descend_z` to 0.5mm. It is typical for the "
+"sensor to require an `x_offset` and `y_offset`. If these values are not known,"
+" one should estimate the values during initial calibration."
+msgstr ""
+"Um eine Wirbelstromsonde (Eddy Current Probe) zu konfigurieren, deklarieren "
+"Sie zunächst einen [probe_eddy_current-"
+"Konfigurationsabschnitt](Config_Reference.md#probe_eddy_current) in der Datei "
+"printer.cfg. Es wird empfohlen, `descend_z` auf 0,5 mm zu setzen. "
+"Üblicherweise benötigt der Sensor einen `x_offset` und `y_offset`. Sind diese "
+"Werte nicht bekannt, sollten sie während der ersten Kalibrierung geschätzt "
+"werden."
+
+#: docs/Eddy_Probe.md:block 44 (paragraph)
+msgid "Then restart the printer and proceed to the following calibration steps."
+msgstr ""
+"Starten Sie anschließend den Drucker neu und fahren Sie mit den folgenden "
+"Kalibrierungsschritten fort."
+
+#: docs/Eddy_Probe.md:block 45 (header)
+msgid "Calibrating drive current"
+msgstr "Kalibrierung des Treiberstroms"
+
+#: docs/Eddy_Probe.md:block 47 (header)
+msgid "Calibrating Z heights"
+msgstr "Kalibrierung der Z-Höhen"
+
+#: docs/Eddy_Probe.md:block 48 (paragraph)
+msgid ""
+"The second step in calibration is to correlate the sensor readings to the "
+"corresponding Z heights. Home the printer and navigate the toolhead so that "
+"the nozzle is near the center of the bed. Then run a "
+"`PROBE_EDDY_CURRENT_CALIBRATE CHIP=my_eddy_probe` command. Once the tool "
+"starts, follow the steps described at [\"the paper test\"](Bed_Level.md#the-"
+"paper-test) to determine the actual distance between the nozzle and bed at the"
+" given location. Once those steps are complete one can `ACCEPT` the position. "
+"The tool will then move the toolhead so that the sensor is above the point "
+"where the nozzle used to be and run a series of movements to correlate the "
+"sensor to Z positions. This will take a couple of minutes. After the tool "
+"completes it will output the sensor performance data:"
+msgstr ""
+"Der zweite Schritt der Kalibrierung besteht darin, die Sensormesswerte den "
+"entsprechenden Z-Höhen zuzuordnen. Homen Sie den Drucker und bewegen Sie den "
+"Werkzeugkopf so, dass sich die Düse nahe der Bettmitte befindet. Führen Sie "
+"dann den Befehl `PROBE_EDDY_CURRENT_CALIBRATE CHIP=my_eddy_probe` aus. Sobald "
+"das Werkzeug startet, folgen Sie den unter [\"dem "
+"Papiertest\"](Bed_Level.md#the-paper-test) beschriebenen Schritten, um den "
+"tatsächlichen Abstand zwischen Düse und Bett an der jeweiligen Stelle zu "
+"bestimmen. Sind diese Schritte abgeschlossen, kann die Position mit `ACCEPT` "
+"bestätigt werden. Das Werkzeug bewegt den Werkzeugkopf anschließend so, dass "
+"sich der Sensor über der Stelle befindet, an der zuvor die Düse war, und führt"
+" eine Reihe von Bewegungen aus, um den Sensor den Z-Positionen zuzuordnen. "
+"Dies dauert einige Minuten. Nach Abschluss gibt das Werkzeug die Sensor-"
+"Leistungsdaten aus:"
+
+#: docs/Eddy_Probe.md:block 50 (paragraph)
+msgid ""
+"issue a `SAVE_CONFIG` command to save the results to the printer.cfg and "
+"restart."
+msgstr ""
+"Führen Sie den Befehl `SAVE_CONFIG` aus, um die Ergebnisse in der printer.cfg "
+"zu speichern, und starten Sie neu."
+
+#: docs/Eddy_Probe.md:block 52 (paragraph)
+msgid ""
+"Note that eddy current sensors are susceptible to \"thermal drift\". That is, "
+"changes in temperature can result in changes in reported Z height. Changes in "
+"either the bed surface temperature or sensor hardware temperature can alter "
+"the results. Therefore, for best results the calibration done here and the "
+"subsequent probing that utilizes that calibration should be done at the same "
+"temperature."
+msgstr ""
+"Beachten Sie, dass Wirbelstromsensoren anfällig für \"thermische Drift\" sind."
+" Das bedeutet, Temperaturänderungen können zu Änderungen der gemeldeten Z-Höhe"
+" führen. Sowohl Änderungen der Betttemperatur als auch der Sensorhardware-"
+"Temperatur können die Ergebnisse beeinflussen. Für beste Ergebnisse sollten "
+"daher die hier durchgeführte Kalibrierung und die anschließende Sondierung, "
+"die diese Kalibrierung nutzt, bei derselben Temperatur erfolgen."
+
+#: docs/Eddy_Probe.md:block 53 (header)
+msgid "Tap calibration"
+msgstr "Tap-Kalibrierung"
+
+#: docs/Eddy_Probe.md:block 54 (paragraph)
+msgid ""
+"In order to utilize \"tap\" probing it is necessary to configure some "
+"parameters."
+msgstr ""
+"Um \"tap\"-Sondierung nutzen zu können, müssen einige Parameter konfiguriert "
+"werden."
+
+#: docs/Eddy_Probe.md:block 55 (paragraph)
+msgid ""
+"It must be possible to command the toolhead below the nominal plane of the "
+"bed. This is typically done by setting `position_min: -1` in the `[stepper_z]`"
+" config section of the printer.cfg (or similar setting, such as "
+"`minimum_z_position`, depending on the kinematics). This is necessary to "
+"ensure the nozzle can be commanded to firmly contact the bed. This is also to "
+"ensure the nozzle makes contact with the bed before it would otherwise be "
+"commanded to start deceleration."
+msgstr ""
+"Es muss möglich sein, den Werkzeugkopf unterhalb der nominellen Bettebene zu "
+"bewegen. Dies geschieht typischerweise, indem `position_min: -1` im "
+"Konfigurationsabschnitt `[stepper_z]` der printer.cfg gesetzt wird (oder eine "
+"ähnliche Einstellung wie `minimum_z_position`, je nach Kinematik). Dies ist "
+"notwendig, um sicherzustellen, dass die Düse fest mit dem Bett in Kontakt "
+"gebracht werden kann. Außerdem wird so sichergestellt, dass die Düse das Bett "
+"berührt, bevor sonst mit dem Abbremsen begonnen würde."
+
+#: docs/Eddy_Probe.md:block 56 (paragraph)
+msgid ""
+"It is also necessary to configure a `tap_threshold` parameter. This parameter "
+"determines when downward toolhead movement during a \"tap\" probe should be "
+"halted. A value too large could result in a nozzle/bed contact not detected, "
+"which could result in the nozzle crashing uncontrollably into the bed. A value"
+" too small could result in a \"tap\" probe attempt halting before making "
+"contact with the bed, which could result in probing errors or inaccurate probe"
+" results."
+msgstr ""
+"Außerdem muss ein Parameter `tap_threshold` konfiguriert werden. Dieser "
+"Parameter bestimmt, wann die Abwärtsbewegung des Werkzeugkopfs während einer "
+"\"tap\"-Sondierung gestoppt werden soll. Ein zu großer Wert könnte dazu "
+"führen, dass ein Düse-Bett-Kontakt nicht erkannt wird, was zu einer "
+"unkontrollierten Kollision der Düse mit dem Bett führen könnte. Ein zu kleiner"
+" Wert könnte dazu führen, dass ein \"tap\"-Sondierungsversuch stoppt, bevor "
+"das Bett berührt wird, was zu Sondierungsfehlern oder ungenauen Ergebnissen "
+"führen kann."
+
+#: docs/Eddy_Probe.md:block 57 (paragraph)
+msgid ""
+"The `PROBE_EDDY_CURRENT_TAP_CALIBRATE` command can be used to configure an "
+"appropriate `tap_threshold` value. This tool may be run after completing the "
+"main `PROBE_EDDY_CURRENT_CALIBRATE` calibration. Follow these steps to "
+"calibrate `tap_threshold`:"
+msgstr ""
+"Mit dem Befehl `PROBE_EDDY_CURRENT_TAP_CALIBRATE` kann ein geeigneter "
+"`tap_threshold`-Wert konfiguriert werden. Dieses Werkzeug kann nach Abschluss "
+"der Hauptkalibrierung `PROBE_EDDY_CURRENT_CALIBRATE` ausgeführt werden. "
+"Befolgen Sie diese Schritte, um `tap_threshold` zu kalibrieren:"
+
+#: docs/Eddy_Probe.md:block 58 (ordered list)
+msgid ""
+"Verify that both the nozzle and bed are clean. Enable the printer, home the "
+"printer, move the toolhead to a position near the center of the bed, and make "
+"sure the nozzle is between 3 - 10 millimeters from the bed."
+msgstr ""
+"Stellen Sie sicher, dass Düse und Bett sauber sind. Aktivieren Sie den "
+"Drucker, homen Sie ihn, bewegen Sie den Werkzeugkopf in die Nähe der Bettmitte"
+" und stellen Sie sicher, dass die Düse zwischen 3 und 10 Millimeter vom Bett "
+"entfernt ist."
+
+#: docs/Eddy_Probe.md:block 58 (ordered list)
+msgid ""
+"The next step involves commanding the nozzle to make contact with the bed. "
+"This process always has some risks, so be prepared to issue an emergency halt "
+"(`M112`) if the probing descent does not stop after contacting the bed. When "
+"ready issue the following command: `PROBE_EDDY_CURRENT_TAP_CALIBRATE "
+"TAP=guess` This command analyzes the data found during the main probe "
+"calibration to make an initial coarse guess for the tap_threshold value and it"
+" then performs the corresponding \"tap\" probe. Ideally the above command will"
+" cause the probe to descend until it hits the bed, lift away from the bed, and"
+" then report a valid probe result. If not, see the paragraphs at the end of "
+"this section to troubleshoot. If the attempt was successful then continue to "
+"the next step."
+msgstr ""
+"Der nächste Schritt besteht darin, die Düse mit dem Bett in Kontakt zu "
+"bringen. Dieser Vorgang birgt stets gewisse Risiken. Seien Sie daher bereit, "
+"einen Nothalt (`M112`) auszulösen, falls die Sondierungsbewegung nach dem "
+"Kontakt mit dem Bett nicht stoppt. Wenn Sie bereit sind, geben Sie folgenden "
+"Befehl ein: `PROBE_EDDY_CURRENT_TAP_CALIBRATE TAP=guess`. Dieser Befehl "
+"analysiert die während der Hauptsonden-Kalibrierung erfassten Daten, um eine "
+"erste grobe Schätzung für den tap_threshold-Wert vorzunehmen, und führt "
+"anschließend die entsprechende \"tap\"-Sondierung durch. Im Idealfall lässt "
+"der obige Befehl die Sonde absinken, bis sie das Bett berührt, hebt sie wieder"
+" ab und meldet dann ein gültiges Sondierungsergebnis. Falls nicht, lesen Sie "
+"die Absätze am Ende dieses Abschnitts zur Fehlerbehebung. War der Versuch "
+"erfolgreich, fahren Sie mit dem nächsten Schritt fort."
+
+#: docs/Eddy_Probe.md:block 58 (ordered list)
+msgid ""
+"The next step is to run another tap probe with a \"refined\" threshold "
+"setting. The tool utilizes information gathered during a previous successful "
+"tap probe to determine this improved threshold. Make sure that the nozzle is "
+"near the center of the bed, that it is between 3 - 10mm above the bed, be "
+"ready to issue an emergency halt, and then run the following command: "
+"`PROBE_EDDY_CURRENT_TAP_CALIBRATE TAP=refine` Ideally this command will also "
+"succeed; if not, see the paragraphs at the end of this section to "
+"troubleshoot. If the attempt was successful then continue to the next step."
+msgstr ""
+"Der nächste Schritt besteht darin, eine weitere Tap-Sondierung mit einer "
+"\"verfeinerten\" Schwellenwerteinstellung durchzuführen. Das Werkzeug nutzt "
+"dabei Informationen aus einer zuvor erfolgreichen Tap-Sondierung, um diesen "
+"verbesserten Schwellenwert zu bestimmen. Stellen Sie sicher, dass sich die "
+"Düse nahe der Bettmitte befindet und zwischen 3 und 10 mm über dem Bett liegt,"
+" seien Sie bereit für einen Nothalt, und führen Sie dann folgenden Befehl aus:"
+" `PROBE_EDDY_CURRENT_TAP_CALIBRATE TAP=refine`. Idealerweise gelingt auch "
+"dieser Befehl; falls nicht, lesen Sie die Absätze am Ende dieses Abschnitts "
+"zur Fehlerbehebung. War der Versuch erfolgreich, fahren Sie mit dem nächsten "
+"Schritt fort."
+
+#: docs/Eddy_Probe.md:block 58 (ordered list)
+msgid ""
+"If probing with the refined threshold is successful then the next test is to "
+"verify that it is stable over multiple probe attempts. Make sure that the "
+"nozzle is near the center of the bed, that it is between 3 - 10mm above the "
+"bed, be ready to issue an emergency halt, and then run the following command: "
+"`PROBE_EDDY_CURRENT_TAP_CALIBRATE TAP=verify` This command will probe the bed "
+"five times in a row. Ideally the above command will also succeed; if not, see "
+"the paragraphs at the end of this section to troubleshoot. If the attempt was "
+"successful then continue to the next step."
+msgstr ""
+"Ist die Sondierung mit dem verfeinerten Schwellenwert erfolgreich, besteht der"
+" nächste Test darin zu prüfen, ob sie über mehrere Sondierungsversuche hinweg "
+"stabil bleibt. Stellen Sie sicher, dass sich die Düse nahe der Bettmitte "
+"befindet und zwischen 3 und 10 mm über dem Bett liegt, seien Sie bereit für "
+"einen Nothalt, und führen Sie dann folgenden Befehl aus: "
+"`PROBE_EDDY_CURRENT_TAP_CALIBRATE TAP=verify`. Dieser Befehl sondiert das Bett"
+" fünfmal hintereinander. Idealerweise gelingt auch dieser Befehl; falls nicht,"
+" lesen Sie die Absätze am Ende dieses Abschnitts zur Fehlerbehebung. War der "
+"Versuch erfolgreich, fahren Sie mit dem nächsten Schritt fort."
+
+#: docs/Eddy_Probe.md:block 58 (ordered list)
+msgid ""
+"If all of the above steps are successful then one can issue a `SAVE_CONFIG` "
+"command to save the \"tap_threshold\" parameter to the printer.cfg file. "
+"Calibration should now be complete."
+msgstr ""
+"Sind alle obigen Schritte erfolgreich, kann mit dem Befehl `SAVE_CONFIG` der "
+"Parameter \"tap_threshold\" in der Datei printer.cfg gespeichert werden. Die "
+"Kalibrierung sollte damit abgeschlossen sein."
+
+#: docs/Eddy_Probe.md:block 59 (paragraph)
+msgid ""
+"If any of the steps above did not succeed then it may be necessary to "
+"troubleshoot and manually determine an appropriate `tap_threshold`. This is "
+"done by running commands of the form: `PROBE METHOD=tap TAP_THRESHOLD=<value>`"
+" Where `<value>` is a threshold to test."
+msgstr ""
+"War einer der obigen Schritte nicht erfolgreich, ist möglicherweise eine "
+"manuelle Fehlerbehebung und Bestimmung eines geeigneten `tap_threshold`-Werts "
+"erforderlich. Dies geschieht durch Befehle der Form: `PROBE METHOD=tap "
+"TAP_THRESHOLD=<Wert>`, wobei `<Wert>` ein zu testender Schwellenwert ist."
+
+#: docs/Eddy_Probe.md:block 60 (paragraph)
+msgid ""
+"In general, if a probe attempt halts before making contact with the bed, then "
+"this indicates that the provided `TAP_THRESHOLD` parameter is too low. Try "
+"increasing it by about 10% and retry. Similarly, if a probe attempt does not "
+"halt after making contact with the bed then it indicates that `TAP_THRESHOLD` "
+"is too high. Consider decreasing the attempted value in half."
+msgstr ""
+"Generell gilt: Stoppt ein Sondierungsversuch, bevor das Bett berührt wird, "
+"deutet dies darauf hin, dass der angegebene `TAP_THRESHOLD`-Parameter zu "
+"niedrig ist. Erhöhen Sie ihn um etwa 10% und versuchen Sie es erneut. Stoppt "
+"ein Sondierungsversuch umgekehrt nach dem Kontakt mit dem Bett nicht, deutet "
+"dies darauf hin, dass `TAP_THRESHOLD` zu hoch ist. Erwägen Sie, den versuchten"
+" Wert zu halbieren."
+
+#: docs/Eddy_Probe.md:block 61 (paragraph)
+msgid ""
+"If the automated calibration tool failed during the initial \"guess\" stage, "
+"then one can use the tap_threshold value reported by the tool as a starting "
+"point for manual attempts. Once a successful probe attempt is completed then "
+"one can return to the main steps described above starting at the \"refine\" "
+"stage."
+msgstr ""
+"Ist das automatische Kalibrierungswerkzeug bereits in der anfänglichen "
+"\"guess\"-Phase fehlgeschlagen, kann der vom Werkzeug gemeldete tap_threshold-"
+"Wert als Ausgangspunkt für manuelle Versuche verwendet werden. Sobald ein "
+"erfolgreicher Sondierungsversuch abgeschlossen ist, kann man zu den oben "
+"beschriebenen Hauptschritten zurückkehren und bei der \"refine\"-Phase "
+"fortfahren."
+
+#: docs/Eddy_Probe.md:block 62 (header)
+msgid "Performing initial calibration when homing with probe"
+msgstr "Erste Kalibrierung beim Homing mit Sonde durchführen"
+
+#: docs/Eddy_Probe.md:block 63 (paragraph)
+msgid ""
+"It is possible to use an eddy current probe to home a Z axis. To use this "
+"process, set the `[stepper_z]` config section `endstop_pin` to "
+"`probe:z_virtual_endstop`."
+msgstr ""
+"Es ist möglich, eine Wirbelstromsonde zum Homen einer Z-Achse zu verwenden. "
+"Setzen Sie dazu im Konfigurationsabschnitt `[stepper_z]` die Option "
+"`endstop_pin` auf `probe:z_virtual_endstop`."
+
+#: docs/Eddy_Probe.md:block 64 (paragraph)
+msgid ""
+"In order to home with an eddy probe it is necessary to first calibrate the "
+"probe via the `PROBE_EDDY_CURRENT_CALIBRATE` command. However, that command "
+"requires that the printer be homed first."
+msgstr ""
+"Um mit einer Eddy-Sonde zu homen, muss die Sonde zunächst über den Befehl "
+"`PROBE_EDDY_CURRENT_CALIBRATE` kalibriert werden. Dieser Befehl setzt jedoch "
+"voraus, dass der Drucker zuvor bereits gehomt wurde."
+
+#: docs/Eddy_Probe.md:block 65 (paragraph)
+msgid ""
+"The following steps may be used to avoid this circular dependency for the very"
+" first calibration:"
+msgstr ""
+"Mit den folgenden Schritten lässt sich diese zirkuläre Abhängigkeit bei der "
+"allerersten Kalibrierung umgehen:"
+
+#: docs/Eddy_Probe.md:block 66 (ordered list)
+msgid ""
+"Define a `[probe_eddy_current]` config section in the printer.cfg file as "
+"described in the [configuration section](#configuration)."
+msgstr ""
+"Definieren Sie einen `[probe_eddy_current]`-Konfigurationsabschnitt in der "
+"Datei printer.cfg wie im [Konfigurationsabschnitt](#configuration) "
+"beschrieben."
+
+#: docs/Eddy_Probe.md:block 66 (ordered list)
+msgid ""
+"Make sure a [force move](Config_Reference.md#force_move) section is defined "
+"and ensure its `enable_force_move` option is present and set to true."
+msgstr ""
+"Stellen Sie sicher, dass ein [Force-"
+"Move](Config_Reference.md#force_move)-Abschnitt definiert ist und dass dessen "
+"Option `enable_force_move` vorhanden und auf true gesetzt ist."
+
+#: docs/Eddy_Probe.md:block 66 (ordered list)
+msgid ""
+"Manually adjust the carriages so that the toolhead is near the center of the "
+"bed and roughly 20mm away from the bed. Issue `LDC_CALIBRATE_DRIVE_CURRENT "
+"CHIP=<config_name>` and `SAVE_CONFIG` commands as described in the "
+"[calibrating drive current section](#calibrating-drive-current)."
+msgstr ""
+"Verstellen Sie die Schlitten manuell so, dass sich der Werkzeugkopf nahe der "
+"Bettmitte und etwa 20 mm vom Bett entfernt befindet. Geben Sie die Befehle "
+"`LDC_CALIBRATE_DRIVE_CURRENT CHIP=<config_name>` und `SAVE_CONFIG` wie im "
+"[Abschnitt zur Kalibrierung des Treiberstroms](#calibrating-drive-current) "
+"beschrieben ein."
+
+#: docs/Eddy_Probe.md:block 66 (ordered list)
+msgid ""
+"Manually move the toolhead so that it is roughly 20mm away from the bed and "
+"home the printer's X and Y axes. This is typically done with a `G28 X0 Y0` "
+"command. Command the toolhead X and Y position so that the toolhead is roughly"
+" over the center of the bed. This is typically done with a command like `G1 "
+"X50 Y50` (using appropriate XY values for the printer)."
+msgstr ""
+"Bewegen Sie den Werkzeugkopf manuell so, dass er etwa 20 mm vom Bett entfernt "
+"ist, und homen Sie die X- und Y-Achse des Druckers. Dies geschieht "
+"typischerweise mit dem Befehl `G28 X0 Y0`. Fahren Sie die X- und Y-Position "
+"des Werkzeugkopfs so, dass er sich etwa über der Bettmitte befindet. Dies "
+"geschieht typischerweise mit einem Befehl wie `G1 X50 Y50` (mit den für den "
+"jeweiligen Drucker passenden XY-Werten)."
+
+#: docs/Eddy_Probe.md:block 66 (ordered list)
+msgid ""
+"Manually adjust the bed so that it is mostly flat relative to the toolhead XY "
+"carriages (if necessary). Manually adjust the Z carriage so that the nozzle is"
+" roughly 20mm from the bed and issue a `SET_STEPPER_ENABLE STEPPER=stepper_z` "
+"command. Issue a `SET_KINEMATIC_POSITION Z=25` command followed by a "
+"`PROBE_EDDY_CURRENT_CALIBRATE CHIP=my_eddy_probe` command. Important - after "
+"issuing these commands the printer will be able to move in the Z direction, "
+"but it does not know the actual Z position. Care must be taken to avoid "
+"movement requests that may cause the toolhead to descend into the bed."
+msgstr ""
+"Justieren Sie das Bett bei Bedarf manuell so, dass es relativ zu den XY-"
+"Schlitten des Werkzeugkopfs weitgehend eben liegt. Justieren Sie den "
+"Z-Schlitten manuell so, dass die Düse etwa 20 mm vom Bett entfernt ist, und "
+"geben Sie den Befehl `SET_STEPPER_ENABLE STEPPER=stepper_z` ein. Geben Sie "
+"dann den Befehl `SET_KINEMATIC_POSITION Z=25` und anschließend "
+"`PROBE_EDDY_CURRENT_CALIBRATE CHIP=my_eddy_probe` ein. Wichtig: Nach Eingabe "
+"dieser Befehle kann sich der Drucker in Z-Richtung bewegen, kennt jedoch die "
+"tatsächliche Z-Position nicht. Es muss darauf geachtet werden, "
+"Bewegungsbefehle zu vermeiden, die dazu führen könnten, dass der Werkzeugkopf "
+"in das Bett hinabfährt."
+
+#: docs/Eddy_Probe.md:block 66 (ordered list)
+msgid ""
+"Complete the eddy probe calibration as described in the [calibrating z heights"
+" section](#calibrating-z-heights). Issue a `SAVE_CONFIG` command upon "
+"completion."
+msgstr ""
+"Schließen Sie die Eddy-Sonden-Kalibrierung wie im [Abschnitt zur Kalibrierung "
+"der Z-Höhen](#calibrating-z-heights) beschrieben ab. Geben Sie nach Abschluss "
+"den Befehl `SAVE_CONFIG` ein."
+
+#: docs/Eddy_Probe.md:block 67 (paragraph)
+msgid ""
+"These steps are only needed to obtain an initial configuration. If one needs "
+"to rerun `PROBE_EDDY_CURRENT_CALIBRATE` in the future then the normal "
+"mechanism should be possible once this initial configuration is available."
+msgstr ""
+"Diese Schritte werden nur benötigt, um eine erste Konfiguration zu erhalten. "
+"Muss `PROBE_EDDY_CURRENT_CALIBRATE` künftig erneut ausgeführt werden, sollte "
+"dies über den normalen Mechanismus möglich sein, sobald diese erste "
+"Konfiguration vorliegt."
+
+#: docs/Eddy_Probe.md:block 77 (header)
+msgid "Errors description"
+msgstr "Fehlerbeschreibung"
+
+#: docs/Eddy_Probe.md:block 78 (paragraph)
+msgid "Possible homing errors and actionables:"
+msgstr "Mögliche Homing-Fehler und Maßnahmen:"
+
+#: docs/Eddy_Probe.md:block 79 (unordered list)
+msgid "Sensor error"
+msgstr "Sensorfehler"
+
+#: docs/Eddy_Probe.md:block 79 (unordered list)
+msgid "Check logs for detailed error"
+msgstr "Für detaillierte Fehlerinformationen die Logs prüfen"
+
+#: docs/Eddy_Probe.md:block 79 (unordered list)
+msgid "Eddy I2C STATUS/DATA error."
+msgstr "Eddy-I2C-STATUS/DATA-Fehler."
+
+#: docs/Eddy_Probe.md:block 79 (unordered list)
+msgid "Check loose wiring."
+msgstr "Lose Verkabelung prüfen."
+
+#: docs/Eddy_Probe.md:block 79 (unordered list)
+msgid "Try software I2C/decrease I2C rate"
+msgstr "Software-I2C versuchen / I2C-Rate verringern"
+
+#: docs/Eddy_Probe.md:block 79 (unordered list)
+msgid "Invalid read data"
+msgstr "Ungültige gelesene Daten"
+
+#: docs/Eddy_Probe.md:block 79 (unordered list)
+msgid "Same as I2C"
+msgstr "Wie bei I2C"
+
+#: docs/Eddy_Probe.md:block 80 (paragraph)
+msgid "Possible sensor errors and actionables:"
+msgstr "Mögliche Sensorfehler und Maßnahmen:"
+
+#: docs/Eddy_Probe.md:block 81 (unordered list)
+msgid "Frequency over valid hard range"
+msgstr "Frequenz außerhalb des gültigen Hard-Bereichs"
+
+#: docs/Eddy_Probe.md:block 81 (unordered list)
+msgid "Check frequency configuration"
+msgstr "Frequenzkonfiguration prüfen"
+
+#: docs/Eddy_Probe.md:block 81 (unordered list)
+msgid "Hardware fault"
+msgstr "Hardwarefehler"
+
+#: docs/Eddy_Probe.md:block 81 (unordered list)
+msgid "Frequency over valid soft range"
+msgstr "Frequenz außerhalb des gültigen Soft-Bereichs"
+
+#: docs/Eddy_Probe.md:block 81 (unordered list)
+msgid "Conversion Watchdog timeout"
+msgstr "Zeitüberschreitung des Konvertierungs-Watchdogs"
+
+#: docs/Eddy_Probe.md:block 82 (paragraph)
+msgid "Amplitude Low/High warning messages can mean:"
+msgstr "Warnmeldungen zu niedriger/hoher Amplitude können bedeuten:"
+
+#: docs/Eddy_Probe.md:block 83 (unordered list)
+msgid "Sensor close to the bed"
+msgstr "Sensor zu nah am Bett"
+
+#: docs/Eddy_Probe.md:block 83 (unordered list)
+msgid "Sensor far from the bed"
+msgstr "Sensor zu weit vom Bett entfernt"
+
+#: docs/Eddy_Probe.md:block 83 (unordered list)
+msgid "Higher temperature than was at the current calibration"
+msgstr "Höhere Temperatur als bei der aktuellen Kalibrierung"
+
+#: docs/Eddy_Probe.md:block 83 (unordered list)
+msgid "Capacitor missing"
+msgstr "Kondensator fehlt"
+
+#: docs/Eddy_Probe.md:block 84 (paragraph)
+msgid ""
+"On some sensors, it is not possible to completely avoid amplitude warning "
+"indicator."
+msgstr ""
+"Bei manchen Sensoren lässt sich der Amplitudenwarnhinweis nicht vollständig "
+"vermeiden."
+
+#: docs/Eddy_Probe.md:block 85 (paragraph)
+msgid ""
+"You can try to redo the `LDC_CALIBRATE_DRIVE_CURRENT` calibration at work "
+"temperature or increase `reg_drive_current` by 1-2 from the calibrated value."
+msgstr ""
+"Sie können versuchen, die `LDC_CALIBRATE_DRIVE_CURRENT`-Kalibrierung bei "
+"Betriebstemperatur zu wiederholen oder `reg_drive_current` um 1-2 gegenüber "
+"dem kalibrierten Wert zu erhöhen."
+
+#: docs/Eddy_Probe.md:block 86 (paragraph)
+msgid "Generally, it is like an engine check light. It may indicate an issue."
+msgstr ""
+"Im Allgemeinen ist dies vergleichbar mit einer Motorkontrollleuchte. Es kann "
+"auf ein Problem hindeuten."
+
+#: docs/Eddy_Probe.md:block 87 (header)
+msgid "Possible TAP errors and actionables:"
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid "insufficient lift (A vs B) - too small Z window received by the code"
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid ""
+"LIFT_SPEED/printer.max_z_velocity too low - must be at least 2.5 Recommended "
+">0.5 RPS. For motor cogging reasons."
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid ""
+"printer.max_z_accel too low - must be larger 35 mm/s^2. Recommended 300 "
+"mm/s^2."
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid "SAMPLE_RETRACT_DIST too low Recommended >2 mm."
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid ""
+"no contact found at z=Z (slope delta A vs B) - retraction analysis outputs not"
+" expected data. Often toolhead has stopped in mid-air because of the "
+"measurement noise."
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid "Too high printer.max_z_accel - Z resonances, consider Z input shaper"
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid "Mechanical vibrations - ex. toolhead fan"
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid "Sensor noise (elevated chamber/bed temperature)"
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid "Increase of tap_threshold normally allows to alleviate symptoms"
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid "invalid depress distance (Z vs A:B)"
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid "if Z < A"
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid "tap_threshold too low"
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid "PROBE_SPEED too low"
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid "printer.max_z_accel too low"
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid "if Z > B"
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid "Large toolhead tilt (mechanical/installation issue)"
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid "PROBE_SPEED too high"
+msgstr ""
+
+#: docs/Eddy_Probe.md:block 88 (unordered list)
+msgid "tap_threshold too high"
+msgstr ""
+
+#~ msgid ""
+#~ "This document describes how to use an [eddy "
+#~ "current](https://en.wikipedia.org/wiki/Eddy_current) inductive probe in "
+#~ "Klipper."
+#~ msgstr ""
+#~ "Dieses Dokument beschreibt die Verwendung einer induktiven "
+#~ "[Wirbelstrom](https://en.wikipedia.org/wiki/Eddy_current) Sonde in Klipper."
+
+#~ msgid ""
+#~ "Currently, an eddy current probe can not be used for Z homing. The sensor can "
+#~ "only be used for Z probing."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Start by declaring a [probe_eddy_current config "
+#~ "section](Config_Reference.md#probe_eddy_current) in the printer.cfg file. It "
+#~ "is recommended to set the `z_offset` to 0.5mm. It is typical for the sensor to"
+#~ " require an `x_offset` and `y_offset`. If these values are not known, one "
+#~ "should estimate the values during initial calibration."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The second step in calibration is to correlate the sensor readings to the "
+#~ "corresponding Z heights. Home the printer and navigate the toolhead so that "
+#~ "the nozzle is near the center of the bed. Then run an "
+#~ "`PROBE_EDDY_CURRENT_CALIBRATE CHIP=my_eddy_probe` command. Once the tool "
+#~ "starts, follow the steps described at [\"the paper test\"](Bed_Level.md#the-"
+#~ "paper-test) to determine the actual distance between the nozzle and bed at the"
+#~ " given location. Once those steps are complete one can `ACCEPT` the position. "
+#~ "The tool will then move the the toolhead so that the sensor is above the point"
+#~ " where the nozzle used to be and run a series of movements to correlate the "
+#~ "sensor to Z positions. This will take a couple of minutes. After the tool "
+#~ "completes, issue a `SAVE_CONFIG` command to save the results to the "
+#~ "printer.cfg and restart."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Once calibration is complete, one may use all the standard Klipper tools that "
+#~ "use a Z probe."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Note that eddy current sensors (and inductive probes in general) are "
+#~ "susceptible to \"thermal drift\". That is, changes in temperature can result "
+#~ "in changes in reported Z height. Changes in either the bed surface temperature"
+#~ " or sensor hardware temperature can skew the results. It is important that "
+#~ "calibration and probing is only done when the printer is at a stable "
+#~ "temperature."
+#~ msgstr ""
 
 #~ msgid ""
 #~ "[probe_eddy_current my_probe]\n"

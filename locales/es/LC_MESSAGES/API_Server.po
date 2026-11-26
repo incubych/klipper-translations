@@ -1,18 +1,19 @@
 # Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2021.
+# Pajoer Pa <pajoer@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
 "POT-Creation-Date: 2021-05-20 19:33+0200\n"
-"PO-Revision-Date: 2021-05-20 17:33+0000\n"
-"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
+"PO-Revision-Date: 2026-03-07 09:09+0000\n"
+"Last-Translator: Pajoer Pa <pajoer@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/klipper/api_server/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.7-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid ""
 "This document describes Klipper's Application Programmer Interface (API). This"
@@ -24,30 +25,39 @@ msgstr ""
 "externas efectúen consultas y controlen el sóftwer de anfitrión de Klipper."
 
 msgid "Enabling the API socket"
-msgstr ""
+msgstr "Habilitar el socket API"
 
 msgid ""
 "In order to use the API server, the klippy.py host software must be started "
 "with the `-a` parameter. For example:"
 msgstr ""
+"Para utilizar el servidor API, el software host klippy.py debe iniciarse con "
+"el parámetro `-a`. Por ejemplo:"
 
 msgid ""
 "This causes the host software to create a Unix Domain Socket. A client can "
 "then open a connection on that socket and send commands to Klipper."
 msgstr ""
+"Esto hace que el software host cree un socket de dominio Unix. A continuación,"
+" un cliente puede abrir una conexión en ese socket y enviar comandos a "
+"Klipper."
 
 msgid "Request format"
-msgstr ""
+msgstr "Formato de solicitud"
 
 msgid ""
 "Messages sent and received on the socket are JSON encoded strings terminated "
 "by an ASCII 0x03 character:"
 msgstr ""
+"Los mensajes enviados y recibidos en el socket son cadenas codificadas en JSON"
+" que terminan con un carácter ASCII 0x03:"
 
 msgid ""
 "Klipper contains a `scripts/whconsole.py` tool that can perform the above "
 "message framing. For example:"
 msgstr ""
+"Klipper contiene una herramienta `scripts/whconsole.py` que puede realizar el "
+"encuadre de mensajes anterior. Por ejemplo:"
 
 msgid ""
 "This tool can read a series of JSON commands from stdin, send them to Klipper,"
@@ -525,17 +535,6 @@ msgstr ""
 msgid "might return:"
 msgstr ""
 
-#: docs/API_Server.md:block 111 (paragraph)
-msgid ""
-"The `dump_mesh` endpoint takes one optional parameter, `mesh_args`. This "
-"parameter must be an object, where the keys and values are parameters "
-"available to [BED_MESH_CALIBRATE](#bed_mesh_calibrate). This will update the "
-"mesh configuration and probe points using the supplied parameters prior to "
-"returning the result. It is recommended to omit mesh parameters unless it is "
-"desired to visualize the probe points and/or travel path before performing "
-"`BED_MESH_CALIBRATE`."
-msgstr ""
-
 #: docs/API_Server.md:block 88 (header)
 msgid "load_cell/dump_force"
 msgstr ""
@@ -554,6 +553,53 @@ msgid ""
 "\"counts\", \"tare_counts\"]}}` and might later produce asynchronous messages "
 "such as: `{\"params\":{\"data\":[[3292.432935, 40.65, 562534, -234467]]}}`"
 msgstr ""
+
+#: docs/API_Server.md:block 92 (header)
+msgid "load_cell_probe/dump_taps"
+msgstr ""
+
+#: docs/API_Server.md:block 93 (paragraph)
+msgid ""
+"This endpoint is used to subscribe to details of probing \"tap\" events. Using"
+" this endpoint may increase Klipper's system load."
+msgstr ""
+
+#: docs/API_Server.md:block 94 (paragraph)
+msgid ""
+"A request may look like: `{\"id\": 123, \"method\":\"load_cell/dump_force\", "
+"\"params\": {\"sensor\": \"load_cell\", \"response_template\": {}}}` and might"
+" return: `{\"id\": 123,\"result\":{\"header\":[\"probe_tap_event\"]}}` and "
+"might later produce asynchronous messages such as:"
+msgstr ""
+
+#: docs/API_Server.md:block 96 (paragraph)
+msgid "This data can be used to render:"
+msgstr ""
+
+#: docs/API_Server.md:block 97 (unordered list)
+msgid "The time/force graph"
+msgstr ""
+
+#: docs/API_Server.md:block 115 (paragraph)
+msgid ""
+"The `dump_mesh` endpoint takes one optional parameter, `mesh_args`. This "
+"parameter must be an object, where the keys and values are parameters "
+"available to [BED_MESH_CALIBRATE](G-Codes.md#bed_mesh_calibrate). This will "
+"update the mesh configuration and probe points using the supplied parameters "
+"prior to returning the result. It is recommended to omit mesh parameters "
+"unless it is desired to visualize the probe points and/or travel path before "
+"performing `BED_MESH_CALIBRATE`."
+msgstr ""
+
+#~ msgid ""
+#~ "The `dump_mesh` endpoint takes one optional parameter, `mesh_args`. This "
+#~ "parameter must be an object, where the keys and values are parameters "
+#~ "available to [BED_MESH_CALIBRATE](#bed_mesh_calibrate). This will update the "
+#~ "mesh configuration and probe points using the supplied parameters prior to "
+#~ "returning the result. It is recommended to omit mesh parameters unless it is "
+#~ "desired to visualize the probe points and/or travel path before performing "
+#~ "`BED_MESH_CALIBRATE`."
+#~ msgstr ""
 
 #~ msgid "hx71x/dump_hx71x"
 #~ msgstr ""

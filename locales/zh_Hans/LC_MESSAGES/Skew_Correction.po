@@ -1,17 +1,17 @@
 # badpoi <a1635835119@gmail.com>, 2021.
-# Yifei Ding <dingyifeiair@gmail.com>, 2021.
-# hani-lengxi <2836842270@qq.com>, 2024.
+# Yifei Ding <dingyifeiair@gmail.com>, 2021, 2025.
+# hani-lengxi <2836842270@qq.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-11-30 15:00+0000\n"
+"PO-Revision-Date: 2025-07-22 08:26+0000\n"
 "Last-Translator: hani-lengxi <2836842270@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/klipper/skew_correction/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.9-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "Software based skew correction can help resolve dimensional inaccuracies "
@@ -108,15 +108,6 @@ msgstr ""
 "不要在这次打印中应用倾斜校正。你可以通过从printer.cfg中删除`[skew_correction]`模块或发送 `SET_SKEW "
 "CLEAR=1`G-Code 来实现。"
 
-#: docs/skew_correction.md:block 10 (paragraph)
-msgid ""
-"Make sure `[skew_correction]` is in printer.cfg. You may now use the "
-"`SET_SKEW` gcode to configure skew_correcton. For example, if your measured "
-"lengths along XY are as follows:"
-msgstr ""
-"确保 `[skew_correction]` 已经在 printer.cfg 中。现在可以使用`SET_SKEW` G-Code 来配置 "
-"skew_correcton。例如，如果对 XY 平面测量的距离结果如下："
-
 #: docs/skew_correction.md:block 16 (paragraph)
 msgid ""
 "The `[skew_correction]` module also supports profile management in a manner "
@@ -145,6 +136,21 @@ msgid ""
 msgstr ""
 "`[skew_correction]` 模块要求对您想要校正的每个平面进行 3 次测量；从角 A 到角 C 的长度、从角 B 到角 D 的长度以及从角 A "
 "到角 D 的长度。测量长度 AD 时不包括某些测试对象提供的角落上的平面。"
+
+#: docs/Skew_Correction.md:block 10 (paragraph)
+msgid ""
+"Make sure `[skew_correction]` is in printer.cfg. You may now use the "
+"`SET_SKEW` gcode to configure skew_correction. For example, if your measured "
+"lengths along XY are as follows:"
+msgstr ""
+
+#~ msgid ""
+#~ "Make sure `[skew_correction]` is in printer.cfg. You may now use the "
+#~ "`SET_SKEW` gcode to configure skew_correcton. For example, if your measured "
+#~ "lengths along XY are as follows:"
+#~ msgstr ""
+#~ "确保 `[skew_correction]` 已经在 printer.cfg 中。现在可以使用`SET_SKEW` G-Code 来配置 "
+#~ "skew_correcton。例如，如果对 XY 平面测量的距离结果如下："
 
 #~ msgid ""
 #~ "Length AC = 140.4\n"

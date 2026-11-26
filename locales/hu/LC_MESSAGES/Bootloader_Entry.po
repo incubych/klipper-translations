@@ -1,15 +1,16 @@
 # "Zs.Antal" <zsikaiantal@icloud.com>, 2023, 2024.
+# "Zs.Antal" <antonio092130@icloud.com>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-03-15 16:02+0000\n"
-"Last-Translator: \"Zs.Antal\" <zsikaiantal@icloud.com>\n"
+"PO-Revision-Date: 2025-07-22 09:00+0000\n"
+"Last-Translator: \"Zs.Antal\" <antonio092130@icloud.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/klipper/bootloader_entry/hu/>\n"
 "Language: hu\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: docs/Bootloader_Entry.md:block 1 (header)
 msgid "Bootloader Entry"
@@ -79,16 +80,6 @@ msgstr ""
 #: docs/Bootloader_Entry.md:block 15 (header)
 msgid "Physical serial"
 msgstr "Fizikai sorszám"
-
-#: docs/Bootloader_Entry.md:block 16 (paragraph)
-msgid ""
-"If a physical serial port is being used on the MCU (even if a USB serial "
-"adapter is being used to connect to it), sending the string "
-"`<SPACE><FS><SPACE>Request Serial Bootloader!!<SPACE>~`."
-msgstr ""
-"Ha az MCU-n fizikai soros portot használunk (még akkor is, ha USB soros "
-"adaptert használunk a csatlakozáshoz), akkor a `<SPACE><FS><SPACE>Request "
-"Serial Bootloader!!<SPACE>~` karakterlánc elküldése szükséges."
 
 #: docs/Bootloader_Entry.md:block 17 (paragraph)
 msgid "`<SPACE>` is an ASCII literal space, 0x20."
@@ -248,6 +239,23 @@ msgstr ""
 " DFU módban). Javasoljuk, hogy a DFU mód használatakor a fűtőberendezéseket "
 "kapcsold ki, és más módon akadályozd meg a nemkívánatos műveleteket. További "
 "részletekért olvasd el az alaplap dokumentációját."
+
+#: docs/Bootloader_Entry.md:block 16 (paragraph)
+msgid ""
+"If a physical serial port is being used on the MCU (even if a USB serial "
+"adapter is being used to connect to it), sending the string "
+"`<SPACE><FS><SPACE>Request Serial Bootloader!!<SPACE>~` requests the "
+"bootloader."
+msgstr ""
+
+#~ msgid ""
+#~ "If a physical serial port is being used on the MCU (even if a USB serial "
+#~ "adapter is being used to connect to it), sending the string "
+#~ "`<SPACE><FS><SPACE>Request Serial Bootloader!!<SPACE>~`."
+#~ msgstr ""
+#~ "Ha az MCU-n fizikai soros portot használunk (még akkor is, ha USB soros "
+#~ "adaptert használunk a csatlakozáshoz), akkor a `<SPACE><FS><SPACE>Request "
+#~ "Serial Bootloader!!<SPACE>~` karakterlánc elküldése szükséges."
 
 #~ msgid ""
 #~ "> cd klipper/scripts\n"

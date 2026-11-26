@@ -1,18 +1,20 @@
-# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022.
+# Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022, 2025.
 # Evgeniy Khramov <thejenjagamertjg@gmail.com>, 2022.
-# VICTOR <subfyn@gmail.com>, 2023.
-# xXx <xxx_xxx_xxxxxxxxx@mail.ru>, 2023.
+# VICTOR <subfyn@gmail.com>, 2023, 2025.
+# xXx <xxx_xxx_xxxxxxxxx@mail.ru>, 2023, 2025.
+# Evgeniy Khramov <65224669+thejenja@users.noreply.github.com>, 2025.
+# gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2023-09-30 21:41+0000\n"
-"Last-Translator: xXx <xxx_xxx_xxxxxxxxx@mail.ru>\n"
+"PO-Revision-Date: 2025-09-10 09:02+0000\n"
+"Last-Translator: gfbdrgn <erfvvgtyhbnjhyuu@wireconnected.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/klipper/delta_calibrate/ru/>\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 msgid ""
 "This document describes Klipper's automatic calibration system for \"delta\" "
@@ -260,7 +262,6 @@ msgstr ""
 " стойкой и другими стойками (расстояние от центра до стойки напротив метки C, "
 "расстояние от центра до стойки с меткой B и т.д.)."
 
-#, fuzzy
 msgid "![delta_cal_e_step1](img/delta_cal_e_step1.png)"
 msgstr "![delta_cal_e_step1](img/delta_cal_e_step1.png)"
 
@@ -291,7 +292,6 @@ msgstr ""
 "напротив от C до стойки B, расстояние между стойкой B и стойкой напротив A и "
 "так далее."
 
-#, fuzzy
 msgid "![delta_cal_e_step2](img/delta_cal_e_step2.png)"
 msgstr "![delta_cal_e_step2](img/delta_cal_e_step2.png)"
 
@@ -307,11 +307,9 @@ msgstr ""
 "производятся для самих колонн. Измерьте размер центральной стойки вдоль спицы "
 "A, затем спицы B, а затем спицы C."
 
-#, fuzzy
 msgid "![delta-a-pillar](img/delta-a-pillar.jpg)"
 msgstr "![delta-a-pillar](img/delta-a-pillar.jpg)"
 
-#, fuzzy
 msgid "![delta_cal_e_step3](img/delta_cal_e_step3.png)"
 msgstr "![delta_cal_e_step3](img/delta_cal_e_step3.png)"
 
@@ -325,7 +323,6 @@ msgstr ""
 "Окончательные измерения производятся для внешних опор. Начните с измерения "
 "расстояния от столба A по линии от A до столба напротив C."
 
-#, fuzzy
 msgid "![delta-ab-pillar](img/delta-outer-pillar.jpg)"
 msgstr "![delta-ab-pillar](img/delta-outer-pillar.jpg)"
 
@@ -338,7 +335,6 @@ msgstr ""
 "(стойка напротив C вдоль линии до B, стойка B вдоль линии до стойки напротив A"
 " и т.д.)."
 
-#, fuzzy
 msgid "![delta_cal_e_step4](img/delta_cal_e_step4.png)"
 msgstr "![delta_cal_e_step4](img/delta_cal_e_step4.png)"
 

@@ -1,15 +1,15 @@
-# Adlion Myftarago <adlionmyftarago@live.com>, 2024.
+# Adlion Myftarago <adlionmyftarago@live.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2024-10-31 21:00+0000\n"
+"PO-Revision-Date: 2025-07-22 08:26+0000\n"
 "Last-Translator: Adlion Myftarago <adlionmyftarago@live.com>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/klipper/config_checks/sq/>\n"
 "Language: sq\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.2-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "This document provides a list of steps to help confirm the pin settings in the"
@@ -209,13 +209,6 @@ msgid ""
 "QUERY_ENDSTOPS command should report the endstop as \"TRIGGERED\"."
 msgstr ""
 
-#: docs/Config_checks.md:block 15 (paragraph)
-msgid ""
-"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
-"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
-"^PA2\"), or remove the \"!\" if there is already one present."
-msgstr ""
-
 #: docs/Config_checks.md:block 18 (paragraph)
 msgid ""
 "Use the STEPPER_BUZZ command to verify the connectivity of each stepper motor."
@@ -244,6 +237,19 @@ msgid ""
 "To calibrate the extruder, navigate to the command console and run the "
 "PID_CALIBRATE command. For example: `PID_CALIBRATE HEATER=extruder TARGET=170`"
 msgstr ""
+
+#: docs/Config_checks.md:block 15 (paragraph)
+msgid ""
+"If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+"versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+"^!PA2\"), or remove the \"!\" if there is already one present."
+msgstr ""
+
+#~ msgid ""
+#~ "If the endstop appears inverted (it reports \"open\" when triggered and vice-"
+#~ "versa) then add a \"!\" to the pin definition (for example, \"endstop_pin: "
+#~ "^PA2\"), or remove the \"!\" if there is already one present."
+#~ msgstr ""
 
 #~ msgid ""
 #~ "Start by verifying that temperatures are being properly reported. Navigate to "

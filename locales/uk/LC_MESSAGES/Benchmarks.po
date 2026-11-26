@@ -1,17 +1,19 @@
-# Владислав <vlad.marusenko2000@gmail.com>, 2024.
+# Владислав <vlad.marusenko2000@gmail.com>, 2024, 2025.
 # Максим Горпиніч <mgorpinic2005@gmail.com>, 2024.
 # Максим Горпиніч <maksimgorpinic2005a@gmail.com>, 2025.
+# Deleted User <mgorpinic2005@gmail.com>, 2025.
+# Максим Горпиніч <maksimgorpinic4@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2025-02-20 08:20+0000\n"
-"Last-Translator: Максим Горпиніч <maksimgorpinic2005a@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 08:41+0000\n"
+"Last-Translator: Владислав <vlad.marusenko2000@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/klipper/benchmarks/uk/>\n"
 "Language: uk\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.10.1-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid "This document describes Klipper benchmarks."
 msgstr "Цей документ описує бендикти Klipper."
@@ -241,19 +243,6 @@ msgstr ""
 " двох \"часових\" повідомленнях відповіді. Загальна кількість команд за "
 "секунду — `100000 * mcu_ Частота / годинник_diff`."
 
-msgid ""
-"Note that this test may saturate the USB/CPU capacity of a Raspberry Pi. If "
-"running on a Raspberry Pi, Beaglebone, or similar host computer then increase "
-"the delay (eg, `DELAY {clock + 20*freq} get_uptime`). Where applicable, the "
-"benchmarks below are with console.py running on a desktop class machine with "
-"the device connected via a high-speed hub."
-msgstr ""
-"Зауважте, що цей тест може наситити USB / CPU ємність Raspberry Pi. Якщо "
-"працює на Raspberry Pi, Beaglebone або аналогічний комп'ютер хосту, то "
-"збільшення затримки (наприклад, `DELAY {clock + 20*freq} get_uptime`). Де це "
-"можливо, бендикти нижче з консолі. py, що працює на машині настільного класу з"
-" пристроєм, підключеним через швидкісний вузол."
-
 msgid "MCU"
 msgstr "мікроконтролер"
 
@@ -265,18 +254,6 @@ msgstr "Почати"
 
 msgid "Build compiler"
 msgstr "Створити компілятор"
-
-msgid "stm32f042 (CAN)"
-msgstr "стм32ф042 (CAN)"
-
-msgid "18K"
-msgstr "18КХ"
-
-msgid "c105adc8"
-msgstr "c105adc8"
-
-msgid "arm-none-eabi-gcc (GNU Tools 7-2018-q3-update) 7.3.1"
-msgstr "arm-on-eabi-gcc (GNU Tools 7-2018-q3-update) 7.3.1"
 
 msgid "atmega2560 (serial)"
 msgstr "atmega2560 (серійне)"
@@ -781,27 +758,107 @@ msgstr ""
 msgid "stm32h723"
 msgstr ""
 
-#: docs/Benchmarks.md:block 98 (paragraph)
+#: docs/Benchmarks.md:block 69 (header)
+msgid "STM32G4 step rate benchmark"
+msgstr ""
+
+#: docs/Benchmarks.md:block 70 (paragraph)
+msgid "The following configuration sequence is used on the STM32G431:"
+msgstr ""
+
+#: docs/Benchmarks.md:block 72 (paragraph)
+msgid ""
+"The test was last run on commit `cfa48fe3` with gcc version `arm-none-eabi-gcc"
+" (Fedora 14.1.0-1.fc40) 14.1.0`."
+msgstr ""
+
+#: docs/Benchmarks.md:block 73 (table)
+msgid "stm32g431"
+msgstr ""
+
+#: docs/Benchmarks.md:block 73 (table)
+msgid "47"
+msgstr ""
+
+#: docs/Benchmarks.md:block 73 (table)
+msgid "208"
+msgstr ""
+
+#: docs/Benchmarks.md:block 103 (paragraph)
 msgid ""
 "The test was last run on commit `14c105b8` with gcc version `arm-none-eabi-gcc"
 " (Fedora 14.1.0-1.fc40) 14.1.0` on Raspberry Pi Pico and Pico 2 boards."
 msgstr ""
 
-#: docs/Benchmarks.md:block 99 (table)
+#: docs/Benchmarks.md:block 104 (table)
 msgid "3"
 msgstr ""
 
-#: docs/Benchmarks.md:block 99 (table)
+#: docs/Benchmarks.md:block 104 (table)
 msgid "14"
 msgstr ""
 
-#: docs/Benchmarks.md:block 101 (paragraph)
+#: docs/Benchmarks.md:block 106 (paragraph)
 msgid ""
 "(*) Note that the reported rp2040 ticks are relative to a 12Mhz scheduling "
 "timer and do not correspond to its 200Mhz internal ARM processing rate. It is "
-"expected that 5 scheduling ticks corresponds to ~42 ARM core cycles and 14 "
+"expected that 3 scheduling ticks corresponds to ~42 ARM core cycles and 14 "
 "scheduling ticks corresponds to ~225 ARM core cycles."
 msgstr ""
+
+#: docs/Benchmarks.md:block 116 (paragraph)
+msgid ""
+"The USB tests may exceed the CPU capacity of a Raspberry Pi. If running on a "
+"Raspberry Pi, Beaglebone, or similar host computer then increase the delay "
+"(eg, `DELAY {clock + 20*freq} get_uptime`). Where applicable, the benchmarks "
+"below are with console.py running on a desktop class machine with the device "
+"connected via a super-speed hub."
+msgstr ""
+
+#: docs/Benchmarks.md:block 117 (paragraph)
+msgid ""
+"The CAN bus tests may saturate the USB host controller of a Raspberry Pi (when"
+" testing via a standard gs_usb USB to CAN bus adapter). Where applicable, the "
+"CAN bus benchmarks below are with console.py running on a desktop class "
+"machine with a USB to CAN bus adapter connected via a super-speed USB hub."
+msgstr ""
+
+#: docs/Benchmarks.md:block 118 (table)
+msgid "rp2350 (CAN)"
+msgstr ""
+
+#: docs/Benchmarks.md:block 118 (table)
+msgid "59K"
+msgstr ""
+
+#: docs/Benchmarks.md:block 118 (table)
+msgid "17b8ce4c"
+msgstr ""
+
+#~ msgid ""
+#~ "Note that this test may saturate the USB/CPU capacity of a Raspberry Pi. If "
+#~ "running on a Raspberry Pi, Beaglebone, or similar host computer then increase "
+#~ "the delay (eg, `DELAY {clock + 20*freq} get_uptime`). Where applicable, the "
+#~ "benchmarks below are with console.py running on a desktop class machine with "
+#~ "the device connected via a high-speed hub."
+#~ msgstr ""
+#~ "Зауважте, що цей тест може наситити USB / CPU ємність Raspberry Pi. Якщо "
+#~ "працює на Raspberry Pi, Beaglebone або аналогічний комп'ютер хосту, то "
+#~ "збільшення затримки (наприклад, `DELAY {clock + 20*freq} get_uptime`). Де це "
+#~ "можливо, бендикти нижче з консолі. py, що працює на машині настільного класу з"
+#~ " пристроєм, підключеним через швидкісний вузол."
+
+#~ msgid "stm32f042 (CAN)"
+#~ msgstr "стм32ф042 (CAN)"
+
+#~ msgid "18K"
+#~ msgstr "18КХ"
+
+#~ msgid "c105adc8"
+#~ msgstr "c105adc8"
+
+#~ msgid "arm-none-eabi-gcc (GNU Tools 7-2018-q3-update) 7.3.1"
+#~ msgstr "arm-on-eabi-gcc (GNU Tools 7-2018-q3-update) 7.3.1"
 
 #~ msgid "5"
 #~ msgstr "5"

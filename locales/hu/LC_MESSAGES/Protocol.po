@@ -1,12 +1,13 @@
 # Zs.Antal <zsikaiantal@gmail.com>, 2022.
-# Yifei Ding <dingyifeiair@gmail.com>, 2022.
-# Bálint László <blaszlobors@gmail.com>, 2024.
+# Yifei Ding <dingyifeiair@gmail.com>, 2022, 2025.
+# Bálint László <blaszlobors@gmail.com>, 2024, 2025.
+# "Zs.Antal" <antonio092130@icloud.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-01-20 10:01+0000\n"
+"PO-Revision-Date: 2025-07-22 08:34+0000\n"
 "Last-Translator: Bálint László <blaszlobors@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/klipper/protocol/hu/>\n"
 "Language: hu\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "The Klipper messaging protocol is used for low-level communication between the"
